@@ -87,6 +87,8 @@ ggplot(stock, aes(x=date)) +
     guides(colour=guide_legend(title="Blue Chip Companies")) 
 ```
 
+Since the plots above show prices rather than percentage change, we can see the stocks' starting point is different. Regardless, we can see that the Coca-Cola stock has lagged behind American Express and Jonhson and Jonhson, who have had much stronger movements in the past decade, while Coca-Cola has remained relatively flat.
+
 
 ## XRP Candlestick Plot
 
@@ -116,6 +118,7 @@ xrp_vals$date<-as.Date(xrp_vals$date,"%Y-%m-%d")
 
 
 df <- tail(xrp_vals, 30)
+#df <- xrp_vals
 
 figc <- df %>% plot_ly(x = ~date, type="candlestick",
           open = ~XRP.USD.Open, close = ~XRP.USD.Close,
@@ -125,7 +128,7 @@ figc <- figc %>% layout(title = "Basic Candlestick Chart")
 figc
 ```
 
-
+The candlestick plot shows us that over the last 30 days, the price of the Ripple token in relation to the USD has fluctuated plenty. During the period, it reached a high of almost $0.66 but then dipped significantly to less than $0.54 and is now oscillating around the $0.58 mark. Nonetheless, for few weeks, regardless of the waving, the price seems to be trending up.
 
 ## Economic Data with Plotly
 
@@ -149,9 +152,8 @@ g4 <- ggplot(economic_data, aes(x=date)) +
   scale_colour_manual(values = c("CPI" = "red", "GDP" = "blue")) + 
   labs(
     title = "CPI and GDP Over Time",
-    subtitle = "From Start Year to End Year",  
     x = "Date",
-    y = "Value") +
+    y = "Value in Percentage") +
   guides(colour=guide_legend(title="Indicators"))
 
 
@@ -163,6 +165,6 @@ ggplotly(g4) %>%
 
 ```
 
-
+This plot shows the time series of both GDP, which measures economic growth, and CPI, which measures inflation. Both are shown as quarterly variations from the previous reading of the metric, and the data was obtained from the St. Louis Fed website. The data is shown quarterly from early 2014 to just before the beginning of the COVID-19 pandemic in 2020. We can see that over that period, growth in the US remained strong, being almost consistently above 2%, while inflation was consistently low.
 
 :::
