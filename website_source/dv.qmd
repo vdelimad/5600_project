@@ -31,18 +31,14 @@ knitr::knit_engines$set(python = reticulate::eng_python)
 ```
 
 
-In time series data visualization, the importance lies in presenting temporal patterns and trends in a clear and comprehensible manner. Effective visualization allows analysts and decision-makers to extract meaningful insights from the data, aiding in better understanding the dynamics of a system over time. The choice of visualization techniques is crucial, as it directly influences the interpretation of patterns within the time series. 
 
-The ability to discern seasonality, identify anomalies, and recognize patterns is vital for making informed predictions and strategic decisions. Furthermore, interactive features in visualizations enable users to delve deeper into the data, offering a dynamic and exploratory experience. 
-
-Ultimately, the clarity and accuracy of time series data visualization contribute significantly to enhancing decision-making processes across various domains, such as finance, healthcare, environmental monitoring and many other areas.
 
 
 ::: panel-tabset
 
 ## Data Visualization with Stock Data
 
-The following graph shows overall trends in Apple, Tesla and Amazon stock prices.
+The following graph shows overall trends in American Express, Coca Cola and Johnson & Johnshon stock prices.
 
 ```{r }
 #| warning: false
@@ -52,7 +48,7 @@ The following graph shows overall trends in Apple, Tesla and Amazon stock prices
 options("getSymbols.warning4.0"=FALSE)
 options("getSymbols.yahoo.warning"=FALSE)
 
-tickers = c("AAPL","TSLA","AMZN" )
+tickers = c("AXP","KO","JNJ" )
 for (i in tickers){
   getSymbols(i,
              from = "2012-10-01",
@@ -65,102 +61,36 @@ y <- list(
   title = "value"
 )
 
-stock <- data.frame(AAPL$AAPL.Adjusted,
-                    TSLA$TSLA.Adjusted,
-                    AMZN$AMZN.Adjusted)
+stock <- data.frame(AXP$AXP.Adjusted,
+                    KO$KO.Adjusted,
+                    JNJ$JNJ.Adjusted)
 
 
 stock <- data.frame(stock,rownames(stock))
 colnames(stock) <- append(tickers,'Dates')
 
 stock$date<-as.Date(stock$Dates,"%Y-%m-%d")
-head(stock)
+#head(stock)
 
 ################################################
 
 ggplot(stock, aes(x=date)) +
-  geom_line(aes(y=AAPL, colour="AAPL"))+
-  geom_line(aes(y=AMZN, colour="AMZN"))+
-  geom_line(aes(y=TSLA, colour="TSLA"))+
+  geom_line(aes(y=AXP, colour="AXP"))+
+  geom_line(aes(y=JNJ, colour="JNJ"))+
+  geom_line(aes(y=KO, colour="KO"))+
    labs(
-    title = "Stock Prices for the Tech Companies",
+    title = "Stock Prices for the Blue Chip Stocks Companies",
     subtitle = "From 2013-2022",
     x = "Date",
     y = "Adjusted Closing Prices")+
     theme(panel.background = element_rect(fill = "white", colour = "grey50"))+
-    guides(colour=guide_legend(title="Tech Companies")) 
+    guides(colour=guide_legend(title="Blue Chip Companies")) 
 ```
 
 
-## Interactive Plot
-
-Hover over the plot to see the difference.
- 
-```{r}
-
-#| code-fold: true
-#| warning: false
-
-
-g4<- ggplot(stock, aes(x=date)) +
-  geom_line(aes(y=AAPL, colour="AAPL"))+
-  geom_line(aes(y=AMZN, colour="AMZN"))+
-  geom_line(aes(y=TSLA, colour="TSLA"))+
-   labs(
-    title = "Stock Prices for the Tech Companies",
-    subtitle = "From 2013-2022",
-    x = "Date",
-    y = "Adjusted Closing Prices")+
-    guides(colour=guide_legend(title="Tech Companies")) 
-
-
-ggplotly(g4) %>%
-  layout(hovermode = "x")
-```
-
-## Bitcoin plot using plotly
-
-OR you can obtain a single stock price
+## XRP Candlestick Plot
 
 ```{r}
-#| code-fold: true
-#| warning: false
-
-
-#bitc_ALL <- getSymbols("BTC",auto.assign = FALSE, from = "2020-10-01",src="yahoo")
-bitc <- getSymbols("BTC",auto.assign = FALSE, from = "2021-09-15",src="yahoo") 
-head(bitc)
-start(bitc)
-end(bitc)
-
-bitc=data.frame(bitc)
-bitc <- data.frame(bitc,rownames(bitc))
-head(bitc)
-
-colnames(bitc)[7] = "date"
-head(bitc)
-
-bitc$date<-as.Date(bitc$date,"%Y-%m-%d")
-str(bitc)
-
-
-## ggplot
-bitc %>%
-  ggplot()+
-  geom_line(aes(y=BTC.Adjusted,x=date),color="blue")
-
-## plotly
-fig <- plot_ly(bitc, x = ~date, y = ~BTC.Adjusted, type = 'scatter', mode = 'lines')
-
-fig <- fig %>% layout(title = "Basic line Plot")
-fig
-```
-
-
-## candlestick plot
-
-```{r}
-
 #| code-fold: true
 #| warning: false
 
@@ -169,13 +99,70 @@ fig
 # candlestick plot
 
 
-df <- tail(bitc, 30)
+xrp_vals <- getSymbols("XRP-USD",auto.assign = FALSE, from = "2021-09-15",src="yahoo") 
+#head(xrp_vals)
+#start(xrp_vals)
+#end(xrp_vals)
+
+xrp_vals=data.frame(xrp_vals)
+xrp_vals <- data.frame(xrp_vals,rownames(xrp_vals))
+#head(xrp_vals)
+
+colnames(xrp_vals)[7] = "date"
+#head(xrp_vals)
+
+xrp_vals$date<-as.Date(xrp_vals$date,"%Y-%m-%d")
+#str(xrp_vals)
+
+
+df <- tail(xrp_vals, 30)
 
 figc <- df %>% plot_ly(x = ~date, type="candlestick",
-          open = ~BTC.Open, close = ~BTC.Close,
-          high = ~BTC.High, low = ~BTC.Low) 
+          open = ~XRP.USD.Open, close = ~XRP.USD.Close,
+          high = ~XRP.USD.High, low = ~XRP.USD.Low) 
 figc <- figc %>% layout(title = "Basic Candlestick Chart")
 
 figc
 ```
+
+
+
+## Economic Data with Plotly
+
+Hover over the plot to see the difference.
+ 
+```{r}
+#| code-fold: true
+#| warning: false
+
+# bring in data
+economic_data <- read.csv("../../data/fred_data_lab0/economic_data.csv")
+
+
+economic_data$date <- as.Date(economic_data$date, format="%d/%m/%Y")
+
+
+g4 <- ggplot(economic_data, aes(x=date)) +
+  geom_line(aes(y=cpi, colour="CPI"), size=1) +  
+  geom_line(aes(y=gdp, colour="GDP"), size=1) +
+  # format
+  scale_colour_manual(values = c("CPI" = "red", "GDP" = "blue")) + 
+  labs(
+    title = "CPI and GDP Over Time",
+    subtitle = "From Start Year to End Year",  
+    x = "Date",
+    y = "Value") +
+  guides(colour=guide_legend(title="Indicators"))
+
+
+# plot
+ggplotly(g4) %>%
+  layout(hovermode = "x")
+
+
+
+```
+
+
+
 :::
