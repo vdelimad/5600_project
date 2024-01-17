@@ -1,0 +1,181 @@
+# Time Series Data Visualization {.unnumbered}
+
+
+```{r}
+#| code-fold: true
+#| code-summary: 'Importing Libraries'
+#| warning: false
+#| output: false
+library(tidyverse)
+library(ggplot2)
+library(forecast)
+library(astsa) 
+library(xts)
+library(tseries)
+library(fpp2)
+library(fma)
+library(lubridate)
+library(tidyverse)
+library(TSstudio)
+library(quantmod)
+library(tidyquant)
+library(plotly)
+library(ggplot2)
+library(imputeTS)
+library(gridExtra)
+library(reticulate)
+library(readxl)
+#use_python("/usr/local/bin/python3", require = T)
+knitr::knit_engines$set(python = reticulate::eng_python)
+#py_install("tensorflow")
+```
+
+
+In time series data visualization, the importance lies in presenting temporal patterns and trends in a clear and comprehensible manner. Effective visualization allows analysts and decision-makers to extract meaningful insights from the data, aiding in better understanding the dynamics of a system over time. The choice of visualization techniques is crucial, as it directly influences the interpretation of patterns within the time series. 
+
+The ability to discern seasonality, identify anomalies, and recognize patterns is vital for making informed predictions and strategic decisions. Furthermore, interactive features in visualizations enable users to delve deeper into the data, offering a dynamic and exploratory experience. 
+
+Ultimately, the clarity and accuracy of time series data visualization contribute significantly to enhancing decision-making processes across various domains, such as finance, healthcare, environmental monitoring and many other areas.
+
+
+::: panel-tabset
+
+## Data Visualization with Stock Data
+
+The following graph shows overall trends in Apple, Tesla and Amazon stock prices.
+
+```{r }
+#| warning: false
+#| code-fold: true
+
+
+options("getSymbols.warning4.0"=FALSE)
+options("getSymbols.yahoo.warning"=FALSE)
+
+tickers = c("AAPL","TSLA","AMZN" )
+for (i in tickers){
+  getSymbols(i,
+             from = "2012-10-01",
+             to = "2024-01-01")}
+
+x <- list(
+  title = "date"
+)
+y <- list(
+  title = "value"
+)
+
+stock <- data.frame(AAPL$AAPL.Adjusted,
+                    TSLA$TSLA.Adjusted,
+                    AMZN$AMZN.Adjusted)
+
+
+stock <- data.frame(stock,rownames(stock))
+colnames(stock) <- append(tickers,'Dates')
+
+stock$date<-as.Date(stock$Dates,"%Y-%m-%d")
+head(stock)
+
+################################################
+
+ggplot(stock, aes(x=date)) +
+  geom_line(aes(y=AAPL, colour="AAPL"))+
+  geom_line(aes(y=AMZN, colour="AMZN"))+
+  geom_line(aes(y=TSLA, colour="TSLA"))+
+   labs(
+    title = "Stock Prices for the Tech Companies",
+    subtitle = "From 2013-2022",
+    x = "Date",
+    y = "Adjusted Closing Prices")+
+    theme(panel.background = element_rect(fill = "white", colour = "grey50"))+
+    guides(colour=guide_legend(title="Tech Companies")) 
+```
+
+
+## Interactive Plot
+
+Hover over the plot to see the difference.
+ 
+```{r}
+
+#| code-fold: true
+#| warning: false
+
+
+g4<- ggplot(stock, aes(x=date)) +
+  geom_line(aes(y=AAPL, colour="AAPL"))+
+  geom_line(aes(y=AMZN, colour="AMZN"))+
+  geom_line(aes(y=TSLA, colour="TSLA"))+
+   labs(
+    title = "Stock Prices for the Tech Companies",
+    subtitle = "From 2013-2022",
+    x = "Date",
+    y = "Adjusted Closing Prices")+
+    guides(colour=guide_legend(title="Tech Companies")) 
+
+
+ggplotly(g4) %>%
+  layout(hovermode = "x")
+```
+
+## Bitcoin plot using plotly
+
+OR you can obtain a single stock price
+
+```{r}
+#| code-fold: true
+#| warning: false
+
+
+#bitc_ALL <- getSymbols("BTC",auto.assign = FALSE, from = "2020-10-01",src="yahoo")
+bitc <- getSymbols("BTC",auto.assign = FALSE, from = "2021-09-15",src="yahoo") 
+head(bitc)
+start(bitc)
+end(bitc)
+
+bitc=data.frame(bitc)
+bitc <- data.frame(bitc,rownames(bitc))
+head(bitc)
+
+colnames(bitc)[7] = "date"
+head(bitc)
+
+bitc$date<-as.Date(bitc$date,"%Y-%m-%d")
+str(bitc)
+
+
+## ggplot
+bitc %>%
+  ggplot()+
+  geom_line(aes(y=BTC.Adjusted,x=date),color="blue")
+
+## plotly
+fig <- plot_ly(bitc, x = ~date, y = ~BTC.Adjusted, type = 'scatter', mode = 'lines')
+
+fig <- fig %>% layout(title = "Basic line Plot")
+fig
+```
+
+
+## candlestick plot
+
+```{r}
+
+#| code-fold: true
+#| warning: false
+
+
+#plotly
+# candlestick plot
+
+
+df <- tail(bitc, 30)
+
+figc <- df %>% plot_ly(x = ~date, type="candlestick",
+          open = ~BTC.Open, close = ~BTC.Close,
+          high = ~BTC.High, low = ~BTC.Low) 
+figc <- figc %>% layout(title = "Basic Candlestick Chart")
+
+figc
+```
+:::

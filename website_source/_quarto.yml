@@ -1,0 +1,50 @@
+project:
+  type: book
+  output-dir: ../_site
+
+
+book:
+  title: "Space Exploration with Time Series"
+  date: "2024-05-03"
+  date-format: "YYYY-MM-DD"
+  search: 
+    location: sidebar
+    type: textbox
+  page-footer:
+    background: primary
+    left: |
+      A project by Victor De Lima for DSAN 5600.
+    right:
+      - icon: github
+        href: https://github.com/vdelimad/5600_project
+        aria-label: GitHub
+  chapters:
+    - index.qmd
+    - dv.qmd
+    - author.qmd
+    - 01_introduction.qmd
+    - 02_data_sources.qmd
+    - 03_data_visualization.qmd
+    - 04_eda.qmd
+    - 05_univariate_ts.qmd
+    - 07_multivariate_ts.qmd
+    - 08_financial_ts.qmd
+    - 09_deep_learning.qmd
+    - 10_other.qmd
+    - 11_conclusions.qmd
+    - references.qmd
+
+format:
+  html:
+    theme: cyborg
+    css: styles.css
+    link-external-newwindow: true
+    page-navigation: true
+    toc-title: Contents
+
+
+bibliography: references.bib
+csl: apa.csl
+
+
+
