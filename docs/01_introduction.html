@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -190,7 +209,24 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#topic-explanation" id="toc-topic-explanation" class="nav-link active" data-scroll-target="#topic-explanation"><span class="header-section-number">1.1</span> Topic Explanation</a></li>
+  <li><a href="#the-big-picture" id="toc-the-big-picture" class="nav-link" data-scroll-target="#the-big-picture"><span class="header-section-number">1.2</span> The Big Picture</a></li>
+  <li><a href="#literature-review" id="toc-literature-review" class="nav-link" data-scroll-target="#literature-review"><span class="header-section-number">1.3</span> Literature Review</a></li>
+  <li><a href="#analytical-angles" id="toc-analytical-angles" class="nav-link" data-scroll-target="#analytical-angles"><span class="header-section-number">1.4</span> Analytical Angles</a>
+  <ul class="collapse">
+  <li><a href="#public-sector-space-exploration" id="toc-public-sector-space-exploration" class="nav-link" data-scroll-target="#public-sector-space-exploration">Public Sector Space Exploration</a></li>
+  <li><a href="#public-interest-in-space-exploration" id="toc-public-interest-in-space-exploration" class="nav-link" data-scroll-target="#public-interest-in-space-exploration">Public Interest in Space Exploration</a></li>
+  <li><a href="#use-of-space-infrastructure" id="toc-use-of-space-infrastructure" class="nav-link" data-scroll-target="#use-of-space-infrastructure">Use of Space Infrastructure</a></li>
+  <li><a href="#private-sector-space-exploration" id="toc-private-sector-space-exploration" class="nav-link" data-scroll-target="#private-sector-space-exploration">Private Sector Space Exploration</a></li>
+  <li><a href="#international-participation-in-space-exploration" id="toc-international-participation-in-space-exploration" class="nav-link" data-scroll-target="#international-participation-in-space-exploration">International Participation in Space Exploration</a></li>
+  </ul></li>
+  <li><a href="#guiding-questions" id="toc-guiding-questions" class="nav-link" data-scroll-target="#guiding-questions"><span class="header-section-number">1.5</span> Guiding Questions</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -212,9 +248,83 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Coming soon.</p>
+<section id="topic-explanation" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="topic-explanation"><span class="header-section-number">1.1</span> Topic Explanation</h2>
+<p>Space exploration, once the domain of national agencies and science fiction, has evolved into a multifaceted endeavor that encompasses the pursuit of knowledge and the potential for economic growth, technological advancements, and international collaboration. The public support of initiatives, the exploration of Mars, and the financial investment in space ventures represent crucial components of this broader narrative. As humanity reaches out to the cosmos, the implications of these efforts stretch far beyond the immediate scientific discoveries, touching on aspects of environmental stewardship, human survival, and the expansion of our economic sphere.</p>
+<p>This project embarks on a research journey that leverages time series techniques and data to uncover space exploration patterns, trends, and insights. At the heart of this endeavor lies the examination of various facets of space exploration, segmented into distinct categories encompassing both the public and private sectors and international participation, detailed next.</p>
+</section>
+<section id="the-big-picture" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="the-big-picture"><span class="header-section-number">1.2</span> The Big Picture</h2>
+<p>This study examines the essential elements that have shaped space exploration. It begins by acknowledging the origins of space exploration within the public sector, setting the foundation for subsequent advancements and exploration efforts. From there, we delve into the escalating public interest in space, which fuels further investment and interest in outer space activities. We also analyze the strategic use of space infrastructure, mainly satellites, highlighting their critical role in supporting various functions, from scientific research to commercial applications. Next, the narrative shifts to the dynamic involvement of private enterprises in space missions, making their way into the financial markets by pioneering innovations, reducing costs, and opening new possibilities for space travel and exploration. Lastly, we look at the role of international participation and illustrate how the drive across countries to explore space has grown over time.</p>
+<p><img src="images/big_picture_chart.jpg" class="img-fluid"></p>
+</section>
+<section id="literature-review" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="literature-review"><span class="header-section-number">1.3</span> Literature Review</h2>
+<p>In this review, we explore the transformative dynamics of the space exploration sector, from its economic prospects and technological advancements to governmental investments and the role of private enterprises in shaping the industry.</p>
+<p>Space exploration is on the brink of becoming a trillion-dollar industry by 2040, according to <span class="citation" data-cites="morgan_stanley_space_2020">Morgan Stanley (<a href="references.html#ref-morgan_stanley_space_2020" role="doc-biblioref">2020</a>)</span>, propelled by declining launch costs, technological advancements, and increased interest from the public and private sectors. With satellite broadband expected to account for half of this growth, introducing reusable rockets and mass-produced satellites promises to slash expenses further, opening up new possibilities such as high-speed global delivery systems and commercial space travel. Nevertheless, the volatile history of space-related investments is a cautionary note for potential investors.</p>
+<p>The unveiling of the James Webb Space Telescope’s first images in 2022 represented a landmark moment in space exploration, highlighting the synergy between major space agencies (NASA, E.S.A., C.S.A.) and the transformative impact of the Fourth Industrial Revolution (<span class="citation" data-cites="signe_how_2023">Signé &amp; Dooley (<a href="references.html#ref-signe_how_2023" role="doc-biblioref">2023</a>)</span>). This era is marked by the fusion of technologies across digital, physical, and biological spheres, leading to reduced costs and the proliferation of smaller satellites. These advancements are democratizing space access and bringing in a variety of new participants, including private companies and emerging space nations, despite challenges like geopolitical tensions and the necessity for inclusive, equitable regulations.</p>
+<p>On the governmental front, <span class="citation" data-cites="sadek_global_2022">Sadek (<a href="references.html#ref-sadek_global_2022" role="doc-biblioref">2022</a>)</span> predicts a surge in global space exploration investment to $31 billion by 2031, focusing on transportation, orbital infrastructure, and lunar ventures. This increase is buoyed by heightened cooperation across nations and sectors, aiming for a sustainable lunar presence and extended human activity in low Earth orbit. Noteworthy is the diversification of the space exploration field with new entrants like Australia and the U.A.E., alongside significant projects like the Artemis program and the International Lunar Research Station, signaling a shift towards more inclusive and collaborative space endeavors.</p>
+<p>NASA’s contributions to the economy and space exploration have been substantial, generating over $71.2 billion in economic output and supporting more than 339,600 jobs in 2021, as reported by <span class="citation" data-cites="dunbar_nasas_2022">Dunbar (<a href="references.html#ref-dunbar_nasas_2022" role="doc-biblioref">2022</a>)</span>. This impact stems from its Moon to Mars missions, climate change research, and the creation of high-quality jobs across the United States, underlining NASA’s pivotal role in fostering economic growth and cementing American leadership in global space exploration and science.</p>
+<p>Lastly, the space sector has witnessed a remarkable surge in investment, growing to more than $10 billion annually by 2021 from $300 million in 2012 (<span class="citation" data-cites="bland_different_2022">Bland et al. (<a href="references.html#ref-bland_different_2022" role="doc-biblioref">2022</a>)</span>). This influx drives innovation and competition, with companies increasingly adopting commercial models and focusing on intellectual property, especially in lower Earth orbit and potential operations between the Earth and the Moon. The industry’s evolution is characterized by strategic mergers, product innovation, and a disruptive approach to securing market dominance, indicating a dynamic and competitive future landscape for space exploration and utilization.</p>
+</section>
+<section id="analytical-angles" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="analytical-angles"><span class="header-section-number">1.4</span> Analytical Angles</h2>
+<p>The analytical approach to this project consists of five distinct angles, each designed to portray a different side of space exploration.</p>
+<section id="public-sector-space-exploration" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="public-sector-space-exploration">Public Sector Space Exploration</h3>
+<p>We start by delving into the public sector’s contributions, highlighted by data from the Mars Curiosity Rover, which provides a window into the Martian climate. Additionally, we analyze government spending patterns in space exploration, offering a lens through which we can assess national priorities and commitments to space endeavors.</p>
+</section>
+<section id="public-interest-in-space-exploration" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="public-interest-in-space-exploration">Public Interest in Space Exploration</h3>
+<p>Public interest in space exploration, an equally crucial aspect, is examined through Google Trends data. This perspective reveals the flow of engagement with space-related topics, reflecting changing changing curiosity over time.</p>
+</section>
+<section id="use-of-space-infrastructure" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="use-of-space-infrastructure">Use of Space Infrastructure</h3>
+<p>The use of space infrastructure is another crucial area of focus. By examining data on meteorological satellite launches and the current satellites orbiting Earth, we gain insights into the operational aspects of space assets and their critical role in global communication, weather forecasting, and environmental monitoring.</p>
+</section>
+<section id="private-sector-space-exploration" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="private-sector-space-exploration">Private Sector Space Exploration</h3>
+<p>Next, we examine the private sector, particularly in the growing area of commercial space activities, through the lens of the ARKX Space Exploration ETF. This dataset sheds light on the financial dimensions of space exploration and highlights the growing importance of private companies in advancing the frontiers of space.</p>
+</section>
+<section id="international-participation-in-space-exploration" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="international-participation-in-space-exploration">International Participation in Space Exploration</h3>
+<p>Lastly, international participation in space exploration is evaluated through a database of launches by country. This analysis provides a global overview of space endeavors, highlighting the collaborative and competitive dynamics that fuel the pursuit of knowledge and opportunities beyond our planet.</p>
+</section>
+</section>
+<section id="guiding-questions" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="guiding-questions"><span class="header-section-number">1.5</span> Guiding Questions</h2>
+<ol type="1">
+<li>How do weather patterns on Mars compare over time, and what implications might these have for future manned missions?</li>
+<li>How has government expenditure on space exploration evolved over the past decade, and what trends can be identified in the allocation of resources to different space activities?</li>
+<li>How does public interest in space exploration respond to major space exploration events or milestones?</li>
+<li>What trends can be identified in the launch of meteorological satellites, and how does this reflect the global emphasis on weather monitoring and climate change?</li>
+<li>How has the number and type of satellites in orbit changed over time, and what does this indicate about the evolving uses of space?</li>
+<li>What investment trends can be discerned from the ARKX Space Exploration ETF data, and how do these reflect the private sector’s confidence in space exploration as a viable industry?</li>
+<li>How does the performance of the ARKX ETF correlate with major announcements or achievements by private space companies?</li>
+<li>Analyzing the launches by country database, can we identify temporal trends in international participation and leadership in space exploration?</li>
+<li>How do the activities in the public sector of space exploration influence trends and interests in the private sector, and vice versa?</li>
+<li>Can we identify patterns or cycles in government spending on space exploration, and how do these align with political or economic cycles?</li>
+</ol>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-bland_different_2022" class="csl-entry" role="listitem">
+Bland, R., Brukardt, R., Gangware, W., &amp; Swartz, D. (2022). A different space race: <span>Raising</span> capital and accelerating space investment <span></span> <span>McKinsey</span>. In <em>McKinsey &amp; Company</em>. <a href="https://www.mckinsey.com/industries/aerospace-and-defense/our-insights/a-different-space-race-raising-capital-and-accelerating-growth-in-space">https://www.mckinsey.com/industries/aerospace-and-defense/our-insights/a-different-space-race-raising-capital-and-accelerating-growth-in-space</a>
+</div>
+<div id="ref-dunbar_nasas_2022" class="csl-entry" role="listitem">
+Dunbar, B. (2022). <span>NASA</span>’s <span>Economic</span> <span>Benefit</span> <span>Reaches</span> <span>All</span> 50 <span>States</span>. In <em>The National Aeronautics and Space Administration</em>. <a href="https://www.nasa.gov/news-release/nasas-economic-benefit-reaches-all-50-states/">https://www.nasa.gov/news-release/nasas-economic-benefit-reaches-all-50-states/</a>
+</div>
+<div id="ref-morgan_stanley_space_2020" class="csl-entry" role="listitem">
+Morgan Stanley. (2020). <em>Space: <span>Investing</span> in the <span>Final</span> <span>Frontier</span></em>. <a href="https://www.morganstanley.com/ideas/investing-in-space">https://www.morganstanley.com/ideas/investing-in-space</a>
+</div>
+<div id="ref-sadek_global_2022" class="csl-entry" role="listitem">
+Sadek, S. (2022). Global governmental <span>Space</span> <span>Exploration</span> investments to reach $<span>31B</span> by 2031 as public and private players reach for the <span>Moon</span>. In <em>Euroconsult</em>. <a href="https://www.euroconsult-ec.com/press-release/global-governmental-space-exploration-investments-to-reach-31b-by-2031-as-public-and-private-players-reach-for-the-moon/">https://www.euroconsult-ec.com/press-release/global-governmental-space-exploration-investments-to-reach-31b-by-2031-as-public-and-private-players-reach-for-the-moon/</a>
+</div>
+<div id="ref-signe_how_2023" class="csl-entry" role="listitem">
+Signé, L., &amp; Dooley, H. (2023). How space exploration is fueling the <span>Fourth</span> <span>Industrial</span> <span>Revolution</span>. In <em>The Brookings Institution</em>. <a href="https://www.brookings.edu/articles/how-space-exploration-is-fueling-the-fourth-industrial-revolution/">https://www.brookings.edu/articles/how-space-exploration-is-fueling-the-fourth-industrial-revolution/</a>
+</div>
+</div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

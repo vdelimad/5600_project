@@ -1,3 +1,32 @@
 # Data Sources
 
-Coming soon.
+
+## Public Sector Space Exploration
+
+- Mars Curiosity Rover Weather Data was obtained from @centro_de_astrobiologia_csic-inta_rems_nodate using Python.
+  - The data presented in the widget is derived from readings by the Rover Environmental Monitoring Station (REMS) aboard the Mars Science Laboratory (MSL) rover on Mars, reflecting the conditions at the REMS site. The presence and activities of the MSL rover affect these readings (including its position, temperature, orientation, shading, and dust accumulation). REMS measurements with timing vary daily, which impacts the day-to-day variability of the reported data [@centro_de_astrobiologia_csic-inta_rems_nodate]. 
+  - Year starts and seasons based on longitudes were obtained from @the_planetary_society_mars_2024.
+- Public Expenditure on Space Exploration data is from @us_bureau_of_economic_analysis_government_nodate.
+
+
+## Public Interest in Space Exploration
+
+- From Google Trends, we obtained data on Mars [@google_trends_mars_nodate], Space Exploration [@google_trends_space_nodate], and SpaceX [@google_trends_spacex_nodate].
+
+
+## Use of Space Infrastructure
+
+- Meteorological Satellite Launch Database is from @world_meteorological_organization_list_nodate
+- Satellites Currently in Orbit data is from @union_of_concerned_scientists_ucs_2023
+
+
+## Private Sector Space Exploration
+
+- SpaceX Launch Data
+- ARKX (ARk Space Exploration ETF) data was obtained from @yahoo_finance_ark_2024
+
+
+## International Cooperation in Space Exploration
+
+- Launches by Country Database was obtained from @next_spaceflight_rocket_nodate.
+

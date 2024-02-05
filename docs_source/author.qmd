@@ -4,4 +4,36 @@ toc: false
 
 # About the Author {.unnumbered}
 
-Coming soon.
+
+
+```{=html}
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<section id="image-panel" class="level3 quarto-layout-cell" style="flex-basis: 30.0%;justify-content: center;">
+<div class="quarto-about-jolla">
+    <img src="images/victor_de_lima.jpg" class="about-image
+    round" style="height: 13em; width: 13em; margin-bottom: 0px !important;">
+</div>
+</section>
+<section id="text-panel" class="level3 quarto-layout-cell" style="flex-basis: 70.0%;justify-content: center;">
+<div class="quarto-title">
+    <h1 class="mb-1">Victor De Lima</h1>
+    <h3 class="mt-1 mb-1">Student, MS in Data Science and Analytics</h3>
+    <p class="mb-0">Georgetown University</p>
+  </div>
+</section>
+</div>
+</div>
+
+```
+
+Hello! My name is Victor De Lima. I'm a student interested in machine learning algorithms research, particularly in improving model performance in real-world applications, enhancing interpretability, and optimizing the trade-offs between model quality, training time, and financial cost. I am currently pursuing an M.S. in Data Science at Georgetown University in Washington, DC.
+
+My professional journey spans multiple roles and industries. I began my career in data analytics consulting, a foundation I later built upon in the finance industry to develop cutting-edge bond, company, and market analysis models. In the summer of 2023, I held the position of Data Scientist with the Arlington County Government. 
+
+My experience also includes various research projects, such as using machine learning methods for recommendation systems and materials science problems. Currently, I am a Research Assistant at Georgetown's AI-Measurement and Data Science lab. Complementing my research, actively engaging in Teaching Assistant roles has significantly enhanced my academic journey. Eager to further deepen my expertise, I am currently intent on pursuing a Ph.D.
+
+Throughout my studies, I've concentrated on subjects such as optimization, deep learning, and reinforcement learning. I actively use machine learning frameworks like PyTorch and Scikit-learn in my projects and research work. Despite my preference for Python, my toolkit comprises various programming languages and complementary tools, such as R and LaTeX. 
+
+When not crunching numbers or writing code, I love exploring physics and mathematics concepts and listening to great science communicators.
+
