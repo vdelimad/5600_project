@@ -139,7 +139,7 @@ Hover over the plot to see the difference.
 #| warning: false
 
 # bring in data
-economic_data <- read.csv("../../data/fred_data_lab0/economic_data.csv")
+economic_data <- read.csv("../../../data/fred_data_lab0/economic_data.csv")
 
 
 economic_data$date <- as.Date(economic_data$date, format="%d/%m/%Y")

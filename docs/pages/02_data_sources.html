@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Space Exploration with Time Series - 7&nbsp; Financial Time Series Models (ARCH/GARCH)</title>
+<title>5600 Portfolio Project - Victor De Lima - 2&nbsp; Data Sources</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +20,46 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./09_deep_learning.html" rel="next">
-<link href="./07_multivariate_ts.html" rel="prev">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../pages/03_data_visualization.html" rel="next">
+<link href="../pages/01_introduction.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -75,7 +94,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./08_financial_ts.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Financial Time Series Models (ARCH/GARCH)</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/02_data_sources.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Data Sources</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -90,7 +109,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Space Exploration with Time Series</a> 
+      <a href="../">5600 Portfolio Project - Victor De Lima</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -102,85 +121,85 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Time Series</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dv.html" class="sidebar-item-text sidebar-link">
+  <a href="../pages/dv.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Time Series Data Visualization</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./author.html" class="sidebar-item-text sidebar-link">
+  <a href="../pages/author.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">About the Author</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./01_introduction.html" class="sidebar-item-text sidebar-link">
+  <a href="../pages/01_introduction.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./02_data_sources.html" class="sidebar-item-text sidebar-link">
+  <a href="../pages/02_data_sources.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Data Sources</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./03_data_visualization.html" class="sidebar-item-text sidebar-link">
+  <a href="../pages/03_data_visualization.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data Visualization</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./04_eda.html" class="sidebar-item-text sidebar-link">
+  <a href="../pages/04_eda.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Exploratory Data Analysis</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./05_univariate_ts.html" class="sidebar-item-text sidebar-link">
+  <a href="../pages/05_univariate_ts.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Univariate TS Models (ARIMA/SARIMA)</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./07_multivariate_ts.html" class="sidebar-item-text sidebar-link">
+  <a href="../pages/07_multivariate_ts.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Multivariate TS Models (ARIMAX/SARIMAX/VAR)</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./08_financial_ts.html" class="sidebar-item-text sidebar-link active">
+  <a href="../pages/08_financial_ts.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Financial Time Series Models (ARCH/GARCH)</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./09_deep_learning.html" class="sidebar-item-text sidebar-link">
+  <a href="../pages/09_deep_learning.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Deep Learning for TS</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./10_other.html" class="sidebar-item-text sidebar-link">
+  <a href="../pages/10_other.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Other: Interrupted TS/ARFIMA/ Spectral Analysis</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./11_conclusions.html" class="sidebar-item-text sidebar-link">
+  <a href="../pages/11_conclusions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Conclusions</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
+  <a href="../pages/references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -190,14 +209,24 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#public-sector-space-exploration" id="toc-public-sector-space-exploration" class="nav-link active" data-scroll-target="#public-sector-space-exploration"><span class="header-section-number">2.1</span> Public Sector Space Exploration</a></li>
+  <li><a href="#public-interest-in-space-exploration" id="toc-public-interest-in-space-exploration" class="nav-link" data-scroll-target="#public-interest-in-space-exploration"><span class="header-section-number">2.2</span> Public Interest in Space Exploration</a></li>
+  <li><a href="#use-of-space-infrastructure" id="toc-use-of-space-infrastructure" class="nav-link" data-scroll-target="#use-of-space-infrastructure"><span class="header-section-number">2.3</span> Use of Space Infrastructure</a></li>
+  <li><a href="#private-sector-space-exploration" id="toc-private-sector-space-exploration" class="nav-link" data-scroll-target="#private-sector-space-exploration"><span class="header-section-number">2.4</span> Private Sector Space Exploration</a></li>
+  <li><a href="#international-cooperation-in-space-exploration" id="toc-international-cooperation-in-space-exploration" class="nav-link" data-scroll-target="#international-cooperation-in-space-exploration"><span class="header-section-number">2.5</span> International Cooperation in Space Exploration</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Financial Time Series Models (ARCH/GARCH)</span></h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Data Sources</span></h1>
 </div>
 
 
@@ -212,9 +241,77 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Coming soon.</p>
+<section id="public-sector-space-exploration" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="public-sector-space-exploration"><span class="header-section-number">2.1</span> Public Sector Space Exploration</h2>
+<ul>
+<li>Mars Curiosity Rover Weather Data was obtained from <span class="citation" data-cites="centro_de_astrobiologia_csic-inta_rems_nodate">Centro de Astrobiología (CSIC-INTA) (<a href="references.html#ref-centro_de_astrobiologia_csic-inta_rems_nodate" role="doc-biblioref">n.d.</a>)</span> using Python.
+<ul>
+<li>The data presented in the widget is derived from readings by the Rover Environmental Monitoring Station (REMS) aboard the Mars Science Laboratory (MSL) rover on Mars, reflecting the conditions at the REMS site. The presence and activities of the MSL rover affect these readings (including its position, temperature, orientation, shading, and dust accumulation). REMS measurements with timing vary daily, which impacts the day-to-day variability of the reported data <span class="citation" data-cites="centro_de_astrobiologia_csic-inta_rems_nodate">(<a href="references.html#ref-centro_de_astrobiologia_csic-inta_rems_nodate" role="doc-biblioref">Centro de Astrobiología (CSIC-INTA), n.d.</a>)</span>.</li>
+<li>Year starts and seasons based on longitudes were obtained from <span class="citation" data-cites="the_planetary_society_mars_2024">The Planetary Society (<a href="references.html#ref-the_planetary_society_mars_2024" role="doc-biblioref">2024</a>)</span>.</li>
+</ul></li>
+<li>Public Expenditure on Space Exploration data is from <span class="citation" data-cites="us_bureau_of_economic_analysis_government_nodate">U.S. Bureau of Economic Analysis (<a href="references.html#ref-us_bureau_of_economic_analysis_government_nodate" role="doc-biblioref">n.d.</a>)</span>.</li>
+</ul>
+</section>
+<section id="public-interest-in-space-exploration" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="public-interest-in-space-exploration"><span class="header-section-number">2.2</span> Public Interest in Space Exploration</h2>
+<ul>
+<li>From Google Trends, we obtained data on Mars <span class="citation" data-cites="google_trends_mars_nodate">(<a href="references.html#ref-google_trends_mars_nodate" role="doc-biblioref">Google Trends, n.d.-a</a>)</span>, Space Exploration <span class="citation" data-cites="google_trends_space_nodate">(<a href="references.html#ref-google_trends_space_nodate" role="doc-biblioref">Google Trends, n.d.-b</a>)</span>, and SpaceX <span class="citation" data-cites="google_trends_spacex_nodate">(<a href="references.html#ref-google_trends_spacex_nodate" role="doc-biblioref">Google Trends, n.d.-c</a>)</span>.</li>
+</ul>
+</section>
+<section id="use-of-space-infrastructure" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="use-of-space-infrastructure"><span class="header-section-number">2.3</span> Use of Space Infrastructure</h2>
+<ul>
+<li>Meteorological Satellite Launch Database is from <span class="citation" data-cites="world_meteorological_organization_list_nodate">World Meteorological Organization (<a href="references.html#ref-world_meteorological_organization_list_nodate" role="doc-biblioref">n.d.</a>)</span></li>
+<li>Satellites Currently in Orbit data is from <span class="citation" data-cites="union_of_concerned_scientists_ucs_2023">Union of Concerned Scientists (<a href="references.html#ref-union_of_concerned_scientists_ucs_2023" role="doc-biblioref">2023</a>)</span></li>
+</ul>
+</section>
+<section id="private-sector-space-exploration" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="private-sector-space-exploration"><span class="header-section-number">2.4</span> Private Sector Space Exploration</h2>
+<ul>
+<li>SpaceX Launch Data</li>
+<li>ARKX (ARk Space Exploration ETF) data was obtained from <span class="citation" data-cites="yahoo_finance_ark_2024">Yahoo Finance (<a href="references.html#ref-yahoo_finance_ark_2024" role="doc-biblioref">2024</a>)</span></li>
+</ul>
+</section>
+<section id="international-cooperation-in-space-exploration" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="international-cooperation-in-space-exploration"><span class="header-section-number">2.5</span> International Cooperation in Space Exploration</h2>
+<ul>
+<li>Launches by Country Database was obtained from <span class="citation" data-cites="next_spaceflight_rocket_nodate">Next Spaceflight (<a href="references.html#ref-next_spaceflight_rocket_nodate" role="doc-biblioref">n.d.</a>)</span>.</li>
+</ul>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-centro_de_astrobiologia_csic-inta_rems_nodate" class="csl-entry" role="listitem">
+Centro de Astrobiología (CSIC-INTA). (n.d.). <em><span>REMS</span> <span>Weather</span> <span>Widget</span></em>. Retrieved February 3, 2024, from <a href="http://cab.inta-csic.es/rems/wp-content/plugins/marsweather-widget/widget.php?lang=en">http://cab.inta-csic.es/rems/wp-content/plugins/marsweather-widget/widget.php?lang=en</a>
+</div>
+<div id="ref-google_trends_mars_nodate" class="csl-entry" role="listitem">
+Google Trends. (n.d.-a). <em>Mars</em>. <a href="https://trends.google.com/trends/explore?date=today%205-y&amp;geo=US&amp;q=Mars&amp;hl=en">https://trends.google.com/trends/explore?date=today%205-y&amp;geo=US&amp;q=Mars&amp;hl=en</a>
+</div>
+<div id="ref-google_trends_space_nodate" class="csl-entry" role="listitem">
+Google Trends. (n.d.-b). <em>Space <span>Exploration</span></em>. <a href="https://trends.google.com/trends/explore?date=today%205-y&amp;geo=US&amp;q=Space%20Exploration&amp;hl=en">https://trends.google.com/trends/explore?date=today%205-y&amp;geo=US&amp;q=Space%20Exploration&amp;hl=en</a>
+</div>
+<div id="ref-google_trends_spacex_nodate" class="csl-entry" role="listitem">
+Google Trends. (n.d.-c). <em><span>SpaceX</span></em>. <a href="https://trends.google.com/trends/explore?date=today%205-y&amp;geo=US&amp;q=SpaceX&amp;hl=en">https://trends.google.com/trends/explore?date=today%205-y&amp;geo=US&amp;q=SpaceX&amp;hl=en</a>
+</div>
+<div id="ref-next_spaceflight_rocket_nodate" class="csl-entry" role="listitem">
+Next Spaceflight. (n.d.). <em>Rocket <span>Launch</span> <span>Schedule</span></em>. Retrieved February 5, 2024, from <a href="https://www.kaggle.com/datasets/agirlcoding/all-space-missions-from-1957?resource=download&amp;select=Space_Corrected.csv">https://www.kaggle.com/datasets/agirlcoding/all-space-missions-from-1957?resource=download&amp;select=Space_Corrected.csv</a>
+</div>
+<div id="ref-the_planetary_society_mars_2024" class="csl-entry" role="listitem">
+The Planetary Society. (2024). <em>Mars’ <span>Calendar</span></em>. <a href="https://www.planetary.org/articles/mars-calendar">https://www.planetary.org/articles/mars-calendar</a>
+</div>
+<div id="ref-union_of_concerned_scientists_ucs_2023" class="csl-entry" role="listitem">
+Union of Concerned Scientists. (2023). <em><span>UCS</span> <span>Satellite</span> <span>Database</span></em>. <a href="https://www.ucsusa.org/resources/satellite-database">https://www.ucsusa.org/resources/satellite-database</a>
+</div>
+<div id="ref-us_bureau_of_economic_analysis_government_nodate" class="csl-entry" role="listitem">
+U.S. Bureau of Economic Analysis. (n.d.). Government current expenditures: <span>Economic</span> affairs: <span>Space</span> [<span>G160241A027NBEA</span>]. In <em>FRED, Federal Reserve Bank of St. Louis</em>. Retrieved February 5, 2024, from <a href="https://fred.stlouisfed.org/series/G160241A027NBEA">https://fred.stlouisfed.org/series/G160241A027NBEA</a>
+</div>
+<div id="ref-world_meteorological_organization_list_nodate" class="csl-entry" role="listitem">
+World Meteorological Organization. (n.d.). List of all <span>Satellites</span>. In <em>OSCAR - Observing Systems Capability Analysis and Review Tool</em>. Retrieved February 5, 2024, from <a href="https://space.oscar.wmo.int/satellites">https://space.oscar.wmo.int/satellites</a>
+</div>
+<div id="ref-yahoo_finance_ark_2024" class="csl-entry" role="listitem">
+Yahoo Finance. (2024). <em><span>ARK</span> <span>Space</span> <span>Exploration</span> &amp; <span>Innovation</span> <span>ETF</span> (<span>ARKX</span>) <span>Stock</span> <span>Historical</span> <span>Prices</span> &amp; <span>Data</span></em>. <a href="https://finance.yahoo.com/quote/ARKX/history/">https://finance.yahoo.com/quote/ARKX/history/</a>
+</div>
+</div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -466,13 +563,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./07_multivariate_ts.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Multivariate TS Models (ARIMAX/SARIMAX/VAR)</span></span>
+      <a href="../pages/01_introduction.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./09_deep_learning.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Deep Learning for TS</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../pages/03_data_visualization.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data Visualization</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

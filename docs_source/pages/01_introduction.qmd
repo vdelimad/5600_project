@@ -1,0 +1,111 @@
+# Introduction
+
+
+### Beyond the Horizon: How Space Exploration Drives Scientific Innovation and Economic Growth {.unnumbered .unlisted}
+
+::: {.callout-note appearance="simple"}
+This title will be moved to the index page after the grading of Lab 0.
+::: 
+
+
+
+## Topic Explanation
+
+Exploring space has transcended the initial excitement of discovery and the rivalry between nations, maturing into a domain concerned with finding solutions for Earth's challenges. Space exploration has significantly evolved since being initially the realm of national space agencies and the imaginations of science fiction. It now represents an effort to enhance our understanding of the universe, drive economic expansion, foster technological innovation, and encourage collaboration across borders. This expanded focus includes the public's enthusiastic backing of space exploration initiatives, the ongoing missions to Mars, and the substantial financial commitments to space-related ventures.
+
+This project aims to harness time series analysis techniques and data to reveal the underlying patterns, trends, and insights within the field of space exploration. It aims to showcase how these efforts have grown and diversified over time, encompassing both government agencies' endeavors and private sector entities' involvement. Through this analysis, the project aspires to highlight the benefits of space exploration, not only in pushing the boundaries of human knowledge but also in offering tangible benefits for economic development, international cooperation, and the global pursuit of science.
+
+
+## The Big Picture
+
+This study explores essential areas that have shaped the trajectory of space exploration. The analysis begins by focusing on the public domain—where space exploration initially took root—by examining the investments made and sampling some of the scientific knowledge gained as a result. The focus then shifts to the growing public interest in space exploration, reflecting an increasing engagement with space-related topics. Following this, the study delves into the strategic deployment of space infrastructure, particularly satellites, and their indispensable role in facilitating various activities, from scientific research to commercial operations. The discussion then moves to private enterprises' role in space exploration and their impact on financial markets. Finally, the study addresses the state of international collaboration, showcasing how the drive to explore space has expanded globally over time. The project's "Big Picture" is depicted in @fig-big-picture.
+
+
+![The 5 overarching perspectives of the project.](../images/big_picture_chart.jpg){#fig-big-picture}
+
+
+
+## Literature Review
+
+This literature review focuses on exploring the trends in the space exploration industry. The overview includes economic prospects and technological advancements to governmental investments and the role of private enterprises in shaping the industry.
+
+### Economic Prospects {.unnumbered .unlisted}
+
+Space exploration is on the brink of becoming a trillion-dollar industry by 2040, according to @morgan_stanley_space_2020, propelled by declining launch costs, technological advancements, and increased interest from the public and private sectors. With satellite broadband expected to account for half of this growth, introducing reusable rockets and mass-produced satellites promises to slash expenses further, opening up new possibilities such as high-speed global delivery systems and commercial space travel.
+
+### Technological Advancements {.unnumbered .unlisted}
+
+The unveiling of the James Webb Space Telescope's first images in 2022 represented a landmark moment in space exploration, highlighting the synergy between space agencies (NASA, E.S.A., C.S.A.) and the transformative impact of the Fourth Industrial Revolution (@signe_how_2023). This era is marked by the fusion of technologies across digital, physical, and biological spheres, leading to reduced costs and the proliferation of smaller satellites. These advancements are democratizing space access and bringing in a variety of new participants, including private companies and emerging space nations, despite challenges like geopolitical tensions and the necessity for inclusive, equitable regulations.
+
+### Governmental Investments {.unnumbered .unlisted}
+
+On the governmental front, @sadek_global_2022 predicts a global space exploration investment surge to $31 billion by 2031, focusing on transportation, orbital infrastructure, and lunar ventures. This increase is buoyed by heightened cooperation across nations and sectors, aiming for a sustainable lunar presence and extended human activity in low Earth orbit. Noteworthy is the diversification of the space exploration field with new entrants like Australia and the U.A.E., alongside significant projects like the Artemis program and the International Lunar Research Station, signaling a shift towards more inclusive and collaborative space endeavors.
+
+NASA's contributions to the economy and space exploration have been substantial, generating over $71.2 billion in economic output and supporting more than 339,600 jobs in 2021, as reported by @dunbar_nasas_2022. This impact stems from its Moon to Mars missions, climate change research, and the creation of high-quality jobs across the United States, underlining NASA's pivotal role in fostering economic growth and cementing American leadership in global space exploration and science.
+
+
+### The role of private enterprises in shaping the industry {.unnumbered .unlisted}
+
+Lastly, the space sector has witnessed a remarkable surge in investment, growing to more than $10 billion annually by 2021 from $300 million in 2012 (@bland_different_2022). This influx drives innovation and competition, with companies increasingly adopting commercial models and focusing on intellectual property, especially in lower Earth orbit and potential operations between the Earth and the Moon. The industry's evolution is characterized by strategic mergers, product innovation, and a disruptive approach to securing market dominance, indicating a dynamic and competitive future landscape for space exploration and utilization.
+
+The space exploration industry is rapidly evolving, with significant economic opportunities, technological breakthroughs, governmental investments, and private sector innovation. The synergy between public and private entities and international collaboration is essential for steady progress. This background sets the stage for addressing the analysis in the following sections.
+
+
+
+## Analytical Angles
+
+The analytical approach to this project consists of five distinct angles, each designed to portray a different aspect of how space exploration drives scientific innovation and economic growth:
+
+### Public Sector Space Exploration {.unnumbered}
+
+The public sector has been the backbone of space exploration, often leading the charge regarding investment and research. The analysis will examine how government spending on space exploration has influenced scientific discovery and spurred the development of new technologies. Additionally, we will examine the data from pivotal missions like the NASA Curiosity rover to see how they have advanced our understanding of the cosmos and contributed to economic growth through technological spillovers.
+
+![The NASA Curiosity Rover. Source: @nasa_curiosity_nodate](../images/nasa_curiosity.jpg){#fig-nasa-curiosity}
+
+
+### Public Interest in Space Exploration {.unnumbered}
+
+Public interest is another driving force that can shape space exploration's trajectory. This angle will explore how public engagement, as quantified by Google Trends and social media metrics, correlates with funding initiatives and mission priorities. By analyzing several topics within the database, we can determine what aspects of space explorations captivate the audience the most. This perspective also reveals the flow of engagement with space-related topics, reflecting changing curiosity over time.
+
+![Crowds watch SpaceX Falcon Heavy boosters land on Tuesday, Feb. 6, 2018 in Cape Canaveral. Source: @herrera_space_2019](../images/cape_canaveral_crowds.jpg){#fig-cape-canaveral-crowds}
+
+
+### Use of Space Infrastructure {.unnumbered}
+
+Space infrastructure, particularly satellites, is critical to numerous sectors, including telecommunications, navigation, and earth observation. Our analysis will trace the development and deployment of satellites over time, assessing changes in their purposes and control. Additionally, we will look specifically at weather satellites and the patterns within this use case of the technology.
+
+![Artist's impression of satellites and debris on orbit around Earth. Source: @european_space_agency_debris_2008](../images/esa_satellites.jpg){#fig-esa-satellites}
+
+
+
+### Private Sector Space Exploration {.unnumbered}
+
+The private sector's entry into space exploration has introduced new dynamics into the industry, emphasizing cost reduction and innovation. This section will examine the private sector, particularly in the growing area of commercial space activities, through the lens of the ARKX Space Exploration ETF. This dataset sheds light on the financial dimensions of space exploration and highlights the growing importance of private companies in advancing the frontiers of space.
+
+![SpaceX's launch from the Kennedy Space Center’s Launch Complex 39A. Source: @spacex_mission_nodate](../images/spacex_kennedy.jpg){#fig-spacex-kennedy}
+
+
+### International Participation in Space Exploration {.unnumbered}
+
+Lastly, international participation in space exploration is evaluated through a database of launches by country. This analysis provides a global overview of space endeavors, highlighting the collaborative and competitive dynamics that fuel the industry.
+
+![The International Space Station is widely regarded as a symbol of international scientific collaboration. Source: @nasa_international_nodate](../images/iss.jpg){#fig-iss}
+
+
+
+
+## Guiding Questions
+
+1. How do weather patterns on Mars compare over time, and what implications might these have for future manned missions?
+1. How has government expenditure on space exploration evolved over the past decade, and what trends can be identified in the allocation of resources to different space activities?
+1. How does public interest in space exploration respond to major space exploration events or milestones?
+1. What relationship exists between public interest in space exploration, measured through Google Trends and social media metrics, and the increase in space-related funding and missions?
+1. What trends can be identified in the launch of meteorological satellites, and how does this reflect the global emphasis on weather monitoring and climate change?
+1. How has the number and type of satellites in orbit changed over time, and what does this indicate about the evolving uses of space?
+1. What investment trends can be discerned from the ARKX Space Exploration ETF data, and how do these reflect the private sector's confidence in space exploration as a viable industry?
+1. How does the performance of the ARKX ETF correlate with major announcements or achievements by private space companies?
+1. Analyzing the launches by country database, can we identify temporal trends in international participation and leadership in space exploration?
+1. How do emerging space nations fit into the global space exploration landscape, and what unique contributions do they offer?
+1. How do the activities in the public sector of space exploration influence trends and interests in the private sector, and vice versa?
+1. Can we identify patterns or cycles in government spending on space exploration, and how do these align with political or economic cycles?
+

@@ -4,7 +4,7 @@ project:
 
 
 book:
-  title: "Space Exploration with Time Series"
+  title: "5600 Portfolio Project - Victor De Lima"
   date: "2024-05-03"
   date-format: "YYYY-MM-DD"
   search: 
@@ -20,19 +20,19 @@ book:
         aria-label: GitHub
   chapters:
     - index.qmd
-    - dv.qmd
-    - author.qmd
-    - 01_introduction.qmd
-    - 02_data_sources.qmd
-    - 03_data_visualization.qmd
-    - 04_eda.qmd
-    - 05_univariate_ts.qmd
-    - 07_multivariate_ts.qmd
-    - 08_financial_ts.qmd
-    - 09_deep_learning.qmd
-    - 10_other.qmd
-    - 11_conclusions.qmd
-    - references.qmd
+    - pages/dv.qmd
+    - pages/author.qmd
+    - pages/01_introduction.qmd
+    - pages/02_data_sources.qmd
+    - pages/03_data_visualization.qmd
+    - pages/04_eda.qmd
+    - pages/05_univariate_ts.qmd
+    - pages/07_multivariate_ts.qmd
+    - pages/08_financial_ts.qmd
+    - pages/09_deep_learning.qmd
+    - pages/10_other.qmd
+    - pages/11_conclusions.qmd
+    - pages/references.qmd
 
 format:
   html:
@@ -43,8 +43,8 @@ format:
     toc-title: Contents
 
 
-bibliography: references.bib
-csl: apa.csl
+bibliography: assets/references.bib
+csl: assets/apa.csl
 
 
 
