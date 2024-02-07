@@ -8,7 +8,7 @@
 
 <meta name="dcterms.date" content="2024-05-03">
 
-<title>5600 Portfolio Project - Victor De Lima</title>
+<title>Beyond the Horizon: How Space Exploration Drives Scientific Innovation and Economic Growth</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,7 +31,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./pages/dv.html" rel="next">
+<link href="./pages/01_introduction.html" rel="next">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -75,7 +75,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Time Series</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">About the Author</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -103,18 +103,6 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Time Series</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./pages/dv.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Time Series Data Visualization</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./pages/author.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">About the Author</span></a>
   </div>
 </li>
@@ -195,7 +183,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">5600 Portfolio Project - Victor De Lima</h1>
+<h1 class="title">Beyond the Horizon: How Space Exploration Drives Scientific Innovation and Economic Growth</h1>
 </div>
 
 
@@ -216,30 +204,33 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="time-series" class="level1 unnumbered">
-<h1 class="unnumbered">Time Series</h1>
-<section id="what-is-a-time-series" class="level3">
-<h3 class="anchored" data-anchor-id="what-is-a-time-series">What is a Time Series ?</h3>
-<ul>
-<li><p>Any metric that is measured over regular time intervals makes a Time Series. A time series is a sequence of data points or observations collected or recorded over a period of time at specific, equally spaced intervals. Each data point in a time series is associated with a particular timestamp or time period, making it possible to analyze and study how a particular variable or phenomenon changes over time. Time series data can be found in various domains and can represent a wide range of phenomena, including financial data, economic indicators, weather measurements, stock prices, sales figures, and more.</p>
-<ul>
-<li>Example: Weather data, Stock prices, Industry forecasts, etc are some of the common ones.</li>
-</ul></li>
-<li><p>The analysis of experimental data that have been observed at different points in time leads to new and unique problems in statistical modeling and inference.</p></li>
-<li><p>The obvious correlation introduced by the sampling of adjacent points in time can severely restrict the applicability of the many conventional statistical methods traditionally dependent on the assumption that these adjacent observations are independent and identically distributed.</p></li>
-</ul>
-<p><strong>Key characteristics of time series data include:</strong></p>
-<p><strong>Temporal Order:</strong> Time series data is ordered chronologically, with each data point representing an observation at a specific point in time. The order of data points is critical for understanding trends and patterns over time.</p>
-<p><strong>Equally Spaced Intervals:</strong> In most cases, time series data is collected at regular intervals, such as hourly, daily, weekly, monthly, or yearly. However, irregularly spaced time series data can also exist.</p>
-<p><strong>Dependency:</strong> Time series data often exhibits temporal dependency, meaning that the value at a given time is influenced by or related to the values at previous times. This dependency can take various forms, including trends, seasonality. This serial correlation is called as autocorrelation.</p>
-<p><strong>Components:</strong> Time series data can typically be decomposed into various components, including:</p>
-<p><em>Trend:</em> The long-term movement or direction in the data. <em>Seasonality:</em> Repeating patterns or cycles that occur at fixed intervals. <em>Noise/Irregularity:</em> Random fluctuations or variability in the data that cannot be attributed to the trend or seasonality.</p>
-<p><strong>Applications:</strong> Time series data is widely used for various applications, including forecasting future values, identifying patterns and anomalies, understanding underlying trends, and making informed decisions based on historical data.</p>
-<p>Analyzing time series data involves techniques like time series decomposition, smoothing, statistical modeling, and forecasting. This class will cover but not be limited to traditional time series modeling including ARIMA, SARIMA, the multivariate Time Series modeling including; ARIMAX, SARIMAX, and VAR models, Financial Time Series modeling including; ARCH, GARCH models, and E-GARCH, M-GARCH..ect, Bayesian structural time series (BSTS) models, Spectral Analysis and Deep Learning Techniques for Time Series. Researchers and analysts use software tools like Python, R, and specialized time series libraries to work with and analyze time series data effectively.</p>
-<p>Time series analysis is essential in fields such as finance, economics, epidemiology, environmental science, engineering, and many others, as it provides insights into how variables change over time and allows for the development of predictive models to forecast future trends and outcomes.</p>
-
-
+<section id="about-the-author" class="level1 unnumbered">
+<h1 class="unnumbered">About the Author</h1>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<section id="image-panel" class="level3 quarto-layout-cell" style="flex-basis: 30.0%;justify-content: center;">
+<div class="quarto-about-jolla">
+    <img src="images/victor_de_lima.jpg" class="about-image
+    round" style="height: 13em; width: 13em; margin-bottom: 0px !important;">
+</div>
 </section>
+<section id="text-panel" class="level3 quarto-layout-cell" style="flex-basis: 70.0%;justify-content: center;">
+<div class="quarto-title">
+    <h1 class="mb-1">Victor De Lima</h1>
+    <h3 class="mt-1 mb-1 anchored" data-anchor-id="text-panel">Student, MS in Data Science and Analytics</h3>
+    <p class="mb-0">Georgetown University</p>
+  </div>
+</section>
+</div>
+</div>
+
+<p>Hello! My name is Victor De Lima. I’m a student interested in machine learning algorithms research, particularly in improving model performance in real-world applications, enhancing interpretability, and optimizing the trade-offs between model quality, training time, and financial cost. I am currently pursuing an M.S. in Data Science at Georgetown University in Washington, DC.</p>
+<p>My professional journey spans multiple roles and industries. I began my career in data analytics consulting, a foundation I later built upon in the finance industry to develop cutting-edge bond, company, and market analysis models. In the summer of 2023, I held the position of Data Scientist with the Arlington County Government.</p>
+<p>My experience also includes various research projects, such as using machine learning methods for recommendation systems and materials science problems. Currently, I am a Research Assistant at Georgetown’s AI-Measurement and Data Science lab. Complementing my research, actively engaging in Teaching Assistant roles has significantly enhanced my academic journey. Eager to further deepen my expertise, I am currently intent on pursuing a Ph.D.</p>
+<p>Throughout my studies, I’ve concentrated on subjects such as optimization, deep learning, and reinforcement learning. I actively use machine learning frameworks like PyTorch and Scikit-learn in my projects and research work. Despite my preference for Python, my toolkit comprises various programming languages and complementary tools, such as R and LaTeX.</p>
+<p>When not crunching numbers or writing code, I love exploring physics and mathematics concepts and listening to great science communicators.</p>
+
+
 </section>
 
 </main> <!-- /main -->
@@ -494,8 +485,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   <div class="nav-page nav-page-previous">
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./pages/dv.html" class="pagination-link">
-        <span class="nav-page-text">Time Series Data Visualization</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./pages/01_introduction.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

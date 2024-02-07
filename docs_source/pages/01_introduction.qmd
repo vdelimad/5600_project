@@ -1,11 +1,8 @@
 # Introduction
 
 
-### Beyond the Horizon: How Space Exploration Drives Scientific Innovation and Economic Growth {.unnumbered .unlisted}
 
-::: {.callout-note appearance="simple"}
-This title will be moved to the index page after the grading of Lab 0.
-::: 
+
 
 
 

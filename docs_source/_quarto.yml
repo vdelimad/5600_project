@@ -4,9 +4,14 @@ project:
 
 
 book:
-  title: "5600 Portfolio Project - Victor De Lima"
+  title: "Beyond the Horizon: How Space Exploration Drives Scientific Innovation and Economic Growth"
   date: "2024-05-03"
   date-format: "YYYY-MM-DD"
+  #author:
+  #  - name: Victor De Lima
+  #    affiliations: Georgetown University, M.S. in Data Science and Analytics
+  sidebar:
+    title: 5600 Portfolio Project - Victor De Lima
   search: 
     location: sidebar
     type: textbox
@@ -20,8 +25,6 @@ book:
         aria-label: GitHub
   chapters:
     - index.qmd
-    - pages/dv.qmd
-    - pages/author.qmd
     - pages/01_introduction.qmd
     - pages/02_data_sources.qmd
     - pages/03_data_visualization.qmd
