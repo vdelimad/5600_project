@@ -31,9 +31,9 @@ The raw data collected for this section is available [here](https://drive.google
 Time series in this section include:
 
 - Public yearly expenditure on space exploration in the U.S.
-- Mars daily air temperature
-- Mars daily ground temperature
-- Mars daily sunrise and sunset times
+- Mars daily air temperature (seasonal)
+- Mars daily ground temperature (seasonal)
+- Mars daily sunrise and sunset times (seasonal)
 
 ::: 
 
