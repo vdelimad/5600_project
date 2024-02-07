@@ -2,6 +2,12 @@
 toc: false
 ---
 
+::: {.callout-note appearance="simple"}
+All the code used for this project is publicly available on [Github](https://github.com/vdelimad/5600_project).
+::: 
+
+
+
 # About the Author {.unnumbered}
 
 

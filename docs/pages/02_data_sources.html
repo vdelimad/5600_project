@@ -80,6 +80,9 @@ div.csl-indent {
     "search-label": "Search"
   }
 }</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 <link rel="stylesheet" href="styles.css">
@@ -205,7 +208,7 @@ div.csl-indent {
   <li><a href="#public-interest-in-space-exploration" id="toc-public-interest-in-space-exploration" class="nav-link" data-scroll-target="#public-interest-in-space-exploration"><span class="header-section-number">2.2</span> Public Interest in Space Exploration</a></li>
   <li><a href="#use-of-space-infrastructure" id="toc-use-of-space-infrastructure" class="nav-link" data-scroll-target="#use-of-space-infrastructure"><span class="header-section-number">2.3</span> Use of Space Infrastructure</a></li>
   <li><a href="#private-sector-space-exploration" id="toc-private-sector-space-exploration" class="nav-link" data-scroll-target="#private-sector-space-exploration"><span class="header-section-number">2.4</span> Private Sector Space Exploration</a></li>
-  <li><a href="#international-cooperation-in-space-exploration" id="toc-international-cooperation-in-space-exploration" class="nav-link" data-scroll-target="#international-cooperation-in-space-exploration"><span class="header-section-number">2.5</span> International Cooperation in Space Exploration</a></li>
+  <li><a href="#global-involvement-in-space-exploration" id="toc-global-involvement-in-space-exploration" class="nav-link" data-scroll-target="#global-involvement-in-space-exploration"><span class="header-section-number">2.5</span> Global Involvement in Space Exploration</a></li>
   </ul>
 </nav>
     </div>
@@ -229,42 +232,785 @@ div.csl-indent {
 
 </header>
 
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<ul>
+<li>All the data used for this project is available <a href="https://drive.google.com/drive/folders/12TitZpUuNKQ8eOs6QGxapIH0S1hUC5Nj?usp=drive_link">here</a>.</li>
+<li>Links to the data sources are included in the citations, available by hovering over them.</li>
+</ul>
+</div>
+</div>
+</div>
+<!--
+##############################################
+######## Public Sector Space Exploration
+##############################################
+-->
 <section id="public-sector-space-exploration" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="public-sector-space-exploration"><span class="header-section-number">2.1</span> Public Sector Space Exploration</h2>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The raw data collected for this section is available <a href="https://drive.google.com/drive/folders/1nT_PhYAVFN1hPbnnE0OxxhDoX4y6C_t3?usp=drive_link">here</a>, and the sources are provided in the text.</p>
+<p>Time series in this section include:</p>
 <ul>
-<li>Mars Curiosity Rover Weather Data was obtained from <span class="citation" data-cites="centro_de_astrobiologia_csic-inta_rems_nodate">Centro de Astrobiología (CSIC-INTA) (<a href="references.html#ref-centro_de_astrobiologia_csic-inta_rems_nodate" role="doc-biblioref">n.d.</a>)</span> using Python.
-<ul>
-<li>The data presented in the widget is derived from readings by the Rover Environmental Monitoring Station (REMS) aboard the Mars Science Laboratory (MSL) rover on Mars, reflecting the conditions at the REMS site. The presence and activities of the MSL rover affect these readings (including its position, temperature, orientation, shading, and dust accumulation). REMS measurements with timing vary daily, which impacts the day-to-day variability of the reported data <span class="citation" data-cites="centro_de_astrobiologia_csic-inta_rems_nodate">(<a href="references.html#ref-centro_de_astrobiologia_csic-inta_rems_nodate" role="doc-biblioref">Centro de Astrobiología (CSIC-INTA), n.d.</a>)</span>.</li>
-<li>Year starts and seasons based on longitudes were obtained from <span class="citation" data-cites="the_planetary_society_mars_2024">The Planetary Society (<a href="references.html#ref-the_planetary_society_mars_2024" role="doc-biblioref">2024</a>)</span>.</li>
-</ul></li>
-<li>Public Expenditure on Space Exploration data is from <span class="citation" data-cites="us_bureau_of_economic_analysis_government_nodate">U.S. Bureau of Economic Analysis (<a href="references.html#ref-us_bureau_of_economic_analysis_government_nodate" role="doc-biblioref">n.d.</a>)</span>.</li>
+<li>Public yearly expenditure on space exploration in the U.S.</li>
+<li>Mars daily air temperature</li>
+<li>Mars daily ground temperature</li>
+<li>Mars daily sunrise and sunset times</li>
 </ul>
+</div>
+</div>
+</div>
+<section id="public-expenditure-on-space-exploration" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="public-expenditure-on-space-exploration">Public Expenditure on Space Exploration</h3>
+<p>The data on Public Expenditure on Space Exploration, sourced from <span class="citation" data-cites="us_bureau_of_economic_analysis_government_nodate">U.S. Bureau of Economic Analysis (<a href="references.html#ref-us_bureau_of_economic_analysis_government_nodate" role="doc-biblioref">n.d.</a>)</span>, traces the financial commitment of the United States to space exploration initiatives from the late 1950s. This dataset reveals a progressive increase in spending over the initial years, starting from a modest 0.150 billion dollars in 1959. The trend of escalating investment is further underscored by the 1963 figure, which rose quickly to 1.801 billion dollars, showcasing the U.S.’s commitment to establishing its presence in space and achieving technological supremacy during the Cold War era. As of 2022, this figure had grown to 15.5 billion dollars.</p>
+<p>Here is a view of a sample of the data <span class="citation" data-cites="us_bureau_of_economic_analysis_government_nodate">(<a href="references.html#ref-us_bureau_of_economic_analysis_government_nodate" role="doc-biblioref">U.S. Bureau of Economic Analysis, n.d.</a>)</span>:</p>
+<div class="cell" data-execution_count="2">
+<div class="cell-output cell-output-display">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">DATE</th>
+<th data-quarto-table-cell-role="th">G160241A027NBEA</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>1959-01-01</td>
+<td>0.150</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>1960-01-01</td>
+<td>0.323</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>1961-01-01</td>
+<td>0.444</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>1962-01-01</td>
+<td>0.928</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>1963-01-01</td>
+<td>1.801</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="mars-curiosity-rover-weather-data" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="mars-curiosity-rover-weather-data">Mars Curiosity Rover Weather Data</h3>
+<p>The Mars Curiosity Rover Weather Data, collected from <span class="citation" data-cites="centro_de_astrobiologia_csic-inta_rems_nodate">Centro de Astrobiología (CSIC-INTA) (<a href="references.html#ref-centro_de_astrobiologia_csic-inta_rems_nodate" role="doc-biblioref">n.d.</a>)</span> using Python, offers detailed meteorological observations from the Rover Environmental Monitoring Station (REMS) aboard the Mars Science Laboratory (MSL) rover. This dataset captures various aspects of the Martian atmosphere, such as air and ground temperatures, pressure, and ultraviolet radiation levels, with daily variability influenced by the rover’s activities and environmental factors like temperature, orientation, shading, and dust accumulation. For instance, in late January 2024, during Mars’ autumn season, the data shows a fluctuation in air temperature ranging from -1°C to 3°C for maximums and plummeting to as low as -75°C for minimums. Ground temperatures varied between 13°C and 16°C for maximums, with minimums reaching down to -84°C. The code used to collect the data is available <a href="https://github.com/vdelimad/5600_project/blob/main/notebooks/1_data_collection/mars_widget_data_collect.ipynb">here</a>, and the data used to process it is available <a href="https://github.com/vdelimad/5600_project/blob/main/notebooks/2_data_processing/mars_widget_data_process.ipynb">here</a>. Additional data containing the year starts and seasons in Mars based on longitudes was obtained from <span class="citation" data-cites="the_planetary_society_mars_2024">The Planetary Society (<a href="references.html#ref-the_planetary_society_mars_2024" role="doc-biblioref">2024</a>)</span>.</p>
+<p>Here is a view of a sample of the data (scrollable to the right) <span class="citation" data-cites="centro_de_astrobiologia_csic-inta_rems_nodate">(<a href="references.html#ref-centro_de_astrobiologia_csic-inta_rems_nodate" role="doc-biblioref">Centro de Astrobiología (CSIC-INTA), n.d.</a>)</span>:</p>
+<div class="cell" data-execution_count="3">
+<div class="cell-output cell-output-display">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">curiosity_sol</th>
+<th data-quarto-table-cell-role="th">earth_date_utc</th>
+<th data-quarto-table-cell-role="th">mars_year</th>
+<th data-quarto-table-cell-role="th">mars_month</th>
+<th data-quarto-table-cell-role="th">solar_longitude_degrees</th>
+<th data-quarto-table-cell-role="th">season</th>
+<th data-quarto-table-cell-role="th">air_temperature_max_celsius</th>
+<th data-quarto-table-cell-role="th">air_temperature_min_celsius</th>
+<th data-quarto-table-cell-role="th">ground_temperature_max_celsius</th>
+<th data-quarto-table-cell-role="th">ground_temperature_min_celsius</th>
+<th data-quarto-table-cell-role="th">pressure_current_pascals</th>
+<th data-quarto-table-cell-role="th">sunrise_and_sunset_max</th>
+<th data-quarto-table-cell-role="th">sunrise_and_sunset_min</th>
+<th data-quarto-table-cell-role="th">ultraviolet_radiation_current</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>4081</td>
+<td>2024-01-29</td>
+<td>37</td>
+<td>7</td>
+<td>189</td>
+<td>autumn</td>
+<td>-1.0</td>
+<td>-69.0</td>
+<td>13.0</td>
+<td>-78.0</td>
+<td>730.0</td>
+<td>05:18:00</td>
+<td>17:21:00</td>
+<td>high</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>4080</td>
+<td>2024-01-28</td>
+<td>37</td>
+<td>7</td>
+<td>188</td>
+<td>autumn</td>
+<td>-2.0</td>
+<td>-72.0</td>
+<td>14.0</td>
+<td>-78.0</td>
+<td>729.0</td>
+<td>05:18:00</td>
+<td>17:21:00</td>
+<td>high</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>4079</td>
+<td>2024-01-27</td>
+<td>37</td>
+<td>7</td>
+<td>188</td>
+<td>autumn</td>
+<td>2.0</td>
+<td>-75.0</td>
+<td>14.0</td>
+<td>-78.0</td>
+<td>729.0</td>
+<td>05:18:00</td>
+<td>17:21:00</td>
+<td>high</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>4078</td>
+<td>2024-01-26</td>
+<td>37</td>
+<td>7</td>
+<td>187</td>
+<td>autumn</td>
+<td>3.0</td>
+<td>-73.0</td>
+<td>16.0</td>
+<td>-84.0</td>
+<td>728.0</td>
+<td>05:18:00</td>
+<td>17:21:00</td>
+<td>high</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>4077</td>
+<td>2024-01-25</td>
+<td>37</td>
+<td>7</td>
+<td>186</td>
+<td>autumn</td>
+<td>0.0</td>
+<td>-70.0</td>
+<td>15.0</td>
+<td>-75.0</td>
+<td>728.0</td>
+<td>05:18:00</td>
+<td>17:20:00</td>
+<td>high</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p><br></p>
+<p>As an example, <a href="#fig-martian-air-temperature">Figure&nbsp;<span>2.1</span></a> shows the Martian air temperature over time. The dates have been proxied to that of Earth for the plot.</p>
+<div id="fig-martian-air-temperature" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../../docs_source/images/results/martian_air_temperature_over_time.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure&nbsp;2.1: Martian Air Temperature Over Time</figcaption>
+</figure>
+</div>
+<!--
+##############################################
+######## Public Interest in Space Exploration
+##############################################
+-->
+</section>
 </section>
 <section id="public-interest-in-space-exploration" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="public-interest-in-space-exploration"><span class="header-section-number">2.2</span> Public Interest in Space Exploration</h2>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The raw data collected for this section is available <a href="https://drive.google.com/drive/folders/1nYxxYyJ0VbSfWlQkTuUjMMOeFOsuffTC?usp=drive_link">here</a>, and the sources are provided in the text.</p>
+<p>Time series in this section include:</p>
 <ul>
-<li>From Google Trends, we obtained data on Mars <span class="citation" data-cites="google_trends_mars_nodate">(<a href="references.html#ref-google_trends_mars_nodate" role="doc-biblioref">Google Trends, n.d.-a</a>)</span>, Space Exploration <span class="citation" data-cites="google_trends_space_nodate">(<a href="references.html#ref-google_trends_space_nodate" role="doc-biblioref">Google Trends, n.d.-b</a>)</span>, and SpaceX <span class="citation" data-cites="google_trends_spacex_nodate">(<a href="references.html#ref-google_trends_spacex_nodate" role="doc-biblioref">Google Trends, n.d.-c</a>)</span>.</li>
+<li>Google Trends data for “Space Exploration”</li>
+<li>Google Trends data for “Mars”</li>
+<li>Google Trends data for “SpaceX”</li>
+<li>Google Trends data for “Space Exploration”</li>
 </ul>
+</div>
+</div>
+</div>
+<section id="google-trends-data" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="google-trends-data">Google Trends Data</h3>
+<p>The Google Trends data provides insights into the public interest in topics of Mars <span class="citation" data-cites="google_trends_mars_nodate">(<a href="references.html#ref-google_trends_mars_nodate" role="doc-biblioref">Google Trends, n.d.-a</a>)</span>, Space Exploration <span class="citation" data-cites="google_trends_space_nodate">(<a href="references.html#ref-google_trends_space_nodate" role="doc-biblioref">Google Trends, n.d.-c</a>)</span>, SpaceX <span class="citation" data-cites="google_trends_spacex_nodate">(<a href="references.html#ref-google_trends_spacex_nodate" role="doc-biblioref">Google Trends, n.d.-d</a>)</span> and Satellites <span class="citation" data-cites="google_trends_satellites_nodate">(<a href="references.html#ref-google_trends_satellites_nodate" role="doc-biblioref">Google Trends, n.d.-b</a>)</span> and satellites over five years. By examining weekly search volumes in the United States, we can observe fluctuations in interest levels. These numbers reflect the relative search interest in space exploration, indicating how public engagement with the topic changes over time. This data can be helpful to understand trends, seasonal variations, or impacts of specific events on the public’s interest in space-related topics.</p>
+<p>Here is a view of a sample of the data [<span class="citation" data-cites="google_trends_space_nodate">(<a href="references.html#ref-google_trends_space_nodate" role="doc-biblioref">Google Trends, n.d.-c</a>)</span>]:</p>
+<div class="cell" data-execution_count="4">
+<div class="cell-output cell-output-display">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Category: All categories</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Week</td>
+<td>space exploration: (United States)</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2019-02-03</td>
+<td>59</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2019-02-10</td>
+<td>65</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2019-02-17</td>
+<td>61</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2019-02-24</td>
+<td>74</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<!--
+##############################################
+######## Use of Space Infrastructure
+##############################################
+-->
+</section>
 </section>
 <section id="use-of-space-infrastructure" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="use-of-space-infrastructure"><span class="header-section-number">2.3</span> Use of Space Infrastructure</h2>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The raw data collected for this section is available <a href="https://drive.google.com/drive/folders/1nc6PluHYQPzXGjBo-FRQHknH2_EpYTr2?usp=drive_link">here</a>, and the sources are provided in the text.</p>
+<p>Time series in this section include:</p>
 <ul>
-<li>Meteorological Satellite Launch Database is from <span class="citation" data-cites="world_meteorological_organization_list_nodate">World Meteorological Organization (<a href="references.html#ref-world_meteorological_organization_list_nodate" role="doc-biblioref">n.d.</a>)</span></li>
-<li>Satellites Currently in Orbit data is from <span class="citation" data-cites="union_of_concerned_scientists_ucs_2023">Union of Concerned Scientists (<a href="references.html#ref-union_of_concerned_scientists_ucs_2023" role="doc-biblioref">2023</a>)</span></li>
+<li>Country of operator of satellite launched.</li>
+<li>Purpose of satellite launched.</li>
+<li>Status of weather satellites launched (includes launch and end of life date).</li>
+<li>Agency of weather satellites launched.</li>
 </ul>
+</div>
+</div>
+</div>
+<section id="satellite-data" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="satellite-data">Satellite Data</h3>
+<p>The data extracted from <span class="citation" data-cites="world_meteorological_organization_list_nodate">World Meteorological Organization (<a href="references.html#ref-world_meteorological_organization_list_nodate" role="doc-biblioref">n.d.</a>)</span>, the Meteorological Satellite Launch Database encompasses various information such as the satellite’s name, its official U.N. registry country, the operator or owner country, the entity managing it, its intended users, purpose, and more specific operational details. For instance, the dataset includes 1HOPSAT-TD, a high optical performance satellite by Hera Systems for Earth observation through infrared imaging in a low Earth orbit (LEO), with a launch date of November 12, 2019. This dataset shows the global engagement in space exploration and utilization for varied purposes, from commercial to educational. Additionally, the Satellites Currently in Orbit Dataset from <span class="citation" data-cites="union_of_concerned_scientists_ucs_2023">Union of Concerned Scientists (<a href="references.html#ref-union_of_concerned_scientists_ucs_2023" role="doc-biblioref">2023</a>)</span> shows similar information but is limited to active satellites.</p>
+<p>Here is a view of a sample of the data <span class="citation" data-cites="union_of_concerned_scientists_ucs_2023">(<a href="references.html#ref-union_of_concerned_scientists_ucs_2023" role="doc-biblioref">Union of Concerned Scientists, 2023</a>)</span>:</p>
+<div class="cell" data-execution_count="5">
+<div class="cell-output cell-output-display">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Name of Satellite, Alternate Names</th>
+<th data-quarto-table-cell-role="th">Current Official Name of Satellite</th>
+<th data-quarto-table-cell-role="th">Country/Org of UN Registry</th>
+<th data-quarto-table-cell-role="th">Country of Operator/Owner</th>
+<th data-quarto-table-cell-role="th">Operator/Owner</th>
+<th data-quarto-table-cell-role="th">Users</th>
+<th data-quarto-table-cell-role="th">Purpose</th>
+<th data-quarto-table-cell-role="th">Detailed Purpose</th>
+<th data-quarto-table-cell-role="th">Class of Orbit</th>
+<th data-quarto-table-cell-role="th">Type of Orbit</th>
+<th data-quarto-table-cell-role="th">Longitude of GEO (degrees)</th>
+<th data-quarto-table-cell-role="th">Perigee (km)</th>
+<th data-quarto-table-cell-role="th">Apogee (km)</th>
+<th data-quarto-table-cell-role="th">Eccentricity</th>
+<th data-quarto-table-cell-role="th">Inclination (degrees)</th>
+<th data-quarto-table-cell-role="th">Period (minutes)</th>
+<th data-quarto-table-cell-role="th">Launch Mass (kg.)</th>
+<th data-quarto-table-cell-role="th">Dry Mass (kg.)</th>
+<th data-quarto-table-cell-role="th">Power (watts)</th>
+<th data-quarto-table-cell-role="th">Date of Launch</th>
+<th data-quarto-table-cell-role="th">Expected Lifetime (yrs.)</th>
+<th data-quarto-table-cell-role="th">Contractor</th>
+<th data-quarto-table-cell-role="th">Country of Contractor</th>
+<th data-quarto-table-cell-role="th">Launch Site</th>
+<th data-quarto-table-cell-role="th">Launch Vehicle</th>
+<th data-quarto-table-cell-role="th">COSPAR Number</th>
+<th data-quarto-table-cell-role="th">NORAD Number</th>
+<th data-quarto-table-cell-role="th">Comments</th>
+<th data-quarto-table-cell-role="th">Unnamed: 28</th>
+<th data-quarto-table-cell-role="th">Source Used for Orbital Data</th>
+<th data-quarto-table-cell-role="th">Source</th>
+<th data-quarto-table-cell-role="th">Source.1</th>
+<th data-quarto-table-cell-role="th">Source.2</th>
+<th data-quarto-table-cell-role="th">Source.3</th>
+<th data-quarto-table-cell-role="th">Source.4</th>
+<th data-quarto-table-cell-role="th">Source.5</th>
+<th data-quarto-table-cell-role="th">Source.6</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>1HOPSAT-TD (1st-generation High Optical Perfor...</td>
+<td>1HOPSAT-TD</td>
+<td>NR</td>
+<td>USA</td>
+<td>Hera Systems</td>
+<td>Commercial</td>
+<td>Earth Observation</td>
+<td>Infrared Imaging</td>
+<td>LEO</td>
+<td>Non-Polar Inclined</td>
+<td>0.0</td>
+<td>566</td>
+<td>576</td>
+<td>0.001510</td>
+<td>36.90</td>
+<td>96.08</td>
+<td>22</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>11/12/2019</td>
+<td>0.5</td>
+<td>Hera Systems</td>
+<td>USA</td>
+<td>Satish Dhawan Space Centre</td>
+<td>PSLV</td>
+<td>2019-089H</td>
+<td>44859</td>
+<td>Pathfinder for planned earth observation const...</td>
+<td>NaN</td>
+<td>JMSatcat/3_20</td>
+<td>https://spaceflightnow.com/2019/12/11/indias-5...</td>
+<td>https://www.herasys.com/</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>AAC AIS-Sat1 (Kelpie 1)</td>
+<td>AAC AIS-Sat1&nbsp;(Kelpie 1)</td>
+<td>United Kingdom</td>
+<td>United Kingdom</td>
+<td>AAC Clyde Space</td>
+<td>Commercial</td>
+<td>Earth Observation</td>
+<td>Automatic Identification System (AIS)</td>
+<td>LEO</td>
+<td>Sun-Synchronous</td>
+<td>0.0</td>
+<td>637</td>
+<td>654</td>
+<td>0.001510</td>
+<td>98.00</td>
+<td>95</td>
+<td>4</td>
+<td>4</td>
+<td>NaN</td>
+<td>03/01/2023</td>
+<td>NaN</td>
+<td>AAC Clyde Space</td>
+<td>Sweden/UK/USA/Netherlands</td>
+<td>Cape Canaveral</td>
+<td>Falcon 9</td>
+<td>2023-001DC</td>
+<td>55107</td>
+<td>Provide AIS information to Orbcomm.</td>
+<td>NaN</td>
+<td>JMSatcat/9_23</td>
+<td>https://www.aac-clyde.space/articles/aac-clyde...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>Aalto-1</td>
+<td>Aalto-1</td>
+<td>Finland</td>
+<td>Finland</td>
+<td>Aalto University</td>
+<td>Civil</td>
+<td>Technology Development</td>
+<td>NaN</td>
+<td>LEO</td>
+<td>Sun-Synchronous</td>
+<td>0.0</td>
+<td>497</td>
+<td>517</td>
+<td>0.001450</td>
+<td>97.45</td>
+<td>94.7</td>
+<td>5</td>
+<td>NaN</td>
+<td>4.5</td>
+<td>23/06/2017</td>
+<td>2.0</td>
+<td>Aalto University</td>
+<td>Finland</td>
+<td>Satish Dhawan Space Centre</td>
+<td>PSLV</td>
+<td>2017-036L</td>
+<td>42775</td>
+<td>Technology development and education.</td>
+<td>NaN</td>
+<td>JMSatcat/10_17</td>
+<td>https://directory.eoportal.org/web/eoportal/sa...</td>
+<td>NaN</td>
+<td>http://www.planet4589.org/space/log/satcat.txt</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>AAt-4</td>
+<td>AAt-4</td>
+<td>Denmark</td>
+<td>Denmark</td>
+<td>University of Aalborg</td>
+<td>Civil</td>
+<td>Earth Observation</td>
+<td>Automatic Identification System (AIS)</td>
+<td>LEO</td>
+<td>Sun-Synchronous</td>
+<td>0.0</td>
+<td>442</td>
+<td>687</td>
+<td>0.001510</td>
+<td>98.20</td>
+<td>95.9</td>
+<td>1</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>25/04/2016</td>
+<td>NaN</td>
+<td>University of Aalborg</td>
+<td>Denmark</td>
+<td>Guiana Space Center</td>
+<td>Soyuz-2.1a</td>
+<td>2016-025E</td>
+<td>41460</td>
+<td>Carries AIS system.</td>
+<td>NaN</td>
+<td>Space50</td>
+<td>http://spaceflightnow.com/2016/04/26/soyuz-bla...</td>
+<td>NaN</td>
+<td>http://space50.org/objekt.php?mot=2016-025E&amp;ja...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>ABS-2 (Koreasat-8, ST-3)</td>
+<td>ABS-2</td>
+<td>NR</td>
+<td>Multinational</td>
+<td>Asia Broadcast Satellite Ltd.</td>
+<td>Commercial</td>
+<td>Communications</td>
+<td>NaN</td>
+<td>GEO</td>
+<td>NaN</td>
+<td>75.0</td>
+<td>35,778</td>
+<td>35,793</td>
+<td>0.000178</td>
+<td>0.08</td>
+<td>1436.03</td>
+<td>6,330</td>
+<td>NaN</td>
+<td>16,000.00</td>
+<td>06/02/2014</td>
+<td>15.0</td>
+<td>Space Systems/Loral</td>
+<td>USA</td>
+<td>Guiana Space Center</td>
+<td>Ariane 5 ECA</td>
+<td>2014-006A</td>
+<td>39508</td>
+<td>32 C-band, 51 Ku-band, and 6 Ka-band transpond...</td>
+<td>NaN</td>
+<td>ZARYA</td>
+<td>http://www.absatellite.net/satellite-fleet/?sa...</td>
+<td>NaN</td>
+<td>http://www.zarya.info/Diaries/Launches/Launche...</td>
+<td>http://www.absatellite.net/2010/10/13/asia-bro...</td>
+<td>http://www.spacenews.com/article/satellite-tel...</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<!--
+##############################################
+######## Private Sector Space Exploration
+##############################################
+-->
+</section>
 </section>
 <section id="private-sector-space-exploration" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="private-sector-space-exploration"><span class="header-section-number">2.4</span> Private Sector Space Exploration</h2>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The raw data collected for this section is available <a href="https://drive.google.com/drive/folders/1ndvI3SKNGYegR5lXbpJsVKQy8qxvwihQ?usp=drive_link">here</a>, and the sources are provided in the text.</p>
+<p>Time series in this section include:</p>
 <ul>
-<li>SpaceX Launch Data</li>
-<li>ARKX (ARk Space Exploration ETF) data was obtained from <span class="citation" data-cites="yahoo_finance_ark_2024">Yahoo Finance (<a href="references.html#ref-yahoo_finance_ark_2024" role="doc-biblioref">2024</a>)</span></li>
+<li>Stock data for ARK Space Exploration ETF (ARKX)</li>
+<li>Stock data for Kratos Defense &amp; Security (KTOS)</li>
+<li>Stock data for Trimble Inc.&nbsp;(TRMB)</li>
+<li>Stock data for Aerovironment Inc.&nbsp;(AVAV)</li>
 </ul>
+</div>
+</div>
+</div>
+<section id="space-exploration-stock-data" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="space-exploration-stock-data">Space Exploration Stock Data</h3>
+<p>The Space Exploration Stock Data, sourced from Yahoo Finance, details the market performance of the ARK Space Exploration ETF (ARKX) <span class="citation" data-cites="yahoo_finance_ark_nodate">(<a href="references.html#ref-yahoo_finance_ark_nodate" role="doc-biblioref">Yahoo Finance, n.d.-b</a>)</span>, Kratos Defense &amp; Security (KTOS) <span class="citation" data-cites="yahoo_finance_kratos_nodate">(<a href="references.html#ref-yahoo_finance_kratos_nodate" role="doc-biblioref">Yahoo Finance, n.d.-c</a>)</span>, Trimble Inc.&nbsp;(TRMB) <span class="citation" data-cites="yahoo_finance_trimble_nodate">(<a href="references.html#ref-yahoo_finance_trimble_nodate" role="doc-biblioref">Yahoo Finance, n.d.-d</a>)</span>, and Aerovironment Inc.&nbsp;(AVAV) <span class="citation" data-cites="yahoo_finance_aerovironment_nodate">(<a href="references.html#ref-yahoo_finance_aerovironment_nodate" role="doc-biblioref">Yahoo Finance, n.d.-a</a>)</span> over a brief period of five years. These datasets include daily trading metrics, including opening, high, low, close, and adjusted close prices, alongside the trading volume. For instance, on March 30, 2021, ARKX opened at $20.50, reached a high of $20.70, a low of $20.07, and closed at $20.30, with a trading volume of approximately 14.6 million shares. These figures indicate active trading and fluctuating investor interest in space exploration companies.</p>
+<p>Here is a view of a sample of the data <span class="citation" data-cites="yahoo_finance_ark_nodate">(<a href="references.html#ref-yahoo_finance_ark_nodate" role="doc-biblioref">Yahoo Finance, n.d.-b</a>)</span>:</p>
+<div class="cell" data-execution_count="6">
+<div class="cell-output cell-output-display">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Date</th>
+<th data-quarto-table-cell-role="th">Open</th>
+<th data-quarto-table-cell-role="th">High</th>
+<th data-quarto-table-cell-role="th">Low</th>
+<th data-quarto-table-cell-role="th">Close</th>
+<th data-quarto-table-cell-role="th">Adj Close</th>
+<th data-quarto-table-cell-role="th">Volume</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>2021-03-30</td>
+<td>20.500000</td>
+<td>20.700001</td>
+<td>20.073999</td>
+<td>20.299999</td>
+<td>20.299999</td>
+<td>14594100</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>2021-03-31</td>
+<td>20.430000</td>
+<td>20.570000</td>
+<td>20.410000</td>
+<td>20.570000</td>
+<td>20.570000</td>
+<td>7522400</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>2021-04-01</td>
+<td>20.889999</td>
+<td>21.000000</td>
+<td>20.730000</td>
+<td>20.910000</td>
+<td>20.910000</td>
+<td>6543000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>2021-04-05</td>
+<td>21.270000</td>
+<td>21.270000</td>
+<td>21.010000</td>
+<td>21.139999</td>
+<td>21.139999</td>
+<td>5038100</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>2021-04-06</td>
+<td>21.129999</td>
+<td>21.139999</td>
+<td>21.030001</td>
+<td>21.100000</td>
+<td>21.100000</td>
+<td>3597900</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<!--
+##############################################
+######## International Cooperation in Space Exploration
+##############################################
+-->
 </section>
-<section id="international-cooperation-in-space-exploration" class="level2" data-number="2.5">
-<h2 data-number="2.5" class="anchored" data-anchor-id="international-cooperation-in-space-exploration"><span class="header-section-number">2.5</span> International Cooperation in Space Exploration</h2>
+</section>
+<section id="global-involvement-in-space-exploration" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="global-involvement-in-space-exploration"><span class="header-section-number">2.5</span> Global Involvement in Space Exploration</h2>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The raw data collected for this section is available <a href="https://drive.google.com/drive/folders/1nndwBUbngfFOX-5XcKUzvHRnB3HI9Ocv?usp=drive_link">here</a>, and the sources are provided in the text.</p>
+<p>Time series in this section include:</p>
 <ul>
-<li>Launches by Country Database was obtained from <span class="citation" data-cites="next_spaceflight_rocket_nodate">Next Spaceflight (<a href="references.html#ref-next_spaceflight_rocket_nodate" role="doc-biblioref">n.d.</a>)</span>.</li>
+<li>Location of mission launch.</li>
+<li>Company of mission launch.</li>
+<li>Status of mission launch.</li>
 </ul>
+</div>
+</div>
+</div>
+<section id="launches-by-country-data" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="launches-by-country-data">Launches by Country Data</h3>
+<p>The Launches by Country Database from <span class="citation" data-cites="next_spaceflight_rocket_nodate">Next Spaceflight (<a href="references.html#ref-next_spaceflight_rocket_nodate" role="doc-biblioref">n.d.</a>)</span> details global space launch activities, documenting various missions’ specifics, including the launching company, location, date and time, mission details, and more. For instance, SpaceX’s launch on August 7, 2020, from LC-39A at Kennedy Space Center in Florida, USA, involved a Falcon 9 Block 5 rocket carrying Starlink V1 L9 &amp; BlackSky satellites, noted for its active status and successful outcome. The database captures a variety of missions from different countries, highlighting the growing global collaboration in space endeavors.</p>
+<p>Here is a view of a sample of the data <span class="citation" data-cites="next_spaceflight_rocket_nodate">(<a href="references.html#ref-next_spaceflight_rocket_nodate" role="doc-biblioref">Next Spaceflight, n.d.</a>)</span>:</p>
+<div class="cell" data-execution_count="7">
+<div class="cell-output cell-output-display">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Company Name</th>
+<th data-quarto-table-cell-role="th">Location</th>
+<th data-quarto-table-cell-role="th">Datum</th>
+<th data-quarto-table-cell-role="th">Detail</th>
+<th data-quarto-table-cell-role="th">Status Rocket</th>
+<th data-quarto-table-cell-role="th">Rocket</th>
+<th data-quarto-table-cell-role="th">Status Mission</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>SpaceX</td>
+<td>LC-39A, Kennedy Space Center, Florida, USA</td>
+<td>Fri Aug 07, 2020 05:12 UTC</td>
+<td>Falcon 9 Block 5 | Starlink V1 L9 &amp; BlackSky</td>
+<td>StatusActive</td>
+<td>50</td>
+<td>Success</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>CASC</td>
+<td>Site 9401 (SLS-2), Jiuquan Satellite Launch Ce...</td>
+<td>Thu Aug 06, 2020 04:01 UTC</td>
+<td>Long March 2D | Gaofen-9 04 &amp; Q-SAT</td>
+<td>StatusActive</td>
+<td>29.75</td>
+<td>Success</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>SpaceX</td>
+<td>Pad A, Boca Chica, Texas, USA</td>
+<td>Tue Aug 04, 2020 23:57 UTC</td>
+<td>Starship Prototype | 150 Meter Hop</td>
+<td>StatusActive</td>
+<td>NaN</td>
+<td>Success</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>Roscosmos</td>
+<td>Site 200/39, Baikonur Cosmodrome, Kazakhstan</td>
+<td>Thu Jul 30, 2020 21:25 UTC</td>
+<td>Proton-M/Briz-M | Ekspress-80 &amp; Ekspress-103</td>
+<td>StatusActive</td>
+<td>65</td>
+<td>Success</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>ULA</td>
+<td>SLC-41, Cape Canaveral AFS, Florida, USA</td>
+<td>Thu Jul 30, 2020 11:50 UTC</td>
+<td>Atlas V 541 | Perseverance</td>
+<td>StatusActive</td>
+<td>145</td>
+<td>Success</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="list" style="display: none">
@@ -274,11 +1020,14 @@ Centro de Astrobiología (CSIC-INTA). (n.d.). <em><span>REMS</span> <span>Weathe
 <div id="ref-google_trends_mars_nodate" class="csl-entry" role="listitem">
 Google Trends. (n.d.-a). <em>Mars</em>. <a href="https://trends.google.com/trends/explore?date=today%205-y&amp;geo=US&amp;q=Mars&amp;hl=en">https://trends.google.com/trends/explore?date=today%205-y&amp;geo=US&amp;q=Mars&amp;hl=en</a>
 </div>
+<div id="ref-google_trends_satellites_nodate" class="csl-entry" role="listitem">
+Google Trends. (n.d.-b). <em>Satellites</em>. <a href="https://trends.google.com/trends/explore?date=today%205-y&amp;geo=US&amp;q=Satellites&amp;hl=en">https://trends.google.com/trends/explore?date=today%205-y&amp;geo=US&amp;q=Satellites&amp;hl=en</a>
+</div>
 <div id="ref-google_trends_space_nodate" class="csl-entry" role="listitem">
-Google Trends. (n.d.-b). <em>Space <span>Exploration</span></em>. <a href="https://trends.google.com/trends/explore?date=today%205-y&amp;geo=US&amp;q=Space%20Exploration&amp;hl=en">https://trends.google.com/trends/explore?date=today%205-y&amp;geo=US&amp;q=Space%20Exploration&amp;hl=en</a>
+Google Trends. (n.d.-c). <em>Space <span>Exploration</span></em>. <a href="https://trends.google.com/trends/explore?date=today%205-y&amp;geo=US&amp;q=Space%20Exploration&amp;hl=en">https://trends.google.com/trends/explore?date=today%205-y&amp;geo=US&amp;q=Space%20Exploration&amp;hl=en</a>
 </div>
 <div id="ref-google_trends_spacex_nodate" class="csl-entry" role="listitem">
-Google Trends. (n.d.-c). <em><span>SpaceX</span></em>. <a href="https://trends.google.com/trends/explore?date=today%205-y&amp;geo=US&amp;q=SpaceX&amp;hl=en">https://trends.google.com/trends/explore?date=today%205-y&amp;geo=US&amp;q=SpaceX&amp;hl=en</a>
+Google Trends. (n.d.-d). <em><span>SpaceX</span></em>. <a href="https://trends.google.com/trends/explore?date=today%205-y&amp;geo=US&amp;q=SpaceX&amp;hl=en">https://trends.google.com/trends/explore?date=today%205-y&amp;geo=US&amp;q=SpaceX&amp;hl=en</a>
 </div>
 <div id="ref-next_spaceflight_rocket_nodate" class="csl-entry" role="listitem">
 Next Spaceflight. (n.d.). <em>Rocket <span>Launch</span> <span>Schedule</span></em>. Retrieved February 5, 2024, from <a href="https://www.kaggle.com/datasets/agirlcoding/all-space-missions-from-1957?resource=download&amp;select=Space_Corrected.csv">https://www.kaggle.com/datasets/agirlcoding/all-space-missions-from-1957?resource=download&amp;select=Space_Corrected.csv</a>
@@ -295,10 +1044,20 @@ U.S. Bureau of Economic Analysis. (n.d.). Government current expenditures: <span
 <div id="ref-world_meteorological_organization_list_nodate" class="csl-entry" role="listitem">
 World Meteorological Organization. (n.d.). List of all <span>Satellites</span>. In <em>OSCAR - Observing Systems Capability Analysis and Review Tool</em>. Retrieved February 5, 2024, from <a href="https://space.oscar.wmo.int/satellites">https://space.oscar.wmo.int/satellites</a>
 </div>
-<div id="ref-yahoo_finance_ark_2024" class="csl-entry" role="listitem">
-Yahoo Finance. (2024). <em><span>ARK</span> <span>Space</span> <span>Exploration</span> &amp; <span>Innovation</span> <span>ETF</span> (<span>ARKX</span>) <span>Stock</span> <span>Historical</span> <span>Prices</span> &amp; <span>Data</span></em>. <a href="https://finance.yahoo.com/quote/ARKX/history/">https://finance.yahoo.com/quote/ARKX/history/</a>
+<div id="ref-yahoo_finance_aerovironment_nodate" class="csl-entry" role="listitem">
+Yahoo Finance. (n.d.-a). <em><span>AeroVironment</span>, <span>Inc</span>. (<span>AVAV</span>) <span>Stock</span> <span>Historical</span> <span>Prices</span> &amp; <span>Data</span></em>. Retrieved January 17, 2024, from <a href="https://finance.yahoo.com/quote/AVAV/history?period1=1549411200&amp;period2=1707177600&amp;interval=1d&amp;filter=history&amp;frequency=1d&amp;includeAdjustedClose=true">https://finance.yahoo.com/quote/AVAV/history?period1=1549411200&amp;period2=1707177600&amp;interval=1d&amp;filter=history&amp;frequency=1d&amp;includeAdjustedClose=true</a>
+</div>
+<div id="ref-yahoo_finance_ark_nodate" class="csl-entry" role="listitem">
+Yahoo Finance. (n.d.-b). <em><span>ARK</span> <span>Space</span> <span>Exploration</span> &amp; <span>Innovation</span> <span>ETF</span> (<span>ARKX</span>) <span>Stock</span> <span>Historical</span> <span>Prices</span> &amp; <span>Data</span></em>. Retrieved January 17, 2024, from <a href="https://finance.yahoo.com/quote/ARKX/history/">https://finance.yahoo.com/quote/ARKX/history/</a>
+</div>
+<div id="ref-yahoo_finance_kratos_nodate" class="csl-entry" role="listitem">
+Yahoo Finance. (n.d.-c). <em>Kratos <span>Defense</span> &amp; <span>Security</span> <span>Solutions</span>, <span>Inc</span>. (<span>KTOS</span>) <span>Stock</span> <span>Historical</span> <span>Prices</span> &amp; <span>Data</span></em>. Retrieved January 17, 2024, from <a href="https://finance.yahoo.com/quote/KTOS/history?period1=1549411200&amp;period2=1707177600&amp;interval=1d&amp;filter=history&amp;frequency=1d&amp;includeAdjustedClose=true">https://finance.yahoo.com/quote/KTOS/history?period1=1549411200&amp;period2=1707177600&amp;interval=1d&amp;filter=history&amp;frequency=1d&amp;includeAdjustedClose=true</a>
+</div>
+<div id="ref-yahoo_finance_trimble_nodate" class="csl-entry" role="listitem">
+Yahoo Finance. (n.d.-d). <em>Trimble <span>Inc</span>. (<span>TRMB</span>) <span>Stock</span> <span>Historical</span> <span>Prices</span> &amp; <span>Data</span></em>. Retrieved January 17, 2024, from <a href="https://finance.yahoo.com/quote/TRMB/history?period1=1549411200&amp;period2=1707177600&amp;interval=1d&amp;filter=history&amp;frequency=1d&amp;includeAdjustedClose=true">https://finance.yahoo.com/quote/TRMB/history?period1=1549411200&amp;period2=1707177600&amp;interval=1d&amp;filter=history&amp;frequency=1d&amp;includeAdjustedClose=true</a>
 </div>
 </div>
+</section>
 </section>
 
 </main> <!-- /main -->
