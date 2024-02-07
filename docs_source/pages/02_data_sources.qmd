@@ -75,7 +75,7 @@ display(mars_weather_data.head())
 
 As an example, @fig-martian-air-temperature shows the Martian air temperature over time. The dates have been proxied to that of Earth for the plot.
 
-![Martian Air Temperature Over Time](../../docs_source/images/results/martian_air_temperature_over_time.png){#fig-martian-air-temperature}
+![Martian Air Temperature Over Time](../images/results/martian_air_temperature_over_time.png){#fig-martian-air-temperature}
 
 
 <!--
@@ -122,7 +122,7 @@ display(google_trends.head())
 #| fig-cap: "Shows the adjusted price of ARKX over time."
 
 width_percentage = "100%"
-IFrame(src='../../docs_source/images/results/space_exploration_google_trends_plot.html', width=width_percentage, height=570)
+IFrame(src='../images/results/space_exploration_google_trends_plot.html', width=width_percentage, height=570)
 
 
 ```
@@ -213,7 +213,7 @@ display(arkx.head())
 #| fig-cap: "Shows the adjusted price of ARKX over time."
 
 width_percentage = "100%"
-IFrame(src='../../docs_source/images/results/arkx_adj_close_plot.html', width=width_percentage, height=570)
+IFrame(src='../images/results/arkx_adj_close_plot.html', width=width_percentage, height=570)
 
 
 ```
