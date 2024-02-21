@@ -77,18 +77,32 @@
     "text": "2.5 Global Involvement in Space Exploration\n\n\n\n\n\n\nThe raw data collected for this section is available here, and the sources are provided in the text.\nTime series in this section include:\n\nLocation of mission launch.\nCompany of mission launch.\nStatus of mission launch.\n\n\n\n\n\nLaunches by Country Data\nThe Launches by Country Database from Next Spaceflight (n.d.) details global space launch activities, documenting various missions’ specifics, including the launching company, location, date and time, mission details, and more. For instance, SpaceX’s launch on August 7, 2020, from LC-39A at Kennedy Space Center in Florida, USA, involved a Falcon 9 Block 5 rocket carrying Starlink V1 L9 & BlackSky satellites, noted for its active status and successful outcome. The database captures a variety of missions from different countries, highlighting the growing global collaboration in space endeavors.\n\n\n\nFigure 2.5: Shows the Next Spaceflight website depicting upcoming launches.\n\n\nHere is a view of a sample of the data (Next Spaceflight, n.d.):\n\n\n\n\n\n\n\n\n\nCompany Name\nLocation\nDatum\nDetail\nStatus Rocket\nRocket\nStatus Mission\n\n\n\n\n0\nSpaceX\nLC-39A, Kennedy Space Center, Florida, USA\nFri Aug 07, 2020 05:12 UTC\nFalcon 9 Block 5 | Starlink V1 L9 & BlackSky\nStatusActive\n50\nSuccess\n\n\n1\nCASC\nSite 9401 (SLS-2), Jiuquan Satellite Launch Ce...\nThu Aug 06, 2020 04:01 UTC\nLong March 2D | Gaofen-9 04 & Q-SAT\nStatusActive\n29.75\nSuccess\n\n\n2\nSpaceX\nPad A, Boca Chica, Texas, USA\nTue Aug 04, 2020 23:57 UTC\nStarship Prototype | 150 Meter Hop\nStatusActive\nNaN\nSuccess\n\n\n3\nRoscosmos\nSite 200/39, Baikonur Cosmodrome, Kazakhstan\nThu Jul 30, 2020 21:25 UTC\nProton-M/Briz-M | Ekspress-80 & Ekspress-103\nStatusActive\n65\nSuccess\n\n\n4\nULA\nSLC-41, Cape Canaveral AFS, Florida, USA\nThu Jul 30, 2020 11:50 UTC\nAtlas V 541 | Perseverance\nStatusActive\n145\nSuccess\n\n\n\n\n\n\n\n\n\n\n\nCentro de Astrobiología (CSIC-INTA). (n.d.). REMS Weather Widget. Retrieved February 3, 2024, from http://cab.inta-csic.es/rems/wp-content/plugins/marsweather-widget/widget.php?lang=en\n\n\nGoogle Trends. (n.d.-a). Mars. https://trends.google.com/trends/explore?date=today%205-y&geo=US&q=Mars&hl=en\n\n\nGoogle Trends. (n.d.-b). Satellites. https://trends.google.com/trends/explore?date=today%205-y&geo=US&q=Satellites&hl=en\n\n\nGoogle Trends. (n.d.-c). Space Exploration. https://trends.google.com/trends/explore?date=today%205-y&geo=US&q=Space%20Exploration&hl=en\n\n\nGoogle Trends. (n.d.-d). SpaceX. https://trends.google.com/trends/explore?date=today%205-y&geo=US&q=SpaceX&hl=en\n\n\nNext Spaceflight. (n.d.). Rocket Launch Schedule. Retrieved February 5, 2024, from https://www.kaggle.com/datasets/agirlcoding/all-space-missions-from-1957?resource=download&select=Space_Corrected.csv\n\n\nThe Planetary Society. (2024). Mars’ Calendar. https://www.planetary.org/articles/mars-calendar\n\n\nUnion of Concerned Scientists. (2023). UCS Satellite Database. https://www.ucsusa.org/resources/satellite-database\n\n\nU.S. Bureau of Economic Analysis. (n.d.). Government current expenditures: Economic affairs: Space [G160241A027NBEA]. In FRED, Federal Reserve Bank of St. Louis. Retrieved February 5, 2024, from https://fred.stlouisfed.org/series/G160241A027NBEA\n\n\nWorld Meteorological Organization. (n.d.). List of all Satellites. In OSCAR - Observing Systems Capability Analysis and Review Tool. Retrieved February 5, 2024, from https://space.oscar.wmo.int/satellites\n\n\nYahoo Finance. (n.d.-a). AeroVironment, Inc. (AVAV) Stock Historical Prices & Data. Retrieved January 17, 2024, from https://finance.yahoo.com/quote/AVAV/history?period1=1549411200&period2=1707177600&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true\n\n\nYahoo Finance. (n.d.-b). ARK Space Exploration & Innovation ETF (ARKX) Stock Historical Prices & Data. Retrieved January 17, 2024, from https://finance.yahoo.com/quote/ARKX/history/\n\n\nYahoo Finance. (n.d.-c). Kratos Defense & Security Solutions, Inc. (KTOS) Stock Historical Prices & Data. Retrieved January 17, 2024, from https://finance.yahoo.com/quote/KTOS/history?period1=1549411200&period2=1707177600&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true\n\n\nYahoo Finance. (n.d.-d). Trimble Inc. (TRMB) Stock Historical Prices & Data. Retrieved January 17, 2024, from https://finance.yahoo.com/quote/TRMB/history?period1=1549411200&period2=1707177600&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true"
   },
   {
-    "objectID": "pages/03_data_visualization.html#mars-weather-dashboard",
-    "href": "pages/03_data_visualization.html#mars-weather-dashboard",
+    "objectID": "pages/03_data_visualization.html#mars-weather-dashboard-with-tableau",
+    "href": "pages/03_data_visualization.html#mars-weather-dashboard-with-tableau",
     "title": "3  Data Visualization",
-    "section": "3.1 Mars Weather Dashboard",
-    "text": "3.1 Mars Weather Dashboard\nFor a better view of the widget below, see it in Tableau public here."
+    "section": "3.1 Mars Weather Dashboard with Tableau",
+    "text": "3.1 Mars Weather Dashboard with Tableau\nFor a better view of the widget below, see it in Tableau public here."
   },
   {
-    "objectID": "pages/03_data_visualization.html#financial-candlestick-charts",
-    "href": "pages/03_data_visualization.html#financial-candlestick-charts",
+    "objectID": "pages/03_data_visualization.html#financial-candlestick-charts-with-plotly",
+    "href": "pages/03_data_visualization.html#financial-candlestick-charts-with-plotly",
     "title": "3  Data Visualization",
-    "section": "3.2 Financial Candlestick Charts",
-    "text": "3.2 Financial Candlestick Charts"
+    "section": "3.2 Financial Candlestick Charts with Plotly",
+    "text": "3.2 Financial Candlestick Charts with Plotly\n\n\n\n\n        \n        \nFigure 3.1: Shows the candlestick and SMA charts for the analyzed stocks."
+  },
+  {
+    "objectID": "pages/03_data_visualization.html#launches-per-country-of-launch-with-play-button",
+    "href": "pages/03_data_visualization.html#launches-per-country-of-launch-with-play-button",
+    "title": "3  Data Visualization",
+    "section": "3.3 Launches Per Country of Launch with Play Button",
+    "text": "3.3 Launches Per Country of Launch with Play Button\n\n\n\n\n        \n        \nFigure 3.2: Shows the total launches per country of launch site."
+  },
+  {
+    "objectID": "pages/03_data_visualization.html#the-rise-of-private-launches",
+    "href": "pages/03_data_visualization.html#the-rise-of-private-launches",
+    "title": "3  Data Visualization",
+    "section": "3.4 The Rise of Private Launches",
+    "text": "3.4 The Rise of Private Launches\n\n\n\n\n        \n        \nFigure 3.3: Shows the cumulative launches of SpaceX vs all others."
   },
   {
     "objectID": "pages/04_eda.html",

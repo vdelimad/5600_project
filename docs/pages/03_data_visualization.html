@@ -61,6 +61,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 <link rel="stylesheet" href="styles.css">
@@ -182,8 +185,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Contents</h2>
    
   <ul>
-  <li><a href="#mars-weather-dashboard" id="toc-mars-weather-dashboard" class="nav-link active" data-scroll-target="#mars-weather-dashboard"><span class="header-section-number">3.1</span> Mars Weather Dashboard</a></li>
-  <li><a href="#financial-candlestick-charts" id="toc-financial-candlestick-charts" class="nav-link" data-scroll-target="#financial-candlestick-charts"><span class="header-section-number">3.2</span> Financial Candlestick Charts</a></li>
+  <li><a href="#mars-weather-dashboard-with-tableau" id="toc-mars-weather-dashboard-with-tableau" class="nav-link active" data-scroll-target="#mars-weather-dashboard-with-tableau"><span class="header-section-number">3.1</span> Mars Weather Dashboard with Tableau</a></li>
+  <li><a href="#financial-candlestick-charts-with-plotly" id="toc-financial-candlestick-charts-with-plotly" class="nav-link" data-scroll-target="#financial-candlestick-charts-with-plotly"><span class="header-section-number">3.2</span> Financial Candlestick Charts with Plotly</a></li>
+  <li><a href="#launches-per-country-of-launch-with-play-button" id="toc-launches-per-country-of-launch-with-play-button" class="nav-link" data-scroll-target="#launches-per-country-of-launch-with-play-button"><span class="header-section-number">3.3</span> Launches Per Country of Launch with Play Button</a></li>
+  <li><a href="#the-rise-of-private-launches" id="toc-the-rise-of-private-launches" class="nav-link" data-scroll-target="#the-rise-of-private-launches"><span class="header-section-number">3.4</span> The Rise of Private Launches</a></li>
   </ul>
 </nav>
     </div>
@@ -207,8 +212,8 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="mars-weather-dashboard" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="mars-weather-dashboard"><span class="header-section-number">3.1</span> Mars Weather Dashboard</h2>
+<section id="mars-weather-dashboard-with-tableau" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="mars-weather-dashboard-with-tableau"><span class="header-section-number">3.1</span> Mars Weather Dashboard with Tableau</h2>
 <p>For a better view of the widget below, see it in Tableau public <a href="https://public.tableau.com/views/mars_weather_dashboard/MarsWeatherMonitor?:language=en-US&amp;:sid=&amp;:display_count=n&amp;:origin=viz_share_link">here</a>.</p>
 
 
@@ -217,9 +222,44 @@ ul.task-list li input[type="checkbox"] {
 <script type="text/javascript">                    var divElement = document.getElementById('viz1708532854437');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='700px';vizElement.style.height='850px';} else { vizElement.style.width='100%';vizElement.style.height='1327px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
 
 </section>
-<section id="financial-candlestick-charts" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="financial-candlestick-charts"><span class="header-section-number">3.2</span> Financial Candlestick Charts</h2>
-<iframe width="100%" height="570" src="../../docs_source/images/results/stocks_crossover_plot_with_candlesticks_with_dropdown.html"></iframe>
+<section id="financial-candlestick-charts-with-plotly" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="financial-candlestick-charts-with-plotly"><span class="header-section-number">3.2</span> Financial Candlestick Charts with Plotly</h2>
+<div class="cell" data-execution_count="2">
+<div id="fig-candlestick-charts" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+
+        <iframe width="100%" height="570" src="../../docs_source/images/results/stocks_crossover_plot_with_candlesticks_with_dropdown.html" frameborder="0" allowfullscreen=""></iframe>
+        
+<figcaption class="figure-caption">Figure&nbsp;3.1: Shows the candlestick and SMA charts for the analyzed stocks.</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="launches-per-country-of-launch-with-play-button" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="launches-per-country-of-launch-with-play-button"><span class="header-section-number">3.3</span> Launches Per Country of Launch with Play Button</h2>
+<div class="cell" data-execution_count="3">
+<div id="fig-launches-per-country" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+
+        <iframe width="100%" height="570" src="../../docs_source/images/launches_per_country_of_launch_site.html" frameborder="0" allowfullscreen=""></iframe>
+        
+<figcaption class="figure-caption">Figure&nbsp;3.2: Shows the total launches per country of launch site.</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="the-rise-of-private-launches" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="the-rise-of-private-launches"><span class="header-section-number">3.4</span> The Rise of Private Launches</h2>
+<div class="cell" data-execution_count="4">
+<div id="fig-spacex-others" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+
+        <iframe width="100%" height="570" src="../../docs_source/images/cumulative_launches_spacex_vs_others.html" frameborder="0" allowfullscreen=""></iframe>
+        
+<figcaption class="figure-caption">Figure&nbsp;3.3: Shows the cumulative launches of SpaceX vs all others.</figcaption>
+</figure>
+</div>
+</div>
 
 
 </section>

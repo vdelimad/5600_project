@@ -9,7 +9,7 @@ pd.set_option('display.max_columns', None)
 
 # Data Visualization
 
-## Mars Weather Dashboard
+## Mars Weather Dashboard with Tableau
 
 For a better view of the widget below, see it in Tableau public [here](https://public.tableau.com/views/mars_weather_dashboard/MarsWeatherMonitor?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link).
 
@@ -22,11 +22,41 @@ For a better view of the widget below, see it in Tableau public [here](https://p
 ```
 
 
-## Financial Candlestick Charts
+## Financial Candlestick Charts with Plotly
 
 
-```{=html}
-<iframe width="100%" height="570" src='../../docs_source/images/results/stocks_crossover_plot_with_candlesticks_with_dropdown.html'></iframe>
+```{python}
+#| echo: false
+#| label: fig-candlestick-charts
+#| fig-cap: "Shows the candlestick and SMA charts for the analyzed stocks."
+width_percentage = "100%"
+IFrame(src='../../docs_source/images/results/stocks_crossover_plot_with_candlesticks_with_dropdown.html', width=width_percentage, height=570)
+```
+
+
+
+## Launches Per Country of Launch with Play Button
+
+
+```{python}
+#| echo: false
+#| label: fig-launches-per-country
+#| fig-cap: "Shows the total launches per country of launch site."
+width_percentage = "100%"
+IFrame(src='../../docs_source/images/launches_per_country_of_launch_site.html', width=width_percentage, height=570)
+```
+
+
+
+## The Rise of Private Launches
+
+
+```{python}
+#| echo: false
+#| label: fig-spacex-others
+#| fig-cap: "Shows the cumulative launches of SpaceX vs all others."
+width_percentage = "100%"
+IFrame(src='../../docs_source/images/cumulative_launches_spacex_vs_others.html', width=width_percentage, height=570)
 ```
 
 
