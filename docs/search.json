@@ -81,14 +81,14 @@
     "href": "pages/03_data_visualization.html#mars-weather-dashboard",
     "title": "3  Data Visualization",
     "section": "3.1 Mars Weather Dashboard",
-    "text": "3.1 Mars Weather Dashboard\nTableau"
+    "text": "3.1 Mars Weather Dashboard\nFor a better view of the widget below, see it in Tableau public here."
   },
   {
     "objectID": "pages/03_data_visualization.html#financial-candlestick-charts",
     "href": "pages/03_data_visualization.html#financial-candlestick-charts",
     "title": "3  Data Visualization",
     "section": "3.2 Financial Candlestick Charts",
-    "text": "3.2 Financial Candlestick Charts\n\nARKXAVAVKTOSTRMB\n\n\n\n\n\n\n        \n        \nFigure 3.1: Shows the candlestick and SMA chart for ARKX.\n\n\n\n\n\n\n\n\n\n        \n        \nFigure 3.2: Shows the candlestick and SMA chart for AVAV.\n\n\n\n\n\n\n\n\n\n        \n        \nFigure 3.3: Shows the candlestick and SMA chart for KTOS.\n\n\n\n\n\n\n\n\n\n        \n        \nFigure 3.4: Shows the candlestick and SMA chart for TRMB."
+    "text": "3.2 Financial Candlestick Charts"
   },
   {
     "objectID": "pages/04_eda.html",
