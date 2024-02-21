@@ -114,12 +114,12 @@ display(google_trends.head())
 
 ```
 
-@fig-google-trends shows the Google Trends search interest for the `Space Exploration` term. Further research will reveal whether this patterns correlate to specific events in the industry.
+@fig-google-trends shows the Google Trends search interest for the `Space Exploration` term. Further research will reveal whether these patterns correlate to specific events in the industry.
 
 ```{python}
 #| echo: false
 #| label: fig-google-trends
-#| fig-cap: "Shows the adjusted price of ARKX over time."
+#| fig-cap: "Shows the Google Trends search interest for `Space Exploration`."
 
 width_percentage = "100%"
 IFrame(src='../images/results/space_exploration_google_trends_plot.html', width=width_percentage, height=570)

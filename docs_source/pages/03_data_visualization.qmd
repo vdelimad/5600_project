@@ -1,3 +1,79 @@
+```{python}
+#| echo: false
+import pandas as pd
+from IPython.display import display, HTML, IFrame
+
+pd.set_option('display.max_columns', None) 
+
+```
+
 # Data Visualization
 
-Coming soon.
+## Mars Weather Dashboard
+
+Tableau
+
+
+
+
+## Financial Candlestick Charts
+
+::: {.panel-tabset}
+
+## ARKX
+
+```{python}
+#| echo: false
+#| label: fig-candlestick-arkx
+#| fig-cap: "Shows the candlestick and SMA chart for ARKX."
+
+width_percentage = "100%"
+IFrame(src='../images/results/arkx_crossover_plot_with_candlesticks.html', width=width_percentage, height=570)
+
+
+```
+
+
+## AVAV
+
+```{python}
+#| echo: false
+#| label: fig-candlestick-avav
+#| fig-cap: "Shows the candlestick and SMA chart for AVAV."
+
+width_percentage = "100%"
+IFrame(src='../images/results/avav_crossover_plot_with_candlesticks.html', width=width_percentage, height=570)
+
+
+```
+
+
+## KTOS
+
+```{python}
+#| echo: false
+#| label: fig-candlestick-ktos
+#| fig-cap: "Shows the candlestick and SMA chart for KTOS."
+
+width_percentage = "100%"
+IFrame(src='../images/results/ktos_crossover_plot_with_candlesticks.html', width=width_percentage, height=570)
+
+
+```
+
+
+## TRMB
+
+```{python}
+#| echo: false
+#| label: fig-candlestick-trmb
+#| fig-cap: "Shows the candlestick and SMA chart for TRMB."
+
+width_percentage = "100%"
+IFrame(src='../images/results/trmb_crossover_plot_with_candlesticks.html', width=width_percentage, height=570)
+
+
+```
+
+:::
+
