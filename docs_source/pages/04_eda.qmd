@@ -17,14 +17,24 @@ from IPython.display import Markdown
 
 ::: {.panel-tabset}
 
-## Mars Ground Temperature
+## Seas. 1: Mars Temperature
 
 ![](../../docs_source/images/eda/original/original_mars_weather_ground_temperature.jpeg)
 
 
-## Mars Pressure
+## Seas. 2: Mars Pressure
 
 ![](../../docs_source/images/eda/original/original_pressure_current_pascals.jpeg)
+
+
+## Financial 1: ARKX
+
+![](../../docs_source/images/eda/original/original_arkx_stock_adj_close.jpeg)
+
+## Financial 2: AVAV
+
+![](../../docs_source/images/eda/original/original_avav_stock_adj_close.jpeg)
+
 
 
 ## Treasury NASA Outlays
@@ -32,22 +42,17 @@ from IPython.display import Markdown
 ![](../../docs_source/images/eda/original/original_treasury_nasa_outlays.jpeg)
 
 
-## ARKX Stock
-
-![](../../docs_source/images/eda/original/original_arkx_stock_adj_close.jpeg)
-
-
 ## Google Trends
 
 ![](../../docs_source/images/eda/original/original_google_trends_space_exploration.jpeg)
 
 
-## Mission Launches
+## Launches
 
 ![](../../docs_source/images/eda/original/original_launches_per_month.jpeg)
 
 
-## Operational Satellites
+## Satellites
 
 ![](../../docs_source/images/eda/original/original_satellites_operational_count.jpeg)
 
@@ -58,14 +63,24 @@ from IPython.display import Markdown
 
 ::: {.panel-tabset}
 
-## Mars Ground Temperature
+## Seas. 1: Mars Temperature
 
 ![](../../docs_source/images/eda/lagplots/lagplots_mars_weather_ground_temperature.jpeg)
 
 
-## Mars Pressure
+## Seas. 2: Mars Pressure
 
 ![](../../docs_source/images/eda/lagplots/lagplots_pressure_current_pascals.jpeg)
+
+
+## Financial 1: ARKX
+
+![](../../docs_source/images/eda/lagplots/lagplots_arkx_stock_adj_close.jpeg)
+
+
+## Financial 2: AVAV
+
+![](../../docs_source/images/eda/lagplots/lagplots_avav_stock_adj_close.jpeg)
 
 
 ## Treasury NASA Outlays
@@ -73,22 +88,17 @@ from IPython.display import Markdown
 ![](../../docs_source/images/eda/lagplots/lagplots_treasury_nasa_outlays.jpeg)
 
 
-## ARKX Stock
-
-![](../../docs_source/images/eda/lagplots/lagplots_arkx_stock_adj_close.jpeg)
-
-
 ## Google Trends
 
 ![](../../docs_source/images/eda/lagplots/lagplots_google_trends_space_exploration.jpeg)
 
 
-## Mission Launches
+## Launches
 
 ![](../../docs_source/images/eda/lagplots/lagplots_launches_per_month.jpeg)
 
 
-## Operational Satellites
+## Satellites
 
 ![](../../docs_source/images/eda/lagplots/lagplots_satellites_operational_count.jpeg)
 
@@ -101,14 +111,24 @@ from IPython.display import Markdown
 
 ::: {.panel-tabset}
 
-## Mars Ground Temperature
+## Seas. 1: Mars Temperature
 
 ![](../../docs_source/images/eda/decomposition/decomposition_mars_weather_ground_temperature.jpeg)
 
 
-## Mars Pressure
+## Seas. 2: Mars Pressure
 
 ![](../../docs_source/images/eda/decomposition/decomposition_pressure_current_pascals.jpeg)
+
+
+## Financial 1: ARKX
+
+![](../../docs_source/images/eda/decomposition/decomposition_arkx_stock_adj_close.jpeg)
+
+
+## Financial 2: AVAV
+
+![](../../docs_source/images/eda/decomposition/decomposition_avav_stock_adj_close.jpeg)
 
 
 ## Treasury NASA Outlays
@@ -116,22 +136,17 @@ from IPython.display import Markdown
 ![](../../docs_source/images/eda/decomposition/decomposition_treasury_nasa_outlays.jpeg)
 
 
-## ARKX Stock
-
-![](../../docs_source/images/eda/decomposition/decomposition_arkx_stock_adj_close.jpeg)
-
-
 ## Google Trends
 
 ![](../../docs_source/images/eda/decomposition/decomposition_google_trends_space_exploration.jpeg)
 
 
-## Mission Launches
+## Launches
 
 ![](../../docs_source/images/eda/decomposition/decomposition_launches_per_month.jpeg)
 
 
-## Operational Satellites
+## Satellites
 
 ![](../../docs_source/images/eda/decomposition/decomposition_satellites_operational_count.jpeg)
 
@@ -144,14 +159,24 @@ from IPython.display import Markdown
 
 ::: {.panel-tabset}
 
-## Mars Ground Temperature
+## Seas. 1: Mars Temperature
 
 ![](../../docs_source/images/eda/acf_and_pacf/acf_and_pacf_mars_weather_ground_temperature.jpeg)
 
 
-## Mars Pressure
+## Seas. 2: Mars Pressure
 
 ![](../../docs_source/images/eda/acf_and_pacf/acf_and_pacf_pressure_current_pascals.jpeg)
+
+
+## Financial 1: ARKX
+
+![](../../docs_source/images/eda/acf_and_pacf/acf_and_pacf_arkx_stock_adj_close.jpeg)
+
+
+## Financial 2: AVAV
+
+![](../../docs_source/images/eda/acf_and_pacf/acf_and_pacf_avav_stock_adj_close.jpeg)
 
 
 ## Treasury NASA Outlays
@@ -159,22 +184,17 @@ from IPython.display import Markdown
 ![](../../docs_source/images/eda/acf_and_pacf/acf_and_pacf_treasury_nasa_outlays.jpeg)
 
 
-## ARKX Stock
-
-![](../../docs_source/images/eda/acf_and_pacf/acf_and_pacf_arkx_stock_adj_close.jpeg)
-
-
 ## Google Trends
 
 ![](../../docs_source/images/eda/acf_and_pacf/acf_and_pacf_google_trends_space_exploration.jpeg)
 
 
-## Mission Launches
+## Launches
 
 ![](../../docs_source/images/eda/acf_and_pacf/acf_and_pacf_launches_per_month.jpeg)
 
 
-## Operational Satellites
+## Satellites
 
 ![](../../docs_source/images/eda/acf_and_pacf/acf_and_pacf_satellites_operational_count.jpeg)
 
@@ -245,14 +265,24 @@ clean_result_table(dickey_fuller)
 
 ::: {.panel-tabset}
 
-## Mars Ground Temperature
+## Seas. 1: Mars Temperature
 
 ![](../../docs_source/images/eda/detrend_and_difference/detrend_and_difference_mars_weather_ground_temperature.jpeg)
 
 
-## Mars Pressure
+## Seas. 2: Mars Pressure
 
 ![](../../docs_source/images/eda/detrend_and_difference/detrend_and_difference_pressure_current_pascals.jpeg)
+
+
+## Financial 1: ARKX
+
+![](../../docs_source/images/eda/detrend_and_difference/detrend_and_difference_arkx_stock_adj_close.jpeg)
+
+
+## Financial 2: AVAV
+
+![](../../docs_source/images/eda/detrend_and_difference/detrend_and_difference_avav_stock_adj_close.jpeg)
 
 
 ## Treasury NASA Outlays
@@ -260,22 +290,17 @@ clean_result_table(dickey_fuller)
 ![](../../docs_source/images/eda/detrend_and_difference/detrend_and_difference_treasury_nasa_outlays.jpeg)
 
 
-## ARKX Stock
-
-![](../../docs_source/images/eda/detrend_and_difference/detrend_and_difference_arkx_stock_adj_close.jpeg)
-
-
 ## Google Trends
 
 ![](../../docs_source/images/eda/detrend_and_difference/detrend_and_difference_google_trends_space_exploration.jpeg)
 
 
-## Mission Launches
+## Launches
 
 ![](../../docs_source/images/eda/detrend_and_difference/detrend_and_difference_launches_per_month.jpeg)
 
 
-## Operational Satellites
+## Satellites
 
 ![](../../docs_source/images/eda/detrend_and_difference/detrend_and_difference_satellites_operational_count.jpeg)
 
@@ -292,14 +317,24 @@ clean_result_table(dickey_fuller)
 
 ::: {.panel-tabset}
 
-## Mars Ground Temperature
+## Seas. 1: Mars Temperature
 
 ![](../../docs_source/images/eda/original_and_difference/original_and_difference_mars_weather_ground_temperature.jpeg)
 
 
-## Mars Pressure
+## Seas. 2: Mars Pressure
 
 ![](../../docs_source/images/eda/original_and_difference/original_and_difference_pressure_current_pascals.jpeg)
+
+
+## Financial 1: ARKX
+
+![](../../docs_source/images/eda/original_and_difference/original_and_difference_arkx_stock_adj_close.jpeg)
+
+
+## Financial 2: AVAV
+
+![](../../docs_source/images/eda/original_and_difference/original_and_difference_avav_stock_adj_close.jpeg)
 
 
 ## Treasury NASA Outlays
@@ -307,22 +342,17 @@ clean_result_table(dickey_fuller)
 ![](../../docs_source/images/eda/original_and_difference/original_and_difference_treasury_nasa_outlays.jpeg)
 
 
-## ARKX Stock
-
-![](../../docs_source/images/eda/original_and_difference/original_and_difference_arkx_stock_adj_close.jpeg)
-
-
 ## Google Trends
 
 ![](../../docs_source/images/eda/original_and_difference/original_and_difference_google_trends_space_exploration.jpeg)
 
 
-## Mission Launches
+## Launches
 
 ![](../../docs_source/images/eda/original_and_difference/original_and_difference_launches_per_month.jpeg)
 
 
-## Operational Satellites
+## Satellites
 
 ![](../../docs_source/images/eda/original_and_difference/original_and_difference_satellites_operational_count.jpeg)
 
@@ -335,14 +365,24 @@ clean_result_table(dickey_fuller)
 
 ::: {.panel-tabset}
 
-## Mars Ground Temperature
+## Seas. 1: Mars Temperature
 
 ![](../../docs_source/images/eda/first_second_difference/first_second_difference_mars_weather_ground_temperature.jpeg)
 
 
-## Mars Pressure
+## Seas. 2: Mars Pressure
 
 ![](../../docs_source/images/eda/first_second_difference/first_second_difference_pressure_current_pascals.jpeg)
+
+
+## Financial 1: ARKX
+
+![](../../docs_source/images/eda/first_second_difference/first_second_difference_arkx_stock_adj_close.jpeg)
+
+
+## Financial 2: AVAV
+
+![](../../docs_source/images/eda/first_second_difference/first_second_difference_avav_stock_adj_close.jpeg)
 
 
 ## Treasury NASA Outlays
@@ -350,22 +390,17 @@ clean_result_table(dickey_fuller)
 ![](../../docs_source/images/eda/first_second_difference/first_second_difference_treasury_nasa_outlays.jpeg)
 
 
-## ARKX Stock
-
-![](../../docs_source/images/eda/first_second_difference/first_second_difference_arkx_stock_adj_close.jpeg)
-
-
 ## Google Trends
 
 ![](../../docs_source/images/eda/first_second_difference/first_second_difference_google_trends_space_exploration.jpeg)
 
 
-## Mission Launches
+## Launches
 
 ![](../../docs_source/images/eda/first_second_difference/first_second_difference_launches_per_month.jpeg)
 
 
-## Operational Satellites
+## Satellites
 
 ![](../../docs_source/images/eda/first_second_difference/first_second_difference_satellites_operational_count.jpeg)
 
@@ -433,8 +468,10 @@ clean_result_table(adjusted_dickey_fuller)
 
 
 
-## Moving Average Smoothing
+## SMA Smoothing
 
+
+As an additional, following the example provided for the EDA section, I include an SMA analysis.
 
 
 

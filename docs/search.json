@@ -67,7 +67,7 @@
     "href": "pages/02_data_sources.html#private-sector-space-exploration",
     "title": "2  Data Sources",
     "section": "2.4 Private Sector Space Exploration",
-    "text": "2.4 Private Sector Space Exploration\n\n\n\n\n\n\nThe raw data collected for this section is available here, and the sources are provided in the text.\nTime series in this section include:\n\nStock data for ARK Space Exploration ETF (ARKX)\nStock data for Kratos Defense & Security (KTOS)\nStock data for Trimble Inc. (TRMB)\nStock data for Aerovironment Inc. (AVAV)\n\n\n\n\n\nSpace Exploration Stock Data\nThe Space Exploration Stock Data, sourced from Yahoo Finance, details the market performance of the ARK Space Exploration ETF (ARKX) (Yahoo Finance, n.d.-b), Kratos Defense & Security (KTOS) (Yahoo Finance, n.d.-c), Trimble Inc. (TRMB) (Yahoo Finance, n.d.-d), and Aerovironment Inc. (AVAV) (Yahoo Finance, n.d.-a) over a brief period of five years. These datasets include daily trading metrics, including opening, high, low, close, and adjusted close prices, alongside the trading volume. For instance, on March 30, 2021, ARKX opened at $20.50, reached a high of $20.70, a low of $20.07, and closed at $20.30, with a trading volume of approximately 14.6 million shares. These figures indicate active trading and fluctuating investor interest in space exploration companies.\nHere is a view of a sample of the data (Yahoo Finance, n.d.-b):\n\n\n\n\n\n\n\n\n\nDate\nOpen\nHigh\nLow\nClose\nAdj Close\nVolume\n\n\n\n\n0\n2021-03-30\n20.500000\n20.700001\n20.073999\n20.299999\n20.299999\n14594100\n\n\n1\n2021-03-31\n20.430000\n20.570000\n20.410000\n20.570000\n20.570000\n7522400\n\n\n2\n2021-04-01\n20.889999\n21.000000\n20.730000\n20.910000\n20.910000\n6543000\n\n\n3\n2021-04-05\n21.270000\n21.270000\n21.010000\n21.139999\n21.139999\n5038100\n\n\n4\n2021-04-06\n21.129999\n21.139999\n21.030001\n21.100000\n21.100000\n3597900\n\n\n\n\n\n\n\nFigure 2.4 shows the adjusted price of ARKX over time, where we see an overall decreasing trend during 2022, largely as a result of interest rate movements in the global markets.\n\n\n\n\n        \n        \nFigure 2.4: Shows the adjusted price of ARKX over time."
+    "text": "2.4 Private Sector Space Exploration\n\n\n\n\n\n\nThe raw data collected for this section is available here, and the sources are provided in the text.\nTime series in this section include:\n\nStock data for ARK Space Exploration ETF (ARKX)\nStock data for Kratos Defense & Security (KTOS)\nStock data for Trimble Inc. (TRMB)\nStock data for Aerovironment Inc. (AVAV)\n\n\n\n\n\nSpace Exploration Stock Data\nThe Space Exploration Stock Data, sourced from Yahoo Finance, details the market performance of the ARK Space Exploration ETF (ARKX) (Yahoo Finance, n.d.-b), Kratos Defense & Security (KTOS) (Yahoo Finance, n.d.-c), Trimble Inc. (TRMB) (Yahoo Finance, n.d.-d), and Aerovironment Inc. (AVAV) (Yahoo Finance, n.d.-a) over a brief period of five years. These datasets include daily trading metrics, including opening, high, low, close, and adjusted close prices, alongside the trading volume. For instance, on March 30, 2021, ARKX opened at $20.50, reached a high of $20.70, a low of $20.07, and closed at $20.30, with a trading volume of approximately 14.6 million shares. These figures indicate active trading and fluctuating investor interest in space exploration companies.\nHere is a view of a sample of the data (Yahoo Finance, n.d.-b):\n\n\n\n\n\n\n\n\n\nDate\nOpen\nHigh\nLow\nClose\nAdj Close\nVolume\n\n\n\n\n0\n2021-04-01\n20.889999\n21.000000\n20.730000\n20.910000\n20.910000\n6543000\n\n\n1\n2021-04-05\n21.270000\n21.270000\n21.010000\n21.139999\n21.139999\n5038100\n\n\n2\n2021-04-06\n21.129999\n21.139999\n21.030001\n21.100000\n21.100000\n3597900\n\n\n3\n2021-04-07\n21.030001\n21.049999\n20.750000\n20.809999\n20.809999\n2992600\n\n\n4\n2021-04-08\n20.969999\n21.049999\n20.860001\n21.049999\n21.049999\n2124300\n\n\n\n\n\n\n\nFigure 2.4 shows the adjusted price of ARKX over time, where we see an overall decreasing trend during 2022, largely as a result of interest rate movements in the global markets.\n\n\n\n\n        \n        \nFigure 2.4: Shows the adjusted price of ARKX over time."
   },
   {
     "objectID": "pages/02_data_sources.html#global-involvement-in-space-exploration",
@@ -116,70 +116,70 @@
     "href": "pages/04_eda.html#original-data",
     "title": "4  Exploratory Data Analysis",
     "section": "4.1 Original Data",
-    "text": "4.1 Original Data\n\nMars Ground TemperatureMars PressureTreasury NASA OutlaysARKX StockGoogle TrendsMission LaunchesOperational Satellites"
+    "text": "4.1 Original Data\n\nSeas. 1: Mars TemperatureSeas. 2: Mars PressureFinancial 1: ARKXFinancial 2: AVAVTreasury NASA OutlaysGoogle TrendsLaunchesSatellites"
   },
   {
     "objectID": "pages/04_eda.html#lag-plots",
     "href": "pages/04_eda.html#lag-plots",
     "title": "4  Exploratory Data Analysis",
     "section": "4.2 Lag Plots",
-    "text": "4.2 Lag Plots\n\nMars Ground TemperatureMars PressureTreasury NASA OutlaysARKX StockGoogle TrendsMission LaunchesOperational Satellites"
+    "text": "4.2 Lag Plots\n\nSeas. 1: Mars TemperatureSeas. 2: Mars PressureFinancial 1: ARKXFinancial 2: AVAVTreasury NASA OutlaysGoogle TrendsLaunchesSatellites"
   },
   {
     "objectID": "pages/04_eda.html#decomposition",
     "href": "pages/04_eda.html#decomposition",
     "title": "4  Exploratory Data Analysis",
     "section": "4.3 Decomposition",
-    "text": "4.3 Decomposition\n\nMars Ground TemperatureMars PressureTreasury NASA OutlaysARKX StockGoogle TrendsMission LaunchesOperational Satellites"
+    "text": "4.3 Decomposition\n\nSeas. 1: Mars TemperatureSeas. 2: Mars PressureFinancial 1: ARKXFinancial 2: AVAVTreasury NASA OutlaysGoogle TrendsLaunchesSatellites"
   },
   {
     "objectID": "pages/04_eda.html#acf-and-pacf-plots",
     "href": "pages/04_eda.html#acf-and-pacf-plots",
     "title": "4  Exploratory Data Analysis",
     "section": "4.4 ACF and PACF Plots",
-    "text": "4.4 ACF and PACF Plots\n\nMars Ground TemperatureMars PressureTreasury NASA OutlaysARKX StockGoogle TrendsMission LaunchesOperational Satellites"
+    "text": "4.4 ACF and PACF Plots\n\nSeas. 1: Mars TemperatureSeas. 2: Mars PressureFinancial 1: ARKXFinancial 2: AVAVTreasury NASA OutlaysGoogle TrendsLaunchesSatellites"
   },
   {
     "objectID": "pages/04_eda.html#dickey-fuller-test",
     "href": "pages/04_eda.html#dickey-fuller-test",
     "title": "4  Exploratory Data Analysis",
     "section": "4.5 Dickey-Fuller Test",
-    "text": "4.5 Dickey-Fuller Test\nTable 4.1 shows the results of the Augmented Dickey-Fuller Test:\n\n\n\n\nTable 4.1: Shows the results of running the Augmented Dickey-Fuller Test on the time series datasets (alternative hypothesis: stationary).\n\n\nData Series\nTest Statistic\nP-Value\n\n\n\n\nAverage Ground Temperature on Mars\n-6.1751\n0.01\n\n\nAtmospheric Pressure on Mars\n-6.3287\n0.01\n\n\nARKX Stock Adjusted Close\n-1.5445\n0.7711\n\n\nTreasury NASA Outlays\n-4.9603\n0.01\n\n\nGoogle Trends Space Exploration Term\n-3.9223\n0.0134\n\n\nWeather Satellite Launches\n-3.0653\n0.1274\n\n\nOperational Satellites Over Time\n-1.7323\n0.6878"
+    "text": "4.5 Dickey-Fuller Test\nTable 4.1 shows the results of the Augmented Dickey-Fuller Test:\n\n\n\n\nTable 4.1: Shows the results of running the Augmented Dickey-Fuller Test on the time series datasets (alternative hypothesis: stationary).\n\n\nData Series\nTest Statistic\nP-Value\n\n\n\n\nAverage Ground Temperature on Mars\n-6.1751\n0.01\n\n\nAtmospheric Pressure on Mars\n-6.3287\n0.01\n\n\nARKX Stock Adjusted Close\n-1.5925\n0.7508\n\n\nAVAV Stock Adjusted Close\n-2.4559\n0.3853\n\n\nTreasury NASA Outlays\n-4.9603\n0.01\n\n\nGoogle Trends Space Exploration Term\n-3.9223\n0.0134\n\n\nWeather Satellite Launches\n-3.0653\n0.1274\n\n\nOperational Satellites Over Time\n-1.7323\n0.6878"
   },
   {
     "objectID": "pages/04_eda.html#detrend-and-difference",
     "href": "pages/04_eda.html#detrend-and-difference",
     "title": "4  Exploratory Data Analysis",
     "section": "4.6 Detrend and Difference",
-    "text": "4.6 Detrend and Difference\n\nMars Ground TemperatureMars PressureTreasury NASA OutlaysARKX StockGoogle TrendsMission LaunchesOperational Satellites"
+    "text": "4.6 Detrend and Difference\n\nSeas. 1: Mars TemperatureSeas. 2: Mars PressureFinancial 1: ARKXFinancial 2: AVAVTreasury NASA OutlaysGoogle TrendsLaunchesSatellites"
   },
   {
     "objectID": "pages/04_eda.html#original-and-first-difference",
     "href": "pages/04_eda.html#original-and-first-difference",
     "title": "4  Exploratory Data Analysis",
     "section": "4.7 Original and First Difference",
-    "text": "4.7 Original and First Difference\n\nMars Ground TemperatureMars PressureTreasury NASA OutlaysARKX StockGoogle TrendsMission LaunchesOperational Satellites"
+    "text": "4.7 Original and First Difference\n\nSeas. 1: Mars TemperatureSeas. 2: Mars PressureFinancial 1: ARKXFinancial 2: AVAVTreasury NASA OutlaysGoogle TrendsLaunchesSatellites"
   },
   {
     "objectID": "pages/04_eda.html#first-and-second-difference",
     "href": "pages/04_eda.html#first-and-second-difference",
     "title": "4  Exploratory Data Analysis",
     "section": "4.8 First and Second Difference",
-    "text": "4.8 First and Second Difference\n\nMars Ground TemperatureMars PressureTreasury NASA OutlaysARKX StockGoogle TrendsMission LaunchesOperational Satellites"
+    "text": "4.8 First and Second Difference\n\nSeas. 1: Mars TemperatureSeas. 2: Mars PressureFinancial 1: ARKXFinancial 2: AVAVTreasury NASA OutlaysGoogle TrendsLaunchesSatellites"
   },
   {
     "objectID": "pages/04_eda.html#adjusted-dickey-fuller-test",
     "href": "pages/04_eda.html#adjusted-dickey-fuller-test",
     "title": "4  Exploratory Data Analysis",
     "section": "4.9 Adjusted Dickey-Fuller Test",
-    "text": "4.9 Adjusted Dickey-Fuller Test\nTable 4.2 shows the results of the adjusted Augmented Dickey-Fuller Test:\n\n\n\n\nTable 4.2: Shows the results of running the adjusted Augmented Dickey-Fuller Test on the time series datasets.\n\n\nData Series\nTest Statistic\nP-Value\n\n\n\n\nAverage Ground Temperature on Mars\n-5.5444\n0.01\n\n\nAtmospheric Pressure on Mars\n-3.5828\n0.041\n\n\nARKX Stock Adjusted Close\n-8.403\n0.01\n\n\nTreasury NASA Outlays\n-8.877\n0.01\n\n\nGoogle Trends Space Exploration Term\n-7.1225\n0.01\n\n\nWeather Satellite Launches\n-13.3759\n0.01\n\n\nOperational Satellites Over Time\n-2.8909\n0.2066"
+    "text": "4.9 Adjusted Dickey-Fuller Test\nTable 4.2 shows the results of the adjusted Augmented Dickey-Fuller Test:\n\n\n\n\nTable 4.2: Shows the results of running the adjusted Augmented Dickey-Fuller Test on the time series datasets.\n\n\nData Series\nTest Statistic\nP-Value\n\n\n\n\nAverage Ground Temperature on Mars\n-5.5444\n0.01\n\n\nAtmospheric Pressure on Mars\n-3.5828\n0.041\n\n\nARKX Stock Adjusted Close\n-8.5612\n0.01\n\n\nAVAV Stock Adjusted Close\n-9.5899\n0.01\n\n\nTreasury NASA Outlays\n-8.877\n0.01\n\n\nGoogle Trends Space Exploration Term\n-7.1225\n0.01\n\n\nWeather Satellite Launches\n-13.3759\n0.01\n\n\nOperational Satellites Over Time\n-2.8909\n0.2066"
   },
   {
-    "objectID": "pages/04_eda.html#moving-average-smoothing",
-    "href": "pages/04_eda.html#moving-average-smoothing",
+    "objectID": "pages/04_eda.html#sma-smoothing",
+    "href": "pages/04_eda.html#sma-smoothing",
     "title": "4  Exploratory Data Analysis",
-    "section": "4.10 Moving Average Smoothing",
-    "text": "4.10 Moving Average Smoothing"
+    "section": "4.10 SMA Smoothing",
+    "text": "4.10 SMA Smoothing\nAs an additional, following the example provided for the EDA section, I include an SMA analysis."
   },
   {
     "objectID": "pages/05_univariate_ts.html",
