@@ -112,11 +112,74 @@
     "text": "3.5 Weather Satellites with ggplot2\n\n\n\nFigure 3.4: Shows the weather satellite launches per year hued by status"
   },
   {
-    "objectID": "pages/04_eda.html",
-    "href": "pages/04_eda.html",
+    "objectID": "pages/04_eda.html#original-data",
+    "href": "pages/04_eda.html#original-data",
     "title": "4  Exploratory Data Analysis",
-    "section": "",
-    "text": "Coming soon."
+    "section": "4.1 Original Data",
+    "text": "4.1 Original Data\n\nMars Ground TemperatureMars PressureGovernment Space ExpendituresARKX StockGoogle TrendsMission LaunchesOperational Satellites"
+  },
+  {
+    "objectID": "pages/04_eda.html#lag-plots",
+    "href": "pages/04_eda.html#lag-plots",
+    "title": "4  Exploratory Data Analysis",
+    "section": "4.2 Lag Plots",
+    "text": "4.2 Lag Plots"
+  },
+  {
+    "objectID": "pages/04_eda.html#decomposition",
+    "href": "pages/04_eda.html#decomposition",
+    "title": "4  Exploratory Data Analysis",
+    "section": "4.3 Decomposition",
+    "text": "4.3 Decomposition"
+  },
+  {
+    "objectID": "pages/04_eda.html#acf-and-pacf-plots",
+    "href": "pages/04_eda.html#acf-and-pacf-plots",
+    "title": "4  Exploratory Data Analysis",
+    "section": "4.4 ACF and PACF Plots",
+    "text": "4.4 ACF and PACF Plots"
+  },
+  {
+    "objectID": "pages/04_eda.html#dickey-fuller-test",
+    "href": "pages/04_eda.html#dickey-fuller-test",
+    "title": "4  Exploratory Data Analysis",
+    "section": "4.5 Dickey-Fuller Test",
+    "text": "4.5 Dickey-Fuller Test"
+  },
+  {
+    "objectID": "pages/04_eda.html#detrend-vs-difference",
+    "href": "pages/04_eda.html#detrend-vs-difference",
+    "title": "4  Exploratory Data Analysis",
+    "section": "4.6 Detrend Vs Difference",
+    "text": "4.6 Detrend Vs Difference"
+  },
+  {
+    "objectID": "pages/04_eda.html#original-vs-first-difference",
+    "href": "pages/04_eda.html#original-vs-first-difference",
+    "title": "4  Exploratory Data Analysis",
+    "section": "4.7 Original Vs First Difference",
+    "text": "4.7 Original Vs First Difference"
+  },
+  {
+    "objectID": "pages/04_eda.html#first-vs-second-difference",
+    "href": "pages/04_eda.html#first-vs-second-difference",
+    "title": "4  Exploratory Data Analysis",
+    "section": "4.8 First Vs Second Difference",
+    "text": "4.8 First Vs Second Difference"
+  },
+  {
+    "objectID": "pages/04_eda.html#adjusted-dickey-fuller-test",
+    "href": "pages/04_eda.html#adjusted-dickey-fuller-test",
+    "title": "4  Exploratory Data Analysis",
+    "section": "4.9 Adjusted Dickey-Fuller Test",
+    "text": "4.9 Adjusted Dickey-Fuller Test"
+  },
+  {
+    "objectID": "pages/04_eda.html#moving-average-smoothing",
+    "href": "pages/04_eda.html#moving-average-smoothing",
+    "title": "4  Exploratory Data Analysis",
+    "section": "4.10 Moving Average Smoothing",
+    "text": "4.10 Moving Average Smoothing"
   },
   {
     "objectID": "pages/05_univariate_ts.html",
