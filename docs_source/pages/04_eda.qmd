@@ -12,6 +12,13 @@ from IPython.display import Markdown
 
 ```
 
+::: {.callout-note appearance="simple"}
+
+The code used in this section is available [here](https://github.com/vdelimad/5600_project/blob/main/notebooks/4_eda/eda_analysis.ipynb).
+
+::: 
+
+
 
 ## Original Data
 
@@ -466,12 +473,57 @@ clean_result_table(adjusted_dickey_fuller)
 
 
 
-
-
 ## SMA Smoothing
 
 
 As an additional, following the example provided for the EDA section, I include an SMA analysis.
+
+
+
+
+::: {.panel-tabset}
+
+## Seas. 1: Mars Temperature
+
+![](../../docs_source/images/eda/sma/sma_mars_weather_ground_temperature.jpeg)
+
+
+## Seas. 2: Mars Pressure
+
+![](../../docs_source/images/eda/sma/sma_pressure_current_pascals.jpeg)
+
+
+## Financial 1: ARKX
+
+![](../../docs_source/images/eda/sma/sma_arkx_stock_adj_close.jpeg)
+
+## Financial 2: AVAV
+
+![](../../docs_source/images/eda/sma/sma_avav_stock_adj_close.jpeg)
+
+
+
+## Treasury NASA Outlays
+
+![](../../docs_source/images/eda/sma/sma_treasury_nasa_outlays.jpeg)
+
+
+## Google Trends
+
+![](../../docs_source/images/eda/sma/sma_google_trends_space_exploration.jpeg)
+
+
+## Launches
+
+![](../../docs_source/images/eda/sma/sma_launches_per_month.jpeg)
+
+
+## Satellites
+
+![](../../docs_source/images/eda/sma/sma_satellites_operational_count.jpeg)
+
+:::
+
 
 
 

@@ -179,7 +179,7 @@
     "href": "pages/04_eda.html#sma-smoothing",
     "title": "4  Exploratory Data Analysis",
     "section": "4.10 SMA Smoothing",
-    "text": "4.10 SMA Smoothing\nAs an additional, following the example provided for the EDA section, I include an SMA analysis."
+    "text": "4.10 SMA Smoothing\nAs an additional, following the example provided for the EDA section, I include an SMA analysis.\n\nSeas. 1: Mars TemperatureSeas. 2: Mars PressureFinancial 1: ARKXFinancial 2: AVAVTreasury NASA OutlaysGoogle TrendsLaunchesSatellites"
   },
   {
     "objectID": "pages/05_univariate_ts.html",

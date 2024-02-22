@@ -9,6 +9,13 @@ pd.set_option('display.max_columns', None)
 
 ```
 
+::: {.callout-note appearance="simple"}
+
+The code used in this section is available [here](https://github.com/vdelimad/5600_project/tree/main/notebooks/3_visualization).
+
+::: 
+
+
 
 ## Mars Weather Dashboard with Tableau
 
