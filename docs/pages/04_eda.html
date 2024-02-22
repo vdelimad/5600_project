@@ -187,9 +187,9 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#decomposition" id="toc-decomposition" class="nav-link" data-scroll-target="#decomposition"><span class="header-section-number">4.3</span> Decomposition</a></li>
   <li><a href="#acf-and-pacf-plots" id="toc-acf-and-pacf-plots" class="nav-link" data-scroll-target="#acf-and-pacf-plots"><span class="header-section-number">4.4</span> ACF and PACF Plots</a></li>
   <li><a href="#dickey-fuller-test" id="toc-dickey-fuller-test" class="nav-link" data-scroll-target="#dickey-fuller-test"><span class="header-section-number">4.5</span> Dickey-Fuller Test</a></li>
-  <li><a href="#detrend-vs-difference" id="toc-detrend-vs-difference" class="nav-link" data-scroll-target="#detrend-vs-difference"><span class="header-section-number">4.6</span> Detrend Vs Difference</a></li>
-  <li><a href="#original-vs-first-difference" id="toc-original-vs-first-difference" class="nav-link" data-scroll-target="#original-vs-first-difference"><span class="header-section-number">4.7</span> Original Vs First Difference</a></li>
-  <li><a href="#first-vs-second-difference" id="toc-first-vs-second-difference" class="nav-link" data-scroll-target="#first-vs-second-difference"><span class="header-section-number">4.8</span> First Vs Second Difference</a></li>
+  <li><a href="#detrend-and-difference" id="toc-detrend-and-difference" class="nav-link" data-scroll-target="#detrend-and-difference"><span class="header-section-number">4.6</span> Detrend and Difference</a></li>
+  <li><a href="#original-and-first-difference" id="toc-original-and-first-difference" class="nav-link" data-scroll-target="#original-and-first-difference"><span class="header-section-number">4.7</span> Original and First Difference</a></li>
+  <li><a href="#first-and-second-difference" id="toc-first-and-second-difference" class="nav-link" data-scroll-target="#first-and-second-difference"><span class="header-section-number">4.8</span> First and Second Difference</a></li>
   <li><a href="#adjusted-dickey-fuller-test" id="toc-adjusted-dickey-fuller-test" class="nav-link" data-scroll-target="#adjusted-dickey-fuller-test"><span class="header-section-number">4.9</span> Adjusted Dickey-Fuller Test</a></li>
   <li><a href="#moving-average-smoothing" id="toc-moving-average-smoothing" class="nav-link" data-scroll-target="#moving-average-smoothing"><span class="header-section-number">4.10</span> Moving Average Smoothing</a></li>
   </ul>
@@ -343,7 +343,7 @@ ul.task-list li input[type="checkbox"] {
 <tr class="header">
 <th style="text-align: left;">Data Series</th>
 <th style="text-align: right;">Test Statistic</th>
-<th style="text-align: right;">P Value</th>
+<th style="text-align: right;">P-Value</th>
 </tr>
 </thead>
 <tbody>
@@ -388,17 +388,149 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </section>
-<section id="detrend-vs-difference" class="level2" data-number="4.6">
-<h2 data-number="4.6" class="anchored" data-anchor-id="detrend-vs-difference"><span class="header-section-number">4.6</span> Detrend Vs Difference</h2>
+<section id="detrend-and-difference" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="detrend-and-difference"><span class="header-section-number">4.6</span> Detrend and Difference</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true">Mars Ground Temperature</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" role="tab" aria-controls="tabset-5-2" aria-selected="false">Mars Pressure</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-3" role="tab" aria-controls="tabset-5-3" aria-selected="false">Treasury NASA Outlays</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-4" role="tab" aria-controls="tabset-5-4" aria-selected="false">ARKX Stock</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-5" role="tab" aria-controls="tabset-5-5" aria-selected="false">Google Trends</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-6" role="tab" aria-controls="tabset-5-6" aria-selected="false">Mission Launches</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-7-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-7" role="tab" aria-controls="tabset-5-7" aria-selected="false">Operational Satellites</a></li></ul>
+<div class="tab-content">
+<div id="tabset-5-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-5-1-tab">
+<p><img src="../../docs_source/images/eda/detrend_and_difference/detrend_and_difference_mars_weather_ground_temperature.jpeg" class="img-fluid"></p>
+</div>
+<div id="tabset-5-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-2-tab">
+<p><img src="../../docs_source/images/eda/detrend_and_difference/detrend_and_difference_pressure_current_pascals.jpeg" class="img-fluid"></p>
+</div>
+<div id="tabset-5-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-3-tab">
+<p><img src="../../docs_source/images/eda/detrend_and_difference/detrend_and_difference_treasury_nasa_outlays.jpeg" class="img-fluid"></p>
+</div>
+<div id="tabset-5-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-4-tab">
+<p><img src="../../docs_source/images/eda/detrend_and_difference/detrend_and_difference_arkx_stock_adj_close.jpeg" class="img-fluid"></p>
+</div>
+<div id="tabset-5-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-5-tab">
+<p><img src="../../docs_source/images/eda/detrend_and_difference/detrend_and_difference_google_trends_space_exploration.jpeg" class="img-fluid"></p>
+</div>
+<div id="tabset-5-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-6-tab">
+<p><img src="../../docs_source/images/eda/detrend_and_difference/detrend_and_difference_launches_per_month.jpeg" class="img-fluid"></p>
+</div>
+<div id="tabset-5-7" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-7-tab">
+<p><img src="../../docs_source/images/eda/detrend_and_difference/detrend_and_difference_satellites_operational_count.jpeg" class="img-fluid"></p>
+</div>
+</div>
+</div>
 </section>
-<section id="original-vs-first-difference" class="level2" data-number="4.7">
-<h2 data-number="4.7" class="anchored" data-anchor-id="original-vs-first-difference"><span class="header-section-number">4.7</span> Original Vs First Difference</h2>
+<section id="original-and-first-difference" class="level2" data-number="4.7">
+<h2 data-number="4.7" class="anchored" data-anchor-id="original-and-first-difference"><span class="header-section-number">4.7</span> Original and First Difference</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-6-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-1" role="tab" aria-controls="tabset-6-1" aria-selected="true">Mars Ground Temperature</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-2" role="tab" aria-controls="tabset-6-2" aria-selected="false">Mars Pressure</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-3" role="tab" aria-controls="tabset-6-3" aria-selected="false">Treasury NASA Outlays</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-4" role="tab" aria-controls="tabset-6-4" aria-selected="false">ARKX Stock</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-5" role="tab" aria-controls="tabset-6-5" aria-selected="false">Google Trends</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-6" role="tab" aria-controls="tabset-6-6" aria-selected="false">Mission Launches</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-7-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-7" role="tab" aria-controls="tabset-6-7" aria-selected="false">Operational Satellites</a></li></ul>
+<div class="tab-content">
+<div id="tabset-6-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-6-1-tab">
+<p><img src="../../docs_source/images/eda/original_and_difference/original_and_difference_mars_weather_ground_temperature.jpeg" class="img-fluid"></p>
+</div>
+<div id="tabset-6-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-2-tab">
+<p><img src="../../docs_source/images/eda/original_and_difference/original_and_difference_pressure_current_pascals.jpeg" class="img-fluid"></p>
+</div>
+<div id="tabset-6-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-3-tab">
+<p><img src="../../docs_source/images/eda/original_and_difference/original_and_difference_treasury_nasa_outlays.jpeg" class="img-fluid"></p>
+</div>
+<div id="tabset-6-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-4-tab">
+<p><img src="../../docs_source/images/eda/original_and_difference/original_and_difference_arkx_stock_adj_close.jpeg" class="img-fluid"></p>
+</div>
+<div id="tabset-6-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-5-tab">
+<p><img src="../../docs_source/images/eda/original_and_difference/original_and_difference_google_trends_space_exploration.jpeg" class="img-fluid"></p>
+</div>
+<div id="tabset-6-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-6-tab">
+<p><img src="../../docs_source/images/eda/original_and_difference/original_and_difference_launches_per_month.jpeg" class="img-fluid"></p>
+</div>
+<div id="tabset-6-7" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-7-tab">
+<p><img src="../../docs_source/images/eda/original_and_difference/original_and_difference_satellites_operational_count.jpeg" class="img-fluid"></p>
+</div>
+</div>
+</div>
 </section>
-<section id="first-vs-second-difference" class="level2" data-number="4.8">
-<h2 data-number="4.8" class="anchored" data-anchor-id="first-vs-second-difference"><span class="header-section-number">4.8</span> First Vs Second Difference</h2>
+<section id="first-and-second-difference" class="level2" data-number="4.8">
+<h2 data-number="4.8" class="anchored" data-anchor-id="first-and-second-difference"><span class="header-section-number">4.8</span> First and Second Difference</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-7-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-1" role="tab" aria-controls="tabset-7-1" aria-selected="true">Mars Ground Temperature</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-2" role="tab" aria-controls="tabset-7-2" aria-selected="false">Mars Pressure</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-3" role="tab" aria-controls="tabset-7-3" aria-selected="false">Treasury NASA Outlays</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-4" role="tab" aria-controls="tabset-7-4" aria-selected="false">ARKX Stock</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-5" role="tab" aria-controls="tabset-7-5" aria-selected="false">Google Trends</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-6" role="tab" aria-controls="tabset-7-6" aria-selected="false">Mission Launches</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-7-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-7" role="tab" aria-controls="tabset-7-7" aria-selected="false">Operational Satellites</a></li></ul>
+<div class="tab-content">
+<div id="tabset-7-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-7-1-tab">
+<p><img src="../../docs_source/images/eda/first_second_difference/first_second_difference_mars_weather_ground_temperature.jpeg" class="img-fluid"></p>
+</div>
+<div id="tabset-7-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-2-tab">
+<p><img src="../../docs_source/images/eda/first_second_difference/first_second_difference_pressure_current_pascals.jpeg" class="img-fluid"></p>
+</div>
+<div id="tabset-7-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-3-tab">
+<p><img src="../../docs_source/images/eda/first_second_difference/first_second_difference_treasury_nasa_outlays.jpeg" class="img-fluid"></p>
+</div>
+<div id="tabset-7-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-4-tab">
+<p><img src="../../docs_source/images/eda/first_second_difference/first_second_difference_arkx_stock_adj_close.jpeg" class="img-fluid"></p>
+</div>
+<div id="tabset-7-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-5-tab">
+<p><img src="../../docs_source/images/eda/first_second_difference/first_second_difference_google_trends_space_exploration.jpeg" class="img-fluid"></p>
+</div>
+<div id="tabset-7-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-6-tab">
+<p><img src="../../docs_source/images/eda/first_second_difference/first_second_difference_launches_per_month.jpeg" class="img-fluid"></p>
+</div>
+<div id="tabset-7-7" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-7-tab">
+<p><img src="../../docs_source/images/eda/first_second_difference/first_second_difference_satellites_operational_count.jpeg" class="img-fluid"></p>
+</div>
+</div>
+</div>
 </section>
 <section id="adjusted-dickey-fuller-test" class="level2" data-number="4.9">
 <h2 data-number="4.9" class="anchored" data-anchor-id="adjusted-dickey-fuller-test"><span class="header-section-number">4.9</span> Adjusted Dickey-Fuller Test</h2>
+<p><a href="#tbl-adjusted-dickey-fuller-test">Table&nbsp;<span>4.2</span></a> shows the results of the adjusted Augmented Dickey-Fuller Test:</p>
+<div class="cell" data-execution_count="3">
+<div class="cell-output cell-output-display" data-execution_count="3">
+<div id="tbl-adjusted-dickey-fuller-test" class="anchored">
+<table class="table table-sm table-striped small">
+<caption>Table&nbsp;4.2: Shows the results of running the adjusted Augmented Dickey-Fuller Test on the time series datasets.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Data Series</th>
+<th style="text-align: right;">Test Statistic</th>
+<th style="text-align: right;">P-Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Average Ground Temperature on Mars</td>
+<td style="text-align: right;">-5.5444</td>
+<td style="text-align: right;">0.01</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Atmospheric Pressure on Mars</td>
+<td style="text-align: right;">-3.5828</td>
+<td style="text-align: right;">0.041</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ARKX Stock Adjusted Close</td>
+<td style="text-align: right;">-8.403</td>
+<td style="text-align: right;">0.01</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Treasury NASA Outlays</td>
+<td style="text-align: right;">-8.877</td>
+<td style="text-align: right;">0.01</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Google Trends Space Exploration Term</td>
+<td style="text-align: right;">-7.1225</td>
+<td style="text-align: right;">0.01</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Weather Satellite Launches</td>
+<td style="text-align: right;">-13.3759</td>
+<td style="text-align: right;">0.01</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Operational Satellites Over Time</td>
+<td style="text-align: right;">-2.8909</td>
+<td style="text-align: right;">0.2066</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
 </section>
 <section id="moving-average-smoothing" class="level2" data-number="4.10">
 <h2 data-number="4.10" class="anchored" data-anchor-id="moving-average-smoothing"><span class="header-section-number">4.10</span> Moving Average Smoothing</h2>

@@ -208,7 +208,7 @@ def clean_result_table(table):
   table = table.rename(columns={
       'data_series': 'Data Series',
       'test_statistic': 'Test Statistic',
-      'p_value': 'P Value',
+      'p_value': 'P-Value',
 
       })
 
@@ -240,18 +240,201 @@ clean_result_table(dickey_fuller)
 
 
 
-## Detrend Vs Difference
+## Detrend and Difference
 
 
-## Original Vs First Difference
+::: {.panel-tabset}
+
+## Mars Ground Temperature
+
+![](../../docs_source/images/eda/detrend_and_difference/detrend_and_difference_mars_weather_ground_temperature.jpeg)
 
 
-## First Vs Second Difference
+## Mars Pressure
+
+![](../../docs_source/images/eda/detrend_and_difference/detrend_and_difference_pressure_current_pascals.jpeg)
+
+
+## Treasury NASA Outlays
+
+![](../../docs_source/images/eda/detrend_and_difference/detrend_and_difference_treasury_nasa_outlays.jpeg)
+
+
+## ARKX Stock
+
+![](../../docs_source/images/eda/detrend_and_difference/detrend_and_difference_arkx_stock_adj_close.jpeg)
+
+
+## Google Trends
+
+![](../../docs_source/images/eda/detrend_and_difference/detrend_and_difference_google_trends_space_exploration.jpeg)
+
+
+## Mission Launches
+
+![](../../docs_source/images/eda/detrend_and_difference/detrend_and_difference_launches_per_month.jpeg)
+
+
+## Operational Satellites
+
+![](../../docs_source/images/eda/detrend_and_difference/detrend_and_difference_satellites_operational_count.jpeg)
+
+:::
+
+
+
+
+
+
+
+## Original and First Difference
+
+
+::: {.panel-tabset}
+
+## Mars Ground Temperature
+
+![](../../docs_source/images/eda/original_and_difference/original_and_difference_mars_weather_ground_temperature.jpeg)
+
+
+## Mars Pressure
+
+![](../../docs_source/images/eda/original_and_difference/original_and_difference_pressure_current_pascals.jpeg)
+
+
+## Treasury NASA Outlays
+
+![](../../docs_source/images/eda/original_and_difference/original_and_difference_treasury_nasa_outlays.jpeg)
+
+
+## ARKX Stock
+
+![](../../docs_source/images/eda/original_and_difference/original_and_difference_arkx_stock_adj_close.jpeg)
+
+
+## Google Trends
+
+![](../../docs_source/images/eda/original_and_difference/original_and_difference_google_trends_space_exploration.jpeg)
+
+
+## Mission Launches
+
+![](../../docs_source/images/eda/original_and_difference/original_and_difference_launches_per_month.jpeg)
+
+
+## Operational Satellites
+
+![](../../docs_source/images/eda/original_and_difference/original_and_difference_satellites_operational_count.jpeg)
+
+:::
+
+
+
+## First and Second Difference
+
+
+::: {.panel-tabset}
+
+## Mars Ground Temperature
+
+![](../../docs_source/images/eda/first_second_difference/first_second_difference_mars_weather_ground_temperature.jpeg)
+
+
+## Mars Pressure
+
+![](../../docs_source/images/eda/first_second_difference/first_second_difference_pressure_current_pascals.jpeg)
+
+
+## Treasury NASA Outlays
+
+![](../../docs_source/images/eda/first_second_difference/first_second_difference_treasury_nasa_outlays.jpeg)
+
+
+## ARKX Stock
+
+![](../../docs_source/images/eda/first_second_difference/first_second_difference_arkx_stock_adj_close.jpeg)
+
+
+## Google Trends
+
+![](../../docs_source/images/eda/first_second_difference/first_second_difference_google_trends_space_exploration.jpeg)
+
+
+## Mission Launches
+
+![](../../docs_source/images/eda/first_second_difference/first_second_difference_launches_per_month.jpeg)
+
+
+## Operational Satellites
+
+![](../../docs_source/images/eda/first_second_difference/first_second_difference_satellites_operational_count.jpeg)
+
+:::
+
 
 
 ## Adjusted Dickey-Fuller Test
 
 
+@tbl-adjusted-dickey-fuller-test shows the results of the adjusted Augmented Dickey-Fuller Test:
+
+
+```{python}
+#| echo: false
+#| label: tbl-adjusted-dickey-fuller-test
+#| tbl-cap: "Shows the results of running the adjusted Augmented Dickey-Fuller Test on the time series datasets."
+
+
+adjusted_dickey_fuller = pd.read_csv('../../docs_source/tables/eda/dickey_fuller/adjusted_dickey_fuller_table.csv')
+
+
+'test_statistic', 'p_value', 'method', 'data_series', 'alternative_hypothesis'
+def clean_result_table(table):
+
+  # format decimals
+  columns_to_format = ['test_statistic', 'p_value']
+  table[columns_to_format] = table[columns_to_format].applymap(lambda x: f"{x:.4f}")
+
+  # format
+  table = table.rename(columns={
+      'data_series': 'Data Series',
+      'test_statistic': 'Test Statistic',
+      'p_value': 'P-Value',
+
+      })
+
+
+  # generate the Markdown table
+  md_table = tabulate(table, headers='keys', tablefmt='pipe', showindex=False)
+
+
+  ## bold a specific line
+  #line_to_bold = 11
+#
+  #lines = md_table.split('\n')
+  ## check if there are enough rows to bold
+  #if len(lines) > line_to_bold:
+  #    third_row_cells = lines[line_to_bold].split('|')[1:-1]    
+  #    third_row_cells = [f"**{cell.strip()}**" for cell in third_row_cells]    
+  #    lines[line_to_bold] = '|' + '|'.join(third_row_cells) + '|'
+  #md_bold_third_row = '\n'.join(lines)
+
+  # show
+  return Markdown(md_table)
+
+
+clean_result_table(adjusted_dickey_fuller)
+
+
+```
+
+
+
+
+
+
 ## Moving Average Smoothing
+
+
 
 

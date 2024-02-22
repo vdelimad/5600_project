@@ -144,35 +144,35 @@
     "href": "pages/04_eda.html#dickey-fuller-test",
     "title": "4  Exploratory Data Analysis",
     "section": "4.5 Dickey-Fuller Test",
-    "text": "4.5 Dickey-Fuller Test\nTable 4.1 shows the results of the Augmented Dickey-Fuller Test:\n\n\n\n\nTable 4.1: Shows the results of running the Augmented Dickey-Fuller Test on the time series datasets (alternative hypothesis: stationary).\n\n\nData Series\nTest Statistic\nP Value\n\n\n\n\nAverage Ground Temperature on Mars\n-6.1751\n0.01\n\n\nAtmospheric Pressure on Mars\n-6.3287\n0.01\n\n\nARKX Stock Adjusted Close\n-1.5445\n0.7711\n\n\nTreasury NASA Outlays\n-4.9603\n0.01\n\n\nGoogle Trends Space Exploration Term\n-3.9223\n0.0134\n\n\nWeather Satellite Launches\n-3.0653\n0.1274\n\n\nOperational Satellites Over Time\n-1.7323\n0.6878"
+    "text": "4.5 Dickey-Fuller Test\nTable 4.1 shows the results of the Augmented Dickey-Fuller Test:\n\n\n\n\nTable 4.1: Shows the results of running the Augmented Dickey-Fuller Test on the time series datasets (alternative hypothesis: stationary).\n\n\nData Series\nTest Statistic\nP-Value\n\n\n\n\nAverage Ground Temperature on Mars\n-6.1751\n0.01\n\n\nAtmospheric Pressure on Mars\n-6.3287\n0.01\n\n\nARKX Stock Adjusted Close\n-1.5445\n0.7711\n\n\nTreasury NASA Outlays\n-4.9603\n0.01\n\n\nGoogle Trends Space Exploration Term\n-3.9223\n0.0134\n\n\nWeather Satellite Launches\n-3.0653\n0.1274\n\n\nOperational Satellites Over Time\n-1.7323\n0.6878"
   },
   {
-    "objectID": "pages/04_eda.html#detrend-vs-difference",
-    "href": "pages/04_eda.html#detrend-vs-difference",
+    "objectID": "pages/04_eda.html#detrend-and-difference",
+    "href": "pages/04_eda.html#detrend-and-difference",
     "title": "4  Exploratory Data Analysis",
-    "section": "4.6 Detrend Vs Difference",
-    "text": "4.6 Detrend Vs Difference"
+    "section": "4.6 Detrend and Difference",
+    "text": "4.6 Detrend and Difference\n\nMars Ground TemperatureMars PressureTreasury NASA OutlaysARKX StockGoogle TrendsMission LaunchesOperational Satellites"
   },
   {
-    "objectID": "pages/04_eda.html#original-vs-first-difference",
-    "href": "pages/04_eda.html#original-vs-first-difference",
+    "objectID": "pages/04_eda.html#original-and-first-difference",
+    "href": "pages/04_eda.html#original-and-first-difference",
     "title": "4  Exploratory Data Analysis",
-    "section": "4.7 Original Vs First Difference",
-    "text": "4.7 Original Vs First Difference"
+    "section": "4.7 Original and First Difference",
+    "text": "4.7 Original and First Difference\n\nMars Ground TemperatureMars PressureTreasury NASA OutlaysARKX StockGoogle TrendsMission LaunchesOperational Satellites"
   },
   {
-    "objectID": "pages/04_eda.html#first-vs-second-difference",
-    "href": "pages/04_eda.html#first-vs-second-difference",
+    "objectID": "pages/04_eda.html#first-and-second-difference",
+    "href": "pages/04_eda.html#first-and-second-difference",
     "title": "4  Exploratory Data Analysis",
-    "section": "4.8 First Vs Second Difference",
-    "text": "4.8 First Vs Second Difference"
+    "section": "4.8 First and Second Difference",
+    "text": "4.8 First and Second Difference\n\nMars Ground TemperatureMars PressureTreasury NASA OutlaysARKX StockGoogle TrendsMission LaunchesOperational Satellites"
   },
   {
     "objectID": "pages/04_eda.html#adjusted-dickey-fuller-test",
     "href": "pages/04_eda.html#adjusted-dickey-fuller-test",
     "title": "4  Exploratory Data Analysis",
     "section": "4.9 Adjusted Dickey-Fuller Test",
-    "text": "4.9 Adjusted Dickey-Fuller Test"
+    "text": "4.9 Adjusted Dickey-Fuller Test\nTable 4.2 shows the results of the adjusted Augmented Dickey-Fuller Test:\n\n\n\n\nTable 4.2: Shows the results of running the adjusted Augmented Dickey-Fuller Test on the time series datasets.\n\n\nData Series\nTest Statistic\nP-Value\n\n\n\n\nAverage Ground Temperature on Mars\n-5.5444\n0.01\n\n\nAtmospheric Pressure on Mars\n-3.5828\n0.041\n\n\nARKX Stock Adjusted Close\n-8.403\n0.01\n\n\nTreasury NASA Outlays\n-8.877\n0.01\n\n\nGoogle Trends Space Exploration Term\n-7.1225\n0.01\n\n\nWeather Satellite Launches\n-13.3759\n0.01\n\n\nOperational Satellites Over Time\n-2.8909\n0.2066"
   },
   {
     "objectID": "pages/04_eda.html#moving-average-smoothing",
