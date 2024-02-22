@@ -40,7 +40,7 @@ Time series in this section include:
 
 ### Public Expenditure on Space Exploration {.unnumbered .unlisted}
 
-The data on Public Expenditure on Space Exploration, sourced from @us_bureau_of_economic_analysis_government_nodate, traces the financial commitment of the United States to space exploration initiatives from the late 1950s. This dataset reveals a progressive increase in spending over the initial years, starting from a modest 0.150 billion dollars in 1959. The trend of escalating investment is further underscored by the 1963 figure, which rose quickly to 1.801 billion dollars, showcasing the U.S.'s commitment to establishing its presence in space and achieving technological supremacy during the Cold War era. As of 2022, this figure had grown to 15.5 billion dollars. 
+The data on Public Expenditure on Space Exploration, sourced from @us_bureau_of_economic_analysis_government_nodate, traces the financial commitment of the United States to space exploration initiatives from the late 1950s. This dataset reveals a progressive increase in spending over the initial years, starting from a modest 0.150 billion dollars in 1959. The trend of escalating investment is further underscored by the 1963 figure, which rose quickly to 1.801 billion dollars, showcasing the U.S.'s commitment to establishing its presence in space and achieving technological supremacy during the Cold War era. As of 2022, this figure had grown to 15.5 billion dollars. Summary data of receipts and outlays of the U.S. Government to NASA from @department_of_the_treasury_monthly_nodate is also included.
 
 Here is a view of a sample of the data [@us_bureau_of_economic_analysis_government_nodate]:
 

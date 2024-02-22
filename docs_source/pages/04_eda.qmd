@@ -2,54 +2,130 @@
 
 
 
-
-
-
 ## Original Data
 
 ::: {.panel-tabset}
 
 ## Mars Ground Temperature
 
-![](../../docs_source/images/eda/original_mars_weather_ground_temperature_status.jpeg)
+![](../../docs_source/images/eda/original/original_mars_weather_ground_temperature_status.jpeg)
 
 
 ## Mars Pressure
 
-![](../../docs_source/images/eda/original_pressure_current_pascals_status.jpeg)
+![](../../docs_source/images/eda/original/original_pressure_current_pascals_status.jpeg)
 
 
-## Government Space Expenditures
+## Treasury NASA Outlays
 
-![](../../docs_source/images/eda/original_government_space_expenditures_status.jpeg)
+![](../../docs_source/images/eda/original/original_treasury_nasa_outlays_status.jpeg)
 
 
 ## ARKX Stock
 
-![](../../docs_source/images/eda/original_arkx_stock_adj_close_status.jpeg)
+![](../../docs_source/images/eda/original/original_arkx_stock_adj_close_status.jpeg)
 
 
 ## Google Trends
 
-![](../../docs_source/images/eda/original_google_trends_space_exploration_status.jpeg)
+![](../../docs_source/images/eda/original/original_google_trends_space_exploration_status.jpeg)
 
 
 ## Mission Launches
 
-![](../../docs_source/images/eda/original_launches_per_month_status.jpeg)
+![](../../docs_source/images/eda/original/original_launches_per_month_status.jpeg)
 
 
 ## Operational Satellites
 
-![](../../docs_source/images/eda/original_satellites_operational_count_status.jpeg)
+![](../../docs_source/images/eda/original/original_satellites_operational_count_status.jpeg)
 
 :::
 
 
 ## Lag Plots
 
+::: {.panel-tabset}
+
+## Mars Ground Temperature
+
+![](../../docs_source/images/eda/lagplots/lagplots_mars_weather_ground_temperature_status.jpeg)
+
+
+## Mars Pressure
+
+![](../../docs_source/images/eda/lagplots/lagplots_pressure_current_pascals_status.jpeg)
+
+
+## Treasury NASA Outlays
+
+![](../../docs_source/images/eda/lagplots/lagplots_treasury_nasa_outlays_status.jpeg)
+
+
+## ARKX Stock
+
+![](../../docs_source/images/eda/lagplots/lagplots_arkx_stock_adj_close_status.jpeg)
+
+
+## Google Trends
+
+![](../../docs_source/images/eda/lagplots/lagplots_google_trends_space_exploration_status.jpeg)
+
+
+## Mission Launches
+
+![](../../docs_source/images/eda/lagplots/lagplots_launches_per_month_status.jpeg)
+
+
+## Operational Satellites
+
+![](../../docs_source/images/eda/lagplots/lagplots_satellites_operational_count_status.jpeg)
+
+:::
+
+
 
 ## Decomposition
+
+
+::: {.panel-tabset}
+
+## Mars Ground Temperature
+
+![](../../docs_source/images/eda/decomposition/decomposition_mars_weather_ground_temperature_status.jpeg)
+
+
+## Mars Pressure
+
+![](../../docs_source/images/eda/decomposition/decomposition_pressure_current_pascals_status.jpeg)
+
+
+## Treasury NASA Outlays
+
+![](../../docs_source/images/eda/decomposition/decomposition_treasury_nasa_outlays_status.jpeg)
+
+
+## ARKX Stock
+
+![](../../docs_source/images/eda/decomposition/decomposition_arkx_stock_adj_close_status.jpeg)
+
+
+## Google Trends
+
+![](../../docs_source/images/eda/decomposition/decomposition_google_trends_space_exploration_status.jpeg)
+
+
+## Mission Launches
+
+![](../../docs_source/images/eda/decomposition/decomposition_launches_per_month_status.jpeg)
+
+
+## Operational Satellites
+
+![](../../docs_source/images/eda/decomposition/decomposition_satellites_operational_count_status.jpeg)
+
+:::
+
 
 
 ## ACF and PACF Plots
