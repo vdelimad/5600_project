@@ -45,6 +45,7 @@ format:
     page-navigation: true
     toc-title: Contents
 
+tbl-cap-location: bottom
 
 bibliography: assets/references.bib
 csl: assets/apa.csl

@@ -1,5 +1,16 @@
 # Exploratory Data Analysis
 
+```{python}
+#| echo: false
+
+import pandas as pd
+from tabulate import tabulate
+import IPython.display as d
+from IPython.display import display, HTML, IFrame
+from IPython.display import Markdown
+
+
+```
 
 
 ## Original Data
@@ -8,37 +19,37 @@
 
 ## Mars Ground Temperature
 
-![](../../docs_source/images/eda/original/original_mars_weather_ground_temperature_status.jpeg)
+![](../../docs_source/images/eda/original/original_mars_weather_ground_temperature.jpeg)
 
 
 ## Mars Pressure
 
-![](../../docs_source/images/eda/original/original_pressure_current_pascals_status.jpeg)
+![](../../docs_source/images/eda/original/original_pressure_current_pascals.jpeg)
 
 
 ## Treasury NASA Outlays
 
-![](../../docs_source/images/eda/original/original_treasury_nasa_outlays_status.jpeg)
+![](../../docs_source/images/eda/original/original_treasury_nasa_outlays.jpeg)
 
 
 ## ARKX Stock
 
-![](../../docs_source/images/eda/original/original_arkx_stock_adj_close_status.jpeg)
+![](../../docs_source/images/eda/original/original_arkx_stock_adj_close.jpeg)
 
 
 ## Google Trends
 
-![](../../docs_source/images/eda/original/original_google_trends_space_exploration_status.jpeg)
+![](../../docs_source/images/eda/original/original_google_trends_space_exploration.jpeg)
 
 
 ## Mission Launches
 
-![](../../docs_source/images/eda/original/original_launches_per_month_status.jpeg)
+![](../../docs_source/images/eda/original/original_launches_per_month.jpeg)
 
 
 ## Operational Satellites
 
-![](../../docs_source/images/eda/original/original_satellites_operational_count_status.jpeg)
+![](../../docs_source/images/eda/original/original_satellites_operational_count.jpeg)
 
 :::
 
@@ -49,37 +60,37 @@
 
 ## Mars Ground Temperature
 
-![](../../docs_source/images/eda/lagplots/lagplots_mars_weather_ground_temperature_status.jpeg)
+![](../../docs_source/images/eda/lagplots/lagplots_mars_weather_ground_temperature.jpeg)
 
 
 ## Mars Pressure
 
-![](../../docs_source/images/eda/lagplots/lagplots_pressure_current_pascals_status.jpeg)
+![](../../docs_source/images/eda/lagplots/lagplots_pressure_current_pascals.jpeg)
 
 
 ## Treasury NASA Outlays
 
-![](../../docs_source/images/eda/lagplots/lagplots_treasury_nasa_outlays_status.jpeg)
+![](../../docs_source/images/eda/lagplots/lagplots_treasury_nasa_outlays.jpeg)
 
 
 ## ARKX Stock
 
-![](../../docs_source/images/eda/lagplots/lagplots_arkx_stock_adj_close_status.jpeg)
+![](../../docs_source/images/eda/lagplots/lagplots_arkx_stock_adj_close.jpeg)
 
 
 ## Google Trends
 
-![](../../docs_source/images/eda/lagplots/lagplots_google_trends_space_exploration_status.jpeg)
+![](../../docs_source/images/eda/lagplots/lagplots_google_trends_space_exploration.jpeg)
 
 
 ## Mission Launches
 
-![](../../docs_source/images/eda/lagplots/lagplots_launches_per_month_status.jpeg)
+![](../../docs_source/images/eda/lagplots/lagplots_launches_per_month.jpeg)
 
 
 ## Operational Satellites
 
-![](../../docs_source/images/eda/lagplots/lagplots_satellites_operational_count_status.jpeg)
+![](../../docs_source/images/eda/lagplots/lagplots_satellites_operational_count.jpeg)
 
 :::
 
@@ -92,37 +103,37 @@
 
 ## Mars Ground Temperature
 
-![](../../docs_source/images/eda/decomposition/decomposition_mars_weather_ground_temperature_status.jpeg)
+![](../../docs_source/images/eda/decomposition/decomposition_mars_weather_ground_temperature.jpeg)
 
 
 ## Mars Pressure
 
-![](../../docs_source/images/eda/decomposition/decomposition_pressure_current_pascals_status.jpeg)
+![](../../docs_source/images/eda/decomposition/decomposition_pressure_current_pascals.jpeg)
 
 
 ## Treasury NASA Outlays
 
-![](../../docs_source/images/eda/decomposition/decomposition_treasury_nasa_outlays_status.jpeg)
+![](../../docs_source/images/eda/decomposition/decomposition_treasury_nasa_outlays.jpeg)
 
 
 ## ARKX Stock
 
-![](../../docs_source/images/eda/decomposition/decomposition_arkx_stock_adj_close_status.jpeg)
+![](../../docs_source/images/eda/decomposition/decomposition_arkx_stock_adj_close.jpeg)
 
 
 ## Google Trends
 
-![](../../docs_source/images/eda/decomposition/decomposition_google_trends_space_exploration_status.jpeg)
+![](../../docs_source/images/eda/decomposition/decomposition_google_trends_space_exploration.jpeg)
 
 
 ## Mission Launches
 
-![](../../docs_source/images/eda/decomposition/decomposition_launches_per_month_status.jpeg)
+![](../../docs_source/images/eda/decomposition/decomposition_launches_per_month.jpeg)
 
 
 ## Operational Satellites
 
-![](../../docs_source/images/eda/decomposition/decomposition_satellites_operational_count_status.jpeg)
+![](../../docs_source/images/eda/decomposition/decomposition_satellites_operational_count.jpeg)
 
 :::
 
@@ -131,7 +142,102 @@
 ## ACF and PACF Plots
 
 
+::: {.panel-tabset}
+
+## Mars Ground Temperature
+
+![](../../docs_source/images/eda/acf_and_pacf/acf_and_pacf_mars_weather_ground_temperature.jpeg)
+
+
+## Mars Pressure
+
+![](../../docs_source/images/eda/acf_and_pacf/acf_and_pacf_pressure_current_pascals.jpeg)
+
+
+## Treasury NASA Outlays
+
+![](../../docs_source/images/eda/acf_and_pacf/acf_and_pacf_treasury_nasa_outlays.jpeg)
+
+
+## ARKX Stock
+
+![](../../docs_source/images/eda/acf_and_pacf/acf_and_pacf_arkx_stock_adj_close.jpeg)
+
+
+## Google Trends
+
+![](../../docs_source/images/eda/acf_and_pacf/acf_and_pacf_google_trends_space_exploration.jpeg)
+
+
+## Mission Launches
+
+![](../../docs_source/images/eda/acf_and_pacf/acf_and_pacf_launches_per_month.jpeg)
+
+
+## Operational Satellites
+
+![](../../docs_source/images/eda/acf_and_pacf/acf_and_pacf_satellites_operational_count.jpeg)
+
+:::
+
+
+
+
 ## Dickey-Fuller Test
+
+@tbl-dickey-fuller-test shows the results of the Augmented Dickey-Fuller Test:
+
+
+```{python}
+#| echo: false
+#| label: tbl-dickey-fuller-test
+#| tbl-cap: "Shows the results of running the Augmented Dickey-Fuller Test on the time series datasets (alternative hypothesis: `stationary`)."
+
+
+dickey_fuller = pd.read_csv('../../docs_source/tables/eda/dickey_fuller/dickey_fuller_table.csv')
+
+
+'test_statistic', 'p_value', 'method', 'data_series', 'alternative_hypothesis'
+def clean_result_table(table):
+
+  # format decimals
+  columns_to_format = ['test_statistic', 'p_value']
+  table[columns_to_format] = table[columns_to_format].applymap(lambda x: f"{x:.4f}")
+
+  # format
+  table = table.rename(columns={
+      'data_series': 'Data Series',
+      'test_statistic': 'Test Statistic',
+      'p_value': 'P Value',
+
+      })
+
+
+  # generate the Markdown table
+  md_table = tabulate(table, headers='keys', tablefmt='pipe', showindex=False)
+
+
+  ## bold a specific line
+  #line_to_bold = 11
+#
+  #lines = md_table.split('\n')
+  ## check if there are enough rows to bold
+  #if len(lines) > line_to_bold:
+  #    third_row_cells = lines[line_to_bold].split('|')[1:-1]    
+  #    third_row_cells = [f"**{cell.strip()}**" for cell in third_row_cells]    
+  #    lines[line_to_bold] = '|' + '|'.join(third_row_cells) + '|'
+  #md_bold_third_row = '\n'.join(lines)
+
+  # show
+  return Markdown(md_table)
+
+
+clean_result_table(dickey_fuller)
+
+
+```
+
+
 
 
 ## Detrend Vs Difference

@@ -137,14 +137,14 @@
     "href": "pages/04_eda.html#acf-and-pacf-plots",
     "title": "4  Exploratory Data Analysis",
     "section": "4.4 ACF and PACF Plots",
-    "text": "4.4 ACF and PACF Plots"
+    "text": "4.4 ACF and PACF Plots\n\nMars Ground TemperatureMars PressureTreasury NASA OutlaysARKX StockGoogle TrendsMission LaunchesOperational Satellites"
   },
   {
     "objectID": "pages/04_eda.html#dickey-fuller-test",
     "href": "pages/04_eda.html#dickey-fuller-test",
     "title": "4  Exploratory Data Analysis",
     "section": "4.5 Dickey-Fuller Test",
-    "text": "4.5 Dickey-Fuller Test"
+    "text": "4.5 Dickey-Fuller Test\nTable 4.1 shows the results of the Augmented Dickey-Fuller Test:\n\n\n\n\nTable 4.1: Shows the results of running the Augmented Dickey-Fuller Test on the time series datasets (alternative hypothesis: stationary).\n\n\nData Series\nTest Statistic\nP Value\n\n\n\n\nAverage Ground Temperature on Mars\n-6.1751\n0.01\n\n\nAtmospheric Pressure on Mars\n-6.3287\n0.01\n\n\nARKX Stock Adjusted Close\n-1.5445\n0.7711\n\n\nTreasury NASA Outlays\n-4.9603\n0.01\n\n\nGoogle Trends Space Exploration Term\n-3.9223\n0.0134\n\n\nWeather Satellite Launches\n-3.0653\n0.1274\n\n\nOperational Satellites Over Time\n-1.7323\n0.6878"
   },
   {
     "objectID": "pages/04_eda.html#detrend-vs-difference",
