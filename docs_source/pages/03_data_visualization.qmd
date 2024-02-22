@@ -61,3 +61,10 @@ IFrame(src='../../docs_source/images/cumulative_launches_spacex_vs_others.html',
 
 
 
+## Weather Satellites with `ggplot2`
+
+
+![Shows the weather satellite launches per year hued by status](../../docs_source/images/oscar_satellites_status.jpeg){#fig-weather-satellite-launches}
+
+
+

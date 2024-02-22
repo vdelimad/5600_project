@@ -105,6 +105,13 @@
     "text": "3.4 The Rise of Private Launches\n\n\n\n\n        \n        \nFigure 3.3: Shows the cumulative launches of SpaceX vs all others."
   },
   {
+    "objectID": "pages/03_data_visualization.html#weather-satellites-with-ggplot2",
+    "href": "pages/03_data_visualization.html#weather-satellites-with-ggplot2",
+    "title": "3  Data Visualization",
+    "section": "3.5 Weather Satellites with ggplot2",
+    "text": "3.5 Weather Satellites with ggplot2\n\n\n\nFigure 3.4: Shows the weather satellite launches per year hued by status"
+  },
+  {
     "objectID": "pages/04_eda.html",
     "href": "pages/04_eda.html",
     "title": "4  Exploratory Data Analysis",
