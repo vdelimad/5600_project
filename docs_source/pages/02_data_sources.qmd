@@ -75,7 +75,7 @@ display(mars_weather_data.head())
 
 As an example, @fig-martian-air-temperature shows the Martian air temperature over time. The dates have been proxied to that of Earth for the plot.
 
-![Martian Air Temperature Over Time](../images/results/martian_air_temperature_over_time.png){#fig-martian-air-temperature}
+![Martian Air Temperature Over Time](../images/data_sources/martian_air_temperature_over_time.png){#fig-martian-air-temperature}
 
 
 <!--
@@ -109,7 +109,7 @@ Here is a view of a sample of the data [[@google_trends_space_nodate]]:
 ```{python}
 #| echo: false
 
-google_trends = pd.read_csv(f'../../../data/raw/public_interest/google_trends/united_states_all_categories_space_exploration.csv')
+google_trends = pd.read_csv(f'../../../data/raw/public_interest/google_trends/united_states_all_categories_space_exploration.csv', skiprows=1)
 display(google_trends.head())
 
 ```
@@ -122,7 +122,7 @@ display(google_trends.head())
 #| fig-cap: "Shows the Google Trends search interest for `Space Exploration`."
 
 width_percentage = "100%"
-IFrame(src='../images/results/space_exploration_google_trends_plot.html', width=width_percentage, height=570)
+IFrame(src='../images/data_sources/space_exploration_google_trends_plot.html', width=width_percentage, height=570)
 
 
 ```
@@ -154,7 +154,7 @@ Time series in this section include:
 The data extracted from @world_meteorological_organization_list_nodate, the Meteorological Satellite Launch Database encompasses various information such as the satellite's name, its official U.N. registry country, the operator or owner country, the entity managing it, its intended users, purpose, and more specific operational details. For instance, the dataset includes 1HOPSAT-TD, a high optical performance satellite by Hera Systems for Earth observation through infrared imaging in a low Earth orbit (LEO), with a launch date of November 12, 2019. This dataset shows the global engagement in space exploration and utilization for varied purposes, from commercial to educational. Additionally, the Satellites Currently in Orbit Dataset from @union_of_concerned_scientists_ucs_2023 shows similar information but is limited to active satellites.
 
 
-![Shows the countries with satellites as of 2020. Credit: @union_of_concerned_scientists_ucs_2023](../images/ucs_countries_satellites.png){#fig-ucs-countries-satellites}
+![Shows the countries with satellites as of 2020. Credit: @union_of_concerned_scientists_ucs_2023](../images/data_sources/ucs_countries_satellites.png){#fig-ucs-countries-satellites}
 
 
 Here is a view of a sample of the data [@union_of_concerned_scientists_ucs_2023]:
@@ -213,7 +213,7 @@ display(arkx.head())
 #| fig-cap: "Shows the adjusted price of ARKX over time."
 
 width_percentage = "100%"
-IFrame(src='../images/results/arkx_adj_close_plot.html', width=width_percentage, height=570)
+IFrame(src='../images/data_sources/arkx_adj_close_plot.html', width=width_percentage, height=570)
 
 
 ```
@@ -245,7 +245,7 @@ Time series in this section include:
 The Launches by Country Database from @next_spaceflight_rocket_nodate details global space launch activities, documenting various missions' specifics, including the launching company, location, date and time, mission details, and more. For instance, SpaceX's launch on August 7, 2020, from LC-39A at Kennedy Space Center in Florida, USA, involved a Falcon 9 Block 5 rocket carrying Starlink V1 L9 & BlackSky satellites, noted for its active status and successful outcome. The database captures a variety of missions from different countries, highlighting the growing global collaboration in space endeavors.
 
 
-![Shows the Next Spaceflight website depicting upcoming launches.](../images/next_spaceflight.png){#fig-next-spaceflight}
+![Shows the Next Spaceflight website depicting upcoming launches.](../images/data_sources/next_spaceflight.png){#fig-next-spaceflight}
 
 Here is a view of a sample of the data [@next_spaceflight_rocket_nodate]:
 

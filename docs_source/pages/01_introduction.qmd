@@ -8,7 +8,7 @@
 
 ## Topic Explanation
 
-![An astronaut on the moon. Source: @nasa_apollo_2023](../images/on_the_moon.jpg){#fig-nasa-astronaut}
+![An astronaut on the moon. Source: @nasa_apollo_2023](../images/introduction/on_the_moon.jpg){#fig-nasa-astronaut}
 
 
 Exploring space has transcended the initial excitement of discovery and the rivalry between nations, maturing into a domain concerned with finding solutions for Earth's challenges. Space exploration has significantly evolved since being initially the realm of national space agencies and the imaginations of science fiction. It now represents an effort to enhance our understanding of the universe, drive economic expansion, foster technological innovation, and encourage collaboration across borders. This expanded focus includes the public's enthusiastic backing of space exploration initiatives, the ongoing missions to Mars, and the substantial financial commitments to space-related ventures.
@@ -21,7 +21,7 @@ This project aims to harness time series analysis techniques and data to reveal 
 This study explores essential areas that have shaped the trajectory of space exploration. The analysis begins by focusing on the public domain—where space exploration initially took root—by examining the investments made and sampling some of the scientific knowledge gained as a result. The focus then shifts to the growing public interest in space exploration, reflecting an increasing engagement with space-related topics. Following this, the study delves into the strategic deployment of space infrastructure, particularly satellites, and their indispensable role in facilitating various activities, from scientific research to commercial operations. The discussion then moves to private enterprises' role in space exploration and their impact on financial markets. Finally, the study addresses the state of international collaboration, showcasing how the drive to explore space has expanded globally over time. The project's "Big Picture" is depicted in @fig-big-picture.
 
 
-![The 5 overarching perspectives of the project.](../images/big_picture_chart.jpg){#fig-big-picture}
+![The 5 overarching perspectives of the project.](../images/introduction/big_picture_chart.jpg){#fig-big-picture}
 
 
 
@@ -60,21 +60,21 @@ The analytical approach to this project consists of five distinct angles, each d
 
 The public sector has been the backbone of space exploration, often leading the charge regarding investment and research. The analysis will examine how government spending on space exploration has influenced scientific discovery and spurred the development of new technologies. Additionally, we will examine the data from pivotal missions like the NASA Curiosity rover to see how they have advanced our understanding of the cosmos and contributed to economic growth through technological spillovers.
 
-![The NASA Curiosity Rover. Source: @nasa_curiosity_nodate](../images/nasa_curiosity.jpg){#fig-nasa-curiosity}
+![The NASA Curiosity Rover. Source: @nasa_curiosity_nodate](../images/introduction/nasa_curiosity.jpg){#fig-nasa-curiosity}
 
 
 ### Public Interest in Space Exploration {.unnumbered}
 
 Public interest is another driving force that can shape space exploration's trajectory. This angle will explore how public engagement, as quantified by Google Trends and social media metrics, correlates with funding initiatives and mission priorities. By analyzing several topics within the database, we can determine what aspects of space explorations captivate the audience the most. This perspective also reveals the flow of engagement with space-related topics, reflecting changing curiosity over time.
 
-![Crowds watch SpaceX Falcon Heavy boosters land on Tuesday, Feb. 6, 2018 in Cape Canaveral. Source: @herrera_space_2019](../images/cape_canaveral_crowds.jpg){#fig-cape-canaveral-crowds}
+![Crowds watch SpaceX Falcon Heavy boosters land on Tuesday, Feb. 6, 2018 in Cape Canaveral. Source: @herrera_space_2019](../images/introduction/cape_canaveral_crowds.jpg){#fig-cape-canaveral-crowds}
 
 
 ### Use of Space Infrastructure {.unnumbered}
 
 Space infrastructure, particularly satellites, is critical to numerous sectors, including telecommunications, navigation, and earth observation. Our analysis will trace the development and deployment of satellites over time, assessing changes in their purposes and control. Additionally, we will look specifically at weather satellites and the patterns within this use case of the technology.
 
-![Artist's impression of satellites and debris on orbit around Earth. Source: @european_space_agency_debris_2008](../images/esa_satellites.jpg){#fig-esa-satellites}
+![Artist's impression of satellites and debris on orbit around Earth. Source: @european_space_agency_debris_2008](../images/introduction/esa_satellites.jpg){#fig-esa-satellites}
 
 
 
@@ -82,14 +82,14 @@ Space infrastructure, particularly satellites, is critical to numerous sectors, 
 
 The private sector's entry into space exploration has introduced new dynamics into the industry, emphasizing cost reduction and innovation. This section will examine the private sector, particularly in the growing area of commercial space activities, through the lens of the ARKX Space Exploration ETF. This dataset sheds light on the financial dimensions of space exploration and highlights the growing importance of private companies in advancing the frontiers of space.
 
-![SpaceX's launch from the Kennedy Space Center’s Launch Complex 39A. Source: @spacex_mission_nodate](../images/spacex_kennedy.jpg){#fig-spacex-kennedy}
+![SpaceX's launch from the Kennedy Space Center’s Launch Complex 39A. Source: @spacex_mission_nodate](../images/introduction/spacex_kennedy.jpg){#fig-spacex-kennedy}
 
 
 ### International Participation in Space Exploration {.unnumbered}
 
 Lastly, international participation in space exploration is evaluated through a database of launches by country. This analysis provides a global overview of space endeavors, highlighting the collaborative and competitive dynamics that fuel the industry.
 
-![The International Space Station is widely regarded as a symbol of international scientific collaboration. Source: @nasa_international_nodate](../images/iss.jpg){#fig-iss}
+![The International Space Station is widely regarded as a symbol of international scientific collaboration. Source: @nasa_international_nodate](../images/introduction/iss.jpg){#fig-iss}
 
 
 

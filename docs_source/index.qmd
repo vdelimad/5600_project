@@ -17,7 +17,7 @@ All the code used for this project is publicly available on [Github](https://git
 <div class="quarto-layout-row quarto-layout-valign-top">
 <section id="image-panel" class="level3 quarto-layout-cell" style="flex-basis: 30.0%;justify-content: center;">
 <div class="quarto-about-jolla">
-    <img src="images/victor_de_lima.jpg" class="about-image
+    <img src="images/author/victor_de_lima.jpg" class="about-image
     round" style="height: 13em; width: 13em; margin-bottom: 0px !important;">
 </div>
 </section>
