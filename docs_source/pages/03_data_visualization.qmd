@@ -76,3 +76,14 @@ IFrame(src='../../docs_source/images/visualization/cumulative_launches_spacex_vs
 
 
 
+## Search Interest in Space Terms
+
+
+```{python}
+#| echo: false
+#| label: fig-trends-all
+#| fig-cap: "Shows the Google Trends search interest for the terms `Space Exploration`, `Mars`, `SpaceX`, and `Space Exploration`."
+width_percentage = "100%"
+IFrame(src='../../docs_source/images/visualization/google_trends_all_plot.html', width=width_percentage, height=570)
+```
+

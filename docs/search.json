@@ -112,6 +112,13 @@
     "text": "3.5 Weather Satellites with ggplot2\n\n\n\nFigure 3.4: Shows the weather satellite launches per year hued by status"
   },
   {
+    "objectID": "pages/03_data_visualization.html#search-interest-in-space-terms",
+    "href": "pages/03_data_visualization.html#search-interest-in-space-terms",
+    "title": "3  Data Visualization",
+    "section": "3.6 Search Interest in Space Terms",
+    "text": "3.6 Search Interest in Space Terms\n\n\n\n\n        \n        \nFigure 3.5: Shows the Google Trends search interest for the terms Space Exploration, Mars, SpaceX, and Space Exploration."
+  },
+  {
     "objectID": "pages/04_eda.html#original-data",
     "href": "pages/04_eda.html#original-data",
     "title": "4  Exploratory Data Analysis",
