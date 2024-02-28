@@ -377,7 +377,7 @@ Drawing from the methodologies outlined in Lab 4 notes, we employ detrending and
 
 ## Seas. 1: Mars Temperature
 
-![](../../docs_source/images/eda/detrend_and_difference/detrend_and_difference_mars_weather_ground_temperature.jpeg)
+![](../images/eda/detrend_and_difference/detrend_and_difference_mars_weather_ground_temperature.jpeg)
 
 
 ## Seas. 2: Mars Pressure
