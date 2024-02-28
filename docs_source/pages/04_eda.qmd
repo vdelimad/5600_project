@@ -240,42 +240,42 @@ The decomposition plots illustrate the breakdown of different series into trends
 
 ## Seas. 1: Mars Temperature
 
-![](../../docs_source/images/eda/acf_and_pacf/acf_and_pacf_mars_weather_ground_temperature.jpeg)
+![](../images/eda/acf_and_pacf/acf_and_pacf_mars_weather_ground_temperature.jpeg)
 
 
 ## Seas. 2: Mars Pressure
 
-![](../../docs_source/images/eda/acf_and_pacf/acf_and_pacf_pressure_current_pascals.jpeg)
+![](../images/eda/acf_and_pacf/acf_and_pacf_pressure_current_pascals.jpeg)
 
 
 ## Financial 1: ARKX
 
-![](../../docs_source/images/eda/acf_and_pacf/acf_and_pacf_arkx_stock_adj_close.jpeg)
+![](../images/eda/acf_and_pacf/acf_and_pacf_arkx_stock_adj_close.jpeg)
 
 
 ## Financial 2: AVAV
 
-![](../../docs_source/images/eda/acf_and_pacf/acf_and_pacf_avav_stock_adj_close.jpeg)
+![](../images/eda/acf_and_pacf/acf_and_pacf_avav_stock_adj_close.jpeg)
 
 
 ## Treasury NASA Outlays
 
-![](../../docs_source/images/eda/acf_and_pacf/acf_and_pacf_treasury_nasa_outlays.jpeg)
+![](../images/eda/acf_and_pacf/acf_and_pacf_treasury_nasa_outlays.jpeg)
 
 
 ## Google Trends
 
-![](../../docs_source/images/eda/acf_and_pacf/acf_and_pacf_google_trends_space_exploration.jpeg)
+![](../images/eda/acf_and_pacf/acf_and_pacf_google_trends_space_exploration.jpeg)
 
 
 ## Launches
 
-![](../../docs_source/images/eda/acf_and_pacf/acf_and_pacf_launches_per_month.jpeg)
+![](../images/eda/acf_and_pacf/acf_and_pacf_launches_per_month.jpeg)
 
 
 ## Satellites
 
-![](../../docs_source/images/eda/acf_and_pacf/acf_and_pacf_satellites_operational_count.jpeg)
+![](../images/eda/acf_and_pacf/acf_and_pacf_satellites_operational_count.jpeg)
 
 :::
 
