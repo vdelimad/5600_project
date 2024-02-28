@@ -30,42 +30,42 @@ The code used in this section is available [here](https://github.com/vdelimad/56
 
 ## Seas. 1: Mars Temperature
 
-![](../../docs_source/images/eda/original/original_mars_weather_ground_temperature.jpeg)
+![](../images/eda/original/original_mars_weather_ground_temperature.jpeg)
 
 
 ## Seas. 2: Mars Pressure
 
-![](../../docs_source/images/eda/original/original_pressure_current_pascals.jpeg)
+![](../images/eda/original/original_pressure_current_pascals.jpeg)
 
 
 ## Financial 1: ARKX
 
-![](../../docs_source/images/eda/original/original_arkx_stock_adj_close.jpeg)
+![](../images/eda/original/original_arkx_stock_adj_close.jpeg)
 
 ## Financial 2: AVAV
 
-![](../../docs_source/images/eda/original/original_avav_stock_adj_close.jpeg)
+![](../images/eda/original/original_avav_stock_adj_close.jpeg)
 
 
 
 ## Treasury NASA Outlays
 
-![](../../docs_source/images/eda/original/original_treasury_nasa_outlays.jpeg)
+![](../images/eda/original/original_treasury_nasa_outlays.jpeg)
 
 
 ## Google Trends
 
-![](../../docs_source/images/eda/original/original_google_trends_space_exploration.jpeg)
+![](../images/eda/original/original_google_trends_space_exploration.jpeg)
 
 
 ## Launches
 
-![](../../docs_source/images/eda/original/original_launches_per_month.jpeg)
+![](../images/eda/original/original_launches_per_month.jpeg)
 
 
 ## Satellites
 
-![](../../docs_source/images/eda/original/original_satellites_operational_count.jpeg)
+![](../images/eda/original/original_satellites_operational_count.jpeg)
 
 :::
 
@@ -111,42 +111,42 @@ With reference to the class Lab 2, we will consider the following equations for 
 
 ## Seas. 1: Mars Temperature
 
-![](../../docs_source/images/eda/lagplots/lagplots_mars_weather_ground_temperature.jpeg)
+![](../images/eda/lagplots/lagplots_mars_weather_ground_temperature.jpeg)
 
 
 ## Seas. 2: Mars Pressure
 
-![](../../docs_source/images/eda/lagplots/lagplots_pressure_current_pascals.jpeg)
+![](../images/eda/lagplots/lagplots_pressure_current_pascals.jpeg)
 
 
 ## Financial 1: ARKX
 
-![](../../docs_source/images/eda/lagplots/lagplots_arkx_stock_adj_close.jpeg)
+![](../images/eda/lagplots/lagplots_arkx_stock_adj_close.jpeg)
 
 
 ## Financial 2: AVAV
 
-![](../../docs_source/images/eda/lagplots/lagplots_avav_stock_adj_close.jpeg)
+![](../images/eda/lagplots/lagplots_avav_stock_adj_close.jpeg)
 
 
 ## Treasury NASA Outlays
 
-![](../../docs_source/images/eda/lagplots/lagplots_treasury_nasa_outlays.jpeg)
+![](../images/eda/lagplots/lagplots_treasury_nasa_outlays.jpeg)
 
 
 ## Google Trends
 
-![](../../docs_source/images/eda/lagplots/lagplots_google_trends_space_exploration.jpeg)
+![](../images/eda/lagplots/lagplots_google_trends_space_exploration.jpeg)
 
 
 ## Launches
 
-![](../../docs_source/images/eda/lagplots/lagplots_launches_per_month.jpeg)
+![](../images/eda/lagplots/lagplots_launches_per_month.jpeg)
 
 
 ## Satellites
 
-![](../../docs_source/images/eda/lagplots/lagplots_satellites_operational_count.jpeg)
+![](../images/eda/lagplots/lagplots_satellites_operational_count.jpeg)
 
 :::
 
@@ -185,42 +185,42 @@ With reference to the class Lab 2, we will consider the following equations for 
 
 ## Seas. 1: Mars Temperature
 
-![](../../docs_source/images/eda/decomposition/decomposition_mars_weather_ground_temperature.jpeg)
+![](../images/eda/decomposition/decomposition_mars_weather_ground_temperature.jpeg)
 
 
 ## Seas. 2: Mars Pressure
 
-![](../../docs_source/images/eda/decomposition/decomposition_pressure_current_pascals.jpeg)
+![](../images/eda/decomposition/decomposition_pressure_current_pascals.jpeg)
 
 
 ## Financial 1: ARKX
 
-![](../../docs_source/images/eda/decomposition/decomposition_arkx_stock_adj_close.jpeg)
+![](../images/eda/decomposition/decomposition_arkx_stock_adj_close.jpeg)
 
 
 ## Financial 2: AVAV
 
-![](../../docs_source/images/eda/decomposition/decomposition_avav_stock_adj_close.jpeg)
+![](../images/eda/decomposition/decomposition_avav_stock_adj_close.jpeg)
 
 
 ## Treasury NASA Outlays
 
-![](../../docs_source/images/eda/decomposition/decomposition_treasury_nasa_outlays.jpeg)
+![](../images/eda/decomposition/decomposition_treasury_nasa_outlays.jpeg)
 
 
 ## Google Trends
 
-![](../../docs_source/images/eda/decomposition/decomposition_google_trends_space_exploration.jpeg)
+![](../images/eda/decomposition/decomposition_google_trends_space_exploration.jpeg)
 
 
 ## Launches
 
-![](../../docs_source/images/eda/decomposition/decomposition_launches_per_month.jpeg)
+![](../images/eda/decomposition/decomposition_launches_per_month.jpeg)
 
 
 ## Satellites
 
-![](../../docs_source/images/eda/decomposition/decomposition_satellites_operational_count.jpeg)
+![](../images/eda/decomposition/decomposition_satellites_operational_count.jpeg)
 
 :::
 
@@ -382,37 +382,37 @@ Drawing from the methodologies outlined in Lab 4 notes, we employ detrending and
 
 ## Seas. 2: Mars Pressure
 
-![](../../docs_source/images/eda/detrend_and_difference/detrend_and_difference_pressure_current_pascals.jpeg)
+![](../images/eda/detrend_and_difference/detrend_and_difference_pressure_current_pascals.jpeg)
 
 
 ## Financial 1: ARKX
 
-![](../../docs_source/images/eda/detrend_and_difference/detrend_and_difference_arkx_stock_adj_close.jpeg)
+![](../images/eda/detrend_and_difference/detrend_and_difference_arkx_stock_adj_close.jpeg)
 
 
 ## Financial 2: AVAV
 
-![](../../docs_source/images/eda/detrend_and_difference/detrend_and_difference_avav_stock_adj_close.jpeg)
+![](../images/eda/detrend_and_difference/detrend_and_difference_avav_stock_adj_close.jpeg)
 
 
 ## Treasury NASA Outlays
 
-![](../../docs_source/images/eda/detrend_and_difference/detrend_and_difference_treasury_nasa_outlays.jpeg)
+![](../images/eda/detrend_and_difference/detrend_and_difference_treasury_nasa_outlays.jpeg)
 
 
 ## Google Trends
 
-![](../../docs_source/images/eda/detrend_and_difference/detrend_and_difference_google_trends_space_exploration.jpeg)
+![](../images/eda/detrend_and_difference/detrend_and_difference_google_trends_space_exploration.jpeg)
 
 
 ## Launches
 
-![](../../docs_source/images/eda/detrend_and_difference/detrend_and_difference_launches_per_month.jpeg)
+![](../images/eda/detrend_and_difference/detrend_and_difference_launches_per_month.jpeg)
 
 
 ## Satellites
 
-![](../../docs_source/images/eda/detrend_and_difference/detrend_and_difference_satellites_operational_count.jpeg)
+![](../images/eda/detrend_and_difference/detrend_and_difference_satellites_operational_count.jpeg)
 
 :::
 
@@ -436,42 +436,42 @@ The following panel shows the resulting ACFs:
 
 ## Seas. 1: Mars Temperature
 
-![](../../docs_source/images/eda/original_and_difference/original_and_difference_mars_weather_ground_temperature.jpeg)
+![](../images/eda/original_and_difference/original_and_difference_mars_weather_ground_temperature.jpeg)
 
 
 ## Seas. 2: Mars Pressure
 
-![](../../docs_source/images/eda/original_and_difference/original_and_difference_pressure_current_pascals.jpeg)
+![](../images/eda/original_and_difference/original_and_difference_pressure_current_pascals.jpeg)
 
 
 ## Financial 1: ARKX
 
-![](../../docs_source/images/eda/original_and_difference/original_and_difference_arkx_stock_adj_close.jpeg)
+![](../images/eda/original_and_difference/original_and_difference_arkx_stock_adj_close.jpeg)
 
 
 ## Financial 2: AVAV
 
-![](../../docs_source/images/eda/original_and_difference/original_and_difference_avav_stock_adj_close.jpeg)
+![](../images/eda/original_and_difference/original_and_difference_avav_stock_adj_close.jpeg)
 
 
 ## Treasury NASA Outlays
 
-![](../../docs_source/images/eda/original_and_difference/original_and_difference_treasury_nasa_outlays.jpeg)
+![](../images/eda/original_and_difference/original_and_difference_treasury_nasa_outlays.jpeg)
 
 
 ## Google Trends
 
-![](../../docs_source/images/eda/original_and_difference/original_and_difference_google_trends_space_exploration.jpeg)
+![](../images/eda/original_and_difference/original_and_difference_google_trends_space_exploration.jpeg)
 
 
 ## Launches
 
-![](../../docs_source/images/eda/original_and_difference/original_and_difference_launches_per_month.jpeg)
+![](../images/eda/original_and_difference/original_and_difference_launches_per_month.jpeg)
 
 
 ## Satellites
 
-![](../../docs_source/images/eda/original_and_difference/original_and_difference_satellites_operational_count.jpeg)
+![](../images/eda/original_and_difference/original_and_difference_satellites_operational_count.jpeg)
 
 :::
 
@@ -490,42 +490,42 @@ Several series demonstrate a transition to stationarity following first-differen
 
 ## Seas. 1: Mars Temperature
 
-![](../../docs_source/images/eda/first_second_difference/first_second_difference_mars_weather_ground_temperature.jpeg)
+![](../images/eda/first_second_difference/first_second_difference_mars_weather_ground_temperature.jpeg)
 
 
 ## Seas. 2: Mars Pressure
 
-![](../../docs_source/images/eda/first_second_difference/first_second_difference_pressure_current_pascals.jpeg)
+![](../images/eda/first_second_difference/first_second_difference_pressure_current_pascals.jpeg)
 
 
 ## Financial 1: ARKX
 
-![](../../docs_source/images/eda/first_second_difference/first_second_difference_arkx_stock_adj_close.jpeg)
+![](../images/eda/first_second_difference/first_second_difference_arkx_stock_adj_close.jpeg)
 
 
 ## Financial 2: AVAV
 
-![](../../docs_source/images/eda/first_second_difference/first_second_difference_avav_stock_adj_close.jpeg)
+![](../images/eda/first_second_difference/first_second_difference_avav_stock_adj_close.jpeg)
 
 
 ## Treasury NASA Outlays
 
-![](../../docs_source/images/eda/first_second_difference/first_second_difference_treasury_nasa_outlays.jpeg)
+![](../images/eda/first_second_difference/first_second_difference_treasury_nasa_outlays.jpeg)
 
 
 ## Google Trends
 
-![](../../docs_source/images/eda/first_second_difference/first_second_difference_google_trends_space_exploration.jpeg)
+![](../images/eda/first_second_difference/first_second_difference_google_trends_space_exploration.jpeg)
 
 
 ## Launches
 
-![](../../docs_source/images/eda/first_second_difference/first_second_difference_launches_per_month.jpeg)
+![](../images/eda/first_second_difference/first_second_difference_launches_per_month.jpeg)
 
 
 ## Satellites
 
-![](../../docs_source/images/eda/first_second_difference/first_second_difference_satellites_operational_count.jpeg)
+![](../images/eda/first_second_difference/first_second_difference_satellites_operational_count.jpeg)
 
 :::
 
@@ -615,42 +615,42 @@ The various data series now seem to have achieved stationarity. For example, the
 
 ## Seas. 1: Mars Temperature
 
-![](../../docs_source/images/eda/sma/sma_mars_weather_ground_temperature.jpeg)
+![](../images/eda/sma/sma_mars_weather_ground_temperature.jpeg)
 
 
 ## Seas. 2: Mars Pressure
 
-![](../../docs_source/images/eda/sma/sma_pressure_current_pascals.jpeg)
+![](../images/eda/sma/sma_pressure_current_pascals.jpeg)
 
 
 ## Financial 1: ARKX
 
-![](../../docs_source/images/eda/sma/sma_arkx_stock_adj_close.jpeg)
+![](../images/eda/sma/sma_arkx_stock_adj_close.jpeg)
 
 ## Financial 2: AVAV
 
-![](../../docs_source/images/eda/sma/sma_avav_stock_adj_close.jpeg)
+![](../images/eda/sma/sma_avav_stock_adj_close.jpeg)
 
 
 
 ## Treasury NASA Outlays
 
-![](../../docs_source/images/eda/sma/sma_treasury_nasa_outlays.jpeg)
+![](../images/eda/sma/sma_treasury_nasa_outlays.jpeg)
 
 
 ## Google Trends
 
-![](../../docs_source/images/eda/sma/sma_google_trends_space_exploration.jpeg)
+![](../images/eda/sma/sma_google_trends_space_exploration.jpeg)
 
 
 ## Launches
 
-![](../../docs_source/images/eda/sma/sma_launches_per_month.jpeg)
+![](../images/eda/sma/sma_launches_per_month.jpeg)
 
 
 ## Satellites
 
-![](../../docs_source/images/eda/sma/sma_satellites_operational_count.jpeg)
+![](../images/eda/sma/sma_satellites_operational_count.jpeg)
 
 :::
 
