@@ -186,7 +186,7 @@
     "href": "pages/04_eda.html#sma-smoothing",
     "title": "4  Exploratory Data Analysis",
     "section": "4.10 SMA Smoothing",
-    "text": "4.10 SMA Smoothing\n\nSeas. 1: Mars TemperatureSeas. 2: Mars PressureFinancial 1: ARKXFinancial 2: AVAVTreasury NASA OutlaysGoogle TrendsLaunchesSatellites\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAdditionally, inspired by the example from the EDA section, I have conducted an SMA analysis, incorporating moving averages over 5, 15, and 30 time steps. We observe that the 5-time step moving average for most series sufficiently smooths the data. In contrast, the longer SMAs tend to overly smooth the series, resulting in a loss of visible data trends."
+    "text": "4.10 SMA Smoothing\n\nSeas. 1: Mars TemperatureSeas. 2: Mars PressureFinancial 1: ARKXFinancial 2: AVAVTreasury NASA OutlaysGoogle TrendsLaunchesSatellites\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAdditionally, inspired by the example from the EDA section provided, I have conducted an SMA analysis, incorporating moving averages over 5, 15, and 30 time steps. We observe that the 5-time step moving average for most series sufficiently smooths the data. In contrast, the longer SMAs tend to overly smooth the series, resulting in a loss of visible data trends."
   },
   {
     "objectID": "pages/05_univariate_ts.html",

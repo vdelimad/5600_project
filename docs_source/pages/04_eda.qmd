@@ -656,5 +656,5 @@ The various data series now seem to have achieved stationarity. For example, the
 
 
 
-Additionally, inspired by the example from the EDA section, I have conducted an SMA analysis, incorporating moving averages over 5, 15, and 30 time steps. We observe that the 5-time step moving average for most series sufficiently smooths the data. In contrast, the longer SMAs tend to overly smooth the series, resulting in a loss of visible data trends.
+Additionally, inspired by the example from the EDA section provided, I have conducted an SMA analysis, incorporating moving averages over 5, 15, and 30 time steps. We observe that the 5-time step moving average for most series sufficiently smooths the data. In contrast, the longer SMAs tend to overly smooth the series, resulting in a loss of visible data trends.
 
