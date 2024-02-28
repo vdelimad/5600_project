@@ -137,7 +137,7 @@
     "href": "pages/04_eda.html#decomposition",
     "title": "4  Exploratory Data Analysis",
     "section": "4.3 Decomposition",
-    "text": "4.3 Decomposition\n\nSeas. 1: Mars TemperatureSeas. 2: Mars PressureFinancial 1: ARKXFinancial 2: AVAVTreasury NASA OutlaysGoogle TrendsLaunchesSatellites\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe decomposition plots illustrate the breakdown of different series into trends, seasonality, and remainders, following the specifics outlined in Part 1. The financial series, being technology stocks, stand out for their pronounced volatility, as highlighted by their remainders."
+    "text": "4.3 Decomposition\n\nSeas. 1: Mars TemperatureSeas. 2: Mars PressureFinancial 1: ARKXFinancial 2: AVAVTreasury NASA OutlaysGoogle TrendsLaunchesSatellites\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe decomposition plots illustrate the breakdown of different series into trends, seasonality, and remainders, which agree with the specifics and discussion already detailed in Part 1. The financial series, being technology stocks, stand out for their pronounced volatility, as highlighted by their remainders."
   },
   {
     "objectID": "pages/04_eda.html#acf-and-pacf-plots",
