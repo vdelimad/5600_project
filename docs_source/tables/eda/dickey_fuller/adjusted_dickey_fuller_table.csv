@@ -1,9 +1,9 @@
-"data_series","test_statistic","p_value"
-"Average Ground Temperature on Mars",-5.54438543114547,0.01
-"Atmospheric Pressure on Mars",-3.58283191370177,0.0410000074088457
-"ARKX Stock Adjusted Close",-8.56115453575121,0.01
-"AVAV Stock Adjusted Close",-9.58991634604375,0.01
-"Treasury NASA Outlays",-8.87700031025426,0.01
-"Google Trends Space Exploration Term",-7.12254460387108,0.01
-"Weather Satellite Launches",-13.37587859115,0.01
-"Operational Satellites Over Time",-2.89090189509758,0.206646501914564
+"data_series","stationarity_method","test_statistic","p_value"
+"Average Ground Temperature on Mars","First Difference",-5.54438543114547,0.01
+"Atmospheric Pressure on Mars","Second Difference",-3.89127055113436,0.0195676522598579
+"ARKX Stock Adjusted Close","First Difference",-8.56115453575121,0.01
+"AVAV Stock Adjusted Close","First Difference",-9.58991634604375,0.01
+"Treasury NASA Outlays","First Difference",-8.87700031025426,0.01
+"Google Trends Space Exploration Term","First Difference",-7.12254460387108,0.01
+"Weather Satellite Launches","First Difference",-13.37587859115,0.01
+"Operational Satellites Over Time","Second Difference",-4.68123504273974,0.01

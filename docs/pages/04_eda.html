@@ -62,6 +62,8 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -186,11 +188,11 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#lag-plots" id="toc-lag-plots" class="nav-link" data-scroll-target="#lag-plots"><span class="header-section-number">4.2</span> Lag Plots</a></li>
   <li><a href="#decomposition" id="toc-decomposition" class="nav-link" data-scroll-target="#decomposition"><span class="header-section-number">4.3</span> Decomposition</a></li>
   <li><a href="#acf-and-pacf-plots" id="toc-acf-and-pacf-plots" class="nav-link" data-scroll-target="#acf-and-pacf-plots"><span class="header-section-number">4.4</span> ACF and PACF Plots</a></li>
-  <li><a href="#dickey-fuller-test" id="toc-dickey-fuller-test" class="nav-link" data-scroll-target="#dickey-fuller-test"><span class="header-section-number">4.5</span> Dickey-Fuller Test</a></li>
-  <li><a href="#detrend-and-difference" id="toc-detrend-and-difference" class="nav-link" data-scroll-target="#detrend-and-difference"><span class="header-section-number">4.6</span> Detrend and Difference</a></li>
-  <li><a href="#original-and-first-difference" id="toc-original-and-first-difference" class="nav-link" data-scroll-target="#original-and-first-difference"><span class="header-section-number">4.7</span> Original and First Difference</a></li>
+  <li><a href="#initial-dickey-fuller-test" id="toc-initial-dickey-fuller-test" class="nav-link" data-scroll-target="#initial-dickey-fuller-test"><span class="header-section-number">4.5</span> Initial Dickey-Fuller Test</a></li>
+  <li><a href="#detrending-and-first-differencing" id="toc-detrending-and-first-differencing" class="nav-link" data-scroll-target="#detrending-and-first-differencing"><span class="header-section-number">4.6</span> Detrending and First-Differencing</a></li>
+  <li><a href="#detrended-and-first-differenced-acfs" id="toc-detrended-and-first-differenced-acfs" class="nav-link" data-scroll-target="#detrended-and-first-differenced-acfs"><span class="header-section-number">4.7</span> Detrended and First-Differenced ACFs</a></li>
   <li><a href="#first-and-second-difference" id="toc-first-and-second-difference" class="nav-link" data-scroll-target="#first-and-second-difference"><span class="header-section-number">4.8</span> First and Second Difference</a></li>
-  <li><a href="#adjusted-dickey-fuller-test" id="toc-adjusted-dickey-fuller-test" class="nav-link" data-scroll-target="#adjusted-dickey-fuller-test"><span class="header-section-number">4.9</span> Adjusted Dickey-Fuller Test</a></li>
+  <li><a href="#dickey-fuller-test-on-adjusted-data" id="toc-dickey-fuller-test-on-adjusted-data" class="nav-link" data-scroll-target="#dickey-fuller-test-on-adjusted-data"><span class="header-section-number">4.9</span> Dickey-Fuller Test on Adjusted Data</a></li>
   <li><a href="#sma-smoothing" id="toc-sma-smoothing" class="nav-link" data-scroll-target="#sma-smoothing"><span class="header-section-number">4.10</span> SMA Smoothing</a></li>
   </ul>
 </nav>
@@ -225,6 +227,9 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<!-- ==================================================
+      Original Data
+================================================== -->
 <section id="original-data" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="original-data"><span class="header-section-number">4.1</span> Original Data</h2>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
@@ -256,6 +261,44 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<p>With reference to the class Lab 2, we will consider the following equations for the series based on whether seasonal variations over time:</p>
+<table class="table">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 42%">
+<col style="width: 42%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Type</th>
+<th>Seasonal variations</th>
+<th>Equation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Additive</td>
+<td>Are relatively constant.</td>
+<td><span class="math inline">\(\rm Series = Trend + Seasonal + Random\)</span></td>
+</tr>
+<tr class="even">
+<td>Multiplicative</td>
+<td>Increase or decrease with the level of the series.</td>
+<td><span class="math inline">\(\rm Series = Trend \times Seasonal \times Random\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Seas. 1: Mars Temperature.</strong> The series has shown a general direction of stability, with evident yearly seasonal patterns that reflect the planet’s four distinct seasons. Interestingly, over the past five years, data suggest a slight decrease in temperature, hinting that Mars has been trending warmer. This series is additive.</p>
+<p><strong>Seas. 2: Mars Pressure.</strong> When examining Mars’ Pressure, a downward trend is noticeable. Like its temperature, Mars exhibits clear yearly seasonal patterns corresponding to its four seasons. The pattern of Mars’s atmospheric pressure is also additive.</p>
+<p><strong>Financial 1: ARKX.</strong> The trajectory of ARKX has been on a downward slope. Its performance has been highly volatile, significantly influenced by the interest rate hike cycle that began in 2022. This cycle was particularly detrimental to technology stocks, affecting the overall valuation of ARKX. ARKX is a multiplicative series.</p>
+<p><strong>Financial 2: AVAV.</strong> Contrary to ARKX, AVAV has been trending upward overall despite experiencing high volatility. The same interest rate hike cycle that started in 2022, which negatively impacted technology stocks, applies here. However, AVAV has navigated these challenges more successfully. Also like ARKX, AVAV is a multiplicative series.</p>
+<p><strong>Treasury NASA Outlays.</strong> The outlays have been consistently moving upward, with a steady increase observed. A notable dip in 2019 stands out, but it is considered an anomaly and not representative of the overall upward trend, as it is a single month. The growth in NASA’s budget outlays is multiplicative.</p>
+<p><strong>Google Trends.</strong> In Google Trends for the <code>Space Exploration</code> term, there’s been an increasing general direction despite several fluctuations. The series is multiplicative.</p>
+<p><strong>Launches.</strong> The number of launches of weather satellites has shown an interesting pattern, decreasing from 1960 to 2010 but experiencing a resurgence recently. Despite multiple fluctuations, this rebound suggests a renewed interest or advancement in space exploration technologies. The series is multiplicative.</p>
+<p><strong>Satellites.</strong> The number of operational satellites has been clearly trending upward. Although there have been multiple fluctuations, the overall trajectory steadily increased, with a sharp rise observed in the past year. This indicates a significant expansion in satellite technology and deployment. The series is multiplicative.</p>
+<!-- ==================================================
+      Lag Plots
+================================================== -->
 </section>
 <section id="lag-plots" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="lag-plots"><span class="header-section-number">4.2</span> Lag Plots</h2>
@@ -288,6 +331,17 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<p><strong>Seas. 1: Mars Temperature Monthly.</strong> An inverse correlation is particularly noticeable at a lag of six months, while a high positive correlation emerges at the twelve-month mark. Between these points, the patterns rotate around these mentioned correlations, showcasing the planet’s distinct seasonal changes. This cyclical pattern reflects the Martian climate’s balance, oscillating between warming and cooling as the Martian year progresses.</p>
+<p><strong>Seas. 2: Mars Pressure Monthly.</strong> Similarly, Mars’s pressure data exhibits seasonal characteristics but with a notable distinction. The clear seasonal pattern emerges predominantly at the twelve-month lag, with less clarity in the monthly correlations from months one through eleven. This highlights the unique environmental dynamics of the planet.</p>
+<p><strong>Financial 1: ARKX.</strong> The ARKX financial data demonstrates a common trait of financial instruments, where the correlation is strongest at a one-day lag and gradually weakens over time. This pattern indicates the short-term momentum often observed in financial markets, where recent past performance can strongly influence immediate future performance. However, this influence diminishes as the gap widens.</p>
+<p><strong>Financial 2: AVAV.</strong> The AVAV lag plots mirror the correlation pattern seen in ARKX, with a strong initial correlation that weakens progressively. This again underscores the principle that recent performance is a stronger predictor of the near future than of more distant periods.</p>
+<p><strong>Treasury NASA Outlays Monthly.</strong> For Treasury NASA Outlays, the data shows the strongest positive correlation at a twelve-month lag, yet overall, the correlations are not particularly strong. This indicates that while there is some seasonality to NASA’s budget outlays, it does not follow as predictable a pattern as some other seasonal data, suggesting that other factors play significant roles in budget fluctuations.</p>
+<p><strong>Google Trends Weekly.</strong> Google Trends data, observed weekly, displays a pattern similar to that of financial data, with a strong correlation at the first lag that significantly weakens after that. By the twelfth week, the correlation becomes nearly indiscernible. This highlights the fast-moving nature of internet search trends, where interests shift quickly.</p>
+<p><strong>Weather Satellite Launches Monthly.</strong> The correlation in monthly weather satellite launches is very weak across the board from months one through twelve. This indicates a lack of a strong seasonal or time-based pattern in the launching of weather satellites, suggesting that other factors, such as technological advancements or specific weather monitoring needs may more influence launches.</p>
+<p><strong>Operational Satellites Monthly.</strong> The monthly data on operational satellites shows a strong correlation at the first lag, similar to financial data, but this correlation weakens more slowly over time. This suggests a steadier and more predictable growth pattern or change in the number of operational satellites, following a more consistent trajectory.</p>
+<!-- ==================================================
+      Decomposition
+================================================== -->
 </section>
 <section id="decomposition" class="level2" data-number="4.3">
 <h2 data-number="4.3" class="anchored" data-anchor-id="decomposition"><span class="header-section-number">4.3</span> Decomposition</h2>
@@ -320,6 +374,10 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<p>The decomposition plots illustrate the breakdown of different series into trends, seasonality, and remainders, following the specifics outlined in Part 1. The financial series, being technology stocks, stand out for their pronounced volatility, as highlighted by their remainders.</p>
+<!-- ==================================================
+      ACF and PACF Plots
+================================================== -->
 </section>
 <section id="acf-and-pacf-plots" class="level2" data-number="4.4">
 <h2 data-number="4.4" class="anchored" data-anchor-id="acf-and-pacf-plots"><span class="header-section-number">4.4</span> ACF and PACF Plots</h2>
@@ -352,9 +410,20 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<p><strong>Seas. 1: Mars Temperature.</strong> As expected, due to the seasonal nature of temperature data, there are significant lags, particularly at 6-month and 12-month intervals. For ARIMA model parameters, p could be any value from 1 to 10, while q, based on the PACF, could be 1, 2, or 3. These plots indicate that the series is not stationary.</p>
+<p><strong>Seas. 2: Mars Pressure.</strong> Consistent with patterns observed in temperature data, Mars pressure shows significant seasonal correlations, primarily annually. According to the ACF, p could range from 1 to 7, while the PACF suggests that q could be 1, 2, 3, or 4. These observations imply that the series is not stationary.</p>
+<p><strong>Financial 1: ARKX.</strong> The ACF indicates a decreasing lag, typical for financial data, which could suggest a mean-reverting process. The PACF identifies the only significant lag at 0, indicating that the series may benefit from focusing on immediate past values for predictions.</p>
+<p><strong>Financial 2: AVAV.</strong> Exhibits a pattern similar to ARKX with a decreasing lag in the ACF and significant lag at 0 in the PACF, suggesting that the model parameters for AVAV might closely align with those determined for ARKX, focusing on immediate past values for predictions.</p>
+<p><strong>Treasury NASA Outlays.</strong> This series displays a distinct pattern, with significant correlations at every third lag (3, 6, 9, 12, and so on) in the ACF, indicating a quarterly seasonal pattern. The PACF shows significance at lags 3, 7, and 12, suggesting potential values for q. This pattern indicates a more complex seasonal model, necessitating differencing.</p>
+<p><strong>Google Trends.</strong> This data behaves similarly to the stock patterns observed in the ACF and PACF, hinting at short-term correlations that might be exploited in predictive modeling, much like financial time series data.</p>
+<p><strong>Launches.</strong> The ACF for this series shows autocorrelation across all 28 lags displayed, while the PACF indicates significance in the first seven lags. This extensive autocorrelation suggests a complex interplay of factors influencing launch frequencies, suggesting a detailed ARIMA model may be required to capture the underlying patterns accurately.</p>
+<p><strong>Satellites.</strong> The ACF for satellite data shows autocorrelation across all 24 lags displayed, suggesting a persistent pattern over time, while the PACF highlights significance only in the first lag. This indicates a potentially simpler ARIMA model could be applied, focusing on immediate past values for forecasting future data points.</p>
+<!-- ==================================================
+      Initial Dickey-Fuller Test
+================================================== -->
 </section>
-<section id="dickey-fuller-test" class="level2" data-number="4.5">
-<h2 data-number="4.5" class="anchored" data-anchor-id="dickey-fuller-test"><span class="header-section-number">4.5</span> Dickey-Fuller Test</h2>
+<section id="initial-dickey-fuller-test" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="initial-dickey-fuller-test"><span class="header-section-number">4.5</span> Initial Dickey-Fuller Test</h2>
 <p><a href="#tbl-dickey-fuller-test">Table&nbsp;<span>4.1</span></a> shows the results of the Augmented Dickey-Fuller Test:</p>
 <div class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display" data-execution_count="2">
@@ -414,9 +483,14 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<p><a href="#tbl-dickey-fuller-test">Table&nbsp;<span>4.1</span></a> presents the outcomes of the Augmented Dickey-Fuller Test. The series for which the test yields a p-value sufficiently low to reject the null hypothesis of non-stationarity include Average Ground Temperature on Mars, Atmospheric Pressure on Mars, Treasury NASA Outlays, and the Google Trends Space Exploration Term. However, these results do not align with previous findings from the ACF plots, suggesting that none of the series are stationary in their current form.</p>
+<!-- ==================================================
+      Detrending and First-Differencing
+================================================== -->
 </section>
-<section id="detrend-and-difference" class="level2" data-number="4.6">
-<h2 data-number="4.6" class="anchored" data-anchor-id="detrend-and-difference"><span class="header-section-number">4.6</span> Detrend and Difference</h2>
+<section id="detrending-and-first-differencing" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="detrending-and-first-differencing"><span class="header-section-number">4.6</span> Detrending and First-Differencing</h2>
+<p>Drawing from the methodologies outlined in Lab 4 notes, we employ detrending and first differencing techniques on the series to attempt to attain stationarity. The subsequent panel displays a comparative visualization that includes the original data, the series after detrending, and the results of applying first-differencing.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true">Seas. 1: Mars Temperature</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" role="tab" aria-controls="tabset-5-2" aria-selected="false">Seas. 2: Mars Pressure</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-3" role="tab" aria-controls="tabset-5-3" aria-selected="false">Financial 1: ARKX</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-4" role="tab" aria-controls="tabset-5-4" aria-selected="false">Financial 2: AVAV</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-5" role="tab" aria-controls="tabset-5-5" aria-selected="false">Treasury NASA Outlays</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-6" role="tab" aria-controls="tabset-5-6" aria-selected="false">Google Trends</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-7-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-7" role="tab" aria-controls="tabset-5-7" aria-selected="false">Launches</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-8-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-8" role="tab" aria-controls="tabset-5-8" aria-selected="false">Satellites</a></li></ul>
 <div class="tab-content">
@@ -446,9 +520,14 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<p>Visually, the series appears to be moving towards stationarity, especially after first-differencing. We will verify this observation by examining their ACFs in the following section for confirmation.</p>
+<!-- ==================================================
+      Detrended and First-Differenced ACFs
+================================================== -->
 </section>
-<section id="original-and-first-difference" class="level2" data-number="4.7">
-<h2 data-number="4.7" class="anchored" data-anchor-id="original-and-first-difference"><span class="header-section-number">4.7</span> Original and First Difference</h2>
+<section id="detrended-and-first-differenced-acfs" class="level2" data-number="4.7">
+<h2 data-number="4.7" class="anchored" data-anchor-id="detrended-and-first-differenced-acfs"><span class="header-section-number">4.7</span> Detrended and First-Differenced ACFs</h2>
+<p>The following panel shows the resulting ACFs:</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-6-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-1" role="tab" aria-controls="tabset-6-1" aria-selected="true">Seas. 1: Mars Temperature</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-2" role="tab" aria-controls="tabset-6-2" aria-selected="false">Seas. 2: Mars Pressure</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-3" role="tab" aria-controls="tabset-6-3" aria-selected="false">Financial 1: ARKX</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-4" role="tab" aria-controls="tabset-6-4" aria-selected="false">Financial 2: AVAV</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-5" role="tab" aria-controls="tabset-6-5" aria-selected="false">Treasury NASA Outlays</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-6" role="tab" aria-controls="tabset-6-6" aria-selected="false">Google Trends</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-7-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-7" role="tab" aria-controls="tabset-6-7" aria-selected="false">Launches</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-8-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-8" role="tab" aria-controls="tabset-6-8" aria-selected="false">Satellites</a></li></ul>
 <div class="tab-content">
@@ -478,6 +557,10 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<p>Several series demonstrate a transition to stationarity following first-differencing, with the effect being particularly marked in the financial series where detrending had minimal impact. Conversely, the seasonal series, especially Mars Pressure and the Satellites series, do not appear to exhibit stationarity. Consequently, we will investigate the potential of second differencing in the subsequent section.</p>
+<!-- ==================================================
+      First and Second Difference
+================================================== -->
 </section>
 <section id="first-and-second-difference" class="level2" data-number="4.8">
 <h2 data-number="4.8" class="anchored" data-anchor-id="first-and-second-difference"><span class="header-section-number">4.8</span> First and Second Difference</h2>
@@ -510,18 +593,29 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<p>Now, the series that failed to attain stationarity through first differencing seem to have reached it upon applying second differencing. Following this, we will conduct the Dickey-Fuller test again on the adjusted datasets.</p>
+<!-- ==================================================
+      Dickey-Fuller Test on Adjusted Data
+================================================== -->
 </section>
-<section id="adjusted-dickey-fuller-test" class="level2" data-number="4.9">
-<h2 data-number="4.9" class="anchored" data-anchor-id="adjusted-dickey-fuller-test"><span class="header-section-number">4.9</span> Adjusted Dickey-Fuller Test</h2>
-<p><a href="#tbl-adjusted-dickey-fuller-test">Table&nbsp;<span>4.2</span></a> shows the results of the adjusted Augmented Dickey-Fuller Test:</p>
+<section id="dickey-fuller-test-on-adjusted-data" class="level2" data-number="4.9">
+<h2 data-number="4.9" class="anchored" data-anchor-id="dickey-fuller-test-on-adjusted-data"><span class="header-section-number">4.9</span> Dickey-Fuller Test on Adjusted Data</h2>
+<p><a href="#tbl-adjusted-dickey-fuller-test">Table&nbsp;<span>4.2</span></a> shows the results of the Augmented Dickey-Fuller Test on the adjusted datasets.</p>
 <div class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display" data-execution_count="3">
 <div id="tbl-adjusted-dickey-fuller-test" class="anchored">
 <table class="table table-sm table-striped small">
-<caption>Table&nbsp;4.2: Shows the results of running the adjusted Augmented Dickey-Fuller Test on the time series datasets.</caption>
+<caption>Table&nbsp;4.2: Shows the results of running the Augmented Dickey-Fuller Test on the adjusted time series datasets.</caption>
+<colgroup>
+<col style="width: 42%">
+<col style="width: 25%">
+<col style="width: 20%">
+<col style="width: 12%">
+</colgroup>
 <thead>
 <tr class="header">
 <th style="text-align: left;">Data Series</th>
+<th style="text-align: left;">Stationarity Method</th>
 <th style="text-align: right;">Test Statistic</th>
 <th style="text-align: right;">P-Value</th>
 </tr>
@@ -529,53 +623,64 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Average Ground Temperature on Mars</td>
+<td style="text-align: left;">First Difference</td>
 <td style="text-align: right;">-5.5444</td>
 <td style="text-align: right;">0.01</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Atmospheric Pressure on Mars</td>
-<td style="text-align: right;">-3.5828</td>
-<td style="text-align: right;">0.041</td>
+<td style="text-align: left;">Second Difference</td>
+<td style="text-align: right;">-3.8913</td>
+<td style="text-align: right;">0.0196</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">ARKX Stock Adjusted Close</td>
+<td style="text-align: left;">First Difference</td>
 <td style="text-align: right;">-8.5612</td>
 <td style="text-align: right;">0.01</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">AVAV Stock Adjusted Close</td>
+<td style="text-align: left;">First Difference</td>
 <td style="text-align: right;">-9.5899</td>
 <td style="text-align: right;">0.01</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Treasury NASA Outlays</td>
+<td style="text-align: left;">First Difference</td>
 <td style="text-align: right;">-8.877</td>
 <td style="text-align: right;">0.01</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Google Trends Space Exploration Term</td>
+<td style="text-align: left;">First Difference</td>
 <td style="text-align: right;">-7.1225</td>
 <td style="text-align: right;">0.01</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Weather Satellite Launches</td>
+<td style="text-align: left;">First Difference</td>
 <td style="text-align: right;">-13.3759</td>
 <td style="text-align: right;">0.01</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Operational Satellites Over Time</td>
-<td style="text-align: right;">-2.8909</td>
-<td style="text-align: right;">0.2066</td>
+<td style="text-align: left;">Second Difference</td>
+<td style="text-align: right;">-4.6812</td>
+<td style="text-align: right;">0.01</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 </div>
+<p>The various data series now seem to have achieved stationarity. For example, the Average Ground Temperature on Mars and the Atmospheric Pressure on Mars have become stationary after the first and second differencing, respectively, as evidenced by their test statistics and p-values (all below the 0.05 threshold), laying the groundwork for more dependable forecasting models. Financial series such as ARKX and AVAV stocks, along with Treasury NASA Outlays and the Google Trends Space Exploration Term, also show definitive stationarity after first differencing, as indicated by their significantly negative test statistics and p-values at the 0.01 level. Unlike the previous analysis using the Augmented Dickey-Fuller test, these findings are corroborated by the ACF plots, enhancing the credibility of the results.</p>
+<!-- ==================================================
+      SMA Smoothing
+================================================== -->
 </section>
 <section id="sma-smoothing" class="level2" data-number="4.10">
 <h2 data-number="4.10" class="anchored" data-anchor-id="sma-smoothing"><span class="header-section-number">4.10</span> SMA Smoothing</h2>
-<p>As an additional, following the example provided for the EDA section, I include an SMA analysis.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-8-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-1" role="tab" aria-controls="tabset-8-1" aria-selected="true">Seas. 1: Mars Temperature</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-8-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-2" role="tab" aria-controls="tabset-8-2" aria-selected="false">Seas. 2: Mars Pressure</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-8-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-3" role="tab" aria-controls="tabset-8-3" aria-selected="false">Financial 1: ARKX</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-8-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-4" role="tab" aria-controls="tabset-8-4" aria-selected="false">Financial 2: AVAV</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-8-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-5" role="tab" aria-controls="tabset-8-5" aria-selected="false">Treasury NASA Outlays</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-8-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-6" role="tab" aria-controls="tabset-8-6" aria-selected="false">Google Trends</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-8-7-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-7" role="tab" aria-controls="tabset-8-7" aria-selected="false">Launches</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-8-8-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-8" role="tab" aria-controls="tabset-8-8" aria-selected="false">Satellites</a></li></ul>
 <div class="tab-content">
@@ -605,6 +710,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<p>Additionally, inspired by the example from the EDA section, I have conducted an SMA analysis, incorporating moving averages over 5, 15, and 30 time steps. We observe that the 5-time step moving average for most series sufficiently smooths the data. In contrast, the longer SMAs tend to overly smooth the series, resulting in a loss of visible data trends.</p>
 
 
 </section>

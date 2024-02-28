@@ -224,15 +224,42 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<p>This section shows the visual data explorations of Martian weather, stock market trends, global space launch competitiveness, the ascent of private spaceflight, and the evolving landscape of weather satellite technology. It leverages visualization tools like <code>Tableau</code>, <code>Plotly</code>, <code>ggplot2</code>, and more, to convey the stories contained within the datasets.</p>
+
+<!-- ==================================================
+      Mars Weather Dashboard with Tableau
+================================================== -->
 <section id="mars-weather-dashboard-with-tableau" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="mars-weather-dashboard-with-tableau"><span class="header-section-number">3.1</span> Mars Weather Dashboard with Tableau</h2>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Note: all the series visualized in this dashboard come from the same multivariate dataset.</p>
+</div>
+</div>
+</div>
 <p>For a better view of the widget below, see it in Tableau public <a href="https://public.tableau.com/views/mars_weather_dashboard/MarsWeatherMonitor?:language=en-US&amp;:sid=&amp;:display_count=n&amp;:origin=viz_share_link">here</a>.</p>
+<div id="fig-mars-dashboard" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
 
 
-<div class="tableauPlaceholder" id="viz1708532854437" style="position: relative"><noscript><a href="#"><img alt="Mars Weather Monitor " src="https://public.tableau.com/static/images/ma/mars_weather_dashboard/MarsWeatherMonitor/1_rss.png" style="border: none"></a></noscript><object class="tableauViz" style="display:none;"><param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F"> <param name="embed_code_version" value="3"> <param name="site_root" value=""><param name="name" value="mars_weather_dashboard/MarsWeatherMonitor"><param name="tabs" value="no"><param name="toolbar" value="yes"><param name="static_image" value="https://public.tableau.com/static/images/ma/mars_weather_dashboard/MarsWeatherMonitor/1.png"> <param name="animate_transition" value="yes"><param name="display_static_image" value="yes"><param name="display_spinner" value="yes"><param name="display_overlay" value="yes"><param name="display_count" value="yes"><param name="language" value="en-US"></object></div>                
+<div class="tableauPlaceholder" id="viz1708532854437" style="position: relative"><noscript><a href="#"><img alt="Mars Weather Monitor " src="https://public.tableau.com/static/images/ma/mars_weather_dashboard/MarsWeatherMonitor/1_rss.png" style="border: none" class="figure-img"></a></noscript><object class="tableauViz" style="display:none;"><param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F"> <param name="embed_code_version" value="3"> <param name="site_root" value=""><param name="name" value="mars_weather_dashboard/MarsWeatherMonitor"><param name="tabs" value="no"><param name="toolbar" value="yes"><param name="static_image" value="https://public.tableau.com/static/images/ma/mars_weather_dashboard/MarsWeatherMonitor/1.png"> <param name="animate_transition" value="yes"><param name="display_static_image" value="yes"><param name="display_spinner" value="yes"><param name="display_overlay" value="yes"><param name="display_count" value="yes"><param name="language" value="en-US"></object></div>                
 
 <script type="text/javascript">                    var divElement = document.getElementById('viz1708532854437');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='700px';vizElement.style.height='850px';} else { vizElement.style.width='100%';vizElement.style.height='1327px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
 
+<figcaption class="figure-caption">Figure&nbsp;3.1: Shows the Mars Weather Dashboard built with Tableau.</figcaption>
+</figure>
+</div>
+<p><a href="#fig-mars-dashboard">Figure&nbsp;<span>3.1</span></a> is a multi-panel presentation of Martian climate data, structured into four distinct panels, each illustrating a unique aspect of the Martian environment as observed by the Curiosity Rover over several Martian years, specifically from years 31 to 37. These panels tell the ongoing story of a planet being observed, analyzed, and understood, piece by piece, season by season, year by Martian year.</p>
+<p>In the upper left, we have a panel capturing the rhythm of Martian days, delineated by the varying sunrise and sunset times. The fluctuation is depicted as a yellow band against a dark background, a visual metaphor for daylight hours. Below this, the bottom left panel portrays ground temperature, with vertical bars in seasonal colors representing the minimum and maximum temperatures recorded. The colors (blue for winter, green for spring, orange for summer, and red for autumn) create a thermal theme to the figure, highlighting the cold dominance of the Martian climate, where even summer days struggle to reach above freezing.</p>
+<p>To the right, the upper panel focuses on atmospheric pressure, with a series of box and whisker plots organized by Martian months. Each plot is a snapshot of variability, with the boxes indicating the middle 50% of recorded pressures and the whiskers extending to the extremes. The data suggests a degree of predictability in the expected pressure on Mars. The final panel, bottom right, shifts to air temperature, charted over Martian months with a color gradient that speaks to temperature intensity. Each year is a line of colored squares, each square a month, and each shade a degree, telling a story of a cold planet.</p>
+<p>The data shown in the dashboard shows the outcomes of public investment in space infrastructure. The gathering of Martian environmental data is made possible by the advanced technology aboard the Curiosity Rover, showing how dedicating resources towards the pursuit of knowledge beyond our planet is a stepping stone for humanity’s aspirations in space, providing invaluable insights that could shape the future of space exploration and colonization. Furthermore, for those who might one day set foot on Mars, this data is a source for preparation. It offers a preview of the challenges to be faced in a hostile environment.</p>
+<!-- ==================================================
+      Financial Candlestick Charts with Plotly
+================================================== -->
 </section>
 <section id="financial-candlestick-charts-with-plotly" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="financial-candlestick-charts-with-plotly"><span class="header-section-number">3.2</span> Financial Candlestick Charts with Plotly</h2>
@@ -242,10 +269,15 @@ ul.task-list li input[type="checkbox"] {
 
         <iframe width="100%" height="570" src="../../docs_source/images/visualization/stocks_crossover_plot_with_candlesticks_with_dropdown.html" frameborder="0" allowfullscreen=""></iframe>
         
-<figcaption class="figure-caption">Figure&nbsp;3.1: Shows the candlestick and SMA charts for the analyzed stocks.</figcaption>
+<figcaption class="figure-caption">Figure&nbsp;3.2: Shows the candlestick and SMA charts for the analyzed stocks.</figcaption>
 </figure>
 </div>
 </div>
+<p><a href="#fig-candlestick-charts">Figure&nbsp;<span>3.2</span></a> presents trading data for ARKX, AVAV, KTOS, and TRMB, with the option to change between them. The data is illustrated with candlesticks and Simple Moving Averages (SMAs) to indicate trends over time. Candlestick colors alternate, showcasing fluctuations in price: green signifies weeks where the closing price was higher than the opening, and red is the opposite. The blue line traces the 5-day SMA, which wiggles above and below the 14.5 price mark, indicating short-term price movements. Meanwhile, the orange line, depicting the 20-day SMA, slopes more steadily, suggesting a slower response to price changes. The purple line, representing the 100-day SMA, undulates at the bottom of the chart, hinting at a much longer-term perspective on price trends.</p>
+<p>For example, the ARKX chart covers a period from January 28 to February 18, 2024, during which prices fluctuated between approximately $14.00 and $14.9, with a noticeable peak and trough, providing a narrative of volatility within this period. In this period, observing the 5-day as a short-term trend intersects the 20-day SMA once on the plot, indicating a buy signal based on the crossover strategy we covered in class.</p>
+<!-- ==================================================
+      Launches Per Country of Launch with Play Button
+================================================== -->
 </section>
 <section id="launches-per-country-of-launch-with-play-button" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="launches-per-country-of-launch-with-play-button"><span class="header-section-number">3.3</span> Launches Per Country of Launch with Play Button</h2>
@@ -255,10 +287,14 @@ ul.task-list li input[type="checkbox"] {
 
         <iframe width="100%" height="570" src="../../docs_source/images/visualization/launches_per_country_of_launch_site.html" frameborder="0" allowfullscreen=""></iframe>
         
-<figcaption class="figure-caption">Figure&nbsp;3.2: Shows the total launches per country of launch site.</figcaption>
+<figcaption class="figure-caption">Figure&nbsp;3.3: Shows the total launches per country of launch site.</figcaption>
 </figure>
 </div>
 </div>
+<p><a href="#fig-launches-per-country">Figure&nbsp;<span>3.3</span></a> displays the evolution of space launches by different countries over time. The rising bars from the x-axis, labeled “Launch Site Country,” visually represent the competitive drive and technological progress each nation has pursued in space exploration. Initially, the USA, Russia, and Kazakhstan led in launch numbers until around 2015, when China’s participation in space exploration increased significantly. Throughout the timeline, other nations such as France, India, Japan, and Kazakhstan contribute more modestly to the total launch count, each with fewer than 20 launches. An “Other” category aggregates launches from countries not listed individually, adding a notable, though smaller, contribution to global launch efforts. This plot highlights the shifting dynamics of global space exploration, with China and India emerging as key contenders in the near future.</p>
+<!-- ==================================================
+      The Rise of Private Launches
+================================================== -->
 </section>
 <section id="the-rise-of-private-launches" class="level2" data-number="3.4">
 <h2 data-number="3.4" class="anchored" data-anchor-id="the-rise-of-private-launches"><span class="header-section-number">3.4</span> The Rise of Private Launches</h2>
@@ -268,19 +304,28 @@ ul.task-list li input[type="checkbox"] {
 
         <iframe width="100%" height="570" src="../../docs_source/images/visualization/cumulative_launches_spacex_vs_others.html" frameborder="0" allowfullscreen=""></iframe>
         
-<figcaption class="figure-caption">Figure&nbsp;3.3: Shows the cumulative launches of SpaceX vs all others.</figcaption>
+<figcaption class="figure-caption">Figure&nbsp;3.4: Shows the cumulative launches of SpaceX vs all others.</figcaption>
 </figure>
 </div>
 </div>
+<p><a href="#fig-spacex-others">Figure&nbsp;<span>3.4</span></a> compares yearly rocket launches between SpaceX and every other agency from 1960 to around 2020. In the graph, the ‘Other’ category, depicted in red, shows a substantial number of launches in the early years, with a peak of over 120 annually in the mid-1960s. Despite fluctuations, this activity remained high until after 1990, when there was a significant decline, dropping to nearly 40 launches per year. This sharp decrease mirrors the end of the Cold War, underscoring a shift in governmental perspectives on space exploration. It suggests that space exploration lost its status as a competitive priority following the Cold War, implying it was primarily a surrogate for military competition rather than a pursuit of collective advancement or curiosity.</p>
+<p>In contrast, SpaceX, represented in blue, entered the chart around 2010. Initially, its launch numbers were modest but have consistently risen over the decade. While the frequency of launches from the ‘Other’ category continues to decline, SpaceX has experienced a notable increase. By 2020, SpaceX’s annual launch count is significant compared to all other global agencies combined, signaling a pivotal change in space exploration and the commercial rocket launch industry. This graph narrates the sector’s evolution, highlighting the transition from a field dominated by government players to one where a single company from the private sector starts to lead.</p>
+<!-- ==================================================
+      Weather Satellites with `ggplot2`
+================================================== -->
 </section>
 <section id="weather-satellites-with-ggplot2" class="level2" data-number="3.5">
 <h2 data-number="3.5" class="anchored" data-anchor-id="weather-satellites-with-ggplot2"><span class="header-section-number">3.5</span> Weather Satellites with <code>ggplot2</code></h2>
 <div id="fig-weather-satellite-launches" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="../../docs_source/images/visualization/oscar_satellites_status.jpeg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Figure&nbsp;3.4: Shows the weather satellite launches per year hued by status</figcaption>
+<figcaption class="figure-caption">Figure&nbsp;3.5: Shows the weather satellite launches per year hued by status</figcaption>
 </figure>
 </div>
+<p><a href="#fig-weather-satellite-launches">Figure&nbsp;<span>3.5</span></a> visualizes the launch history of weather satellites from 1959 to 2024, with each bar denoting the annual launch count and differentiated by the operational status of these satellites. The colors red, green, and blue signify inactive, operational, and other statuses. Launch activity shows a steady rise from the late 1950s through the early 2000s, peaking with a significant increase starting in the late 1990s. This visualization tracks the growth in launches and illustrates the lifecycle within the weather satellite sector, where satellites transition from active to inactive over time. It highlights the ongoing effort to rejuvenate and expand the network of operational satellites, emphasizing the sector’s commitment to enhancing weather forecasting capabilities. The focus on weather satellites makes this trend particularly noteworthy, underscoring the specialized investment and technological advancement over the past six decades.</p>
+<!-- ==================================================
+      Search Interest in Space Terms
+================================================== -->
 </section>
 <section id="search-interest-in-space-terms" class="level2" data-number="3.6">
 <h2 data-number="3.6" class="anchored" data-anchor-id="search-interest-in-space-terms"><span class="header-section-number">3.6</span> Search Interest in Space Terms</h2>
@@ -290,10 +335,13 @@ ul.task-list li input[type="checkbox"] {
 
         <iframe width="100%" height="570" src="../../docs_source/images/visualization/google_trends_all_plot.html" frameborder="0" allowfullscreen=""></iframe>
         
-<figcaption class="figure-caption">Figure&nbsp;3.5: Shows the Google Trends search interest for the terms <code>Space Exploration</code>, <code>Mars</code>, <code>SpaceX</code>, and <code>Space Exploration</code>.</figcaption>
+<figcaption class="figure-caption">Figure&nbsp;3.6: Shows the Google Trends search interest for the terms <code>Space Exploration</code>, <code>Mars</code>, <code>SpaceX</code>, and <code>Space Exploration</code>.</figcaption>
 </figure>
 </div>
 </div>
+<p><a href="#fig-trends-all">Figure&nbsp;<span>3.6</span></a> shows the Google Trends search interest in the United States for four key terms: <code>Mars</code>, <code>Satellites</code>, <code>Space Exploration</code>, and <code>SpaceX</code>, from 2020 to early 2024. A different color represents each term—Mars in blue, Satellites in red, Space Exploration in green, and SpaceX in purple—across a timeline, with the vertical axis measuring search interest from 0 to 100 and the horizontal axis spanning from 2020 to 2024.</p>
+<p><code>Mars</code> exhibits periodic spikes in interest tied to noteworthy events related to the planet, revealing moments of heightened public curiosity. The interest in <code>Satellites</code> shows a steadier trend with occasional peaks, reflecting public attention to satellite launches or developments in satellite technology. The pattern for <code>Space Exploration</code> is notably varied, with frequent and abrupt fluctuations in search interest, suggesting a constantly changing public fascination with exploration missions or discoveries. <code>SpaceX</code>, on the other hand, demonstrates a persistent interest with significant peaks at crucial company milestones, like rocket launches or major announcements.</p>
+<p>This graph shows the evolving nature of public interest and engagement with space-related subjects over the last four years. The interactions among these trends highlight periods when advancements or news in space technology and exploration have sparked increased public inquiry and enthusiasm.</p>
 
 
 </section>
