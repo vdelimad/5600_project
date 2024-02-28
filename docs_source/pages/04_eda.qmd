@@ -318,7 +318,7 @@ The decomposition plots illustrate the breakdown of different series into trends
 #| tbl-cap: "Shows the results of running the Augmented Dickey-Fuller Test on the time series datasets (alternative hypothesis: `stationary`)."
 
 
-dickey_fuller = pd.read_csv('../../docs_source/tables/eda/dickey_fuller/dickey_fuller_table.csv')
+dickey_fuller = pd.read_csv('../tables/eda/dickey_fuller/dickey_fuller_table.csv')
 
 
 'test_statistic', 'p_value', 'method', 'data_series', 'alternative_hypothesis'
@@ -555,7 +555,7 @@ Now, the series that failed to attain stationarity through first differencing se
 #| tbl-cap: "Shows the results of running the Augmented Dickey-Fuller Test on the adjusted time series datasets."
 
 
-adjusted_dickey_fuller = pd.read_csv('../../docs_source/tables/eda/dickey_fuller/adjusted_dickey_fuller_table.csv')
+adjusted_dickey_fuller = pd.read_csv('../tables/eda/dickey_fuller/adjusted_dickey_fuller_table.csv')
 
 
 #'test_statistic', 'p_value', 'method', 'data_series', 'alternative_hypothesis'

@@ -137,7 +137,7 @@ In contrast, SpaceX, represented in blue, entered the chart around 2010. Initial
 ## Weather Satellites with `ggplot2`
 
 
-![Shows the weather satellite launches per year hued by status](../../docs_source/images/visualization/oscar_satellites_status.jpeg){#fig-weather-satellite-launches}
+![Shows the weather satellite launches per year hued by status](../images/visualization/oscar_satellites_status.jpeg){#fig-weather-satellite-launches}
 
 @fig-weather-satellite-launches visualizes the launch history of weather satellites from 1959 to 2024, with each bar denoting the annual launch count and differentiated by the operational status of these satellites. The colors red, green, and blue signify inactive, operational, and other statuses. Launch activity shows a steady rise from the late 1950s through the early 2000s, peaking with a significant increase starting in the late 1990s. This visualization tracks the growth in launches and illustrates the lifecycle within the weather satellite sector, where satellites transition from active to inactive over time. It highlights the ongoing effort to rejuvenate and expand the network of operational satellites, emphasizing the sector's commitment to enhancing weather forecasting capabilities. The focus on weather satellites makes this trend particularly noteworthy, underscoring the specialized investment and technological advancement over the past six decades.
 
