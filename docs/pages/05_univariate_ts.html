@@ -62,6 +62,8 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -185,10 +187,11 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#arima" id="toc-arima" class="nav-link active" data-scroll-target="#arima"><span class="header-section-number">5.1</span> ARIMA</a>
   <ul class="collapse">
   <li><a href="#determining-pd-and-q" id="toc-determining-pd-and-q" class="nav-link" data-scroll-target="#determining-pd-and-q"><span class="header-section-number">5.1.1</span> Determining <code>p</code>,<code>d</code>, and <code>q</code></a></li>
-  <li><a href="#arima-fitting" id="toc-arima-fitting" class="nav-link" data-scroll-target="#arima-fitting"><span class="header-section-number">5.1.2</span> ARIMA fitting</a></li>
-  <li><a href="#auto.arima" id="toc-auto.arima" class="nav-link" data-scroll-target="#auto.arima"><span class="header-section-number">5.1.3</span> <code>auto.arima()</code></a></li>
-  <li><a href="#forecast" id="toc-forecast" class="nav-link" data-scroll-target="#forecast"><span class="header-section-number">5.1.4</span> Forecast</a></li>
-  <li><a href="#benchmark-methods" id="toc-benchmark-methods" class="nav-link" data-scroll-target="#benchmark-methods"><span class="header-section-number">5.1.5</span> Benchmark Methods</a></li>
+  <li><a href="#arima-model-fitting" id="toc-arima-model-fitting" class="nav-link" data-scroll-target="#arima-model-fitting"><span class="header-section-number">5.1.2</span> ARIMA Model Fitting</a></li>
+  <li><a href="#model-diagnostics" id="toc-model-diagnostics" class="nav-link" data-scroll-target="#model-diagnostics"><span class="header-section-number">5.1.3</span> Model Diagnostics</a></li>
+  <li><a href="#auto.arima" id="toc-auto.arima" class="nav-link" data-scroll-target="#auto.arima"><span class="header-section-number">5.1.4</span> <code>auto.arima()</code></a></li>
+  <li><a href="#forecast" id="toc-forecast" class="nav-link" data-scroll-target="#forecast"><span class="header-section-number">5.1.5</span> Forecast</a></li>
+  <li><a href="#benchmark-methods" id="toc-benchmark-methods" class="nav-link" data-scroll-target="#benchmark-methods"><span class="header-section-number">5.1.6</span> Benchmark Methods</a></li>
   </ul></li>
   <li><a href="#sarima" id="toc-sarima" class="nav-link" data-scroll-target="#sarima"><span class="header-section-number">5.2</span> SARIMA</a></li>
   </ul>
@@ -232,11 +235,11 @@ ul.task-list li input[type="checkbox"] {
 <p>During the previous EDA section, the following work that supports the correct section was conducted:</p>
 <ul>
 <li>We performed an initial determination on whether the data is stationary or non-stationary (see <a href="04_eda.html#sec-eda-initial-dickey-fuller-test"><span>Section&nbsp;4.5</span></a>).</li>
-<li>Since the series were found to be non-stationary, we differenced them.</li>
+<li>Since the series were found to be non-stationary, we differenced them. It was also found that <code>log()</code> transformations were not useful for any of the series.</li>
 <li>We plotted the differenced data (see <a href="04_eda.html#sec-eda-detrending-and-first-differencing"><span>Section&nbsp;4.6</span></a>), including the ACFs and PACFs (see <a href="04_eda.html#sec-eda-detrended-and-first-differenced-acfs"><span>Section&nbsp;4.7</span></a> and <a href="04_eda.html#sec-eda-first-and-second-difference"><span>Section&nbsp;4.8</span></a>), and comments were provided throughout.</li>
 <li>Then, with the Augmented Dickey-Fuller Test, we showed that all the series were now stationary (see <a href="04_eda.html#sec-eda-dickey-fuller-test-on-adjusted-data"><span>Section&nbsp;4.9</span></a>).</li>
 </ul>
-<p>It was also found that <code>log()</code> transformations were not useful for any of the series. With this work, we can proceed to begin our ARIMA modeling.</p>
+<p>With this work, we can proceed to begin our ARIMA modeling, which is presented in this section.</p>
 <!-- ----------------------------------------------
      Determining `p`,`d`, and `q`
 ------------------------------------------------ -->
@@ -322,78 +325,24 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<section id="mars-temperature" class="level4 unnumbered unlisted">
-<h4 class="unnumbered unlisted anchored" data-anchor-id="mars-temperature">Mars Temperature</h4>
 <ul>
-<li><code>p</code>: 0, 1,2</li>
-<li><code>d</code>: 1</li>
-<li><code>q</code>: 0, 1, 2, 3</li>
+<li><strong>Mars Temperature.</strong> By the ACF Plot, <code>q</code>= 0, 1, 2, 3 and, by the PACF plot: <code>p</code>= 0, 1, 2.</li>
+<li><strong>Mars Pressure.</strong> By the ACF Plot, <code>q</code>= 0, 1, 2, 3, 4, 5 and, by the PACF plot, <code>p</code>= 0, 1, 2, 3.</li>
+<li><strong>ARKX.</strong> By the ACF Plot, <code>q</code>= 0 and, by the PACF plot, <code>p</code>= 0. These findings highly suggest that this series might be best modeled as a <strong>random walk</strong>, i.e., ARIMA(0, 1, 0).</li>
+<li><strong>AVAV.</strong> By the ACF Plot, <code>q</code>= 0 and, by the PACF plot: <code>p</code>= 0. These findings highly suggest that this series might be best modeled as a <strong>random walk</strong>, i.e., ARIMA(0, 1, 0).</li>
+<li><strong>Treasury NASA Outlays.</strong> By the ACF Plot, <code>q</code>= 0, 1, 2, 3, 4 and, by the PACF plot: <code>p</code>= 0, 1, 2, 3.</li>
+<li><strong>Google Trends.</strong> By the ACF Plot, <code>q</code>= 0, 1, 2 and, by the PACF plot: <code>p</code>= 0, 1, 2.</li>
+<li><strong>Launches.</strong> By the ACF Plot, <code>q</code>= 0, 1 and, by the PACF plot: <code>p</code>= 0, 1, 2, 3, 4, 5.</li>
+<li><strong>Satellites.</strong> By the ACF Plot, <code>q</code>= 0, 1 and, by the PACF plot, <code>p</code>= 0, 1.</li>
 </ul>
-</section>
-<section id="mars-pressure" class="level4 unnumbered unlisted">
-<h4 class="unnumbered unlisted anchored" data-anchor-id="mars-pressure">Mars Pressure</h4>
-<ul>
-<li><code>p</code>: 0, 1,2,3</li>
-<li><code>d</code>: 1, 2</li>
-<li><code>q</code>: 0, 1,2,3,4,5</li>
-</ul>
-</section>
-<section id="arkx" class="level4 unnumbered unlisted">
-<h4 class="unnumbered unlisted anchored" data-anchor-id="arkx">ARKX</h4>
-<ul>
-<li><code>p</code>: 0</li>
-<li><code>d</code>: 1</li>
-<li><code>q</code>: 0</li>
-</ul>
-<p>Perhaps a random walk model.</p>
-</section>
-<section id="avav" class="level4 unnumbered unlisted">
-<h4 class="unnumbered unlisted anchored" data-anchor-id="avav">AVAV</h4>
-<ul>
-<li><code>p</code>: 0</li>
-<li><code>d</code>: 1</li>
-<li><code>q</code>: 0</li>
-</ul>
-<p>Perhaps a random walk model.</p>
-</section>
-<section id="treasury-nasa-outlays-1" class="level4 unnumbered unlisted">
-<h4 class="unnumbered unlisted anchored" data-anchor-id="treasury-nasa-outlays-1">Treasury NASA Outlays</h4>
-<ul>
-<li><code>p</code>: 0, 1, 2, 3</li>
-<li><code>d</code>: 1</li>
-<li><code>q</code>: 0, 1, 2, 3, 4</li>
-</ul>
-</section>
-<section id="google-trends-1" class="level4 unnumbered unlisted">
-<h4 class="unnumbered unlisted anchored" data-anchor-id="google-trends-1">Google Trends</h4>
-<ul>
-<li><code>p</code>: 0, 1, 2</li>
-<li><code>d</code>: 1</li>
-<li><code>q</code>: 0, 1, 2</li>
-</ul>
-</section>
-<section id="launches-1" class="level4 unnumbered unlisted">
-<h4 class="unnumbered unlisted anchored" data-anchor-id="launches-1">Launches</h4>
-<ul>
-<li><code>p</code>: 0, 1,2,3,4,5</li>
-<li><code>d</code>: 1</li>
-<li><code>q</code>: 0, 1</li>
-</ul>
-</section>
-<section id="satellites-1" class="level4 unnumbered unlisted">
-<h4 class="unnumbered unlisted anchored" data-anchor-id="satellites-1">Satellites</h4>
-<ul>
-<li><code>p</code>: 0, 1</li>
-<li><code>d</code>: 1, 2</li>
-<li><code>q</code>: 0, 1</li>
-</ul>
+<p>Now, having determined potential values for <code>p</code>, <code>d</code>, and <code>q</code>, we can proceed to test them.</p>
 <!-- ----------------------------------------------
      ARIMA Fitting
 ------------------------------------------------ -->
 </section>
-</section>
-<section id="arima-fitting" class="level3" data-number="5.1.2">
-<h3 data-number="5.1.2" class="anchored" data-anchor-id="arima-fitting"><span class="header-section-number">5.1.2</span> ARIMA fitting</h3>
+<section id="arima-model-fitting" class="level3" data-number="5.1.2">
+<h3 data-number="5.1.2" class="anchored" data-anchor-id="arima-model-fitting"><span class="header-section-number">5.1.2</span> ARIMA Model Fitting</h3>
+<p>The following panel shows the models tested for each series:</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Seas. 1: Mars Temperature</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Seas. 2: Mars Pressure</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false">Financial 1: ARKX</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-4" role="tab" aria-controls="tabset-2-4" aria-selected="false">Financial 2: AVAV</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-5" role="tab" aria-controls="tabset-2-5" aria-selected="false">Treasury NASA Outlays</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-6" role="tab" aria-controls="tabset-2-6" aria-selected="false">Google Trends</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-7-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-7" role="tab" aria-controls="tabset-2-7" aria-selected="false">Launches</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-8-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-8" role="tab" aria-controls="tabset-2-8" aria-selected="false">Satellites</a></li></ul>
 <div class="tab-content">
@@ -1223,8 +1172,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<section id="best-model" class="level4" data-number="5.1.2.1">
-<h4 data-number="5.1.2.1" class="anchored" data-anchor-id="best-model"><span class="header-section-number">5.1.2.1</span> Best Model</h4>
+<p>The following panel shows the best model for each series and their corresponding equations:</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">Seas. 1: Mars Temperature</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false">Seas. 2: Mars Pressure</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false">Financial 1: ARKX</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-4" role="tab" aria-controls="tabset-3-4" aria-selected="false">Financial 2: AVAV</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-5" role="tab" aria-controls="tabset-3-5" aria-selected="false">Treasury NASA Outlays</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-6" role="tab" aria-controls="tabset-3-6" aria-selected="false">Google Trends</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-7-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-7" role="tab" aria-controls="tabset-3-7" aria-selected="false">Launches</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-8-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-8" role="tab" aria-controls="tabset-3-8" aria-selected="false">Satellites</a></li></ul>
 <div class="tab-content">
@@ -1258,6 +1206,10 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<p>Equation:</p>
+<p><span class="math display">\[
+(1 - \phi_{1} B^{1} - \phi_{2} B^{2})(1-B)^{2} x_t = (1 - \theta_{1} B^{1}- \theta_{2} B^{2}- \theta_{3} B^{3})\omega_t
+\]</span></p>
 </div>
 <div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
 <div class="cell" data-execution_count="14">
@@ -1289,6 +1241,10 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<p>Equation:</p>
+<p><span class="math display">\[
+(1 - \phi_{1} B^{1} - \phi_{2} B^{2})(1-B)^{2} x_t = (1 - \theta_{1} B^{1}- \theta_{2} B^{2}- \theta_{3} B^{3}- \theta_{4} B^{4})\omega_t
+\]</span></p>
 </div>
 <div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
 <div class="cell" data-execution_count="15">
@@ -1320,6 +1276,10 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<p>Equation:</p>
+<p><span class="math display">\[
+(1)(1-B)^{1} x_t = (1 )\omega_t
+\]</span></p>
 </div>
 <div id="tabset-3-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-4-tab">
 <div class="cell" data-execution_count="16">
@@ -1351,6 +1311,10 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<p>Equation:</p>
+<p><span class="math display">\[
+(1)(1-B)^{1} x_t = (1 )\omega_t
+\]</span></p>
 </div>
 <div id="tabset-3-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-5-tab">
 <div class="cell" data-execution_count="17">
@@ -1382,6 +1346,10 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<p>Equation:</p>
+<p><span class="math display">\[
+(1 - \phi_{1} B^{1} - \phi_{2} B^{2} - \phi_{3} B^{3})(1-B)^{1} x_t = (1 - \theta_{1} B^{1}- \theta_{2} B^{2}- \theta_{3} B^{3}- \theta_{4} B^{4})\omega_t
+\]</span></p>
 </div>
 <div id="tabset-3-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-6-tab">
 <div class="cell" data-execution_count="18">
@@ -1413,6 +1381,10 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<p>Equation:</p>
+<p><span class="math display">\[
+(1 - \phi_{1} B^{1})(1-B)^{1} x_t = (1 - \theta_{1} B^{1})\omega_t
+\]</span></p>
 </div>
 <div id="tabset-3-7" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-7-tab">
 <div class="cell" data-execution_count="19">
@@ -1444,6 +1416,10 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<p>Equation:</p>
+<p><span class="math display">\[
+(1 - \phi_{1} B^{1} - \phi_{2} B^{2} - \phi_{3} B^{3} - \phi_{4} B^{4} - \phi_{5} B^{5})(1-B)^{1} x_t = (1 - \theta_{1} B^{1})\omega_t
+\]</span></p>
 </div>
 <div id="tabset-3-8" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-8-tab">
 <div class="cell" data-execution_count="20">
@@ -1475,12 +1451,19 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<p>Equation:</p>
+<p><span class="math display">\[
+(1)(1-B)^{2} x_t = (1 - \theta_{1} B^{1})\omega_t
+\]</span></p>
 </div>
 </div>
 </div>
+<!-- ----------------------------------------------
+     Model Diagnostics
+------------------------------------------------ -->
 </section>
-<section id="model-diagnostics" class="level4" data-number="5.1.2.2">
-<h4 data-number="5.1.2.2" class="anchored" data-anchor-id="model-diagnostics"><span class="header-section-number">5.1.2.2</span> Model Diagnostics</h4>
+<section id="model-diagnostics" class="level3" data-number="5.1.3">
+<h3 data-number="5.1.3" class="anchored" data-anchor-id="model-diagnostics"><span class="header-section-number">5.1.3</span> Model Diagnostics</h3>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true">Seas. 1: Mars Temperature</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false">Seas. 2: Mars Pressure</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-3" role="tab" aria-controls="tabset-4-3" aria-selected="false">Financial 1: ARKX</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-4" role="tab" aria-controls="tabset-4-4" aria-selected="false">Financial 2: AVAV</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-5" role="tab" aria-controls="tabset-4-5" aria-selected="false">Treasury NASA Outlays</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-6" role="tab" aria-controls="tabset-4-6" aria-selected="false">Google Trends</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-7-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-7" role="tab" aria-controls="tabset-4-7" aria-selected="false">Launches</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-8-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-8" role="tab" aria-controls="tabset-4-8" aria-selected="false">Satellites</a></li></ul>
 <div class="tab-content">
@@ -1774,16 +1757,78 @@ $ICs
 </div>
 </div>
 </div>
-</section>
-<section id="model-equations" class="level4" data-number="5.1.2.3">
-<h4 data-number="5.1.2.3" class="anchored" data-anchor-id="model-equations"><span class="header-section-number">5.1.2.3</span> Model Equations</h4>
+<p><strong>Mars Temperature.</strong></p>
+<ul>
+<li>Standardized residuals: The plot shows fluctuations over time but no apparent patterns.</li>
+<li>ACF of residuals: The autocorrelation function bars are mostly within the confidence bounds but still require further improvement.</li>
+<li>Q-Q Plot: Points largely follow the line, indicating residuals are close to normal distribution.</li>
+<li>Ljung-Box: The p-values are below the significance threshold, implying autocorrelation at various lags. We will address this during the SARIMA portion.</li>
+<li>Model output: The model has all significant AR and MA, as low p-values indicate.</li>
+</ul>
+<p><strong>Mars Pressure.</strong></p>
+<ul>
+<li>Standardized residuals: The plot shows fluctuations over time and some patterns are apparent. We will address this during the SARIMA portion with seasonal parameters.</li>
+<li>ACF of residuals: The autocorrelation function bars are mostly within the confidence bounds but still require further improvement.</li>
+<li>Q-Q Plot: Points largely follow the line, indicating residuals are close to normal distribution.</li>
+<li>Ljung-Box: The p-values are below the significance threshold, implying autocorrelation at various lags. We will address this during the SARIMA portion with seasonal parameters.</li>
+<li>Model output: The model has significant AR and MA, as low p-values indicate, however one of the MA terms is insignificant.</li>
+</ul>
+<p><strong>ARKX.</strong></p>
+<ul>
+<li>Standardized residuals: The plot shows fluctuations over time, and no patterns are apparent.</li>
+<li>ACF of residuals: The autocorrelation function bars are within the confidence bounds.</li>
+<li>Q-Q Plot: Points largely follow the line, indicating residuals are close to normal distribution.</li>
+<li>Ljung-Box: The p-values are above the significance threshold, implying no autocorrelation at various lags.</li>
+<li>Model output: The model has only a constant that would be removed if deemed a random walk.</li>
+</ul>
+<p>This is further evidence that a random walk model may be the best for this data.</p>
+<p><strong>AVAV.</strong></p>
+<ul>
+<li>Standardized residuals: The plot shows fluctuations over time, with no apparent patterns.</li>
+<li>ACF of residuals: The autocorrelation function bars are within the confidence bounds.</li>
+<li>Q-Q Plot: Points largely follow the line, indicating residuals are close to normal distribution.</li>
+<li>Ljung-Box: The p-values are above the significance threshold, implying no autocorrelation at various lags.</li>
+<li>Model output: The model has only a constant that would be removed if deemed a random walk.</li>
+</ul>
+<p>This is further evidence that a random walk model may be the best for this data.</p>
+<p><strong>Treasury NASA Outlays.</strong></p>
+<ul>
+<li>Standardized residuals: The plot shows fluctuations over time and some patterns are apparent. We will address this during the SARIMA portion with seasonal parameters.</li>
+<li>ACF of residuals: The autocorrelation function bars are mostly within the confidence bounds but still require further improvement.</li>
+<li>Q-Q Plot: Points largely follow the line, indicating residuals are close to normal distribution.</li>
+<li>Ljung-Box: The p-values are below the significance threshold, implying autocorrelation at various lags. We will address this during the SARIMA portion with seasonal parameters.</li>
+<li>Model output: The model has significant AR and MA, as low p-values indicate, but some terms are insignificant.</li>
+</ul>
+<p><strong>Google Trends.</strong></p>
+<ul>
+<li>Standardized residuals: The plot shows fluctuations over time but patterns are not apparent.</li>
+<li>ACF of residuals: The autocorrelation function bars are mostly within the confidence bounds.</li>
+<li>Q-Q Plot: Points largely follow the line, indicating residuals are close to normal distribution.</li>
+<li>Ljung-Box: A few of the p-values are below the significance threshold, implying autocorrelation. We will address this during the SARIMA portion.</li>
+<li>Model output: The model has significant AR and MA, as low p-values indicate.</li>
+</ul>
+<p><strong>Launches.</strong></p>
+<ul>
+<li>Standardized residuals: The plot shows fluctuations over time, with no apparent patterns.</li>
+<li>ACF of residuals: The autocorrelation function bars are mostly within the confidence bounds, but we will improve this during the SARIMA portion.</li>
+<li>Q-Q Plot: Points largely follow the line, indicating residuals are close to normal distribution.</li>
+<li>Ljung-Box: The p-values are above the significance threshold, implying no autocorrelation at various lags.</li>
+<li>Model output: The model has significant AR and MA, as low p-values indicate, but some terms are insignificant.</li>
+</ul>
+<p><strong>Satellites.</strong></p>
+<ul>
+<li>Standardized residuals: The plot shows fluctuations over time, and no patterns are apparent.</li>
+<li>ACF of residuals: The autocorrelation function bars are within the confidence bounds.</li>
+<li>Q-Q Plot: Points largely follow the line, indicating residuals are close to normal distribution.</li>
+<li>Ljung-Box: The p-values are above the significance threshold, implying no autocorrelation at various lags.</li>
+<li>Model output: The model has significant MA, as low p-values indicate.</li>
+</ul>
 <!-- ----------------------------------------------
     auto.arima()
 ------------------------------------------------ -->
 </section>
-</section>
-<section id="auto.arima" class="level3" data-number="5.1.3">
-<h3 data-number="5.1.3" class="anchored" data-anchor-id="auto.arima"><span class="header-section-number">5.1.3</span> <code>auto.arima()</code></h3>
+<section id="auto.arima" class="level3" data-number="5.1.4">
+<h3 data-number="5.1.4" class="anchored" data-anchor-id="auto.arima"><span class="header-section-number">5.1.4</span> <code>auto.arima()</code></h3>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true">Seas. 1: Mars Temperature</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" role="tab" aria-controls="tabset-5-2" aria-selected="false">Seas. 2: Mars Pressure</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-3" role="tab" aria-controls="tabset-5-3" aria-selected="false">Financial 1: ARKX</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-4" role="tab" aria-controls="tabset-5-4" aria-selected="false">Financial 2: AVAV</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-5" role="tab" aria-controls="tabset-5-5" aria-selected="false">Treasury NASA Outlays</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-6" role="tab" aria-controls="tabset-5-6" aria-selected="false">Google Trends</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-7-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-7" role="tab" aria-controls="tabset-5-7" aria-selected="false">Launches</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-8-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-8" role="tab" aria-controls="tabset-5-8" aria-selected="false">Satellites</a></li></ul>
 <div class="tab-content">
@@ -1910,13 +1955,20 @@ AIC=691.69   AICc=691.79   BIC=697.23
 </div>
 </div>
 </div>
-<p><strong>Time series</strong> Confirms the suspicions that we need seasonal variables and a SARIMA model is needed.</p>
+<p><strong>Mars Temperature.</strong></p>
+<p><strong>Mars Pressure.</strong></p>
+<p><strong>ARKX.</strong></p>
+<p><strong>AVAV.</strong></p>
+<p><strong>Treasury NASA Outlays.</strong></p>
+<p><strong>Google Trends.</strong></p>
+<p><strong>Launches.</strong></p>
+<p><strong>Satellites.</strong></p>
 <!-- ----------------------------------------------
     Forecast
 ------------------------------------------------ -->
 </section>
-<section id="forecast" class="level3" data-number="5.1.4">
-<h3 data-number="5.1.4" class="anchored" data-anchor-id="forecast"><span class="header-section-number">5.1.4</span> Forecast</h3>
+<section id="forecast" class="level3" data-number="5.1.5">
+<h3 data-number="5.1.5" class="anchored" data-anchor-id="forecast"><span class="header-section-number">5.1.5</span> Forecast</h3>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-6-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-1" role="tab" aria-controls="tabset-6-1" aria-selected="true">Seas. 1: Mars Temperature</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-2" role="tab" aria-controls="tabset-6-2" aria-selected="false">Seas. 2: Mars Pressure</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-3" role="tab" aria-controls="tabset-6-3" aria-selected="false">Financial 1: ARKX</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-4" role="tab" aria-controls="tabset-6-4" aria-selected="false">Financial 2: AVAV</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-5" role="tab" aria-controls="tabset-6-5" aria-selected="false">Treasury NASA Outlays</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-6" role="tab" aria-controls="tabset-6-6" aria-selected="false">Google Trends</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-7-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-7" role="tab" aria-controls="tabset-6-7" aria-selected="false">Launches</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-8-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-8" role="tab" aria-controls="tabset-6-8" aria-selected="false">Satellites</a></li></ul>
 <div class="tab-content">
@@ -1946,12 +1998,20 @@ AIC=691.69   AICc=691.79   BIC=697.23
 </div>
 </div>
 </div>
+<p><strong>Mars Temperature.</strong></p>
+<p><strong>Mars Pressure.</strong></p>
+<p><strong>ARKX.</strong></p>
+<p><strong>AVAV.</strong></p>
+<p><strong>Treasury NASA Outlays.</strong></p>
+<p><strong>Google Trends.</strong></p>
+<p><strong>Launches.</strong></p>
+<p><strong>Satellites.</strong></p>
 <!-- ----------------------------------------------
     Benchmark Methods
 ------------------------------------------------ -->
 </section>
-<section id="benchmark-methods" class="level3" data-number="5.1.5">
-<h3 data-number="5.1.5" class="anchored" data-anchor-id="benchmark-methods"><span class="header-section-number">5.1.5</span> Benchmark Methods</h3>
+<section id="benchmark-methods" class="level3" data-number="5.1.6">
+<h3 data-number="5.1.6" class="anchored" data-anchor-id="benchmark-methods"><span class="header-section-number">5.1.6</span> Benchmark Methods</h3>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-7-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-1" role="tab" aria-controls="tabset-7-1" aria-selected="true">Seas. 1: Mars Temperature</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-2" role="tab" aria-controls="tabset-7-2" aria-selected="false">Seas. 2: Mars Pressure</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-3" role="tab" aria-controls="tabset-7-3" aria-selected="false">Financial 1: ARKX</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-4" role="tab" aria-controls="tabset-7-4" aria-selected="false">Financial 2: AVAV</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-5" role="tab" aria-controls="tabset-7-5" aria-selected="false">Treasury NASA Outlays</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-6" role="tab" aria-controls="tabset-7-6" aria-selected="false">Google Trends</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-7-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-7" role="tab" aria-controls="tabset-7-7" aria-selected="false">Launches</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-8-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-8" role="tab" aria-controls="tabset-7-8" aria-selected="false">Satellites</a></li></ul>
 <div class="tab-content">
@@ -2373,6 +2433,14 @@ AIC=691.69   AICc=691.79   BIC=697.23
 </div>
 </div>
 </div>
+<p><strong>Mars Temperature.</strong></p>
+<p><strong>Mars Pressure.</strong></p>
+<p><strong>ARKX.</strong></p>
+<p><strong>AVAV.</strong></p>
+<p><strong>Treasury NASA Outlays.</strong></p>
+<p><strong>Google Trends.</strong></p>
+<p><strong>Launches.</strong></p>
+<p><strong>Satellites.</strong></p>
 <!-- ----------------------------------------------------------------------------------------------------------------------------------------- -->
 <!-- ==================================================
       SARIMA

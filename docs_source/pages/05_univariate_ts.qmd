@@ -30,11 +30,11 @@ The code used in this section is available [here](https://github.com/vdelimad/56
 During the previous EDA section, the following work that supports the correct section was conducted:
 
 - We performed an initial determination on whether the data is stationary or non-stationary (see @sec-eda-initial-dickey-fuller-test).
-- Since the series were found to be non-stationary, we differenced them.
+- Since the series were found to be non-stationary, we differenced them. It was also found that `log()` transformations were not useful for any of the series.
 - We plotted the differenced data (see @sec-eda-detrending-and-first-differencing), including the ACFs and PACFs (see @sec-eda-detrended-and-first-differenced-acfs and @sec-eda-first-and-second-difference), and comments were provided throughout.
 - Then, with the Augmented Dickey-Fuller Test, we showed that all the series were now stationary (see @sec-eda-dickey-fuller-test-on-adjusted-data).
 
-It was also found that `log()` transformations were not useful for any of the series. With this work, we can proceed to begin our ARIMA modeling.
+With this work, we can proceed to begin our ARIMA modeling, which is presented in this section.
 
 
 <!-- ----------------------------------------------
@@ -144,61 +144,17 @@ We can also use the respective ACF and PACFs plots to determine the values of `p
 :::
 
 
-
-#### Mars Temperature {.unnumbered .unlisted}
-
-- `p`: 0, 1,2
-- `d`: 1
-- `q`: 0, 1, 2, 3
-
-#### Mars Pressure {.unnumbered .unlisted}
-
-- `p`: 0, 1,2,3
-- `d`: 1, 2
-- `q`: 0, 1,2,3,4,5
-
-#### ARKX {.unnumbered .unlisted}
-
-- `p`: 0
-- `d`: 1
-- `q`: 0
-
-Perhaps a random walk model.
-
-#### AVAV {.unnumbered .unlisted}
-
-- `p`: 0
-- `d`: 1
-- `q`: 0
-
-Perhaps a random walk model.
+- **Mars Temperature.** By the ACF Plot, `q`= 0, 1, 2, 3 and, by the PACF plot: `p`= 0, 1, 2.
+- **Mars Pressure.** By the ACF Plot, `q`= 0, 1, 2, 3, 4, 5 and, by the PACF plot, `p`= 0, 1, 2, 3.
+- **ARKX.** By the ACF Plot, `q`= 0 and, by the PACF plot, `p`= 0. These findings highly suggest that this series might be best modeled as a **random walk**, i.e., ARIMA(0, 1, 0).
+- **AVAV.** By the ACF Plot, `q`= 0 and, by the PACF plot: `p`= 0. These findings highly suggest that this series might be best modeled as a **random walk**, i.e., ARIMA(0, 1, 0).
+- **Treasury NASA Outlays.** By the ACF Plot, `q`= 0, 1, 2, 3, 4 and, by the PACF plot: `p`= 0, 1, 2, 3.
+- **Google Trends.** By the ACF Plot, `q`= 0, 1, 2 and, by the PACF plot: `p`= 0, 1, 2.
+- **Launches.** By the ACF Plot, `q`= 0, 1 and, by the PACF plot: `p`= 0, 1, 2, 3, 4, 5.
+- **Satellites.** By the ACF Plot, `q`= 0, 1 and, by the PACF plot, `p`= 0, 1.
 
 
-#### Treasury NASA Outlays {.unnumbered .unlisted}
-
-- `p`: 0, 1, 2, 3
-- `d`: 1
-- `q`: 0, 1, 2, 3, 4
-
-#### Google Trends {.unnumbered .unlisted}
-
-- `p`: 0, 1, 2
-- `d`: 1
-- `q`: 0, 1, 2
-
-#### Launches {.unnumbered .unlisted}
-
-- `p`: 0, 1,2,3,4,5
-- `d`: 1
-- `q`: 0, 1
-
-#### Satellites {.unnumbered .unlisted}
-
-- `p`: 0, 1
-- `d`: 1, 2
-- `q`: 0, 1
-
-
+Now, having determined potential values for `p`, `d`, and `q`, we can proceed to test them. 
 
 
 
@@ -207,7 +163,9 @@ Perhaps a random walk model.
      ARIMA Fitting
 ------------------------------------------------ -->
 
-### ARIMA fitting
+### ARIMA Model Fitting
+
+The following panel shows the models tested for each series:
 
 
 ```{python}
@@ -358,8 +316,7 @@ clean_result_table_arima_loop(pd.read_csv('../tables/univariate/arima_loop/arima
 :::
 
 
-#### Best Model
-
+The following panel shows the best model for each series and their corresponding equations:
 
 ```{python}
 #| echo: false
@@ -391,6 +348,7 @@ def clean_result_table_bestmodel(table):
 
 ```
 
+
 ::: {.panel-tabset}
 
 ## Seas. 1: Mars Temperature
@@ -401,11 +359,13 @@ def clean_result_table_bestmodel(table):
 #| label: tbl-bestmodels-mars-ground-temperature
 #| tbl-cap: "Shows the best model of the ARIMA loop."
 
-
 clean_result_table_bestmodel(pd.read_csv('../tables/univariate/best_models/best_models_mars_weather_ground_temperature.csv'))
 
-
 ```
+
+Equation:
+
+{{< include '../tables/univariate/equation_text/equation_text_mars_weather_ground_temperature.txt' >}}
 
 
 ## Seas. 2: Mars Pressure
@@ -422,6 +382,12 @@ clean_result_table_bestmodel(pd.read_csv('../tables/univariate/best_models/best_
 
 ```
 
+Equation:
+
+{{< include '../tables/univariate/equation_text/equation_text_pressure_current_pascals.txt' >}}
+
+
+
 ## Financial 1: ARKX
 
 
@@ -435,6 +401,12 @@ clean_result_table_bestmodel(pd.read_csv('../tables/univariate/best_models/best_
 
 
 ```
+
+Equation:
+
+{{< include '../tables/univariate/equation_text/equation_text_arkx_stock_adj_close.txt' >}}
+
+
 
 ## Financial 2: AVAV
 
@@ -450,6 +422,12 @@ clean_result_table_bestmodel(pd.read_csv('../tables/univariate/best_models/best_
 
 ```
 
+Equation:
+
+{{< include '../tables/univariate/equation_text/equation_text_avav_stock_adj_close.txt' >}}
+
+
+
 ## Treasury NASA Outlays
 
 
@@ -463,6 +441,12 @@ clean_result_table_bestmodel(pd.read_csv('../tables/univariate/best_models/best_
 
 
 ```
+
+Equation:
+
+{{< include '../tables/univariate/equation_text/equation_text_treasury_nasa_outlays.txt' >}}
+
+
 
 ## Google Trends
 
@@ -478,6 +462,12 @@ clean_result_table_bestmodel(pd.read_csv('../tables/univariate/best_models/best_
 
 ```
 
+Equation:
+
+{{< include '../tables/univariate/equation_text/equation_text_google_trends_space_exploration.txt' >}}
+
+
+
 ## Launches
 
 
@@ -491,6 +481,12 @@ clean_result_table_bestmodel(pd.read_csv('../tables/univariate/best_models/best_
 
 
 ```
+
+Equation:
+
+{{< include '../tables/univariate/equation_text/equation_text_launches_per_month.txt' >}}
+
+
 
 ## Satellites
 
@@ -506,15 +502,26 @@ clean_result_table_bestmodel(pd.read_csv('../tables/univariate/best_models/best_
 
 ```
 
+Equation:
+
+{{< include '../tables/univariate/equation_text/equation_text_satellites_operational_count.txt' >}}
+
+
+
 :::
 
 
 
 
 
-#### Model Diagnostics
 
 
+
+<!-- ----------------------------------------------
+     Model Diagnostics
+------------------------------------------------ -->
+
+### Model Diagnostics
 
 ::: {.panel-tabset}
 
@@ -625,9 +632,79 @@ with open('../tables/univariate/diagnostics/diagnostics_output_satellites_operat
 
 
 
+**Mars Temperature.**
+
+- Standardized residuals: The plot shows fluctuations over time but no apparent patterns.
+- ACF of residuals: The autocorrelation function bars are mostly within the confidence bounds but still require further improvement.
+- Q-Q Plot: Points largely follow the line, indicating residuals are close to normal distribution.
+- Ljung-Box: The p-values are below the significance threshold, implying autocorrelation at various lags. We will address this during the SARIMA portion.
+- Model output: The model has all significant AR and MA, as low p-values indicate.
 
 
-#### Model Equations
+**Mars Pressure.**
+
+- Standardized residuals: The plot shows fluctuations over time and some patterns are apparent. We will address this during the SARIMA portion with seasonal parameters.
+- ACF of residuals: The autocorrelation function bars are mostly within the confidence bounds but still require further improvement.
+- Q-Q Plot: Points largely follow the line, indicating residuals are close to normal distribution.
+- Ljung-Box: The p-values are below the significance threshold, implying autocorrelation at various lags. We will address this during the SARIMA portion with seasonal parameters.
+- Model output: The model has significant AR and MA, as low p-values indicate, however one of the MA terms is insignificant.
+
+**ARKX.**
+
+- Standardized residuals: The plot shows fluctuations over time, and no patterns are apparent.
+- ACF of residuals: The autocorrelation function bars are within the confidence bounds.
+- Q-Q Plot: Points largely follow the line, indicating residuals are close to normal distribution.
+- Ljung-Box: The p-values are above the significance threshold, implying no autocorrelation at various lags.
+- Model output: The model has only a constant that would be removed if deemed a random walk.
+
+This is further evidence that a random walk model may be the best for this data.
+
+**AVAV.**
+
+- Standardized residuals: The plot shows fluctuations over time, with no apparent patterns.
+- ACF of residuals: The autocorrelation function bars are within the confidence bounds.
+- Q-Q Plot: Points largely follow the line, indicating residuals are close to normal distribution.
+- Ljung-Box: The p-values are above the significance threshold, implying no autocorrelation at various lags.
+- Model output: The model has only a constant that would be removed if deemed a random walk.
+
+This is further evidence that a random walk model may be the best for this data.
+
+
+**Treasury NASA Outlays.**
+
+- Standardized residuals: The plot shows fluctuations over time and some patterns are apparent. We will address this during the SARIMA portion with seasonal parameters.
+- ACF of residuals: The autocorrelation function bars are mostly within the confidence bounds but still require further improvement.
+- Q-Q Plot: Points largely follow the line, indicating residuals are close to normal distribution.
+- Ljung-Box: The p-values are below the significance threshold, implying autocorrelation at various lags. We will address this during the SARIMA portion with seasonal parameters.
+- Model output: The model has significant AR and MA, as low p-values indicate, but some terms are insignificant.
+
+**Google Trends.**
+
+- Standardized residuals: The plot shows fluctuations over time but patterns are not apparent.
+- ACF of residuals: The autocorrelation function bars are mostly within the confidence bounds.
+- Q-Q Plot: Points largely follow the line, indicating residuals are close to normal distribution.
+- Ljung-Box: A few of the p-values are below the significance threshold, implying autocorrelation. We will address this during the SARIMA portion.
+- Model output: The model has significant AR and MA, as low p-values indicate.
+
+
+**Launches.**
+
+- Standardized residuals: The plot shows fluctuations over time, with no apparent patterns.
+- ACF of residuals: The autocorrelation function bars are mostly within the confidence bounds, but we will improve this during the SARIMA portion.
+- Q-Q Plot: Points largely follow the line, indicating residuals are close to normal distribution.
+- Ljung-Box: The p-values are above the significance threshold, implying no autocorrelation at various lags.
+- Model output: The model has significant AR and MA, as low p-values indicate, but some terms are insignificant.
+
+
+**Satellites.**
+
+- Standardized residuals: The plot shows fluctuations over time, and no patterns are apparent.
+- ACF of residuals: The autocorrelation function bars are within the confidence bounds.
+- Q-Q Plot: Points largely follow the line, indicating residuals are close to normal distribution.
+- Ljung-Box: The p-values are above the significance threshold, implying no autocorrelation at various lags.
+- Model output: The model has significant MA, as low p-values indicate.
+
+
 
 
 
@@ -733,14 +810,28 @@ with open('../tables/univariate/auto_arima/auto_arima_satellites_operational_cou
 :::
 
 
+**Mars Temperature.**
 
 
+**Mars Pressure.**
 
 
+**ARKX.**
 
-**Time series**
-Confirms the suspicions that we need seasonal variables and a SARIMA model is needed.
 
+**AVAV.**
+
+
+**Treasury NASA Outlays.**
+
+
+**Google Trends.**
+
+
+**Launches.**
+
+
+**Satellites.**
 
 
 
@@ -795,6 +886,32 @@ Confirms the suspicions that we need seasonal variables and a SARIMA model is ne
 ![](../images/univariate/forecast/forecast_satellites_operational_count.jpeg)
 
 :::
+
+
+
+**Mars Temperature.**
+
+
+**Mars Pressure.**
+
+
+**ARKX.**
+
+
+**AVAV.**
+
+
+**Treasury NASA Outlays.**
+
+
+**Google Trends.**
+
+
+**Launches.**
+
+
+**Satellites.**
+
 
 
 
@@ -964,6 +1081,32 @@ clean_result_table_benchmarkmethods(pd.read_csv('../tables/univariate/benchmark_
 
 
 :::
+
+
+
+**Mars Temperature.**
+
+
+**Mars Pressure.**
+
+
+**ARKX.**
+
+
+**AVAV.**
+
+
+**Treasury NASA Outlays.**
+
+
+**Google Trends.**
+
+
+**Launches.**
+
+
+**Satellites.**
+
 
 
 
