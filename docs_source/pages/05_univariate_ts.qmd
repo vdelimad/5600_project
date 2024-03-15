@@ -15,7 +15,7 @@ from IPython.display import Markdown
 
 ::: {.callout-note appearance="simple"}
 
-The code used in this section is available [here](https://github.com/vdelimad/5600_project/blob/main/notebooks/4_eda/eda_analysis.ipynb).
+The code used in this section is available [here](https://github.com/vdelimad/5600_project/blob/main/notebooks/5_univariate_ts/univariate_analysis.ipynb).
 
 ::: 
 
@@ -34,7 +34,7 @@ During the previous EDA section, the following work that supports the correct se
 - We plotted the differenced data (see @sec-eda-detrending-and-first-differencing), including the ACFs and PACFs (see @sec-eda-detrended-and-first-differenced-acfs and @sec-eda-first-and-second-difference), and comments were provided throughout.
 - Then, with the Augmented Dickey-Fuller Test, we showed that all the series were now stationary (see @sec-eda-dickey-fuller-test-on-adjusted-data).
 
-With this work, we can proceed to begin our ARIMA modeling.
+It was also found that `log()` transformations were not useful for any of the series. With this work, we can proceed to begin our ARIMA modeling.
 
 
 <!-- ----------------------------------------------
@@ -43,10 +43,160 @@ With this work, we can proceed to begin our ARIMA modeling.
 
 ### Determining `p`,`d`, and `q`
 
+On the previous EDA analysis, we determined the following to be the `d` values for each series:
+
+```{python}
+#| echo: false
+#| label: tbl-adjusted-dickey-fuller-test
+#| tbl-cap: "Shows the orders of the `d` parameter for each series."
+
+
+adjusted_dickey_fuller = pd.read_csv('../tables/eda/dickey_fuller/adjusted_dickey_fuller_table.csv')
+
+
+#'test_statistic', 'p_value', 'method', 'data_series', 'alternative_hypothesis'
+def clean_result_table(table):
+
+  table.drop(columns=['test_statistic', 'p_value'], inplace=True)
+  # format decimals
+  #columns_to_format = ['test_statistic', 'p_value']
+  #table[columns_to_format] = table[columns_to_format].applymap(lambda x: f"{x:.4f}")
+
+  # format
+  table = table.rename(columns={
+      'data_series': 'Data Series',
+      'stationarity_method': 'Stationarity Method',
+      #'test_statistic': 'Test Statistic',
+      #'p_value': 'P-Value',
+
+      })
+
+
+  # generate the Markdown table
+  md_table = tabulate(table, headers='keys', tablefmt='pipe', showindex=False)
+
+
+  ## bold a specific line
+  #line_to_bold = 11
+#
+  #lines = md_table.split('\n')
+  ## check if there are enough rows to bold
+  #if len(lines) > line_to_bold:
+  #    third_row_cells = lines[line_to_bold].split('|')[1:-1]    
+  #    third_row_cells = [f"**{cell.strip()}**" for cell in third_row_cells]    
+  #    lines[line_to_bold] = '|' + '|'.join(third_row_cells) + '|'
+  #md_bold_third_row = '\n'.join(lines)
+
+  # show
+  return Markdown(md_table)
+
+
+clean_result_table(adjusted_dickey_fuller)
+
+
+```
+
+
+We can also use the respective ACF and PACFs plots to determine the values of `p` and `q`:
+
+
+::: {.panel-tabset}
+
+## Seas. 1: Mars Temperature
+
+![](../images/univariate/acf_and_pacf/acf_and_pacf_mars_weather_ground_temperature.jpeg)
+
+
+## Seas. 2: Mars Pressure
+
+![](../images/univariate/acf_and_pacf/acf_and_pacf_pressure_current_pascals.jpeg)
+
+
+## Financial 1: ARKX
+
+![](../images/univariate/acf_and_pacf/acf_and_pacf_arkx_stock_adj_close.jpeg)
+
+
+## Financial 2: AVAV
+
+![](../images/univariate/acf_and_pacf/acf_and_pacf_avav_stock_adj_close.jpeg)
+
+
+## Treasury NASA Outlays
+
+![](../images/univariate/acf_and_pacf/acf_and_pacf_treasury_nasa_outlays.jpeg)
+
+
+## Google Trends
+
+![](../images/univariate/acf_and_pacf/acf_and_pacf_google_trends_space_exploration.jpeg)
+
+
+## Launches
+
+![](../images/univariate/acf_and_pacf/acf_and_pacf_launches_per_month.jpeg)
+
+
+## Satellites
+
+![](../images/univariate/acf_and_pacf/acf_and_pacf_satellites_operational_count.jpeg)
+
+:::
 
 
 
+#### Mars Temperature {.unnumbered .unlisted}
 
+- `p`: 0, 1,2
+- `d`: 1
+- `q`: 0, 1, 2, 3
+
+#### Mars Pressure {.unnumbered .unlisted}
+
+- `p`: 0, 1,2,3
+- `d`: 1, 2
+- `q`: 0, 1,2,3,4,5
+
+#### ARKX {.unnumbered .unlisted}
+
+- `p`: 0
+- `d`: 1
+- `q`: 0
+
+Perhaps a random walk model.
+
+#### AVAV {.unnumbered .unlisted}
+
+- `p`: 0
+- `d`: 1
+- `q`: 0
+
+Perhaps a random walk model.
+
+
+#### Treasury NASA Outlays {.unnumbered .unlisted}
+
+- `p`: 0, 1, 2, 3
+- `d`: 1
+- `q`: 0, 1, 2, 3, 4
+
+#### Google Trends {.unnumbered .unlisted}
+
+- `p`: 0, 1, 2
+- `d`: 1
+- `q`: 0, 1, 2
+
+#### Launches {.unnumbered .unlisted}
+
+- `p`: 0, 1,2,3,4,5
+- `d`: 1
+- `q`: 0, 1
+
+#### Satellites {.unnumbered .unlisted}
+
+- `p`: 0, 1
+- `d`: 1, 2
+- `q`: 0, 1
 
 
 
