@@ -1,3 +1,65 @@
 # Univariate TS Models (ARIMA/SARIMA)
 
-Coming soon.
+
+```{python}
+#| echo: false
+
+import pandas as pd
+from tabulate import tabulate
+import IPython.display as d
+from IPython.display import display, HTML, IFrame
+from IPython.display import Markdown
+
+
+```
+
+::: {.callout-note appearance="simple"}
+
+The code used in this section is available [here](https://github.com/vdelimad/5600_project/blob/main/notebooks/4_eda/eda_analysis.ipynb).
+
+::: 
+
+
+<!-- ==================================================
+      ARIMA
+================================================== -->
+
+
+## ARIMA
+
+During the previous EDA section, the following work that supports the correct section was conducted:
+
+- We performed an initial determination on whether the data is stationary or non-stationary (see @sec-eda-initial-dickey-fuller-test).
+- Since the series were found to be non-stationary, we differenced them.
+- We plotted the differenced data (see @sec-eda-detrending-and-first-differencing), including the ACFs and PACFs (see @sec-eda-detrended-and-first-differenced-acfs and @sec-eda-first-and-second-difference), and comments were provided throughout.
+- Then, with the Augmented Dickey-Fuller Test, we showed that all the series were now stationary (see @sec-eda-dickey-fuller-test-on-adjusted-data).
+
+With this work, we can proceed to begin our ARIMA modeling.
+
+
+<!-- ----------------------------------------------
+     Determining `p`,`d`, and `q`
+------------------------------------------------ -->
+
+### Determining `p`,`d`, and `q`
+
+
+
+
+
+
+
+
+
+<!-- ==================================================
+      SARIMA
+================================================== -->
+
+
+
+## SARIMA
+
+_SARIMA models have been moved to Homework 4._
+
+
+

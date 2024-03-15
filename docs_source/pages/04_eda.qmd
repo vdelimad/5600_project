@@ -24,7 +24,7 @@ The code used in this section is available [here](https://github.com/vdelimad/56
       Original Data
 ================================================== -->
 
-## Original Data
+## Original Data {#sec-eda-original-data}
 
 ::: {.panel-tabset}
 
@@ -105,7 +105,7 @@ With reference to the class Lab 2, we will consider the following equations for 
       Lag Plots
 ================================================== -->
 
-## Lag Plots
+## Lag Plots {#sec-eda-lag-plots}
 
 ::: {.panel-tabset}
 
@@ -178,7 +178,7 @@ With reference to the class Lab 2, we will consider the following equations for 
 ================================================== -->
 
 
-## Decomposition
+## Decomposition {#sec-eda-decomposition}
 
 
 ::: {.panel-tabset}
@@ -233,7 +233,7 @@ The decomposition plots illustrate the breakdown of different series into trends
       ACF and PACF Plots
 ================================================== -->
 
-## ACF and PACF Plots
+## ACF and PACF Plots {#sec-eda-acf-and-pacf-plots}
 
 
 ::: {.panel-tabset}
@@ -307,7 +307,7 @@ The decomposition plots illustrate the breakdown of different series into trends
       Initial Dickey-Fuller Test
 ================================================== -->
 
-## Initial Dickey-Fuller Test
+## Initial Dickey-Fuller Test {#sec-eda-initial-dickey-fuller-test}
 
 @tbl-dickey-fuller-test shows the results of the Augmented Dickey-Fuller Test:
 
@@ -368,7 +368,7 @@ clean_result_table(dickey_fuller)
       Detrending and First-Differencing
 ================================================== -->
 
-## Detrending and First-Differencing
+## Detrending and First-Differencing {#sec-eda-detrending-and-first-differencing}
 
 Drawing from the methodologies outlined in Lab 4 notes, we employ detrending and first differencing techniques on the series to attempt to attain stationarity. The subsequent panel displays a comparative visualization that includes the original data, the series after detrending, and the results of applying first-differencing.
 
@@ -427,7 +427,7 @@ Visually, the series appears to be moving towards stationarity, especially after
 ================================================== -->
 
 
-## Detrended and First-Differenced ACFs
+## Detrended and First-Differenced ACFs {#sec-eda-detrended-and-first-differenced-acfs}
 
 The following panel shows the resulting ACFs:
 
@@ -483,7 +483,7 @@ Several series demonstrate a transition to stationarity following first-differen
       First and Second Difference
 ================================================== -->
 
-## First and Second Difference
+## First and Second Difference {#sec-eda-first-and-second-difference}
 
 
 ::: {.panel-tabset}
@@ -542,7 +542,7 @@ Now, the series that failed to attain stationarity through first differencing se
       Dickey-Fuller Test on Adjusted Data
 ================================================== -->
 
-## Dickey-Fuller Test on Adjusted Data
+## Dickey-Fuller Test on Adjusted Data {#sec-eda-dickey-fuller-test-on-adjusted-data}
 
 
 @tbl-adjusted-dickey-fuller-test shows the results of the Augmented Dickey-Fuller Test on the adjusted datasets. 
@@ -608,7 +608,7 @@ The various data series now seem to have achieved stationarity. For example, the
       SMA Smoothing
 ================================================== -->
 
-## SMA Smoothing
+## SMA Smoothing {#sec-eda-sma-smoothing}
 
 
 ::: {.panel-tabset}

@@ -119,81 +119,88 @@
     "text": "3.6 Search Interest in Space Terms\n\n\n\n\n        \n        \nFigure 3.6: Shows the Google Trends search interest for the terms Space Exploration, Mars, SpaceX, and Space Exploration.\n\n\n\nFigure 3.6 shows the Google Trends search interest in the United States for four key terms: Mars, Satellites, Space Exploration, and SpaceX, from 2020 to early 2024. A different color represents each term—Mars in blue, Satellites in red, Space Exploration in green, and SpaceX in purple—across a timeline, with the vertical axis measuring search interest from 0 to 100 and the horizontal axis spanning from 2020 to 2024.\nMars exhibits periodic spikes in interest tied to noteworthy events related to the planet, revealing moments of heightened public curiosity. The interest in Satellites shows a steadier trend with occasional peaks, reflecting public attention to satellite launches or developments in satellite technology. The pattern for Space Exploration is notably varied, with frequent and abrupt fluctuations in search interest, suggesting a constantly changing public fascination with exploration missions or discoveries. SpaceX, on the other hand, demonstrates a persistent interest with significant peaks at crucial company milestones, like rocket launches or major announcements.\nThis graph shows the evolving nature of public interest and engagement with space-related subjects over the last four years. The interactions among these trends highlight periods when advancements or news in space technology and exploration have sparked increased public inquiry and enthusiasm."
   },
   {
-    "objectID": "pages/04_eda.html#original-data",
-    "href": "pages/04_eda.html#original-data",
+    "objectID": "pages/04_eda.html#sec-eda-original-data",
+    "href": "pages/04_eda.html#sec-eda-original-data",
     "title": "4  Exploratory Data Analysis",
     "section": "4.1 Original Data",
     "text": "4.1 Original Data\n\nSeas. 1: Mars TemperatureSeas. 2: Mars PressureFinancial 1: ARKXFinancial 2: AVAVTreasury NASA OutlaysGoogle TrendsLaunchesSatellites\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWith reference to the class Lab 2, we will consider the following equations for the series based on whether seasonal variations over time:\n\n\n\n\n\n\n\n\nType\nSeasonal variations\nEquation\n\n\n\n\nAdditive\nAre relatively constant.\n\\(\\rm Series = Trend + Seasonal + Random\\)\n\n\nMultiplicative\nIncrease or decrease with the level of the series.\n\\(\\rm Series = Trend \\times Seasonal \\times Random\\)\n\n\n\nSeas. 1: Mars Temperature. The series has shown a general direction of stability, with evident yearly seasonal patterns that reflect the planet’s four distinct seasons. Interestingly, over the past five years, data suggest a slight decrease in temperature, hinting that Mars has been trending warmer. This series is additive.\nSeas. 2: Mars Pressure. When examining Mars’ Pressure, a downward trend is noticeable. Like its temperature, Mars exhibits clear yearly seasonal patterns corresponding to its four seasons. The pattern of Mars’s atmospheric pressure is also additive.\nFinancial 1: ARKX. The trajectory of ARKX has been on a downward slope. Its performance has been highly volatile, significantly influenced by the interest rate hike cycle that began in 2022. This cycle was particularly detrimental to technology stocks, affecting the overall valuation of ARKX. ARKX is a multiplicative series.\nFinancial 2: AVAV. Contrary to ARKX, AVAV has been trending upward overall despite experiencing high volatility. The same interest rate hike cycle that started in 2022, which negatively impacted technology stocks, applies here. However, AVAV has navigated these challenges more successfully. Also like ARKX, AVAV is a multiplicative series.\nTreasury NASA Outlays. The outlays have been consistently moving upward, with a steady increase observed. A notable dip in 2019 stands out, but it is considered an anomaly and not representative of the overall upward trend, as it is a single month. The growth in NASA’s budget outlays is multiplicative.\nGoogle Trends. In Google Trends for the Space Exploration term, there’s been an increasing general direction despite several fluctuations. The series is multiplicative.\nLaunches. The number of launches of weather satellites has shown an interesting pattern, decreasing from 1960 to 2010 but experiencing a resurgence recently. Despite multiple fluctuations, this rebound suggests a renewed interest or advancement in space exploration technologies. The series is multiplicative.\nSatellites. The number of operational satellites has been clearly trending upward. Although there have been multiple fluctuations, the overall trajectory steadily increased, with a sharp rise observed in the past year. This indicates a significant expansion in satellite technology and deployment. The series is multiplicative."
   },
   {
-    "objectID": "pages/04_eda.html#lag-plots",
-    "href": "pages/04_eda.html#lag-plots",
+    "objectID": "pages/04_eda.html#sec-eda-lag-plots",
+    "href": "pages/04_eda.html#sec-eda-lag-plots",
     "title": "4  Exploratory Data Analysis",
     "section": "4.2 Lag Plots",
     "text": "4.2 Lag Plots\n\nSeas. 1: Mars TemperatureSeas. 2: Mars PressureFinancial 1: ARKXFinancial 2: AVAVTreasury NASA OutlaysGoogle TrendsLaunchesSatellites\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSeas. 1: Mars Temperature Monthly. An inverse correlation is particularly noticeable at a lag of six months, while a high positive correlation emerges at the twelve-month mark. Between these points, the patterns rotate around these mentioned correlations, showcasing the planet’s distinct seasonal changes. This cyclical pattern reflects the Martian climate’s balance, oscillating between warming and cooling as the Martian year progresses.\nSeas. 2: Mars Pressure Monthly. Similarly, Mars’s pressure data exhibits seasonal characteristics but with a notable distinction. The clear seasonal pattern emerges predominantly at the twelve-month lag, with less clarity in the monthly correlations from months one through eleven. This highlights the unique environmental dynamics of the planet.\nFinancial 1: ARKX. The ARKX financial data demonstrates a common trait of financial instruments, where the correlation is strongest at a one-day lag and gradually weakens over time. This pattern indicates the short-term momentum often observed in financial markets, where recent past performance can strongly influence immediate future performance. However, this influence diminishes as the gap widens.\nFinancial 2: AVAV. The AVAV lag plots mirror the correlation pattern seen in ARKX, with a strong initial correlation that weakens progressively. This again underscores the principle that recent performance is a stronger predictor of the near future than of more distant periods.\nTreasury NASA Outlays Monthly. For Treasury NASA Outlays, the data shows the strongest positive correlation at a twelve-month lag, yet overall, the correlations are not particularly strong. This indicates that while there is some seasonality to NASA’s budget outlays, it does not follow as predictable a pattern as some other seasonal data, suggesting that other factors play significant roles in budget fluctuations.\nGoogle Trends Weekly. Google Trends data, observed weekly, displays a pattern similar to that of financial data, with a strong correlation at the first lag that significantly weakens after that. By the twelfth week, the correlation becomes nearly indiscernible. This highlights the fast-moving nature of internet search trends, where interests shift quickly.\nWeather Satellite Launches Monthly. The correlation in monthly weather satellite launches is very weak across the board from months one through twelve. This indicates a lack of a strong seasonal or time-based pattern in the launching of weather satellites, suggesting that other factors, such as technological advancements or specific weather monitoring needs may more influence launches.\nOperational Satellites Monthly. The monthly data on operational satellites shows a strong correlation at the first lag, similar to financial data, but this correlation weakens more slowly over time. This suggests a steadier and more predictable growth pattern or change in the number of operational satellites, following a more consistent trajectory."
   },
   {
-    "objectID": "pages/04_eda.html#decomposition",
-    "href": "pages/04_eda.html#decomposition",
+    "objectID": "pages/04_eda.html#sec-eda-decomposition",
+    "href": "pages/04_eda.html#sec-eda-decomposition",
     "title": "4  Exploratory Data Analysis",
     "section": "4.3 Decomposition",
     "text": "4.3 Decomposition\n\nSeas. 1: Mars TemperatureSeas. 2: Mars PressureFinancial 1: ARKXFinancial 2: AVAVTreasury NASA OutlaysGoogle TrendsLaunchesSatellites\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe decomposition plots illustrate the breakdown of different series into trends, seasonality, and remainders, which agree with the specifics and discussion already detailed in Part 1. The financial series, being technology stocks, stand out for their pronounced volatility, as highlighted by their remainders."
   },
   {
-    "objectID": "pages/04_eda.html#acf-and-pacf-plots",
-    "href": "pages/04_eda.html#acf-and-pacf-plots",
+    "objectID": "pages/04_eda.html#sec-eda-acf-and-pacf-plots",
+    "href": "pages/04_eda.html#sec-eda-acf-and-pacf-plots",
     "title": "4  Exploratory Data Analysis",
     "section": "4.4 ACF and PACF Plots",
     "text": "4.4 ACF and PACF Plots\n\nSeas. 1: Mars TemperatureSeas. 2: Mars PressureFinancial 1: ARKXFinancial 2: AVAVTreasury NASA OutlaysGoogle TrendsLaunchesSatellites\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSeas. 1: Mars Temperature. As expected, due to the seasonal nature of temperature data, there are significant lags, particularly at 6-month and 12-month intervals. For ARIMA model parameters, p could be any value from 1 to 10, while q, based on the PACF, could be 1, 2, or 3. These plots indicate that the series is not stationary.\nSeas. 2: Mars Pressure. Consistent with patterns observed in temperature data, Mars pressure shows significant seasonal correlations, primarily annually. According to the ACF, p could range from 1 to 7, while the PACF suggests that q could be 1, 2, 3, or 4. These observations imply that the series is not stationary.\nFinancial 1: ARKX. The ACF indicates a decreasing lag, typical for financial data, which could suggest a mean-reverting process. The PACF identifies the only significant lag at 0, indicating that the series may benefit from focusing on immediate past values for predictions.\nFinancial 2: AVAV. Exhibits a pattern similar to ARKX with a decreasing lag in the ACF and significant lag at 0 in the PACF, suggesting that the model parameters for AVAV might closely align with those determined for ARKX, focusing on immediate past values for predictions.\nTreasury NASA Outlays. This series displays a distinct pattern, with significant correlations at every third lag (3, 6, 9, 12, and so on) in the ACF, indicating a quarterly seasonal pattern. The PACF shows significance at lags 3, 7, and 12, suggesting potential values for q. This pattern indicates a more complex seasonal model, necessitating differencing.\nGoogle Trends. This data behaves similarly to the stock patterns observed in the ACF and PACF, hinting at short-term correlations that might be exploited in predictive modeling, much like financial time series data.\nLaunches. The ACF for this series shows autocorrelation across all 28 lags displayed, while the PACF indicates significance in the first seven lags. This extensive autocorrelation suggests a complex interplay of factors influencing launch frequencies, suggesting a detailed ARIMA model may be required to capture the underlying patterns accurately.\nSatellites. The ACF for satellite data shows autocorrelation across all 24 lags displayed, suggesting a persistent pattern over time, while the PACF highlights significance only in the first lag. This indicates a potentially simpler ARIMA model could be applied, focusing on immediate past values for forecasting future data points."
   },
   {
-    "objectID": "pages/04_eda.html#initial-dickey-fuller-test",
-    "href": "pages/04_eda.html#initial-dickey-fuller-test",
+    "objectID": "pages/04_eda.html#sec-eda-initial-dickey-fuller-test",
+    "href": "pages/04_eda.html#sec-eda-initial-dickey-fuller-test",
     "title": "4  Exploratory Data Analysis",
     "section": "4.5 Initial Dickey-Fuller Test",
     "text": "4.5 Initial Dickey-Fuller Test\nTable 4.1 shows the results of the Augmented Dickey-Fuller Test:\n\n\n\n\nTable 4.1: Shows the results of running the Augmented Dickey-Fuller Test on the time series datasets (alternative hypothesis: stationary).\n\n\nData Series\nTest Statistic\nP-Value\n\n\n\n\nAverage Ground Temperature on Mars\n-6.1751\n0.01\n\n\nAtmospheric Pressure on Mars\n-6.3287\n0.01\n\n\nARKX Stock Adjusted Close\n-1.5925\n0.7508\n\n\nAVAV Stock Adjusted Close\n-2.4559\n0.3853\n\n\nTreasury NASA Outlays\n-4.9603\n0.01\n\n\nGoogle Trends Space Exploration Term\n-3.9223\n0.0134\n\n\nWeather Satellite Launches\n-3.0653\n0.1274\n\n\nOperational Satellites Over Time\n-1.7323\n0.6878\n\n\n\n\n\n\nTable 4.1 presents the outcomes of the Augmented Dickey-Fuller Test. The series for which the test yields a p-value sufficiently low to reject the null hypothesis of non-stationarity include Average Ground Temperature on Mars, Atmospheric Pressure on Mars, Treasury NASA Outlays, and the Google Trends Space Exploration Term. However, these results do not align with previous findings from the ACF plots, suggesting that none of the series are stationary in their current form."
   },
   {
-    "objectID": "pages/04_eda.html#detrending-and-first-differencing",
-    "href": "pages/04_eda.html#detrending-and-first-differencing",
+    "objectID": "pages/04_eda.html#sec-eda-detrending-and-first-differencing",
+    "href": "pages/04_eda.html#sec-eda-detrending-and-first-differencing",
     "title": "4  Exploratory Data Analysis",
     "section": "4.6 Detrending and First-Differencing",
     "text": "4.6 Detrending and First-Differencing\nDrawing from the methodologies outlined in Lab 4 notes, we employ detrending and first differencing techniques on the series to attempt to attain stationarity. The subsequent panel displays a comparative visualization that includes the original data, the series after detrending, and the results of applying first-differencing.\n\nSeas. 1: Mars TemperatureSeas. 2: Mars PressureFinancial 1: ARKXFinancial 2: AVAVTreasury NASA OutlaysGoogle TrendsLaunchesSatellites\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nVisually, the series appears to be moving towards stationarity, especially after first-differencing. We will verify this observation by examining their ACFs in the following section for confirmation."
   },
   {
-    "objectID": "pages/04_eda.html#detrended-and-first-differenced-acfs",
-    "href": "pages/04_eda.html#detrended-and-first-differenced-acfs",
+    "objectID": "pages/04_eda.html#sec-eda-detrended-and-first-differenced-acfs",
+    "href": "pages/04_eda.html#sec-eda-detrended-and-first-differenced-acfs",
     "title": "4  Exploratory Data Analysis",
     "section": "4.7 Detrended and First-Differenced ACFs",
     "text": "4.7 Detrended and First-Differenced ACFs\nThe following panel shows the resulting ACFs:\n\nSeas. 1: Mars TemperatureSeas. 2: Mars PressureFinancial 1: ARKXFinancial 2: AVAVTreasury NASA OutlaysGoogle TrendsLaunchesSatellites\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSeveral series demonstrate a transition to stationarity following first-differencing, with the effect being particularly marked in the financial series where detrending had minimal impact. Conversely, the seasonal series, especially Mars Pressure and the Satellites series, do not appear to exhibit stationarity. Consequently, we will investigate the potential of second differencing in the subsequent section."
   },
   {
-    "objectID": "pages/04_eda.html#first-and-second-difference",
-    "href": "pages/04_eda.html#first-and-second-difference",
+    "objectID": "pages/04_eda.html#sec-eda-first-and-second-difference",
+    "href": "pages/04_eda.html#sec-eda-first-and-second-difference",
     "title": "4  Exploratory Data Analysis",
     "section": "4.8 First and Second Difference",
     "text": "4.8 First and Second Difference\n\nSeas. 1: Mars TemperatureSeas. 2: Mars PressureFinancial 1: ARKXFinancial 2: AVAVTreasury NASA OutlaysGoogle TrendsLaunchesSatellites\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNow, the series that failed to attain stationarity through first differencing seem to have reached it upon applying second differencing. Following this, we will conduct the Dickey-Fuller test again on the adjusted datasets."
   },
   {
-    "objectID": "pages/04_eda.html#dickey-fuller-test-on-adjusted-data",
-    "href": "pages/04_eda.html#dickey-fuller-test-on-adjusted-data",
+    "objectID": "pages/04_eda.html#sec-eda-dickey-fuller-test-on-adjusted-data",
+    "href": "pages/04_eda.html#sec-eda-dickey-fuller-test-on-adjusted-data",
     "title": "4  Exploratory Data Analysis",
     "section": "4.9 Dickey-Fuller Test on Adjusted Data",
     "text": "4.9 Dickey-Fuller Test on Adjusted Data\nTable 4.2 shows the results of the Augmented Dickey-Fuller Test on the adjusted datasets.\n\n\n\n\nTable 4.2: Shows the results of running the Augmented Dickey-Fuller Test on the adjusted time series datasets.\n\n\n\n\n\n\n\n\nData Series\nStationarity Method\nTest Statistic\nP-Value\n\n\n\n\nAverage Ground Temperature on Mars\nFirst Difference\n-5.5444\n0.01\n\n\nAtmospheric Pressure on Mars\nSecond Difference\n-3.8913\n0.0196\n\n\nARKX Stock Adjusted Close\nFirst Difference\n-8.5612\n0.01\n\n\nAVAV Stock Adjusted Close\nFirst Difference\n-9.5899\n0.01\n\n\nTreasury NASA Outlays\nFirst Difference\n-8.877\n0.01\n\n\nGoogle Trends Space Exploration Term\nFirst Difference\n-7.1225\n0.01\n\n\nWeather Satellite Launches\nFirst Difference\n-13.3759\n0.01\n\n\nOperational Satellites Over Time\nSecond Difference\n-4.6812\n0.01\n\n\n\n\n\n\nThe various data series now seem to have achieved stationarity. For example, the Average Ground Temperature on Mars and the Atmospheric Pressure on Mars have become stationary after the first and second differencing, respectively, as evidenced by their test statistics and p-values (all below the 0.05 threshold), laying the groundwork for more dependable forecasting models. Financial series such as ARKX and AVAV stocks, along with Treasury NASA Outlays and the Google Trends Space Exploration Term, also show definitive stationarity after first differencing, as indicated by their significantly negative test statistics and p-values at the 0.01 level. Unlike the previous analysis using the Augmented Dickey-Fuller test, these findings are corroborated by the ACF plots, enhancing the credibility of the results."
   },
   {
-    "objectID": "pages/04_eda.html#sma-smoothing",
-    "href": "pages/04_eda.html#sma-smoothing",
+    "objectID": "pages/04_eda.html#sec-eda-sma-smoothing",
+    "href": "pages/04_eda.html#sec-eda-sma-smoothing",
     "title": "4  Exploratory Data Analysis",
     "section": "4.10 SMA Smoothing",
     "text": "4.10 SMA Smoothing\n\nSeas. 1: Mars TemperatureSeas. 2: Mars PressureFinancial 1: ARKXFinancial 2: AVAVTreasury NASA OutlaysGoogle TrendsLaunchesSatellites\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAdditionally, inspired by the example from the EDA section provided, I have conducted an SMA analysis, incorporating moving averages over 5, 15, and 30 time steps. We observe that the 5-time step moving average for most series sufficiently smooths the data. In contrast, the longer SMAs tend to overly smooth the series, resulting in a loss of visible data trends."
   },
   {
-    "objectID": "pages/05_univariate_ts.html",
-    "href": "pages/05_univariate_ts.html",
+    "objectID": "pages/05_univariate_ts.html#arima",
+    "href": "pages/05_univariate_ts.html#arima",
     "title": "5  Univariate TS Models (ARIMA/SARIMA)",
-    "section": "",
-    "text": "Coming soon."
+    "section": "5.1 ARIMA",
+    "text": "5.1 ARIMA\nDuring the previous EDA section, the following work that supports the correct section was conducted:\n\nWe performed an initial determination on whether the data is stationary or non-stationary (see Section 4.5).\nSince the series were found to be non-stationary, we differenced them.\nWe plotted the differenced data (see Section 4.6), including the ACFs and PACFs (see Section 4.7 and Section 4.8), and comments were provided throughout.\nThen, with the Augmented Dickey-Fuller Test, we showed that all the series were now stationary (see Section 4.9).\n\nWith this work, we can proceed to begin our ARIMA modeling.\n\n\n5.1.1 Determining p,d, and q"
+  },
+  {
+    "objectID": "pages/05_univariate_ts.html#sarima",
+    "href": "pages/05_univariate_ts.html#sarima",
+    "title": "5  Univariate TS Models (ARIMA/SARIMA)",
+    "section": "5.2 SARIMA",
+    "text": "5.2 SARIMA\nSARIMA models have been moved to Homework 4."
   },
   {
     "objectID": "pages/07_multivariate_ts.html",

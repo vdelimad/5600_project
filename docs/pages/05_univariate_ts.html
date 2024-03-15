@@ -178,7 +178,17 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#arima" id="toc-arima" class="nav-link active" data-scroll-target="#arima"><span class="header-section-number">5.1</span> ARIMA</a>
+  <ul class="collapse">
+  <li><a href="#determining-pd-and-q" id="toc-determining-pd-and-q" class="nav-link" data-scroll-target="#determining-pd-and-q"><span class="header-section-number">5.1.1</span> Determining <code>p</code>,<code>d</code>, and <code>q</code></a></li>
+  </ul></li>
+  <li><a href="#sarima" id="toc-sarima" class="nav-link" data-scroll-target="#sarima"><span class="header-section-number">5.2</span> SARIMA</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -200,9 +210,35 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Coming soon.</p>
+<!-- ==================================================
+      ARIMA
+================================================== -->
+<section id="arima" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="arima"><span class="header-section-number">5.1</span> ARIMA</h2>
+<p>During the previous EDA section, the following work that supports the correct section was conducted:</p>
+<ul>
+<li>We performed an initial determination on whether the data is stationary or non-stationary (see <a href="04_eda.html#sec-eda-initial-dickey-fuller-test"><span>Section&nbsp;4.5</span></a>).</li>
+<li>Since the series were found to be non-stationary, we differenced them.</li>
+<li>We plotted the differenced data (see <a href="04_eda.html#sec-eda-detrending-and-first-differencing"><span>Section&nbsp;4.6</span></a>), including the ACFs and PACFs (see <a href="04_eda.html#sec-eda-detrended-and-first-differenced-acfs"><span>Section&nbsp;4.7</span></a> and <a href="04_eda.html#sec-eda-first-and-second-difference"><span>Section&nbsp;4.8</span></a>), and comments were provided throughout.</li>
+<li>Then, with the Augmented Dickey-Fuller Test, we showed that all the series were now stationary (see <a href="04_eda.html#sec-eda-dickey-fuller-test-on-adjusted-data"><span>Section&nbsp;4.9</span></a>).</li>
+</ul>
+<p>With this work, we can proceed to begin our ARIMA modeling.</p>
+<!-- ----------------------------------------------
+     Determining `p`,`d`, and `q`
+------------------------------------------------ -->
+<section id="determining-pd-and-q" class="level3" data-number="5.1.1">
+<h3 data-number="5.1.1" class="anchored" data-anchor-id="determining-pd-and-q"><span class="header-section-number">5.1.1</span> Determining <code>p</code>,<code>d</code>, and <code>q</code></h3>
+<!-- ==================================================
+      SARIMA
+================================================== -->
+</section>
+</section>
+<section id="sarima" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="sarima"><span class="header-section-number">5.2</span> SARIMA</h2>
+<p><em>SARIMA models have been moved to Homework 4.</em></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
