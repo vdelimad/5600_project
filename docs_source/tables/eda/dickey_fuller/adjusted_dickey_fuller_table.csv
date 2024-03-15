@@ -1,5 +1,5 @@
 "data_series","stationarity_method","test_statistic","p_value"
-"Average Ground Temperature on Mars","First Difference",-5.54438543114547,0.01
+"Average Ground Temperature on Mars","Second Difference",-5.37355127920235,0.01
 "Atmospheric Pressure on Mars","Second Difference",-3.89127055113436,0.0195676522598579
 "ARKX Stock Adjusted Close","First Difference",-8.56115453575121,0.01
 "AVAV Stock Adjusted Close","First Difference",-9.58991634604375,0.01

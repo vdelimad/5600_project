@@ -201,6 +201,475 @@ Perhaps a random walk model.
 
 
 
+
+
+<!-- ----------------------------------------------
+     ARIMA Fitting
+------------------------------------------------ -->
+
+### ARIMA fitting
+
+
+```{python}
+#| echo: false
+
+def clean_result_table_arima_loop(table):
+
+  #table.drop(columns=['test_statistic', 'p_value'], inplace=True)
+  # format decimals
+  #columns_to_format = ['test_statistic', 'p_value']
+  #table[columns_to_format] = table[columns_to_format].applymap(lambda x: f"{x:.4f}")
+
+  # format
+  #table = table.rename(columns={
+  #    'data_series': 'Data Series',
+  #    'stationarity_method': 'Stationarity Method',
+  #    #'test_statistic': 'Test Statistic',
+  #    #'p_value': 'P-Value',
+#
+  #    })
+#
+#
+  # generate the Markdown table
+  md_table = tabulate(table, headers='keys', tablefmt='pipe', showindex=False)
+
+
+  # show
+  return Markdown(md_table)
+
+
+```
+
+::: {.panel-tabset}
+
+## Seas. 1: Mars Temperature
+
+
+```{python}
+#| echo: false
+#| label: tbl-arima-mars-ground-temperature
+#| tbl-cap: "Shows the result of the ARIMA loop."
+
+
+clean_result_table_arima_loop(pd.read_csv('../tables/univariate/arima_loop/arima_loop_mars_weather_ground_temperature.csv'))
+
+
+```
+
+
+## Seas. 2: Mars Pressure
+
+
+```{python}
+#| echo: false
+#| label: tbl-arima-pressure-current-pascals
+#| tbl-cap: "Shows the result of the ARIMA loop."
+
+
+clean_result_table_arima_loop(pd.read_csv('../tables/univariate/arima_loop/arima_loop_pressure_current_pascals.csv'))
+
+
+```
+
+## Financial 1: ARKX
+
+
+```{python}
+#| echo: false
+#| label: tbl-arima-arkx-stock-adj-close
+#| tbl-cap: "Shows the result of the ARIMA loop."
+
+
+clean_result_table_arima_loop(pd.read_csv('../tables/univariate/arima_loop/arima_loop_arkx_stock_adj_close.csv'))
+
+
+```
+
+## Financial 2: AVAV
+
+
+```{python}
+#| echo: false
+#| label: tbl-arima-avav-stock-adj-close
+#| tbl-cap: "Shows the result of the ARIMA loop."
+
+
+clean_result_table_arima_loop(pd.read_csv('../tables/univariate/arima_loop/arima_loop_avav_stock_adj_close.csv'))
+
+
+```
+
+## Treasury NASA Outlays
+
+
+```{python}
+#| echo: false
+#| label: tbl-arima-treasury-nasa-outlays
+#| tbl-cap: "Shows the result of the ARIMA loop."
+
+
+clean_result_table_arima_loop(pd.read_csv('../tables/univariate/arima_loop/arima_loop_treasury_nasa_outlays.csv'))
+
+
+```
+
+## Google Trends
+
+
+```{python}
+#| echo: false
+#| label: tbl-arima-google-trends-space-exploration
+#| tbl-cap: "Shows the result of the ARIMA loop."
+
+
+clean_result_table_arima_loop(pd.read_csv('../tables/univariate/arima_loop/arima_loop_google_trends_space_exploration.csv'))
+
+
+```
+
+## Launches
+
+
+```{python}
+#| echo: false
+#| label: tbl-arima-launches-per-month
+#| tbl-cap: "Shows the result of the ARIMA loop."
+
+
+clean_result_table_arima_loop(pd.read_csv('../tables/univariate/arima_loop/arima_loop_launches_per_month.csv'))
+
+
+```
+
+## Satellites
+
+
+```{python}
+#| echo: false
+#| label: tbl-arima-satellites-operational-count
+#| tbl-cap: "Shows the result of the ARIMA loop."
+
+
+clean_result_table_arima_loop(pd.read_csv('../tables/univariate/arima_loop/arima_loop_satellites_operational_count.csv'))
+
+
+```
+
+:::
+
+
+#### Best Model
+
+
+```{python}
+#| echo: false
+
+def clean_result_table_bestmodel(table):
+
+  #table.drop(columns=['test_statistic', 'p_value'], inplace=True)
+  # format decimals
+  #columns_to_format = ['test_statistic', 'p_value']
+  #table[columns_to_format] = table[columns_to_format].applymap(lambda x: f"{x:.4f}")
+
+  # format
+  #table = table.rename(columns={
+  #    'data_series': 'Data Series',
+  #    'stationarity_method': 'Stationarity Method',
+  #    #'test_statistic': 'Test Statistic',
+  #    #'p_value': 'P-Value',
+#
+  #    })
+#
+#
+  # generate the Markdown table
+  md_table = tabulate(table, headers='keys', tablefmt='pipe', showindex=False)
+
+
+  # show
+  return Markdown(md_table)
+
+
+```
+
+::: {.panel-tabset}
+
+## Seas. 1: Mars Temperature
+
+
+```{python}
+#| echo: false
+#| label: tbl-bestmodels-mars-ground-temperature
+#| tbl-cap: "Shows the best model of the ARIMA loop."
+
+
+clean_result_table_bestmodel(pd.read_csv('../tables/univariate/best_models/best_models_mars_weather_ground_temperature.csv'))
+
+
+```
+
+
+## Seas. 2: Mars Pressure
+
+
+```{python}
+#| echo: false
+#| label: tbl-bestmodels-pressure-current-pascals
+#| tbl-cap: "Shows the best model of the ARIMA loop."
+
+
+clean_result_table_bestmodel(pd.read_csv('../tables/univariate/best_models/best_models_pressure_current_pascals.csv'))
+
+
+```
+
+## Financial 1: ARKX
+
+
+```{python}
+#| echo: false
+#| label: tbl-bestmodels-arkx-stock-adj-close
+#| tbl-cap: "Shows the best model of the ARIMA loop."
+
+
+clean_result_table_bestmodel(pd.read_csv('../tables/univariate/best_models/best_models_arkx_stock_adj_close.csv'))
+
+
+```
+
+## Financial 2: AVAV
+
+
+```{python}
+#| echo: false
+#| label: tbl-bestmodels-avav-stock-adj-close
+#| tbl-cap: "Shows the best model of the ARIMA loop."
+
+
+clean_result_table_bestmodel(pd.read_csv('../tables/univariate/best_models/best_models_avav_stock_adj_close.csv'))
+
+
+```
+
+## Treasury NASA Outlays
+
+
+```{python}
+#| echo: false
+#| label: tbl-bestmodels-treasury-nasa-outlays
+#| tbl-cap: "Shows the best model of the ARIMA loop."
+
+
+clean_result_table_bestmodel(pd.read_csv('../tables/univariate/best_models/best_models_treasury_nasa_outlays.csv'))
+
+
+```
+
+## Google Trends
+
+
+```{python}
+#| echo: false
+#| label: tbl-bestmodels-google-trends-space-exploration
+#| tbl-cap: "Shows the best model of the ARIMA loop."
+
+
+clean_result_table_bestmodel(pd.read_csv('../tables/univariate/best_models/best_models_google_trends_space_exploration.csv'))
+
+
+```
+
+## Launches
+
+
+```{python}
+#| echo: false
+#| label: tbl-bestmodels-launches-per-month
+#| tbl-cap: "Shows the best model of the ARIMA loop."
+
+
+clean_result_table_bestmodel(pd.read_csv('../tables/univariate/best_models/best_models_launches_per_month.csv'))
+
+
+```
+
+## Satellites
+
+
+```{python}
+#| echo: false
+#| label: tbl-bestmodels-satellites-operational-count
+#| tbl-cap: "Shows the best model of the ARIMA loop."
+
+
+clean_result_table_bestmodel(pd.read_csv('../tables/univariate/best_models/best_models_satellites_operational_count.csv'))
+
+
+```
+
+:::
+
+
+
+
+
+#### Model Diagnostics
+
+
+
+::: {.panel-tabset}
+
+## Seas. 1: Mars Temperature
+
+![](../images/univariate/diagnostics/diagnostics_plot_mars_weather_ground_temperature.jpeg)
+
+```{python}
+#| echo: false
+
+with open('../tables/univariate/diagnostics/diagnostics_output_mars_weather_ground_temperature.txt', 'r') as file:
+        print(file.read())
+```
+
+
+## Seas. 2: Mars Pressure
+
+![](../images/univariate/diagnostics/diagnostics_plot_pressure_current_pascals.jpeg)
+
+```{python}
+#| echo: false
+
+with open('../tables/univariate/diagnostics/diagnostics_output_pressure_current_pascals.txt', 'r') as file:
+        print(file.read())
+```
+
+
+
+## Financial 1: ARKX
+
+![](../images/univariate/diagnostics/diagnostics_plot_arkx_stock_adj_close.jpeg)
+
+```{python}
+#| echo: false
+
+with open('../tables/univariate/diagnostics/diagnostics_output_arkx_stock_adj_close.txt', 'r') as file:
+        print(file.read())
+```
+
+
+
+## Financial 2: AVAV
+
+![](../images/univariate/diagnostics/diagnostics_plot_avav_stock_adj_close.jpeg)
+
+```{python}
+#| echo: false
+
+with open('../tables/univariate/diagnostics/diagnostics_output_avav_stock_adj_close.txt', 'r') as file:
+        print(file.read())
+```
+
+
+
+## Treasury NASA Outlays
+
+![](../images/univariate/diagnostics/diagnostics_plot_treasury_nasa_outlays.jpeg)
+
+```{python}
+#| echo: false
+
+with open('../tables/univariate/diagnostics/diagnostics_output_treasury_nasa_outlays.txt', 'r') as file:
+        print(file.read())
+```
+
+
+
+## Google Trends
+
+![](../images/univariate/diagnostics/diagnostics_plot_google_trends_space_exploration.jpeg)
+
+```{python}
+#| echo: false
+
+with open('../tables/univariate/diagnostics/diagnostics_output_google_trends_space_exploration.txt', 'r') as file:
+        print(file.read())
+```
+
+
+
+## Launches
+
+![](../images/univariate/diagnostics/diagnostics_plot_launches_per_month.jpeg)
+
+```{python}
+#| echo: false
+
+with open('../tables/univariate/diagnostics/diagnostics_output_launches_per_month.txt', 'r') as file:
+        print(file.read())
+```
+
+
+
+## Satellites
+
+![](../images/univariate/diagnostics/diagnostics_plot_satellites_operational_count.jpeg)
+
+```{python}
+#| echo: false
+
+with open('../tables/univariate/diagnostics/diagnostics_output_satellites_operational_count.txt', 'r') as file:
+        print(file.read())
+```
+
+
+:::
+
+
+
+
+
+
+#### Model Equations
+
+
+
+
+
+
+
+<!-- ----------------------------------------------
+    auto.arima()
+------------------------------------------------ -->
+
+### `auto.arima()`
+
+
+Confirms the suspicions that we need seasonal variables and a SARIMA model is needed.
+
+
+
+
+
+
+<!-- ----------------------------------------------
+    Forecast
+------------------------------------------------ -->
+
+### Forecast
+
+
+
+
+
+
+<!-- ----------------------------------------------
+    Benchmark Methods
+------------------------------------------------ -->
+
+### Benchmark Methods
+
+
+
+
+
 <!-- ==================================================
       SARIMA
 ================================================== -->

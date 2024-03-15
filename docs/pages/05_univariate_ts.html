@@ -185,6 +185,10 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#arima" id="toc-arima" class="nav-link active" data-scroll-target="#arima"><span class="header-section-number">5.1</span> ARIMA</a>
   <ul class="collapse">
   <li><a href="#determining-pd-and-q" id="toc-determining-pd-and-q" class="nav-link" data-scroll-target="#determining-pd-and-q"><span class="header-section-number">5.1.1</span> Determining <code>p</code>,<code>d</code>, and <code>q</code></a></li>
+  <li><a href="#arima-fitting" id="toc-arima-fitting" class="nav-link" data-scroll-target="#arima-fitting"><span class="header-section-number">5.1.2</span> ARIMA fitting</a></li>
+  <li><a href="#auto.arima" id="toc-auto.arima" class="nav-link" data-scroll-target="#auto.arima"><span class="header-section-number">5.1.3</span> <code>auto.arima()</code></a></li>
+  <li><a href="#forecast" id="toc-forecast" class="nav-link" data-scroll-target="#forecast"><span class="header-section-number">5.1.4</span> Forecast</a></li>
+  <li><a href="#benchmark-methods" id="toc-benchmark-methods" class="nav-link" data-scroll-target="#benchmark-methods"><span class="header-section-number">5.1.5</span> Benchmark Methods</a></li>
   </ul></li>
   <li><a href="#sarima" id="toc-sarima" class="nav-link" data-scroll-target="#sarima"><span class="header-section-number">5.2</span> SARIMA</a></li>
   </ul>
@@ -253,7 +257,7 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Average Ground Temperature on Mars</td>
-<td style="text-align: left;">First Difference</td>
+<td style="text-align: left;">Second Difference</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Atmospheric Pressure on Mars</td>
@@ -383,10 +387,1419 @@ ul.task-list li input[type="checkbox"] {
 <li><code>d</code>: 1, 2</li>
 <li><code>q</code>: 0, 1</li>
 </ul>
+<!-- ----------------------------------------------
+     ARIMA Fitting
+------------------------------------------------ -->
+</section>
+</section>
+<section id="arima-fitting" class="level3" data-number="5.1.2">
+<h3 data-number="5.1.2" class="anchored" data-anchor-id="arima-fitting"><span class="header-section-number">5.1.2</span> ARIMA fitting</h3>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Seas. 1: Mars Temperature</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Seas. 2: Mars Pressure</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false">Financial 1: ARKX</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-4" role="tab" aria-controls="tabset-2-4" aria-selected="false">Financial 2: AVAV</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-5" role="tab" aria-controls="tabset-2-5" aria-selected="false">Treasury NASA Outlays</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-6" role="tab" aria-controls="tabset-2-6" aria-selected="false">Google Trends</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-7-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-7" role="tab" aria-controls="tabset-2-7" aria-selected="false">Launches</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-8-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-8" role="tab" aria-controls="tabset-2-8" aria-selected="false">Satellites</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<div class="cell" data-execution_count="4">
+<div class="cell-output cell-output-display" data-execution_count="4">
+<div id="tbl-arima-mars-ground-temperature" class="anchored">
+<table class="table table-sm table-striped small">
+<caption>Table&nbsp;5.2: Shows the result of the ARIMA loop.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: right;">p</th>
+<th style="text-align: right;">d</th>
+<th style="text-align: right;">q</th>
+<th style="text-align: right;">AIC</th>
+<th style="text-align: right;">BIC</th>
+<th style="text-align: right;">AICc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">407.985</td>
+<td style="text-align: right;">410.261</td>
+<td style="text-align: right;">408.042</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">405.902</td>
+<td style="text-align: right;">410.455</td>
+<td style="text-align: right;">406.076</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">407.895</td>
+<td style="text-align: right;">414.725</td>
+<td style="text-align: right;">408.248</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">393.789</td>
+<td style="text-align: right;">402.895</td>
+<td style="text-align: right;">394.386</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">405.636</td>
+<td style="text-align: right;">410.189</td>
+<td style="text-align: right;">405.81</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">407.341</td>
+<td style="text-align: right;">414.171</td>
+<td style="text-align: right;">407.694</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">409.312</td>
+<td style="text-align: right;">418.418</td>
+<td style="text-align: right;">409.909</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">394.866</td>
+<td style="text-align: right;">406.249</td>
+<td style="text-align: right;">395.775</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">407.493</td>
+<td style="text-align: right;">414.323</td>
+<td style="text-align: right;">407.846</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">409.329</td>
+<td style="text-align: right;">418.435</td>
+<td style="text-align: right;">409.926</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">397.701</td>
+<td style="text-align: right;">409.085</td>
+<td style="text-align: right;">398.61</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">355.293</td>
+<td style="text-align: right;">368.953</td>
+<td style="text-align: right;">356.585</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<div class="cell" data-execution_count="5">
+<div class="cell-output cell-output-display" data-execution_count="5">
+<div id="tbl-arima-pressure-current-pascals" class="anchored">
+<table class="table table-sm table-striped small">
+<caption>Table&nbsp;5.3: Shows the result of the ARIMA loop.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: right;">p</th>
+<th style="text-align: right;">d</th>
+<th style="text-align: right;">q</th>
+<th style="text-align: right;">AIC</th>
+<th style="text-align: right;">BIC</th>
+<th style="text-align: right;">AICc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">736.8</td>
+<td style="text-align: right;">739.077</td>
+<td style="text-align: right;">736.857</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">695.033</td>
+<td style="text-align: right;">699.586</td>
+<td style="text-align: right;">695.207</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">679.95</td>
+<td style="text-align: right;">686.78</td>
+<td style="text-align: right;">680.303</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">652.101</td>
+<td style="text-align: right;">661.208</td>
+<td style="text-align: right;">652.698</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">650.23</td>
+<td style="text-align: right;">661.613</td>
+<td style="text-align: right;">651.139</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">634.613</td>
+<td style="text-align: right;">648.273</td>
+<td style="text-align: right;">635.905</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">721.569</td>
+<td style="text-align: right;">726.123</td>
+<td style="text-align: right;">721.743</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">692.885</td>
+<td style="text-align: right;">699.715</td>
+<td style="text-align: right;">693.238</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">680.088</td>
+<td style="text-align: right;">689.194</td>
+<td style="text-align: right;">680.685</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">652.673</td>
+<td style="text-align: right;">664.057</td>
+<td style="text-align: right;">653.582</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">651.719</td>
+<td style="text-align: right;">665.379</td>
+<td style="text-align: right;">653.011</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">634.054</td>
+<td style="text-align: right;">649.99</td>
+<td style="text-align: right;">635.804</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">630.477</td>
+<td style="text-align: right;">637.307</td>
+<td style="text-align: right;">630.83</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">621.431</td>
+<td style="text-align: right;">630.537</td>
+<td style="text-align: right;">622.028</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">617.012</td>
+<td style="text-align: right;">628.395</td>
+<td style="text-align: right;">617.921</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">600.494</td>
+<td style="text-align: right;">614.154</td>
+<td style="text-align: right;">601.786</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">585.615</td>
+<td style="text-align: right;">601.552</td>
+<td style="text-align: right;">587.365</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">621.013</td>
+<td style="text-align: right;">630.119</td>
+<td style="text-align: right;">621.61</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">622.225</td>
+<td style="text-align: right;">633.609</td>
+<td style="text-align: right;">623.135</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">620.667</td>
+<td style="text-align: right;">634.327</td>
+<td style="text-align: right;">621.959</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">613.126</td>
+<td style="text-align: right;">629.063</td>
+<td style="text-align: right;">614.876</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<div class="cell" data-execution_count="6">
+<div class="cell-output cell-output-display" data-execution_count="6">
+<div id="tbl-arima-arkx-stock-adj-close" class="anchored">
+<table class="table table-sm table-striped small">
+<caption>Table&nbsp;5.4: Shows the result of the ARIMA loop.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: right;">p</th>
+<th style="text-align: right;">d</th>
+<th style="text-align: right;">q</th>
+<th style="text-align: right;">AIC</th>
+<th style="text-align: right;">BIC</th>
+<th style="text-align: right;">AICc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">-1.49707</td>
+<td style="text-align: right;">3.09185</td>
+<td style="text-align: right;">-1.49156</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-2-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-4-tab">
+<div class="cell" data-execution_count="7">
+<div class="cell-output cell-output-display" data-execution_count="7">
+<div id="tbl-arima-avav-stock-adj-close" class="anchored">
+<table class="table table-sm table-striped small">
+<caption>Table&nbsp;5.5: Shows the result of the ARIMA loop.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: right;">p</th>
+<th style="text-align: right;">d</th>
+<th style="text-align: right;">q</th>
+<th style="text-align: right;">AIC</th>
+<th style="text-align: right;">BIC</th>
+<th style="text-align: right;">AICc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3527.23</td>
+<td style="text-align: right;">3531.82</td>
+<td style="text-align: right;">3527.24</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-2-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-5-tab">
+<div class="cell" data-execution_count="8">
+<div class="cell-output cell-output-display" data-execution_count="8">
+<div id="tbl-arima-treasury-nasa-outlays" class="anchored">
+<table class="table table-sm table-striped small">
+<caption>Table&nbsp;5.6: Shows the result of the ARIMA loop.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: right;">p</th>
+<th style="text-align: right;">d</th>
+<th style="text-align: right;">q</th>
+<th style="text-align: right;">AIC</th>
+<th style="text-align: right;">BIC</th>
+<th style="text-align: right;">AICc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1605.27</td>
+<td style="text-align: right;">1607.93</td>
+<td style="text-align: right;">1605.31</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1527.45</td>
+<td style="text-align: right;">1532.78</td>
+<td style="text-align: right;">1527.57</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1521.29</td>
+<td style="text-align: right;">1529.28</td>
+<td style="text-align: right;">1521.53</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1517.84</td>
+<td style="text-align: right;">1528.49</td>
+<td style="text-align: right;">1518.24</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">1516.09</td>
+<td style="text-align: right;">1529.41</td>
+<td style="text-align: right;">1516.69</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1579.9</td>
+<td style="text-align: right;">1585.22</td>
+<td style="text-align: right;">1580.01</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1525.13</td>
+<td style="text-align: right;">1533.12</td>
+<td style="text-align: right;">1525.36</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1518.49</td>
+<td style="text-align: right;">1529.14</td>
+<td style="text-align: right;">1518.88</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1518.11</td>
+<td style="text-align: right;">1531.42</td>
+<td style="text-align: right;">1518.71</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">1518.07</td>
+<td style="text-align: right;">1534.05</td>
+<td style="text-align: right;">1518.92</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1523.25</td>
+<td style="text-align: right;">1531.24</td>
+<td style="text-align: right;">1523.49</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1513.82</td>
+<td style="text-align: right;">1524.47</td>
+<td style="text-align: right;">1514.21</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1511.59</td>
+<td style="text-align: right;">1524.91</td>
+<td style="text-align: right;">1512.19</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1490.01</td>
+<td style="text-align: right;">1505.99</td>
+<td style="text-align: right;">1490.86</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">1491.72</td>
+<td style="text-align: right;">1510.36</td>
+<td style="text-align: right;">1492.86</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1522.52</td>
+<td style="text-align: right;">1533.18</td>
+<td style="text-align: right;">1522.92</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1510.86</td>
+<td style="text-align: right;">1524.18</td>
+<td style="text-align: right;">1511.46</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1512.33</td>
+<td style="text-align: right;">1528.32</td>
+<td style="text-align: right;">1513.18</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1491.8</td>
+<td style="text-align: right;">1510.44</td>
+<td style="text-align: right;">1492.94</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">1488.14</td>
+<td style="text-align: right;">1509.44</td>
+<td style="text-align: right;">1489.62</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-2-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-6-tab">
+<div class="cell" data-execution_count="9">
+<div class="cell-output cell-output-display" data-execution_count="9">
+<div id="tbl-arima-google-trends-space-exploration" class="anchored">
+<table class="table table-sm table-striped small">
+<caption>Table&nbsp;5.7: Shows the result of the ARIMA loop.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: right;">p</th>
+<th style="text-align: right;">d</th>
+<th style="text-align: right;">q</th>
+<th style="text-align: right;">AIC</th>
+<th style="text-align: right;">BIC</th>
+<th style="text-align: right;">AICc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1984.36</td>
+<td style="text-align: right;">1987.92</td>
+<td style="text-align: right;">1984.38</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1983.15</td>
+<td style="text-align: right;">1990.28</td>
+<td style="text-align: right;">1983.2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1976.12</td>
+<td style="text-align: right;">1986.8</td>
+<td style="text-align: right;">1976.21</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1984.3</td>
+<td style="text-align: right;">1991.42</td>
+<td style="text-align: right;">1984.35</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1967.69</td>
+<td style="text-align: right;">1978.37</td>
+<td style="text-align: right;">1967.79</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1969.59</td>
+<td style="text-align: right;">1983.83</td>
+<td style="text-align: right;">1969.75</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1979.18</td>
+<td style="text-align: right;">1989.86</td>
+<td style="text-align: right;">1979.27</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1969.61</td>
+<td style="text-align: right;">1983.85</td>
+<td style="text-align: right;">1969.77</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1971.5</td>
+<td style="text-align: right;">1989.3</td>
+<td style="text-align: right;">1971.74</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-2-7" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-7-tab">
+<div class="cell" data-execution_count="10">
+<div class="cell-output cell-output-display" data-execution_count="10">
+<div id="tbl-arima-launches-per-month" class="anchored">
+<table class="table table-sm table-striped small">
+<caption>Table&nbsp;5.8: Shows the result of the ARIMA loop.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: right;">p</th>
+<th style="text-align: right;">d</th>
+<th style="text-align: right;">q</th>
+<th style="text-align: right;">AIC</th>
+<th style="text-align: right;">BIC</th>
+<th style="text-align: right;">AICc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3970.79</td>
+<td style="text-align: right;">3975.41</td>
+<td style="text-align: right;">3970.8</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3466.56</td>
+<td style="text-align: right;">3475.79</td>
+<td style="text-align: right;">3466.58</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3704.41</td>
+<td style="text-align: right;">3713.64</td>
+<td style="text-align: right;">3704.43</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3460.1</td>
+<td style="text-align: right;">3473.94</td>
+<td style="text-align: right;">3460.13</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3625.52</td>
+<td style="text-align: right;">3639.36</td>
+<td style="text-align: right;">3625.55</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3462.05</td>
+<td style="text-align: right;">3480.51</td>
+<td style="text-align: right;">3462.11</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3575.02</td>
+<td style="text-align: right;">3593.48</td>
+<td style="text-align: right;">3575.08</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3461.27</td>
+<td style="text-align: right;">3484.34</td>
+<td style="text-align: right;">3461.35</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3547.44</td>
+<td style="text-align: right;">3570.52</td>
+<td style="text-align: right;">3547.53</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3461.74</td>
+<td style="text-align: right;">3489.43</td>
+<td style="text-align: right;">3461.85</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3506.58</td>
+<td style="text-align: right;">3534.27</td>
+<td style="text-align: right;">3506.69</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3459.99</td>
+<td style="text-align: right;">3492.3</td>
+<td style="text-align: right;">3460.15</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-2-8" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-8-tab">
+<div class="cell" data-execution_count="11">
+<div class="cell-output cell-output-display" data-execution_count="11">
+<div id="tbl-arima-satellites-operational-count" class="anchored">
+<table class="table table-sm table-striped small">
+<caption>Table&nbsp;5.9: Shows the result of the ARIMA loop.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: right;">p</th>
+<th style="text-align: right;">d</th>
+<th style="text-align: right;">q</th>
+<th style="text-align: right;">AIC</th>
+<th style="text-align: right;">BIC</th>
+<th style="text-align: right;">AICc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">712.898</td>
+<td style="text-align: right;">715.66</td>
+<td style="text-align: right;">712.933</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">691.292</td>
+<td style="text-align: right;">696.816</td>
+<td style="text-align: right;">691.397</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">703.964</td>
+<td style="text-align: right;">709.489</td>
+<td style="text-align: right;">704.07</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">692.65</td>
+<td style="text-align: right;">700.936</td>
+<td style="text-align: right;">692.862</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section id="best-model" class="level4" data-number="5.1.2.1">
+<h4 data-number="5.1.2.1" class="anchored" data-anchor-id="best-model"><span class="header-section-number">5.1.2.1</span> Best Model</h4>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">Seas. 1: Mars Temperature</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false">Seas. 2: Mars Pressure</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false">Financial 1: ARKX</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-4" role="tab" aria-controls="tabset-3-4" aria-selected="false">Financial 2: AVAV</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-5" role="tab" aria-controls="tabset-3-5" aria-selected="false">Treasury NASA Outlays</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-6" role="tab" aria-controls="tabset-3-6" aria-selected="false">Google Trends</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-7-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-7" role="tab" aria-controls="tabset-3-7" aria-selected="false">Launches</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-8-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-8" role="tab" aria-controls="tabset-3-8" aria-selected="false">Satellites</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<div class="cell" data-execution_count="13">
+<div class="cell-output cell-output-display" data-execution_count="13">
+<div id="tbl-bestmodels-mars-ground-temperature" class="anchored">
+<table class="table table-sm table-striped small">
+<caption>Table&nbsp;5.10: Shows the best model of the ARIMA loop.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: right;">p</th>
+<th style="text-align: right;">d</th>
+<th style="text-align: right;">q</th>
+<th style="text-align: right;">AIC</th>
+<th style="text-align: right;">BIC</th>
+<th style="text-align: right;">AICc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">355.293</td>
+<td style="text-align: right;">368.953</td>
+<td style="text-align: right;">356.585</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<div class="cell" data-execution_count="14">
+<div class="cell-output cell-output-display" data-execution_count="14">
+<div id="tbl-bestmodels-pressure-current-pascals" class="anchored">
+<table class="table table-sm table-striped small">
+<caption>Table&nbsp;5.11: Shows the best model of the ARIMA loop.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: right;">p</th>
+<th style="text-align: right;">d</th>
+<th style="text-align: right;">q</th>
+<th style="text-align: right;">AIC</th>
+<th style="text-align: right;">BIC</th>
+<th style="text-align: right;">AICc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">585.615</td>
+<td style="text-align: right;">601.552</td>
+<td style="text-align: right;">587.365</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
+<div class="cell" data-execution_count="15">
+<div class="cell-output cell-output-display" data-execution_count="15">
+<div id="tbl-bestmodels-arkx-stock-adj-close" class="anchored">
+<table class="table table-sm table-striped small">
+<caption>Table&nbsp;5.12: Shows the best model of the ARIMA loop.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: right;">p</th>
+<th style="text-align: right;">d</th>
+<th style="text-align: right;">q</th>
+<th style="text-align: right;">AIC</th>
+<th style="text-align: right;">BIC</th>
+<th style="text-align: right;">AICc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">-1.49707</td>
+<td style="text-align: right;">3.09185</td>
+<td style="text-align: right;">-1.49156</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-3-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-4-tab">
+<div class="cell" data-execution_count="16">
+<div class="cell-output cell-output-display" data-execution_count="16">
+<div id="tbl-bestmodels-avav-stock-adj-close" class="anchored">
+<table class="table table-sm table-striped small">
+<caption>Table&nbsp;5.13: Shows the best model of the ARIMA loop.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: right;">p</th>
+<th style="text-align: right;">d</th>
+<th style="text-align: right;">q</th>
+<th style="text-align: right;">AIC</th>
+<th style="text-align: right;">BIC</th>
+<th style="text-align: right;">AICc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3527.23</td>
+<td style="text-align: right;">3531.82</td>
+<td style="text-align: right;">3527.24</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-3-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-5-tab">
+<div class="cell" data-execution_count="17">
+<div class="cell-output cell-output-display" data-execution_count="17">
+<div id="tbl-bestmodels-treasury-nasa-outlays" class="anchored">
+<table class="table table-sm table-striped small">
+<caption>Table&nbsp;5.14: Shows the best model of the ARIMA loop.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: right;">p</th>
+<th style="text-align: right;">d</th>
+<th style="text-align: right;">q</th>
+<th style="text-align: right;">AIC</th>
+<th style="text-align: right;">BIC</th>
+<th style="text-align: right;">AICc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">1488.14</td>
+<td style="text-align: right;">1509.44</td>
+<td style="text-align: right;">1489.62</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-3-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-6-tab">
+<div class="cell" data-execution_count="18">
+<div class="cell-output cell-output-display" data-execution_count="18">
+<div id="tbl-bestmodels-google-trends-space-exploration" class="anchored">
+<table class="table table-sm table-striped small">
+<caption>Table&nbsp;5.15: Shows the best model of the ARIMA loop.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: right;">p</th>
+<th style="text-align: right;">d</th>
+<th style="text-align: right;">q</th>
+<th style="text-align: right;">AIC</th>
+<th style="text-align: right;">BIC</th>
+<th style="text-align: right;">AICc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1967.69</td>
+<td style="text-align: right;">1978.37</td>
+<td style="text-align: right;">1967.79</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-3-7" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-7-tab">
+<div class="cell" data-execution_count="19">
+<div class="cell-output cell-output-display" data-execution_count="19">
+<div id="tbl-bestmodels-launches-per-month" class="anchored">
+<table class="table table-sm table-striped small">
+<caption>Table&nbsp;5.16: Shows the best model of the ARIMA loop.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: right;">p</th>
+<th style="text-align: right;">d</th>
+<th style="text-align: right;">q</th>
+<th style="text-align: right;">AIC</th>
+<th style="text-align: right;">BIC</th>
+<th style="text-align: right;">AICc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3459.99</td>
+<td style="text-align: right;">3492.3</td>
+<td style="text-align: right;">3460.15</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-3-8" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-8-tab">
+<div class="cell" data-execution_count="20">
+<div class="cell-output cell-output-display" data-execution_count="20">
+<div id="tbl-bestmodels-satellites-operational-count" class="anchored">
+<table class="table table-sm table-striped small">
+<caption>Table&nbsp;5.17: Shows the best model of the ARIMA loop.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: right;">p</th>
+<th style="text-align: right;">d</th>
+<th style="text-align: right;">q</th>
+<th style="text-align: right;">AIC</th>
+<th style="text-align: right;">BIC</th>
+<th style="text-align: right;">AICc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">691.292</td>
+<td style="text-align: right;">696.816</td>
+<td style="text-align: right;">691.397</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="model-diagnostics" class="level4" data-number="5.1.2.2">
+<h4 data-number="5.1.2.2" class="anchored" data-anchor-id="model-diagnostics"><span class="header-section-number">5.1.2.2</span> Model Diagnostics</h4>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true">Seas. 1: Mars Temperature</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false">Seas. 2: Mars Pressure</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-3" role="tab" aria-controls="tabset-4-3" aria-selected="false">Financial 1: ARKX</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-4" role="tab" aria-controls="tabset-4-4" aria-selected="false">Financial 2: AVAV</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-5" role="tab" aria-controls="tabset-4-5" aria-selected="false">Treasury NASA Outlays</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-6" role="tab" aria-controls="tabset-4-6" aria-selected="false">Google Trends</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-7-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-7" role="tab" aria-controls="tabset-4-7" aria-selected="false">Launches</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-8-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-8" role="tab" aria-controls="tabset-4-8" aria-selected="false">Satellites</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
+<p><img src="../images/univariate/diagnostics/diagnostics_plot_mars_weather_ground_temperature.jpeg" class="img-fluid"></p>
+<div class="cell" data-execution_count="21">
+<div class="cell-output cell-output-stdout">
+<pre><code>$fit
+
+Call:
+arima(x = xdata, order = c(p, d, q), seasonal = list(order = c(P, D, Q), period = S), 
+    include.mean = !no.constant, transform.pars = trans, fixed = fixed, optim.control = list(trace = trc, 
+        REPORT = 1, reltol = tol))
+
+Coefficients:
+         ar1      ar2      ma1     ma2      ma3
+      0.7964  -0.6722  -1.4499  1.3751  -0.9253
+s.e.  0.1566   0.1320   0.1209  0.1227   0.0876
+
+sigma^2 estimated as 9.718:  log likelihood = -187.09,  aic = 386.19
+
+$degrees_of_freedom
+[1] 67
+
+$ttable
+    Estimate     SE  t.value p.value
+ar1   0.7964 0.1566   5.0858       0
+ar2  -0.6722 0.1320  -5.0909       0
+ma1  -1.4499 0.1209 -11.9929       0
+ma2   1.3751 0.1227  11.2051       0
+ma3  -0.9253 0.0876 -10.5621       0
+
+$ICs
+     AIC     AICc      BIC 
+5.363705 5.376331 5.553427 
+
+</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
+<p><img src="../images/univariate/diagnostics/diagnostics_plot_pressure_current_pascals.jpeg" class="img-fluid"></p>
+<div class="cell" data-execution_count="22">
+<div class="cell-output cell-output-stdout">
+<pre><code>$fit
+
+Call:
+arima(x = xdata, order = c(p, d, q), seasonal = list(order = c(P, D, Q), period = S), 
+    include.mean = !no.constant, transform.pars = trans, fixed = fixed, optim.control = list(trace = trc, 
+        REPORT = 1, reltol = tol))
+
+Coefficients:
+         ar1      ar2      ma1     ma2      ma3      ma4
+      0.9824  -0.9658  -0.8368  0.5997  -0.1876  -0.5753
+s.e.  0.0315   0.0251   0.1111  0.1469   0.1459   0.1039
+
+sigma^2 estimated as 135.3:  log likelihood = -285.81,  aic = 585.62
+
+$degrees_of_freedom
+[1] 66
+
+$ttable
+    Estimate     SE  t.value p.value
+ar1   0.9824 0.0315  31.2322  0.0000
+ar2  -0.9658 0.0251 -38.4349  0.0000
+ma1  -0.8368 0.1111  -7.5331  0.0000
+ma2   0.5997 0.1469   4.0825  0.0001
+ma3  -0.1876 0.1459  -1.2857  0.2031
+ma4  -0.5753 0.1039  -5.5364  0.0000
+
+$ICs
+     AIC     AICc      BIC 
+8.133546 8.151495 8.354889 
+
+</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-4-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-3-tab">
+<p><img src="../images/univariate/diagnostics/diagnostics_plot_arkx_stock_adj_close.jpeg" class="img-fluid"></p>
+<div class="cell" data-execution_count="23">
+<div class="cell-output cell-output-stdout">
+<pre><code>$fit
+
+Call:
+arima(x = xdata, order = c(p, d, q), seasonal = list(order = c(P, D, Q), period = S), 
+    xreg = constant, transform.pars = trans, fixed = fixed, optim.control = list(trace = trc, 
+        REPORT = 1, reltol = tol))
+
+Coefficients:
+      constant
+       -0.0088
+s.e.    0.0089
+
+sigma^2 estimated as 0.05819:  log likelihood = 2.24,  aic = -0.47
+
+$degrees_of_freedom
+[1] 726
+
+$ttable
+         Estimate     SE t.value p.value
+constant  -0.0088 0.0089  -0.987  0.3239
+
+$ICs
+          AIC          AICc           BIC 
+-0.0006474495 -0.0006398604  0.0119768324 
+
+</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-4-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-4-tab">
+<p><img src="../images/univariate/diagnostics/diagnostics_plot_avav_stock_adj_close.jpeg" class="img-fluid"></p>
+<div class="cell" data-execution_count="24">
+<div class="cell-output cell-output-stdout">
+<pre><code>$fit
+
+Call:
+arima(x = xdata, order = c(p, d, q), seasonal = list(order = c(P, D, Q), period = S), 
+    xreg = constant, transform.pars = trans, fixed = fixed, optim.control = list(trace = trc, 
+        REPORT = 1, reltol = tol))
+
+Coefficients:
+      constant
+        0.0061
+s.e.    0.1014
+
+sigma^2 estimated as 7.472:  log likelihood = -1762.61,  aic = 3529.23
+
+$degrees_of_freedom
+[1] 726
+
+$ttable
+         Estimate     SE t.value p.value
+constant   0.0061 0.1014  0.0597  0.9524
+
+$ICs
+     AIC     AICc      BIC 
+4.854511 4.854518 4.867135 
+
+</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-4-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-5-tab">
+<p><img src="../images/univariate/diagnostics/diagnostics_plot_treasury_nasa_outlays.jpeg" class="img-fluid"></p>
+<div class="cell" data-execution_count="25">
+<div class="cell-output cell-output-stdout">
+<pre><code>$fit
+
+Call:
+arima(x = xdata, order = c(p, d, q), seasonal = list(order = c(P, D, Q), period = S), 
+    xreg = constant, transform.pars = trans, fixed = fixed, optim.control = list(trace = trc, 
+        REPORT = 1, reltol = tol))
+
+Coefficients:
+          ar1      ar2     ar3      ma1      ma2      ma3     ma4  constant
+      -0.0681  -0.0653  0.9329  -0.9751  -0.0312  -0.9728  0.9988    6.2142
+s.e.   0.0494   0.0502  0.0494   0.0784   0.0642   0.1076  0.0928    2.0164
+
+sigma^2 estimated as 53163:  log likelihood = -733.65,  aic = 1485.3
+
+$degrees_of_freedom
+[1] 98
+
+$ttable
+         Estimate     SE  t.value p.value
+ar1       -0.0681 0.0494  -1.3775  0.1715
+ar2       -0.0653 0.0502  -1.3005  0.1965
+ar3        0.9329 0.0494  18.8730  0.0000
+ma1       -0.9751 0.0784 -12.4342  0.0000
+ma2       -0.0312 0.0642  -0.4868  0.6275
+ma3       -0.9728 0.1076  -9.0434  0.0000
+ma4        0.9988 0.0928  10.7641  0.0000
+constant   6.2142 2.0164   3.0819  0.0027
+
+$ICs
+     AIC     AICc      BIC 
+14.01224 14.02625 14.23838 
+
+</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-4-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-6-tab">
+<p><img src="../images/univariate/diagnostics/diagnostics_plot_google_trends_space_exploration.jpeg" class="img-fluid"></p>
+<div class="cell" data-execution_count="26">
+<div class="cell-output cell-output-stdout">
+<pre><code>$fit
+
+Call:
+arima(x = xdata, order = c(p, d, q), seasonal = list(order = c(P, D, Q), period = S), 
+    xreg = constant, transform.pars = trans, fixed = fixed, optim.control = list(trace = trc, 
+        REPORT = 1, reltol = tol))
+
+Coefficients:
+         ar1      ma1  constant
+      0.7998  -0.9806    0.0824
+s.e.  0.0545   0.0290    0.0813
+
+sigma^2 estimated as 109.9:  log likelihood = -980.51,  aic = 1969.02
+
+$degrees_of_freedom
+[1] 257
+
+$ttable
+         Estimate     SE  t.value p.value
+ar1        0.7998 0.0545  14.6793  0.0000
+ma1       -0.9806 0.0290 -33.8337  0.0000
+constant   0.0824 0.0813   1.0129  0.3121
+
+$ICs
+     AIC     AICc      BIC 
+7.573157 7.573518 7.627937 
+
+</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-4-7" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-7-tab">
+<p><img src="../images/univariate/diagnostics/diagnostics_plot_launches_per_month.jpeg" class="img-fluid"></p>
+<div class="cell" data-execution_count="27">
+<div class="cell-output cell-output-stdout">
+<pre><code>$fit
+
+Call:
+arima(x = xdata, order = c(p, d, q), seasonal = list(order = c(P, D, Q), period = S), 
+    xreg = constant, transform.pars = trans, fixed = fixed, optim.control = list(trace = trc, 
+        REPORT = 1, reltol = tol))
+
+Coefficients:
+          ar1      ar2      ar3      ar4      ar5      ma1  constant
+      -0.2001  -0.0936  -0.1245  -0.0915  -0.0843  -0.8035    0.0089
+s.e.   0.0562   0.0554   0.0505   0.0483   0.0440   0.0448    0.0111
+
+sigma^2 estimated as 5.919:  log likelihood = -1722.68,  aic = 3461.35
+
+$degrees_of_freedom
+[1] 739
+
+$ttable
+         Estimate     SE  t.value p.value
+ar1       -0.2001 0.0562  -3.5591  0.0004
+ar2       -0.0936 0.0554  -1.6913  0.0912
+ar3       -0.1245 0.0505  -2.4646  0.0139
+ar4       -0.0915 0.0483  -1.8953  0.0584
+ar5       -0.0843 0.0440  -1.9159  0.0558
+ma1       -0.8035 0.0448 -17.9516  0.0000
+constant   0.0089 0.0111   0.8069  0.4200
+
+$ICs
+     AIC     AICc      BIC 
+4.639881 4.640085 4.689369 
+
+</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-4-8" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-8-tab">
+<p><img src="../images/univariate/diagnostics/diagnostics_plot_satellites_operational_count.jpeg" class="img-fluid"></p>
+<div class="cell" data-execution_count="28">
+<div class="cell-output cell-output-stdout">
+<pre><code>$fit
+
+Call:
+arima(x = xdata, order = c(p, d, q), seasonal = list(order = c(P, D, Q), period = S), 
+    include.mean = !no.constant, transform.pars = trans, fixed = fixed, optim.control = list(trace = trc, 
+        REPORT = 1, reltol = tol))
+
+Coefficients:
+          ma1
+      -0.9045
+s.e.   0.1960
+
+sigma^2 estimated as 20.53:  log likelihood = -343.64,  aic = 691.28
+
+$degrees_of_freedom
+[1] 116
+
+$ttable
+    Estimate    SE t.value p.value
+ma1  -0.9045 0.196 -4.6152       0
+
+$ICs
+     AIC     AICc      BIC 
+5.908391 5.908689 5.955608 
+
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="model-equations" class="level4" data-number="5.1.2.3">
+<h4 data-number="5.1.2.3" class="anchored" data-anchor-id="model-equations"><span class="header-section-number">5.1.2.3</span> Model Equations</h4>
+<!-- ----------------------------------------------
+    auto.arima()
+------------------------------------------------ -->
+</section>
+</section>
+<section id="auto.arima" class="level3" data-number="5.1.3">
+<h3 data-number="5.1.3" class="anchored" data-anchor-id="auto.arima"><span class="header-section-number">5.1.3</span> <code>auto.arima()</code></h3>
+<p>Confirms the suspicions that we need seasonal variables and a SARIMA model is needed.</p>
+<!-- ----------------------------------------------
+    Forecast
+------------------------------------------------ -->
+</section>
+<section id="forecast" class="level3" data-number="5.1.4">
+<h3 data-number="5.1.4" class="anchored" data-anchor-id="forecast"><span class="header-section-number">5.1.4</span> Forecast</h3>
+<!-- ----------------------------------------------
+    Benchmark Methods
+------------------------------------------------ -->
+</section>
+<section id="benchmark-methods" class="level3" data-number="5.1.5">
+<h3 data-number="5.1.5" class="anchored" data-anchor-id="benchmark-methods"><span class="header-section-number">5.1.5</span> Benchmark Methods</h3>
 <!-- ==================================================
       SARIMA
 ================================================== -->
-</section>
 </section>
 </section>
 <section id="sarima" class="level2" data-number="5.2">
