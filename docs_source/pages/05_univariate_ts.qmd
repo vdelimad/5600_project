@@ -809,6 +809,171 @@ Confirms the suspicions that we need seasonal variables and a SARIMA model is ne
 
 
 
+```{python}
+#| echo: false
+
+def clean_result_table_benchmarkmethods(table):
+
+  #table.drop(columns=['test_statistic', 'p_value'], inplace=True)
+  # format decimals
+  #columns_to_format = ['test_statistic', 'p_value']
+  #table[columns_to_format] = table[columns_to_format].applymap(lambda x: f"{x:.4f}")
+
+  # format
+  #table = table.rename(columns={
+  #    'data_series': 'Data Series',
+  #    'stationarity_method': 'Stationarity Method',
+  #    #'test_statistic': 'Test Statistic',
+  #    #'p_value': 'P-Value',
+#
+  #    })
+#
+#
+  # generate the Markdown table
+  md_table = tabulate(table, headers='keys', tablefmt='pipe', showindex=False)
+
+
+  # show
+  return Markdown(md_table)
+
+
+```
+
+
+::: {.panel-tabset}
+
+## Seas. 1: Mars Temperature
+
+![](../images/univariate/benchmark_methods/benchmark_methods_mars_weather_ground_temperature.jpeg)
+
+```{python}
+#| echo: false
+#| label: tbl-benchmarkmethods-ground-temperature
+#| tbl-cap: "Shows the accuracy metrics of the benchmark methods."
+
+clean_result_table_benchmarkmethods(pd.read_csv('../tables/univariate/benchmark_methods/benchmark_methods_mars_weather_ground_temperature.csv'))
+
+```
+
+
+
+
+## Seas. 2: Mars Pressure
+
+![](../images/univariate/benchmark_methods/benchmark_methods_pressure_current_pascals.jpeg)
+
+```{python}
+#| echo: false
+#| label: tbl-benchmarkmethods-pressure-current-pascals
+#| tbl-cap: "Shows the accuracy metrics of the benchmark methods."
+
+clean_result_table_benchmarkmethods(pd.read_csv('../tables/univariate/benchmark_methods/benchmark_methods_pressure_current_pascals.csv'))
+
+```
+
+
+
+## Financial 1: ARKX
+
+![](../images/univariate/benchmark_methods/benchmark_methods_arkx_stock_adj_close.jpeg)
+
+```{python}
+#| echo: false
+#| label: tbl-benchmarkmethods-arkx-stock
+#| tbl-cap: "Shows the accuracy metrics of the benchmark methods."
+
+clean_result_table_benchmarkmethods(pd.read_csv('../tables/univariate/benchmark_methods/benchmark_methods_arkx_stock_adj_close.csv'))
+
+```
+
+
+
+## Financial 2: AVAV
+
+![](../images/univariate/benchmark_methods/benchmark_methods_avav_stock_adj_close.jpeg)
+
+```{python}
+#| echo: false
+#| label: tbl-benchmarkmethods-avav-stock
+#| tbl-cap: "Shows the accuracy metrics of the benchmark methods."
+
+clean_result_table_benchmarkmethods(pd.read_csv('../tables/univariate/benchmark_methods/benchmark_methods_avav_stock_adj_close.csv'))
+
+```
+
+
+
+## Treasury NASA Outlays
+
+![](../images/univariate/benchmark_methods/benchmark_methods_treasury_nasa_outlays.jpeg)
+
+```{python}
+#| echo: false
+#| label: tbl-benchmarkmethods-treasury-nasa-outlays
+#| tbl-cap: "Shows the accuracy metrics of the benchmark methods."
+
+clean_result_table_benchmarkmethods(pd.read_csv('../tables/univariate/benchmark_methods/benchmark_methods_treasury_nasa_outlays.csv'))
+
+```
+
+
+
+## Google Trends
+
+![](../images/univariate/benchmark_methods/benchmark_methods_google_trends_space_exploration.jpeg)
+
+```{python}
+#| echo: false
+#| label: tbl-benchmarkmethods-google-trends
+#| tbl-cap: "Shows the accuracy metrics of the benchmark methods."
+
+clean_result_table_benchmarkmethods(pd.read_csv('../tables/univariate/benchmark_methods/benchmark_methods_google_trends_space_exploration.csv'))
+
+```
+
+
+
+## Launches
+
+![](../images/univariate/benchmark_methods/benchmark_methods_launches_per_month.jpeg)
+
+```{python}
+#| echo: false
+#| label: tbl-benchmarkmethods-launches-per-month
+#| tbl-cap: "Shows the accuracy metrics of the benchmark methods."
+
+clean_result_table_benchmarkmethods(pd.read_csv('../tables/univariate/benchmark_methods/benchmark_methods_launches_per_month.csv'))
+
+```
+
+
+
+## Satellites
+
+![](../images/univariate/benchmark_methods/benchmark_methods_satellites_operational_count.jpeg)
+
+```{python}
+#| echo: false
+#| label: tbl-benchmarkmethods-satellites-operational-count
+#| tbl-cap: "Shows the accuracy metrics of the benchmark methods."
+
+clean_result_table_benchmarkmethods(pd.read_csv('../tables/univariate/benchmark_methods/benchmark_methods_satellites_operational_count.csv'))
+
+```
+
+
+
+:::
+
+
+
+
+
+
+
+
+
+
 <!-- ----------------------------------------------------------------------------------------------------------------------------------------- -->
 
 
@@ -821,6 +986,8 @@ Confirms the suspicions that we need seasonal variables and a SARIMA model is ne
 ## SARIMA
 
 _SARIMA models have been moved to Homework 4._
+
+
 
 
 

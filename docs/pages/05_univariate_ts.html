@@ -1952,6 +1952,427 @@ AIC=691.69   AICc=691.79   BIC=697.23
 </section>
 <section id="benchmark-methods" class="level3" data-number="5.1.5">
 <h3 data-number="5.1.5" class="anchored" data-anchor-id="benchmark-methods"><span class="header-section-number">5.1.5</span> Benchmark Methods</h3>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-7-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-1" role="tab" aria-controls="tabset-7-1" aria-selected="true">Seas. 1: Mars Temperature</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-2" role="tab" aria-controls="tabset-7-2" aria-selected="false">Seas. 2: Mars Pressure</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-3" role="tab" aria-controls="tabset-7-3" aria-selected="false">Financial 1: ARKX</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-4" role="tab" aria-controls="tabset-7-4" aria-selected="false">Financial 2: AVAV</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-5" role="tab" aria-controls="tabset-7-5" aria-selected="false">Treasury NASA Outlays</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-6" role="tab" aria-controls="tabset-7-6" aria-selected="false">Google Trends</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-7-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-7" role="tab" aria-controls="tabset-7-7" aria-selected="false">Launches</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-8-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-8" role="tab" aria-controls="tabset-7-8" aria-selected="false">Satellites</a></li></ul>
+<div class="tab-content">
+<div id="tabset-7-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-7-1-tab">
+<p><img src="../images/univariate/benchmark_methods/benchmark_methods_mars_weather_ground_temperature.jpeg" class="img-fluid"></p>
+<div class="cell" data-execution_count="38">
+<div class="cell-output cell-output-display" data-execution_count="38">
+<div id="tbl-benchmarkmethods-ground-temperature" class="anchored">
+<table class="table table-sm table-striped small">
+<caption>Table&nbsp;5.18: Shows the accuracy metrics of the benchmark methods.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">RMSE</th>
+<th style="text-align: right;">MSE</th>
+<th style="text-align: right;">MAE</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Mean</td>
+<td style="text-align: right;">6.32513</td>
+<td style="text-align: right;">5.60803</td>
+<td style="text-align: right;">5.60803</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Naive</td>
+<td style="text-align: right;">3.99073</td>
+<td style="text-align: right;">3.28983</td>
+<td style="text-align: right;">3.28983</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">SNaive</td>
+<td style="text-align: right;">2.74773</td>
+<td style="text-align: right;">2.17864</td>
+<td style="text-align: right;">2.17864</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">RWF</td>
+<td style="text-align: right;">3.99073</td>
+<td style="text-align: right;">3.28983</td>
+<td style="text-align: right;">3.28983</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ARIMA</td>
+<td style="text-align: right;">2.33199</td>
+<td style="text-align: right;">1.87184</td>
+<td style="text-align: right;">1.87184</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-7-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-2-tab">
+<p><img src="../images/univariate/benchmark_methods/benchmark_methods_pressure_current_pascals.jpeg" class="img-fluid"></p>
+<div class="cell" data-execution_count="39">
+<div class="cell-output cell-output-display" data-execution_count="39">
+<div id="tbl-benchmarkmethods-pressure-current-pascals" class="anchored">
+<table class="table table-sm table-striped small">
+<caption>Table&nbsp;5.19: Shows the accuracy metrics of the benchmark methods.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">RMSE</th>
+<th style="text-align: right;">MSE</th>
+<th style="text-align: right;">MAE</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Mean</td>
+<td style="text-align: right;">58.0269</td>
+<td style="text-align: right;">49.2388</td>
+<td style="text-align: right;">49.2388</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Naive</td>
+<td style="text-align: right;">42.6673</td>
+<td style="text-align: right;">36.3194</td>
+<td style="text-align: right;">36.3194</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">SNaive</td>
+<td style="text-align: right;">12.644</td>
+<td style="text-align: right;">10.2099</td>
+<td style="text-align: right;">10.2099</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">RWF</td>
+<td style="text-align: right;">42.6673</td>
+<td style="text-align: right;">36.3194</td>
+<td style="text-align: right;">36.3194</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ARIMA</td>
+<td style="text-align: right;">11.4729</td>
+<td style="text-align: right;">9.14004</td>
+<td style="text-align: right;">9.14004</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-7-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-3-tab">
+<p><img src="../images/univariate/benchmark_methods/benchmark_methods_arkx_stock_adj_close.jpeg" class="img-fluid"></p>
+<div class="cell" data-execution_count="40">
+<div class="cell-output cell-output-display" data-execution_count="40">
+<div id="tbl-benchmarkmethods-arkx-stock" class="anchored">
+<table class="table table-sm table-striped small">
+<caption>Table&nbsp;5.20: Shows the accuracy metrics of the benchmark methods.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">RMSE</th>
+<th style="text-align: right;">MSE</th>
+<th style="text-align: right;">MAE</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Mean</td>
+<td style="text-align: right;">2.83046</td>
+<td style="text-align: right;">2.48152</td>
+<td style="text-align: right;">2.48152</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Naive</td>
+<td style="text-align: right;">0.241389</td>
+<td style="text-align: right;">0.188894</td>
+<td style="text-align: right;">0.188894</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">SNaive</td>
+<td style="text-align: right;">4.31569</td>
+<td style="text-align: right;">3.4923</td>
+<td style="text-align: right;">3.4923</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">RWF</td>
+<td style="text-align: right;">0.241389</td>
+<td style="text-align: right;">0.188894</td>
+<td style="text-align: right;">0.188894</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ARIMA</td>
+<td style="text-align: right;">0.241225</td>
+<td style="text-align: right;">0.188663</td>
+<td style="text-align: right;">0.188663</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-7-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-4-tab">
+<p><img src="../images/univariate/benchmark_methods/benchmark_methods_avav_stock_adj_close.jpeg" class="img-fluid"></p>
+<div class="cell" data-execution_count="41">
+<div class="cell-output cell-output-display" data-execution_count="41">
+<div id="tbl-benchmarkmethods-avav-stock" class="anchored">
+<table class="table table-sm table-striped small">
+<caption>Table&nbsp;5.21: Shows the accuracy metrics of the benchmark methods.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">RMSE</th>
+<th style="text-align: right;">MSE</th>
+<th style="text-align: right;">MAE</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Mean</td>
+<td style="text-align: right;">16.8631</td>
+<td style="text-align: right;">13.0502</td>
+<td style="text-align: right;">13.0502</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Naive</td>
+<td style="text-align: right;">2.73346</td>
+<td style="text-align: right;">1.77323</td>
+<td style="text-align: right;">1.77323</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">SNaive</td>
+<td style="text-align: right;">22.9545</td>
+<td style="text-align: right;">19.3187</td>
+<td style="text-align: right;">19.3187</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">RWF</td>
+<td style="text-align: right;">2.73346</td>
+<td style="text-align: right;">1.77323</td>
+<td style="text-align: right;">1.77323</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ARIMA</td>
+<td style="text-align: right;">2.73159</td>
+<td style="text-align: right;">1.77096</td>
+<td style="text-align: right;">1.77096</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-7-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-5-tab">
+<p><img src="../images/univariate/benchmark_methods/benchmark_methods_treasury_nasa_outlays.jpeg" class="img-fluid"></p>
+<div class="cell" data-execution_count="42">
+<div class="cell-output cell-output-display" data-execution_count="42">
+<div id="tbl-benchmarkmethods-treasury-nasa-outlays" class="anchored">
+<table class="table table-sm table-striped small">
+<caption>Table&nbsp;5.22: Shows the accuracy metrics of the benchmark methods.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">RMSE</th>
+<th style="text-align: right;">MSE</th>
+<th style="text-align: right;">MAE</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Mean</td>
+<td style="text-align: right;">353.807</td>
+<td style="text-align: right;">271.601</td>
+<td style="text-align: right;">271.601</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Naive</td>
+<td style="text-align: right;">465.746</td>
+<td style="text-align: right;">358.741</td>
+<td style="text-align: right;">358.741</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">SNaive</td>
+<td style="text-align: right;">253.909</td>
+<td style="text-align: right;">195.551</td>
+<td style="text-align: right;">195.551</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">RWF</td>
+<td style="text-align: right;">465.746</td>
+<td style="text-align: right;">358.741</td>
+<td style="text-align: right;">358.741</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ARIMA</td>
+<td style="text-align: right;">238.663</td>
+<td style="text-align: right;">188.885</td>
+<td style="text-align: right;">188.885</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-7-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-6-tab">
+<p><img src="../images/univariate/benchmark_methods/benchmark_methods_google_trends_space_exploration.jpeg" class="img-fluid"></p>
+<div class="cell" data-execution_count="43">
+<div class="cell-output cell-output-display" data-execution_count="43">
+<div id="tbl-benchmarkmethods-google-trends" class="anchored">
+<table class="table table-sm table-striped small">
+<caption>Table&nbsp;5.23: Shows the accuracy metrics of the benchmark methods.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">RMSE</th>
+<th style="text-align: right;">MSE</th>
+<th style="text-align: right;">MAE</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Mean</td>
+<td style="text-align: right;">18.9977</td>
+<td style="text-align: right;">15.4921</td>
+<td style="text-align: right;">15.4921</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Naive</td>
+<td style="text-align: right;">10.9495</td>
+<td style="text-align: right;">7.90769</td>
+<td style="text-align: right;">7.90769</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">SNaive</td>
+<td style="text-align: right;">18.4074</td>
+<td style="text-align: right;">14.2356</td>
+<td style="text-align: right;">14.2356</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">RWF</td>
+<td style="text-align: right;">10.9495</td>
+<td style="text-align: right;">7.90769</td>
+<td style="text-align: right;">7.90769</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ARIMA</td>
+<td style="text-align: right;">10.4846</td>
+<td style="text-align: right;">7.81022</td>
+<td style="text-align: right;">7.81022</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-7-7" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-7-tab">
+<p><img src="../images/univariate/benchmark_methods/benchmark_methods_launches_per_month.jpeg" class="img-fluid"></p>
+<div class="cell" data-execution_count="44">
+<div class="cell-output cell-output-display" data-execution_count="44">
+<div id="tbl-benchmarkmethods-launches-per-month" class="anchored">
+<table class="table table-sm table-striped small">
+<caption>Table&nbsp;5.24: Shows the accuracy metrics of the benchmark methods.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">RMSE</th>
+<th style="text-align: right;">MSE</th>
+<th style="text-align: right;">MAE</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Mean</td>
+<td style="text-align: right;">3.06655</td>
+<td style="text-align: right;">2.43</td>
+<td style="text-align: right;">2.43</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Naive</td>
+<td style="text-align: right;">3.45945</td>
+<td style="text-align: right;">2.65684</td>
+<td style="text-align: right;">2.65684</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">SNaive</td>
+<td style="text-align: right;">3.16894</td>
+<td style="text-align: right;">2.42313</td>
+<td style="text-align: right;">2.42313</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">RWF</td>
+<td style="text-align: right;">3.45945</td>
+<td style="text-align: right;">2.65684</td>
+<td style="text-align: right;">2.65684</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ARIMA</td>
+<td style="text-align: right;">2.43236</td>
+<td style="text-align: right;">1.87856</td>
+<td style="text-align: right;">1.87856</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-7-8" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-8-tab">
+<p><img src="../images/univariate/benchmark_methods/benchmark_methods_satellites_operational_count.jpeg" class="img-fluid"></p>
+<div class="cell" data-execution_count="45">
+<div class="cell-output cell-output-display" data-execution_count="45">
+<div id="tbl-benchmarkmethods-satellites-operational-count" class="anchored">
+<table class="table table-sm table-striped small">
+<caption>Table&nbsp;5.25: Shows the accuracy metrics of the benchmark methods.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">RMSE</th>
+<th style="text-align: right;">MSE</th>
+<th style="text-align: right;">MAE</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Mean</td>
+<td style="text-align: right;">55.0698</td>
+<td style="text-align: right;">49.4044</td>
+<td style="text-align: right;">49.4044</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Naive</td>
+<td style="text-align: right;">4.81083</td>
+<td style="text-align: right;">2.5</td>
+<td style="text-align: right;">2.5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">SNaive</td>
+<td style="text-align: right;">19.6326</td>
+<td style="text-align: right;">17.6262</td>
+<td style="text-align: right;">17.6262</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">RWF</td>
+<td style="text-align: right;">4.81083</td>
+<td style="text-align: right;">2.5</td>
+<td style="text-align: right;">2.5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ARIMA</td>
+<td style="text-align: right;">4.47817</td>
+<td style="text-align: right;">2.20521</td>
+<td style="text-align: right;">2.20521</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 <!-- ----------------------------------------------------------------------------------------------------------------------------------------- -->
 <!-- ==================================================
       SARIMA
