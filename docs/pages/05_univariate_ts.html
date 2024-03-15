@@ -1172,7 +1172,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p>The following panel shows the best model for each series and their corresponding equations:</p>
+<p>The following panel shows the best model for each series and their corresponding equations, which were concluded on using AIC as the criterion:</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">Seas. 1: Mars Temperature</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false">Seas. 2: Mars Pressure</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false">Financial 1: ARKX</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-4" role="tab" aria-controls="tabset-3-4" aria-selected="false">Financial 2: AVAV</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-5" role="tab" aria-controls="tabset-3-5" aria-selected="false">Treasury NASA Outlays</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-6" role="tab" aria-controls="tabset-3-6" aria-selected="false">Google Trends</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-7-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-7" role="tab" aria-controls="tabset-3-7" aria-selected="false">Launches</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-8-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-8" role="tab" aria-controls="tabset-3-8" aria-selected="false">Satellites</a></li></ul>
 <div class="tab-content">
@@ -1434,6 +1434,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<p>Now that the best models have been chosen, we continue with the diagnostics.</p>
 <!-- ----------------------------------------------
      Model Diagnostics
 ------------------------------------------------ -->
@@ -1997,13 +1998,13 @@ AIC=691.69   AICc=691.79   BIC=697.23
 </div>
 </div>
 <ul>
-<li><strong>Mars Temperature</strong>: The results of <code>auto.arima()</code> support the need for seasonal terms, as previously discussed.</li>
-<li><strong>Mars Pressure</strong>: The results of <code>auto.arima()</code> support the need for seasonal terms, as previously discussed.</li>
-<li><strong>ARKX</strong>: The <code>auto.arima()</code> result suggests that the series is, as previously suggested, best modeled as a random walk.</li>
-<li><strong>AVAV</strong>: The <code>auto.arima()</code> result suggests that the series is, as previously suggested, best modeled as a random walk.</li>
-<li><strong>Treasury NASA Outlays</strong>: The results also support the need for seasonal terms, as previously discussed. The <code>auto.arima()</code> performance metrics are lower.</li>
-<li><strong>Google Trends</strong>: The results also support the need for seasonal terms, as previously discussed. The <code>auto.arima()</code> performance metrics are lower.</li>
-<li><strong>Launches</strong>: The results also support the need for seasonal terms, as previously discussed. The <code>auto.arima()</code> performance metrics are lower.</li>
+<li><strong>Mars Temperature</strong>: The results of <code>auto.arima()</code> support the need for seasonal terms, as previously discussed. Hence, the <code>auto.arima()</code> model is likely better.</li>
+<li><strong>Mars Pressure</strong>: The results of <code>auto.arima()</code> support the need for seasonal terms, as previously discussed. Hence, the <code>auto.arima()</code> model is likely better.</li>
+<li><strong>ARKX</strong>: The <code>auto.arima()</code> result suggests that the series is, as previously suggested, best modeled as a random walk. Hence, the chosen model is likely best.</li>
+<li><strong>AVAV</strong>: The <code>auto.arima()</code> result suggests that the series is, as previously suggested, best modeled as a random walk. Hence, the chosen model is likely best.</li>
+<li><strong>Treasury NASA Outlays</strong>: The results also support the need for seasonal terms, as previously discussed. The <code>auto.arima()</code> performance metrics are lower. Hence, the <code>auto.arima()</code> model is likely better.</li>
+<li><strong>Google Trends</strong>: The results also support the need for seasonal terms, as previously discussed. The <code>auto.arima()</code> performance metrics are lower. Hence, the <code>auto.arima()</code> model is likely better.</li>
+<li><strong>Launches</strong>: The results also support the need for seasonal terms, as previously discussed. The <code>auto.arima()</code> performance metrics are lower. Hence, the <code>auto.arima()</code> model is likely better.</li>
 <li><strong>Satellites</strong>: The <code>auto.arima()</code> suggest a random walk model with drift, which by the principle of parsimony, may be a better fit. This will be further discussed in the SARIMA section.</li>
 </ul>
 <!-- ----------------------------------------------
@@ -2041,14 +2042,16 @@ AIC=691.69   AICc=691.79   BIC=697.23
 </div>
 </div>
 </div>
-<p><strong>Mars Temperature.</strong></p>
-<p><strong>Mars Pressure.</strong></p>
-<p><strong>ARKX.</strong></p>
-<p><strong>AVAV.</strong></p>
-<p><strong>Treasury NASA Outlays.</strong></p>
-<p><strong>Google Trends.</strong></p>
-<p><strong>Launches.</strong></p>
-<p><strong>Satellites.</strong></p>
+<ul>
+<li><strong>Mars Temperature</strong>: The forecast follows the overall pattern of the data. However, it does not get the seasonality right.</li>
+<li><strong>Mars Pressure</strong>: The forecast gets the overall seasonality patterns wrong, but only the broader pattern is correct. It also captured the downward trend of the data.</li>
+<li><strong>ARKX</strong>: Since this model is a random walk, the forecast with the bands shows previous values and wide confidence bands.</li>
+<li><strong>AVAV</strong>: Since this model is also a random walk, the forecast with the bands shows previous values and wide confidence bands.</li>
+<li><strong>Treasury NASA Outlays</strong>: The forecast could only capture some of the seasonality; however, the model still needs improvement to capture the overall pattern.</li>
+<li><strong>Google Trends</strong>: As previously established, this model requires additional terms, and, as such, the forecast takes a direction but without resembling the overall patterns in the data.</li>
+<li><strong>Launches</strong>: As previously established, this model requires additional terms, and as such, the forecast only reflects the highly volatile data.</li>
+<li><strong>Satellites</strong>: This forecast is highly reflective of the data, given that it is mostly a drifting pattern.</li>
+</ul>
 <!-- ----------------------------------------------
     Benchmark Methods
 ------------------------------------------------ -->
@@ -2059,12 +2062,12 @@ AIC=691.69   AICc=691.79   BIC=697.23
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-7-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-1" role="tab" aria-controls="tabset-7-1" aria-selected="true">Seas. 1: Mars Temperature</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-2" role="tab" aria-controls="tabset-7-2" aria-selected="false">Seas. 2: Mars Pressure</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-3" role="tab" aria-controls="tabset-7-3" aria-selected="false">Financial 1: ARKX</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-4" role="tab" aria-controls="tabset-7-4" aria-selected="false">Financial 2: AVAV</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-5" role="tab" aria-controls="tabset-7-5" aria-selected="false">Treasury NASA Outlays</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-6" role="tab" aria-controls="tabset-7-6" aria-selected="false">Google Trends</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-7-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-7" role="tab" aria-controls="tabset-7-7" aria-selected="false">Launches</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-8-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-8" role="tab" aria-controls="tabset-7-8" aria-selected="false">Satellites</a></li></ul>
 <div class="tab-content">
 <div id="tabset-7-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-7-1-tab">
+<p>Visualization:</p>
 <p><img src="../images/univariate/benchmark_methods/benchmark_methods_mars_weather_ground_temperature.jpeg" class="img-fluid"></p>
+<p>Metrics:</p>
 <div class="cell" data-execution_count="46">
 <div class="cell-output cell-output-display" data-execution_count="46">
-<div id="tbl-benchmarkmethods-ground-temperature" class="anchored">
 <table class="table table-sm table-striped small">
-<caption>Table&nbsp;5.10: Shows the accuracy metrics of the benchmark methods.</caption>
 <thead>
 <tr class="header">
 <th style="text-align: left;">Method</th>
@@ -2109,14 +2112,13 @@ AIC=691.69   AICc=691.79   BIC=697.23
 </div>
 </div>
 </div>
-</div>
 <div id="tabset-7-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-2-tab">
+<p>Visualization:</p>
 <p><img src="../images/univariate/benchmark_methods/benchmark_methods_pressure_current_pascals.jpeg" class="img-fluid"></p>
+<p>Metrics:</p>
 <div class="cell" data-execution_count="47">
 <div class="cell-output cell-output-display" data-execution_count="47">
-<div id="tbl-benchmarkmethods-pressure-current-pascals" class="anchored">
 <table class="table table-sm table-striped small">
-<caption>Table&nbsp;5.11: Shows the accuracy metrics of the benchmark methods.</caption>
 <thead>
 <tr class="header">
 <th style="text-align: left;">Method</th>
@@ -2161,14 +2163,13 @@ AIC=691.69   AICc=691.79   BIC=697.23
 </div>
 </div>
 </div>
-</div>
 <div id="tabset-7-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-3-tab">
+<p>Visualization:</p>
 <p><img src="../images/univariate/benchmark_methods/benchmark_methods_arkx_stock_adj_close.jpeg" class="img-fluid"></p>
+<p>Metrics:</p>
 <div class="cell" data-execution_count="48">
 <div class="cell-output cell-output-display" data-execution_count="48">
-<div id="tbl-benchmarkmethods-arkx-stock" class="anchored">
 <table class="table table-sm table-striped small">
-<caption>Table&nbsp;5.12: Shows the accuracy metrics of the benchmark methods.</caption>
 <thead>
 <tr class="header">
 <th style="text-align: left;">Method</th>
@@ -2213,14 +2214,13 @@ AIC=691.69   AICc=691.79   BIC=697.23
 </div>
 </div>
 </div>
-</div>
 <div id="tabset-7-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-4-tab">
+<p>Visualization:</p>
 <p><img src="../images/univariate/benchmark_methods/benchmark_methods_avav_stock_adj_close.jpeg" class="img-fluid"></p>
+<p>Metrics:</p>
 <div class="cell" data-execution_count="49">
 <div class="cell-output cell-output-display" data-execution_count="49">
-<div id="tbl-benchmarkmethods-avav-stock" class="anchored">
 <table class="table table-sm table-striped small">
-<caption>Table&nbsp;5.13: Shows the accuracy metrics of the benchmark methods.</caption>
 <thead>
 <tr class="header">
 <th style="text-align: left;">Method</th>
@@ -2265,14 +2265,13 @@ AIC=691.69   AICc=691.79   BIC=697.23
 </div>
 </div>
 </div>
-</div>
 <div id="tabset-7-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-5-tab">
+<p>Visualization:</p>
 <p><img src="../images/univariate/benchmark_methods/benchmark_methods_treasury_nasa_outlays.jpeg" class="img-fluid"></p>
+<p>Metrics:</p>
 <div class="cell" data-execution_count="50">
 <div class="cell-output cell-output-display" data-execution_count="50">
-<div id="tbl-benchmarkmethods-treasury-nasa-outlays" class="anchored">
 <table class="table table-sm table-striped small">
-<caption>Table&nbsp;5.14: Shows the accuracy metrics of the benchmark methods.</caption>
 <thead>
 <tr class="header">
 <th style="text-align: left;">Method</th>
@@ -2317,14 +2316,13 @@ AIC=691.69   AICc=691.79   BIC=697.23
 </div>
 </div>
 </div>
-</div>
 <div id="tabset-7-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-6-tab">
+<p>Visualization:</p>
 <p><img src="../images/univariate/benchmark_methods/benchmark_methods_google_trends_space_exploration.jpeg" class="img-fluid"></p>
+<p>Metrics:</p>
 <div class="cell" data-execution_count="51">
 <div class="cell-output cell-output-display" data-execution_count="51">
-<div id="tbl-benchmarkmethods-google-trends" class="anchored">
 <table class="table table-sm table-striped small">
-<caption>Table&nbsp;5.15: Shows the accuracy metrics of the benchmark methods.</caption>
 <thead>
 <tr class="header">
 <th style="text-align: left;">Method</th>
@@ -2369,14 +2367,13 @@ AIC=691.69   AICc=691.79   BIC=697.23
 </div>
 </div>
 </div>
-</div>
 <div id="tabset-7-7" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-7-tab">
+<p>Visualization:</p>
 <p><img src="../images/univariate/benchmark_methods/benchmark_methods_launches_per_month.jpeg" class="img-fluid"></p>
+<p>Metrics:</p>
 <div class="cell" data-execution_count="52">
 <div class="cell-output cell-output-display" data-execution_count="52">
-<div id="tbl-benchmarkmethods-launches-per-month" class="anchored">
 <table class="table table-sm table-striped small">
-<caption>Table&nbsp;5.16: Shows the accuracy metrics of the benchmark methods.</caption>
 <thead>
 <tr class="header">
 <th style="text-align: left;">Method</th>
@@ -2421,14 +2418,13 @@ AIC=691.69   AICc=691.79   BIC=697.23
 </div>
 </div>
 </div>
-</div>
 <div id="tabset-7-8" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-8-tab">
+<p>Visualization:</p>
 <p><img src="../images/univariate/benchmark_methods/benchmark_methods_satellites_operational_count.jpeg" class="img-fluid"></p>
+<p>Metrics:</p>
 <div class="cell" data-execution_count="53">
 <div class="cell-output cell-output-display" data-execution_count="53">
-<div id="tbl-benchmarkmethods-satellites-operational-count" class="anchored">
 <table class="table table-sm table-striped small">
-<caption>Table&nbsp;5.17: Shows the accuracy metrics of the benchmark methods.</caption>
 <thead>
 <tr class="header">
 <th style="text-align: left;">Method</th>
@@ -2475,15 +2471,7 @@ AIC=691.69   AICc=691.79   BIC=697.23
 </div>
 </div>
 </div>
-</div>
-<p><strong>Mars Temperature.</strong></p>
-<p><strong>Mars Pressure.</strong></p>
-<p><strong>ARKX.</strong></p>
-<p><strong>AVAV.</strong></p>
-<p><strong>Treasury NASA Outlays.</strong></p>
-<p><strong>Google Trends.</strong></p>
-<p><strong>Launches.</strong></p>
-<p><strong>Satellites.</strong></p>
+<p>The RMSE of the fitted model outperforms the benchmark methods <code>Mean</code>, <code>Naive</code>, <code>SNaive</code>, and <code>RWF</code> in all cases. The are some that were very close to the performance of the benchmark methods such as <strong>ARKX</strong> (with RMSEs vs the Naive method of 0.241225 vs 0.241389) and <strong>AVAV</strong> (with RMSEs vs the Naive method of 2.73159 vs 2.73346) as these are random walks. Other series that were close were <strong>Mars Pressure</strong>, <strong>Google Trends</strong>, and <strong>Satellites</strong> whose improvements we will address in the next section.</p>
 <!-- ----------------------------------------------------------------------------------------------------------------------------------------- -->
 <!-- ==================================================
       SARIMA

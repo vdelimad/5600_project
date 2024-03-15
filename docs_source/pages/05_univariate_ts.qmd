@@ -316,7 +316,7 @@ clean_result_table_arima_loop(pd.read_csv('../tables/univariate/arima_loop/arima
 :::
 
 
-The following panel shows the best model for each series and their corresponding equations:
+The following panel shows the best model for each series and their corresponding equations, which were concluded on using AIC as the criterion:
 
 ```{python}
 #| echo: false
@@ -493,7 +493,7 @@ Equation:
 :::
 
 
-
+Now that the best models have been chosen, we continue with the diagnostics.
 
 
 
@@ -882,15 +882,14 @@ print(best_models_satellites_operational_count.to_string(index=False))
 :::
 
 
-- **Mars Temperature**: The results of `auto.arima()` support the need for seasonal terms, as previously discussed.
-- **Mars Pressure**: The results of `auto.arima()` support the need for seasonal terms, as previously discussed.
-- **ARKX**: The `auto.arima()` result suggests that the series is, as previously suggested, best modeled as a random walk.
-- **AVAV**: The `auto.arima()` result suggests that the series is, as previously suggested, best modeled as a random walk.
-- **Treasury NASA Outlays**: The results also support the need for seasonal terms, as previously discussed. The `auto.arima()` performance metrics are lower.
-- **Google Trends**: The results also support the need for seasonal terms, as previously discussed. The `auto.arima()` performance metrics are lower.
-- **Launches**: The results also support the need for seasonal terms, as previously discussed. The `auto.arima()` performance metrics are lower.
+- **Mars Temperature**: The results of `auto.arima()` support the need for seasonal terms, as previously discussed. Hence, the `auto.arima()` model is likely better.
+- **Mars Pressure**: The results of `auto.arima()` support the need for seasonal terms, as previously discussed. Hence, the `auto.arima()` model is likely better.
+- **ARKX**: The `auto.arima()` result suggests that the series is, as previously suggested, best modeled as a random walk.  Hence, the chosen model is likely best.
+- **AVAV**: The `auto.arima()` result suggests that the series is, as previously suggested, best modeled as a random walk.  Hence, the chosen model is likely best.
+- **Treasury NASA Outlays**: The results also support the need for seasonal terms, as previously discussed. The `auto.arima()` performance metrics are lower. Hence, the `auto.arima()` model is likely better.
+- **Google Trends**: The results also support the need for seasonal terms, as previously discussed. The `auto.arima()` performance metrics are lower. Hence, the `auto.arima()` model is likely better.
+- **Launches**: The results also support the need for seasonal terms, as previously discussed. The `auto.arima()` performance metrics are lower. Hence, the `auto.arima()` model is likely better.
 - **Satellites**: The `auto.arima()` suggest a random walk model with drift, which by the principle of parsimony, may be a better fit. This will be further discussed in the SARIMA section.
-
 
 
 
@@ -946,30 +945,14 @@ print(best_models_satellites_operational_count.to_string(index=False))
 :::
 
 
-
-**Mars Temperature.**
-
-
-**Mars Pressure.**
-
-
-**ARKX.**
-
-
-**AVAV.**
-
-
-**Treasury NASA Outlays.**
-
-
-**Google Trends.**
-
-
-**Launches.**
-
-
-**Satellites.**
-
+- **Mars Temperature**: The forecast follows the overall pattern of the data. However, it does not get the seasonality right.
+- **Mars Pressure**: The forecast gets the overall seasonality patterns wrong, but only the broader pattern is correct. It also captured the downward trend of the data.
+- **ARKX**: Since this model is a random walk, the forecast with the bands shows previous values and wide confidence bands.
+- **AVAV**: Since this model is also a random walk, the forecast with the bands shows previous values and wide confidence bands.
+- **Treasury NASA Outlays**: The forecast could only capture some of the seasonality; however, the model still needs improvement to capture the overall pattern.
+- **Google Trends**: As previously established, this model requires additional terms, and, as such, the forecast takes a direction but without resembling the overall patterns in the data.
+- **Launches**: As previously established, this model requires additional terms, and as such, the forecast only reflects the highly volatile data.
+- **Satellites**: This forecast is highly reflective of the data, given that it is mostly a drifting pattern.
 
 
 
@@ -980,9 +963,6 @@ print(best_models_satellites_operational_count.to_string(index=False))
 ------------------------------------------------ -->
 
 ### Benchmark Methods
-
-
-
 
 ```{python}
 #| echo: false
@@ -1019,12 +999,14 @@ def clean_result_table_benchmarkmethods(table):
 
 ## Seas. 1: Mars Temperature
 
+Visualization:
+
 ![](../images/univariate/benchmark_methods/benchmark_methods_mars_weather_ground_temperature.jpeg)
+
+Metrics:
 
 ```{python}
 #| echo: false
-#| label: tbl-benchmarkmethods-ground-temperature
-#| tbl-cap: "Shows the accuracy metrics of the benchmark methods."
 
 clean_result_table_benchmarkmethods(pd.read_csv('../tables/univariate/benchmark_methods/benchmark_methods_mars_weather_ground_temperature.csv'))
 
@@ -1035,12 +1017,14 @@ clean_result_table_benchmarkmethods(pd.read_csv('../tables/univariate/benchmark_
 
 ## Seas. 2: Mars Pressure
 
+Visualization:
+
 ![](../images/univariate/benchmark_methods/benchmark_methods_pressure_current_pascals.jpeg)
+
+Metrics:
 
 ```{python}
 #| echo: false
-#| label: tbl-benchmarkmethods-pressure-current-pascals
-#| tbl-cap: "Shows the accuracy metrics of the benchmark methods."
 
 clean_result_table_benchmarkmethods(pd.read_csv('../tables/univariate/benchmark_methods/benchmark_methods_pressure_current_pascals.csv'))
 
@@ -1050,12 +1034,14 @@ clean_result_table_benchmarkmethods(pd.read_csv('../tables/univariate/benchmark_
 
 ## Financial 1: ARKX
 
+Visualization:
+
 ![](../images/univariate/benchmark_methods/benchmark_methods_arkx_stock_adj_close.jpeg)
+
+Metrics:
 
 ```{python}
 #| echo: false
-#| label: tbl-benchmarkmethods-arkx-stock
-#| tbl-cap: "Shows the accuracy metrics of the benchmark methods."
 
 clean_result_table_benchmarkmethods(pd.read_csv('../tables/univariate/benchmark_methods/benchmark_methods_arkx_stock_adj_close.csv'))
 
@@ -1065,12 +1051,14 @@ clean_result_table_benchmarkmethods(pd.read_csv('../tables/univariate/benchmark_
 
 ## Financial 2: AVAV
 
+Visualization:
+
 ![](../images/univariate/benchmark_methods/benchmark_methods_avav_stock_adj_close.jpeg)
+
+Metrics:
 
 ```{python}
 #| echo: false
-#| label: tbl-benchmarkmethods-avav-stock
-#| tbl-cap: "Shows the accuracy metrics of the benchmark methods."
 
 clean_result_table_benchmarkmethods(pd.read_csv('../tables/univariate/benchmark_methods/benchmark_methods_avav_stock_adj_close.csv'))
 
@@ -1080,12 +1068,14 @@ clean_result_table_benchmarkmethods(pd.read_csv('../tables/univariate/benchmark_
 
 ## Treasury NASA Outlays
 
+Visualization:
+
 ![](../images/univariate/benchmark_methods/benchmark_methods_treasury_nasa_outlays.jpeg)
+
+Metrics:
 
 ```{python}
 #| echo: false
-#| label: tbl-benchmarkmethods-treasury-nasa-outlays
-#| tbl-cap: "Shows the accuracy metrics of the benchmark methods."
 
 clean_result_table_benchmarkmethods(pd.read_csv('../tables/univariate/benchmark_methods/benchmark_methods_treasury_nasa_outlays.csv'))
 
@@ -1095,12 +1085,14 @@ clean_result_table_benchmarkmethods(pd.read_csv('../tables/univariate/benchmark_
 
 ## Google Trends
 
+Visualization:
+
 ![](../images/univariate/benchmark_methods/benchmark_methods_google_trends_space_exploration.jpeg)
+
+Metrics:
 
 ```{python}
 #| echo: false
-#| label: tbl-benchmarkmethods-google-trends
-#| tbl-cap: "Shows the accuracy metrics of the benchmark methods."
 
 clean_result_table_benchmarkmethods(pd.read_csv('../tables/univariate/benchmark_methods/benchmark_methods_google_trends_space_exploration.csv'))
 
@@ -1110,12 +1102,14 @@ clean_result_table_benchmarkmethods(pd.read_csv('../tables/univariate/benchmark_
 
 ## Launches
 
+Visualization:
+
 ![](../images/univariate/benchmark_methods/benchmark_methods_launches_per_month.jpeg)
+
+Metrics:
 
 ```{python}
 #| echo: false
-#| label: tbl-benchmarkmethods-launches-per-month
-#| tbl-cap: "Shows the accuracy metrics of the benchmark methods."
 
 clean_result_table_benchmarkmethods(pd.read_csv('../tables/univariate/benchmark_methods/benchmark_methods_launches_per_month.csv'))
 
@@ -1125,50 +1119,23 @@ clean_result_table_benchmarkmethods(pd.read_csv('../tables/univariate/benchmark_
 
 ## Satellites
 
+Visualization:
+
 ![](../images/univariate/benchmark_methods/benchmark_methods_satellites_operational_count.jpeg)
+
+Metrics:
 
 ```{python}
 #| echo: false
-#| label: tbl-benchmarkmethods-satellites-operational-count
-#| tbl-cap: "Shows the accuracy metrics of the benchmark methods."
 
 clean_result_table_benchmarkmethods(pd.read_csv('../tables/univariate/benchmark_methods/benchmark_methods_satellites_operational_count.csv'))
 
 ```
 
 
-
 :::
 
-
-
-**Mars Temperature.**
-
-
-**Mars Pressure.**
-
-
-**ARKX.**
-
-
-**AVAV.**
-
-
-**Treasury NASA Outlays.**
-
-
-**Google Trends.**
-
-
-**Launches.**
-
-
-**Satellites.**
-
-
-
-
-
+The RMSE of the fitted models outperforms the benchmark methods `Mean`, `Naive`, `SNaive`, and `RWF` in all cases. The are some that were very close to the performance of the benchmark methods such as **ARKX** (with RMSEs vs the Naive method of 0.241225 vs 0.241389) and **AVAV** (with RMSEs vs the Naive method of 2.73159 vs 2.73346) as these are random walks. Other series that were close were **Mars Pressure**, **Google Trends**, and **Satellites** whose improvements we will address in the next section.
 
 
 
