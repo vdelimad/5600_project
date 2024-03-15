@@ -356,10 +356,9 @@ def clean_result_table_bestmodel(table):
 
 ```{python}
 #| echo: false
-#| label: tbl-bestmodels-mars-ground-temperature
-#| tbl-cap: "Shows the best model of the ARIMA loop."
 
-clean_result_table_bestmodel(pd.read_csv('../tables/univariate/best_models/best_models_mars_weather_ground_temperature.csv'))
+best_models_mars_weather_ground_temperature = pd.read_csv('../tables/univariate/best_models/best_models_mars_weather_ground_temperature.csv')
+clean_result_table_bestmodel(best_models_mars_weather_ground_temperature)
 
 ```
 
@@ -373,11 +372,9 @@ Equation:
 
 ```{python}
 #| echo: false
-#| label: tbl-bestmodels-pressure-current-pascals
-#| tbl-cap: "Shows the best model of the ARIMA loop."
 
-
-clean_result_table_bestmodel(pd.read_csv('../tables/univariate/best_models/best_models_pressure_current_pascals.csv'))
+best_models_pressure_current_pascals = pd.read_csv('../tables/univariate/best_models/best_models_pressure_current_pascals.csv')
+clean_result_table_bestmodel(best_models_pressure_current_pascals)
 
 
 ```
@@ -393,11 +390,9 @@ Equation:
 
 ```{python}
 #| echo: false
-#| label: tbl-bestmodels-arkx-stock-adj-close
-#| tbl-cap: "Shows the best model of the ARIMA loop."
 
-
-clean_result_table_bestmodel(pd.read_csv('../tables/univariate/best_models/best_models_arkx_stock_adj_close.csv'))
+best_models_arkx_stock_adj_close = pd.read_csv('../tables/univariate/best_models/best_models_arkx_stock_adj_close.csv')
+clean_result_table_bestmodel(best_models_arkx_stock_adj_close)
 
 
 ```
@@ -413,11 +408,9 @@ Equation:
 
 ```{python}
 #| echo: false
-#| label: tbl-bestmodels-avav-stock-adj-close
-#| tbl-cap: "Shows the best model of the ARIMA loop."
 
-
-clean_result_table_bestmodel(pd.read_csv('../tables/univariate/best_models/best_models_avav_stock_adj_close.csv'))
+best_models_avav_stock_adj_close = pd.read_csv('../tables/univariate/best_models/best_models_avav_stock_adj_close.csv')
+clean_result_table_bestmodel(best_models_avav_stock_adj_close)
 
 
 ```
@@ -433,11 +426,9 @@ Equation:
 
 ```{python}
 #| echo: false
-#| label: tbl-bestmodels-treasury-nasa-outlays
-#| tbl-cap: "Shows the best model of the ARIMA loop."
 
-
-clean_result_table_bestmodel(pd.read_csv('../tables/univariate/best_models/best_models_treasury_nasa_outlays.csv'))
+best_models_treasury_nasa_outlays = pd.read_csv('../tables/univariate/best_models/best_models_treasury_nasa_outlays.csv')
+clean_result_table_bestmodel(best_models_treasury_nasa_outlays)
 
 
 ```
@@ -453,11 +444,9 @@ Equation:
 
 ```{python}
 #| echo: false
-#| label: tbl-bestmodels-google-trends-space-exploration
-#| tbl-cap: "Shows the best model of the ARIMA loop."
 
-
-clean_result_table_bestmodel(pd.read_csv('../tables/univariate/best_models/best_models_google_trends_space_exploration.csv'))
+best_models_google_trends_space_exploration = pd.read_csv('../tables/univariate/best_models/best_models_google_trends_space_exploration.csv')
+clean_result_table_bestmodel(best_models_google_trends_space_exploration)
 
 
 ```
@@ -473,11 +462,9 @@ Equation:
 
 ```{python}
 #| echo: false
-#| label: tbl-bestmodels-launches-per-month
-#| tbl-cap: "Shows the best model of the ARIMA loop."
 
-
-clean_result_table_bestmodel(pd.read_csv('../tables/univariate/best_models/best_models_launches_per_month.csv'))
+best_models_launches_per_month = pd.read_csv('../tables/univariate/best_models/best_models_launches_per_month.csv')
+clean_result_table_bestmodel(best_models_launches_per_month)
 
 
 ```
@@ -490,15 +477,11 @@ Equation:
 
 ## Satellites
 
-
 ```{python}
 #| echo: false
-#| label: tbl-bestmodels-satellites-operational-count
-#| tbl-cap: "Shows the best model of the ARIMA loop."
 
-
-clean_result_table_bestmodel(pd.read_csv('../tables/univariate/best_models/best_models_satellites_operational_count.csv'))
-
+best_models_satellites_operational_count = pd.read_csv('../tables/univariate/best_models/best_models_satellites_operational_count.csv')
+clean_result_table_bestmodel(best_models_satellites_operational_count)
 
 ```
 
@@ -507,9 +490,7 @@ Equation:
 {{< include '../tables/univariate/equation_text/equation_text_satellites_operational_count.txt' >}}
 
 
-
 :::
-
 
 
 
@@ -718,10 +699,13 @@ This is further evidence that a random walk model may be the best for this data.
 
 ### `auto.arima()`
 
+The following shows a comparison between the output of the `auto.arima` function and the previously selected model for each series:
 
 ::: {.panel-tabset}
 
 ## Seas. 1: Mars Temperature
+
+`auto.arima` result:
 
 ```{python}
 #| echo: false
@@ -730,8 +714,22 @@ with open('../tables/univariate/auto_arima/auto_arima_mars_weather_ground_temper
         print(file.read())
 ```
 
+Previously chosen model:
+
+```{python}
+#| echo: false
+
+print(best_models_mars_weather_ground_temperature.to_string(index=False))
+
+```
+
+
+
+
 
 ## Seas. 2: Mars Pressure
+
+`auto.arima` result:
 
 ```{python}
 #| echo: false
@@ -740,9 +738,20 @@ with open('../tables/univariate/auto_arima/auto_arima_pressure_current_pascals.t
         print(file.read())
 ```
 
+Previously chosen model:
+
+```{python}
+#| echo: false
+
+print(best_models_pressure_current_pascals.to_string(index=False))
+
+```
+
 
 
 ## Financial 1: ARKX
+
+`auto.arima` result:
 
 ```{python}
 #| echo: false
@@ -751,9 +760,20 @@ with open('../tables/univariate/auto_arima/auto_arima_arkx_stock_adj_close.txt',
         print(file.read())
 ```
 
+Previously chosen model:
+
+```{python}
+#| echo: false
+
+print(best_models_arkx_stock_adj_close.to_string(index=False))
+
+```
+
 
 
 ## Financial 2: AVAV
+
+`auto.arima` result:
 
 ```{python}
 #| echo: false
@@ -762,9 +782,20 @@ with open('../tables/univariate/auto_arima/auto_arima_avav_stock_adj_close.txt',
         print(file.read())
 ```
 
+Previously chosen model:
+
+```{python}
+#| echo: false
+
+print(best_models_avav_stock_adj_close.to_string(index=False))
+
+```
+
 
 
 ## Treasury NASA Outlays
+
+`auto.arima` result:
 
 ```{python}
 #| echo: false
@@ -773,9 +804,20 @@ with open('../tables/univariate/auto_arima/auto_arima_treasury_nasa_outlays.txt'
         print(file.read())
 ```
 
+Previously chosen model:
+
+```{python}
+#| echo: false
+
+print(best_models_treasury_nasa_outlays.to_string(index=False))
+
+```
+
 
 
 ## Google Trends
+
+`auto.arima` result:
 
 ```{python}
 #| echo: false
@@ -784,9 +826,20 @@ with open('../tables/univariate/auto_arima/auto_arima_google_trends_space_explor
         print(file.read())
 ```
 
+Previously chosen model:
+
+```{python}
+#| echo: false
+
+print(best_models_google_trends_space_exploration.to_string(index=False))
+
+```
+
 
 
 ## Launches
+
+`auto.arima` result:
 
 ```{python}
 #| echo: false
@@ -795,9 +848,20 @@ with open('../tables/univariate/auto_arima/auto_arima_launches_per_month.txt', '
         print(file.read())
 ```
 
+Previously chosen model:
+
+```{python}
+#| echo: false
+
+print(best_models_launches_per_month.to_string(index=False))
+
+```
+
 
 
 ## Satellites
+
+`auto.arima` result:
 
 ```{python}
 #| echo: false
@@ -806,32 +870,26 @@ with open('../tables/univariate/auto_arima/auto_arima_satellites_operational_cou
         print(file.read())
 ```
 
+Previously chosen model:
+
+```{python}
+#| echo: false
+
+print(best_models_satellites_operational_count.to_string(index=False))
+
+```
 
 :::
 
 
-**Mars Temperature.**
-
-
-**Mars Pressure.**
-
-
-**ARKX.**
-
-
-**AVAV.**
-
-
-**Treasury NASA Outlays.**
-
-
-**Google Trends.**
-
-
-**Launches.**
-
-
-**Satellites.**
+- **Mars Temperature**: The results of `auto.arima()` support the need for seasonal terms, as previously discussed.
+- **Mars Pressure**: The results of `auto.arima()` support the need for seasonal terms, as previously discussed.
+- **ARKX**: The `auto.arima()` result suggests that the series is, as previously suggested, best modeled as a random walk.
+- **AVAV**: The `auto.arima()` result suggests that the series is, as previously suggested, best modeled as a random walk.
+- **Treasury NASA Outlays**: The results also support the need for seasonal terms, as previously discussed. The `auto.arima()` performance metrics are lower.
+- **Google Trends**: The results also support the need for seasonal terms, as previously discussed. The `auto.arima()` performance metrics are lower.
+- **Launches**: The results also support the need for seasonal terms, as previously discussed. The `auto.arima()` performance metrics are lower.
+- **Satellites**: The `auto.arima()` suggest a random walk model with drift, which by the principle of parsimony, may be a better fit. This will be further discussed in the SARIMA section.
 
 
 
