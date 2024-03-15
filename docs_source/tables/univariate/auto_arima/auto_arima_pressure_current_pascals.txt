@@ -1,0 +1,5 @@
+Series: time_series 
+ARIMA(0,1,0)(0,1,0)[12] 
+
+sigma^2 = 17.7:  log likelihood = -173.93
+AIC=349.86   AICc=349.93   BIC=351.97

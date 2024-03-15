@@ -642,6 +642,103 @@ with open('../tables/univariate/diagnostics/diagnostics_output_satellites_operat
 ### `auto.arima()`
 
 
+::: {.panel-tabset}
+
+## Seas. 1: Mars Temperature
+
+```{python}
+#| echo: false
+
+with open('../tables/univariate/auto_arima/auto_arima_mars_weather_ground_temperature.txt', 'r') as file:
+        print(file.read())
+```
+
+
+## Seas. 2: Mars Pressure
+
+```{python}
+#| echo: false
+
+with open('../tables/univariate/auto_arima/auto_arima_pressure_current_pascals.txt', 'r') as file:
+        print(file.read())
+```
+
+
+
+## Financial 1: ARKX
+
+```{python}
+#| echo: false
+
+with open('../tables/univariate/auto_arima/auto_arima_arkx_stock_adj_close.txt', 'r') as file:
+        print(file.read())
+```
+
+
+
+## Financial 2: AVAV
+
+```{python}
+#| echo: false
+
+with open('../tables/univariate/auto_arima/auto_arima_avav_stock_adj_close.txt', 'r') as file:
+        print(file.read())
+```
+
+
+
+## Treasury NASA Outlays
+
+```{python}
+#| echo: false
+
+with open('../tables/univariate/auto_arima/auto_arima_treasury_nasa_outlays.txt', 'r') as file:
+        print(file.read())
+```
+
+
+
+## Google Trends
+
+```{python}
+#| echo: false
+
+with open('../tables/univariate/auto_arima/auto_arima_google_trends_space_exploration.txt', 'r') as file:
+        print(file.read())
+```
+
+
+
+## Launches
+
+```{python}
+#| echo: false
+
+with open('../tables/univariate/auto_arima/auto_arima_launches_per_month.txt', 'r') as file:
+        print(file.read())
+```
+
+
+
+## Satellites
+
+```{python}
+#| echo: false
+
+with open('../tables/univariate/auto_arima/auto_arima_satellites_operational_count.txt', 'r') as file:
+        print(file.read())
+```
+
+
+:::
+
+
+
+
+
+
+
+**Time series**
 Confirms the suspicions that we need seasonal variables and a SARIMA model is needed.
 
 
@@ -656,6 +753,49 @@ Confirms the suspicions that we need seasonal variables and a SARIMA model is ne
 ### Forecast
 
 
+::: {.panel-tabset}
+
+## Seas. 1: Mars Temperature
+
+![](../images/univariate/forecast/forecast_mars_weather_ground_temperature.jpeg)
+
+
+## Seas. 2: Mars Pressure
+
+![](../images/univariate/forecast/forecast_pressure_current_pascals.jpeg)
+
+
+## Financial 1: ARKX
+
+![](../images/univariate/forecast/forecast_arkx_stock_adj_close.jpeg)
+
+
+## Financial 2: AVAV
+
+![](../images/univariate/forecast/forecast_avav_stock_adj_close.jpeg)
+
+
+## Treasury NASA Outlays
+
+![](../images/univariate/forecast/forecast_treasury_nasa_outlays.jpeg)
+
+
+## Google Trends
+
+![](../images/univariate/forecast/forecast_google_trends_space_exploration.jpeg)
+
+
+## Launches
+
+![](../images/univariate/forecast/forecast_launches_per_month.jpeg)
+
+
+## Satellites
+
+![](../images/univariate/forecast/forecast_satellites_operational_count.jpeg)
+
+:::
+
 
 
 
@@ -669,12 +809,14 @@ Confirms the suspicions that we need seasonal variables and a SARIMA model is ne
 
 
 
+<!-- ----------------------------------------------------------------------------------------------------------------------------------------- -->
+
+
+
 
 <!-- ==================================================
       SARIMA
 ================================================== -->
-
-
 
 ## SARIMA
 

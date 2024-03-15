@@ -1,0 +1,10 @@
+Series: time_series 
+ARIMA(1,0,0)(2,1,0)[12] 
+
+Coefficients:
+         ar1     sar1     sar2
+      0.4416  -0.5915  -0.5616
+s.e.  0.1188   0.1124   0.1087
+
+sigma^2 = 3.721:  log likelihood = -132.75
+AIC=273.5   AICc=274.2   BIC=282.01

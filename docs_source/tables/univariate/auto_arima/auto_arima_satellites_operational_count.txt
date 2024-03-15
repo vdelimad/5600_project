@@ -1,0 +1,10 @@
+Series: time_series 
+ARIMA(0,1,0) with drift 
+
+Coefficients:
+       drift
+      1.8051
+s.e.  0.4105
+
+sigma^2 = 20.06:  log likelihood = -343.84
+AIC=691.69   AICc=691.79   BIC=697.23
