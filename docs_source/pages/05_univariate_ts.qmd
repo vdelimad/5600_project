@@ -205,9 +205,6 @@ def clean_result_table_arima_loop(table):
 
 ```{python}
 #| echo: false
-#| label: tbl-arima-mars-ground-temperature
-#| tbl-cap: "Shows the result of the ARIMA loop."
-
 
 clean_result_table_arima_loop(pd.read_csv('../tables/univariate/arima_loop/arima_loop_mars_weather_ground_temperature.csv'))
 
@@ -220,9 +217,6 @@ clean_result_table_arima_loop(pd.read_csv('../tables/univariate/arima_loop/arima
 
 ```{python}
 #| echo: false
-#| label: tbl-arima-pressure-current-pascals
-#| tbl-cap: "Shows the result of the ARIMA loop."
-
 
 clean_result_table_arima_loop(pd.read_csv('../tables/univariate/arima_loop/arima_loop_pressure_current_pascals.csv'))
 
@@ -234,9 +228,6 @@ clean_result_table_arima_loop(pd.read_csv('../tables/univariate/arima_loop/arima
 
 ```{python}
 #| echo: false
-#| label: tbl-arima-arkx-stock-adj-close
-#| tbl-cap: "Shows the result of the ARIMA loop."
-
 
 clean_result_table_arima_loop(pd.read_csv('../tables/univariate/arima_loop/arima_loop_arkx_stock_adj_close.csv'))
 
@@ -248,9 +239,6 @@ clean_result_table_arima_loop(pd.read_csv('../tables/univariate/arima_loop/arima
 
 ```{python}
 #| echo: false
-#| label: tbl-arima-avav-stock-adj-close
-#| tbl-cap: "Shows the result of the ARIMA loop."
-
 
 clean_result_table_arima_loop(pd.read_csv('../tables/univariate/arima_loop/arima_loop_avav_stock_adj_close.csv'))
 
@@ -262,9 +250,6 @@ clean_result_table_arima_loop(pd.read_csv('../tables/univariate/arima_loop/arima
 
 ```{python}
 #| echo: false
-#| label: tbl-arima-treasury-nasa-outlays
-#| tbl-cap: "Shows the result of the ARIMA loop."
-
 
 clean_result_table_arima_loop(pd.read_csv('../tables/univariate/arima_loop/arima_loop_treasury_nasa_outlays.csv'))
 
@@ -276,9 +261,6 @@ clean_result_table_arima_loop(pd.read_csv('../tables/univariate/arima_loop/arima
 
 ```{python}
 #| echo: false
-#| label: tbl-arima-google-trends-space-exploration
-#| tbl-cap: "Shows the result of the ARIMA loop."
-
 
 clean_result_table_arima_loop(pd.read_csv('../tables/univariate/arima_loop/arima_loop_google_trends_space_exploration.csv'))
 
@@ -290,9 +272,6 @@ clean_result_table_arima_loop(pd.read_csv('../tables/univariate/arima_loop/arima
 
 ```{python}
 #| echo: false
-#| label: tbl-arima-launches-per-month
-#| tbl-cap: "Shows the result of the ARIMA loop."
-
 
 clean_result_table_arima_loop(pd.read_csv('../tables/univariate/arima_loop/arima_loop_launches_per_month.csv'))
 
@@ -304,9 +283,6 @@ clean_result_table_arima_loop(pd.read_csv('../tables/univariate/arima_loop/arima
 
 ```{python}
 #| echo: false
-#| label: tbl-arima-satellites-operational-count
-#| tbl-cap: "Shows the result of the ARIMA loop."
-
 
 clean_result_table_arima_loop(pd.read_csv('../tables/univariate/arima_loop/arima_loop_satellites_operational_count.csv'))
 
