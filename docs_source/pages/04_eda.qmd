@@ -656,5 +656,6 @@ The various data series now seem to have achieved stationarity. For example, the
 
 
 
-Additionally, inspired by the example from the EDA section provided, I have conducted an SMA analysis, incorporating moving averages over 5, 15, and 30 time steps. We observe that the 5-time step moving average for most series sufficiently smooths the data. In contrast, the longer SMAs tend to overly smooth the series, resulting in a loss of visible data trends.
+Lastly, we have conducted an SMA analysis to better understand the underlying patterns. This analysis incorporates the original series (blue) moving averages over 5 (red), 15 (green), 30 (orange), 45 (brown), and 60 (gray) time steps. We observe that, particularly with the series with seasonality, such as **Mars Temperature** and **Mars Pressure**, the 5-time step moving average sufficiently shows the underlying pattern losing too much information. In contrast, the longer SMAs tend to overly smooth the series, resulting in a loss of visible data trends. We see a similar pattern with the financial data series. Overall, the more volatility in the data, the more a larger time step blurs the underlying series.
+
 
