@@ -1,25 +1,14 @@
-$fit
-
-Call:
-arima(x = xdata, order = c(p, d, q), seasonal = list(order = c(P, D, Q), period = S), 
-    include.mean = !no.constant, transform.pars = trans, fixed = fixed, optim.control = list(trace = trc, 
-        REPORT = 1, reltol = tol))
+Series: time_series 
+ARIMA(0,2,1) 
 
 Coefficients:
           ma1
-      -0.9045
-s.e.   0.1960
+      -0.9565
+s.e.   0.1501
 
-sigma^2 estimated as 20.53:  log likelihood = -343.64,  aic = 691.28
+sigma^2 = 20.57:  log likelihood = -343.65
+AIC=691.29   AICc=691.4   BIC=696.82
 
-$degrees_of_freedom
-[1] 116
-
-$ttable
-    Estimate    SE t.value p.value
-ma1  -0.9045 0.196 -4.6152       0
-
-$ICs
-     AIC     AICc      BIC 
-5.908391 5.908689 5.955608 
-
+Training set error measures:
+                    ME     RMSE      MAE       MPE      MAPE    MASE       ACF1
+Training set 0.3766477 4.478166 2.205209 0.1075963 0.8459865 0.12511 0.03397799
